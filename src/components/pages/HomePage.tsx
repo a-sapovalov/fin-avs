@@ -6,6 +6,7 @@ import { ArrowRight, Shield, TrendingUp, Users, ArrowUpRight, Building2, LineCha
 import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import LoanCalculator from '@/components/LoanCalculator';
 
 // --- Utility Components for Design System ---
 
@@ -302,6 +303,11 @@ export default function HomePage() {
 
           </div>
         </div>
+      </section>
+
+      {/* --- LOAN CALCULATOR SECTION --- */}
+      <section className="w-full bg-background py-24 border-t border-primary/10">
+        <LoanCalculator />
       </section>
 
       {/* --- IMMERSIVE CTA SECTION --- */}

@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import LoanCalculator from '@/components/LoanCalculator';
 
 export default function CorporateLoanPage() {
   const benefits = [
@@ -219,6 +220,11 @@ export default function CorporateLoanPage() {
             </div>
           </motion.div>
         </div>
+      </section>
+
+      {/* Loan Calculator Section */}
+      <section className="w-full bg-background py-24 border-t border-primary/10">
+        <LoanCalculator />
       </section>
 
       {/* CTA Section */}
