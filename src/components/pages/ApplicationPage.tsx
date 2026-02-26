@@ -256,14 +256,11 @@ export default function ApplicationPage() {
                       <SelectValue placeholder="Select schedule type" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="monthly" className="font-paragraph">
-                        Monthly
+                      <SelectItem value="annuity" className="font-paragraph">
+                        Annuity
                       </SelectItem>
-                      <SelectItem value="quarterly" className="font-paragraph">
-                        Quarterly
-                      </SelectItem>
-                      <SelectItem value="annual" className="font-paragraph">
-                        Annual
+                      <SelectItem value="bullet" className="font-paragraph">
+                        Bullet
                       </SelectItem>
                     </SelectContent>
                   </Select>

@@ -24,7 +24,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <Image 
-              src="https://static.wixstatic.com/media/43558d_640f34e2ac77424097e80e852f2a7342~mv2.png"
+              src="https://static.wixstatic.com/media/43558d_e909a3a9ce69464f8b30ec05731cd484~mv2.png"
               alt="AVS Finance"
               width={180}
               className="h-12 w-auto"
