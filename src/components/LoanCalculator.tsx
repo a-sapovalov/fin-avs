@@ -12,7 +12,7 @@ interface PaymentScheduleItem {
 
 export default function LoanCalculator() {
   const [creditAmount, setCreditAmount] = useState(100000);
-  const [annualRate, setAnnualRate] = useState(5);
+  const [annualRate, setAnnualRate] = useState(9);
   const [duration, setDuration] = useState(60);
   const [scheduleType, setScheduleType] = useState<'annuity' | 'bullet'>('annuity');
 
@@ -131,17 +131,31 @@ export default function LoanCalculator() {
                   </label>
                   <input
                     type="range"
-                    min="25000"
-                    max="5000000"
-                    step="25000"
+                    min="10000"
+                    max="1000000"
+                    step="10000"
                     value={creditAmount}
                     onChange={(e) => setCreditAmount(Number(e.target.value))}
                     className="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary"
                   />
                   <div className="flex justify-between font-paragraph text-sm text-foreground/60 mt-2">
-                    <span>€25,000</span>
-                    <span>€5,000,000</span>
+                    <span>€10,000</span>
+                    <span>€1,000,000</span>
                   </div>
+                  <input
+                    type="number"
+                    min="10000"
+                    max="1000000"
+                    step="10000"
+                    value={creditAmount}
+                    onChange={(e) => {
+                      const val = Number(e.target.value);
+                      if (val >= 10000 && val <= 1000000) {
+                        setCreditAmount(val);
+                      }
+                    }}
+                    className="w-full mt-3 px-3 py-2 border border-primary/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary"
+                  />
                 </div>
 
                 {/* Annual Rate */}
@@ -151,7 +165,7 @@ export default function LoanCalculator() {
                   </label>
                   <input
                     type="range"
-                    min="2"
+                    min="9"
                     max="15"
                     step="0.1"
                     value={annualRate}
@@ -159,9 +173,23 @@ export default function LoanCalculator() {
                     className="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary"
                   />
                   <div className="flex justify-between font-paragraph text-sm text-foreground/60 mt-2">
-                    <span>2%</span>
+                    <span>9%</span>
                     <span>15%</span>
                   </div>
+                  <input
+                    type="number"
+                    min="9"
+                    max="15"
+                    step="0.1"
+                    value={annualRate}
+                    onChange={(e) => {
+                      const val = Number(e.target.value);
+                      if (val >= 9 && val <= 15) {
+                        setAnnualRate(val);
+                      }
+                    }}
+                    className="w-full mt-3 px-3 py-2 border border-primary/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary"
+                  />
                 </div>
 
                 {/* Duration */}
@@ -171,17 +199,31 @@ export default function LoanCalculator() {
                   </label>
                   <input
                     type="range"
-                    min="12"
-                    max="120"
+                    min="3"
+                    max="240"
                     step="1"
                     value={duration}
                     onChange={(e) => setDuration(Number(e.target.value))}
                     className="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary"
                   />
                   <div className="flex justify-between font-paragraph text-sm text-foreground/60 mt-2">
-                    <span>12 months</span>
-                    <span>120 months</span>
+                    <span>3 months</span>
+                    <span>240 months</span>
                   </div>
+                  <input
+                    type="number"
+                    min="3"
+                    max="240"
+                    step="1"
+                    value={duration}
+                    onChange={(e) => {
+                      const val = Number(e.target.value);
+                      if (val >= 3 && val <= 240) {
+                        setDuration(val);
+                      }
+                    }}
+                    className="w-full mt-3 px-3 py-2 border border-primary/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary"
+                  />
                 </div>
 
                 {/* Schedule Type */}
