@@ -256,38 +256,38 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 border-t border-b border-primary/10">
             
-            {/* Feature 1 */}
+            {/* Perk 1: Fast and Flexible */}
             <div className="relative p-12 group hover:bg-primary/5 transition-colors duration-500">
               <VerticalDivider />
               <div className="mb-8">
-                <Shield className="h-12 w-12 text-primary stroke-1" />
+                <TrendingUp className="h-12 w-12 text-primary stroke-1" />
               </div>
-              <h3 className="font-heading text-3xl text-primary mb-4">Trusted Expertise</h3>
+              <h3 className="font-heading text-3xl text-primary mb-4">Fast and Flexible</h3>
               <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
-                Years of experience serving Estonian businesses with reliable financial solutions. We understand the local landscape intimately.
+                We will tailor a funding solution around your business and provide an indicative offer within two working days.
               </p>
             </div>
 
-            {/* Feature 2 */}
+            {/* Perk 2: Straightforward, Competitive Terms */}
             <div className="relative p-12 group hover:bg-primary/5 transition-colors duration-500">
               <VerticalDivider />
               <div className="mb-8">
                 <LineChart className="h-12 w-12 text-primary stroke-1" />
               </div>
-              <h3 className="font-heading text-3xl text-primary mb-4">Competitive Rates</h3>
+              <h3 className="font-heading text-3xl text-primary mb-4">Straightforward, Competitive Terms</h3>
               <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
-                Transparent pricing and favorable terms designed to support your business growth, not hinder it with hidden fees.
+                Interest rates from 9.5% per annum. You can also apply for up to 12 months' repayment holiday.
               </p>
             </div>
 
-            {/* Feature 3 */}
+            {/* Perk 3: Personal Service */}
             <div className="relative p-12 group hover:bg-primary/5 transition-colors duration-500">
               <div className="mb-8">
                 <Users className="h-12 w-12 text-primary stroke-1" />
               </div>
-              <h3 className="font-heading text-3xl text-primary mb-4">Personalized Service</h3>
+              <h3 className="font-heading text-3xl text-primary mb-4">Personal Service</h3>
               <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
-                Dedicated support and tailored solutions. You are not just an account number; you are a partner in growth.
+                You will have a dedicated relationship manager who takes the time to understand your business and recommends the most suitable option.
               </p>
             </div>
 
