@@ -79,9 +79,14 @@ export default function LoanCalculator() {
       }
     }
 
+    let totalPayment = monthlyPayment * months;
+    if (scheduleType === 'bullet') {
+      totalPayment = totalInterest + principal;
+    }
+
     return {
       monthlyPayment,
-      totalPayment: monthlyPayment * months,
+      totalPayment,
       totalInterest,
       schedule,
     };
