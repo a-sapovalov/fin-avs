@@ -39,7 +39,7 @@ const ParallaxText = ({ children, baseVelocity = 100 }: { children: string; base
   return (
     <div className="overflow-hidden m-0 whitespace-nowrap flex flex-nowrap">
       <motion.div className="font-heading text-[12vw] leading-[0.8] text-primary/5 uppercase font-bold whitespace-nowrap flex flex-nowrap items-center">
-        <span className="block mr-12">{children}</span>
+
         <span className="block mr-12">{children}</span>
         <span className="block mr-12">{children}</span>
         <span className="block mr-12">{children}</span>
@@ -69,9 +69,7 @@ export default function HomePage() {
         className="fixed top-0 left-0 right-0 h-1 bg-accent-gold origin-left z-50"
         style={{ scaleX }}
       />
-
       <Header />
-
       {/* --- HERO SECTION --- */}
       <section ref={heroRef} className="relative w-full min-h-[95vh] flex items-center pt-32 pb-20 overflow-hidden">
         {/* Abstract Background Elements */}
@@ -145,15 +143,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <SectionDivider />
-
       {/* --- TICKER / TRUST SECTION --- */}
-      <section className="py-12 bg-background overflow-hidden border-b border-primary/5">
-        <ParallaxText baseVelocity={-2}>
-          Integrity • Stability • Growth • Partnership •
-        </ParallaxText>
-      </section>
 
       {/* --- SERVICES SECTION (Dark Mode / Sticky) --- */}
       <section className="relative w-full bg-primary text-primary-foreground py-32 overflow-clip">
@@ -250,7 +241,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- WHY CHOOSE AVS (Editorial Grid) --- */}
       <section className="w-full bg-background py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
@@ -304,12 +294,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- LOAN CALCULATOR SECTION --- */}
       <section className="w-full bg-background py-24 border-t border-primary/10">
         <LoanCalculator />
       </section>
-
       {/* --- IMMERSIVE CTA SECTION --- */}
       <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
         {/* Background Image with Parallax */}
@@ -349,7 +337,6 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
-
       <Footer />
     </div>
   );
