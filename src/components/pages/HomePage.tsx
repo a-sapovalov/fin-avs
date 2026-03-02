@@ -77,7 +77,7 @@ export default function HomePage() {
                   </span>
                 </div>
 
-                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-gray-900 leading-tight mb-8 tracking-tight">
+                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown leading-tight mb-8 tracking-tight">
                   Find Your Perfect <span className="text-vibrant-yellow">Mortgage</span> Today
                 </h1>
 
@@ -88,14 +88,14 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-4 items-start">
                   <Link 
                     to="/application"
-                    className="group inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-gray-900 font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
+                    className="group inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
                   >
                     Get Pre-Approved
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link 
                     to="/about"
-                    className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-gray-300 text-gray-900 font-paragraph font-bold text-base rounded-lg hover:border-vibrant-yellow hover:text-vibrant-yellow transition-all duration-300"
+                    className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-gray-300 text-dark-brown font-paragraph font-bold text-base rounded-lg hover:border-vibrant-yellow hover:text-vibrant-yellow transition-all duration-300"
                   >
                     Learn More
                   </Link>
@@ -331,7 +331,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/application"
-                className="inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-gray-900 font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
+                className="inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
               >
                 Start Your Application
                 <ArrowRight className="ml-2 h-5 w-5" />

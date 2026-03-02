@@ -69,7 +69,7 @@ export default function CreditLinePage() {
                   Refinancing Solutions
                 </span>
               </div>
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-8 leading-tight">
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">
                 Refinance Your Mortgage for <span className="text-vibrant-yellow">Better Terms</span>
               </h1>
               <p className="font-paragraph text-lg md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
@@ -77,7 +77,7 @@ export default function CreditLinePage() {
               </p>
               <Link 
                 to="/application"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-gray-900 font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
               >
                 Apply for Refinancing
                 <ArrowRight className="ml-2 h-5 w-5" />

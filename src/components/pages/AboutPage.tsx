@@ -90,7 +90,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-8 leading-tight">
+            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">
               About <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">AVS Finance</span>
             </h1>
             <p className="font-paragraph text-lg md:text-xl text-gray-600 leading-relaxed">

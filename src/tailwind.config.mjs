@@ -34,7 +34,9 @@ export default {
                 primary: '#0A1F33',
                 'vibrant-yellow': '#FFD700',
                 'vibrant-yellow-dark': '#FFC700',
-                'vibrant-yellow-light': '#FFE54C'
+                'vibrant-yellow-light': '#FFE54C',
+                'dark-brown': '#5C4033',
+                'dark-brown-light': '#6B5344'
             },
         },
     },

@@ -168,7 +168,7 @@ export default function ApplicationPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="font-heading text-6xl lg:text-7xl text-primary mb-8">
+          <h1 className="font-heading text-6xl lg:text-7xl text-dark-brown mb-8">
             Loan Application
           </h1>
           <p className="font-paragraph text-xl text-foreground leading-relaxed">

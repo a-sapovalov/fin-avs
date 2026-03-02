@@ -24,7 +24,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="font-heading text-3xl font-bold text-gray-900">
+            <span className="font-heading text-3xl font-bold text-dark-brown">
               AVS <span className="text-vibrant-yellow">Finance</span>
             </span>
           </Link>
@@ -38,7 +38,7 @@ export default function Header() {
                 className={`font-paragraph text-sm font-semibold transition-all duration-300 relative group ${
                   isActive(link.path)
                     ? 'text-vibrant-yellow'
-                    : 'text-gray-700 hover:text-vibrant-yellow'
+                    : 'text-dark-brown hover:text-vibrant-yellow'
                 }`}
               >
                 {link.label}
@@ -52,14 +52,14 @@ export default function Header() {
           {/* CTA Button */}
           <Link 
             to="/application"
-            className="hidden lg:inline-flex items-center justify-center px-8 py-2.5 bg-vibrant-yellow text-gray-900 font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
+            className="hidden lg:inline-flex items-center justify-center px-8 py-2.5 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
           >
             Get Pre-Approved
           </Link>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-900"
+            className="lg:hidden text-dark-brown"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -87,7 +87,7 @@ export default function Header() {
                 className={`font-paragraph text-base py-2 transition-colors duration-300 ${
                   isActive(link.path)
                     ? 'text-vibrant-yellow font-semibold'
-                    : 'text-gray-700 hover:text-vibrant-yellow'
+                    : 'text-dark-brown hover:text-vibrant-yellow'
                 }`}
               >
                 {link.label}
@@ -95,7 +95,7 @@ export default function Header() {
             ))}
             <Link 
               to="/application"
-              className="mt-4 px-8 py-3 bg-vibrant-yellow text-gray-900 font-paragraph text-sm font-bold rounded-lg text-center hover:bg-vibrant-yellow-dark transition-all duration-300"
+              className="mt-4 px-8 py-3 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg text-center hover:bg-vibrant-yellow-dark transition-all duration-300"
             >
               Get Pre-Approved
             </Link>
