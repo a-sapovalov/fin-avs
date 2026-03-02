@@ -133,9 +133,9 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-2xl blur-2xl opacity-30" />
                   <div className="relative">
                     <Image
-                      src="https://static.wixstatic.com/media/43558d_8fb8a301b7ec48c9ada18ce4afe9f164~mv2.jpg"
+                      src="https://static.wixstatic.com/media/43558d_5d51498596fe45818a4f43ac96c9449d~mv2.png"
                       width={400}
-                      className="w-full h-auto object-contain"
+                      className="w-full h-auto object-contain border border-none"
                       originWidth={1024}
                       originHeight={1024} />
                   </div>
