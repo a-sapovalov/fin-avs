@@ -31,7 +31,10 @@ export default {
                 foreground: '#333333',
                 'secondary-foreground': '#FFFFFF',
                 'primary-foreground': '#FFFFFF',
-                primary: '#0A1F33'
+                primary: '#0A1F33',
+                'vibrant-yellow': '#FFD700',
+                'vibrant-yellow-dark': '#FFC700',
+                'vibrant-yellow-light': '#FFE54C'
             },
         },
     },

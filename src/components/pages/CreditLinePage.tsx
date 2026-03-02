@@ -25,20 +25,20 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 
 export default function CreditLinePage() {
   const benefits = [
-    'Access funds only when you need them',
-    'Pay interest only on the amount used',
-    'Revolving credit that replenishes as you repay',
-    'Credit limits from €25,000 to €2,000,000',
-    'Quick access to funds within 24 hours',
-    'Flexible terms with no fixed repayment schedule',
+    'Competitive interest rates from 5.5% per annum',
+    'Flexible refinancing terms up to 25 years',
+    'Loan amounts from €50,000 to €400,000',
+    'Fast approval process within 3-5 business days',
+    'No hidden fees or prepayment penalties',
+    'Dedicated account manager for personalized support',
   ];
 
   const eligibility = [
-    'Active business registered in Estonia',
-    'Minimum 1 year of operational history',
-    'Consistent revenue and positive cash flow',
-    'Good credit standing with no recent defaults',
-    'Clear business purpose for credit line usage',
+    'Valid identification and proof of income',
+    'Existing mortgage or property equity',
+    'Stable employment or business history',
+    'Clear purpose for refinancing funds',
+    'Good credit history and no outstanding defaults',
   ];
 
   return (
@@ -46,10 +46,10 @@ export default function CreditLinePage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative w-full pt-20 pb-24 overflow-hidden bg-gradient-to-br from-white via-cyan-50 to-blue-50">
+      <section className="relative w-full pt-20 pb-24 overflow-hidden bg-gradient-to-br from-white via-yellow-50 to-amber-50">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <motion.div 
-            className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full blur-3xl opacity-20"
+            className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-20"
             animate={{ y: [0, 30, 0] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
@@ -63,23 +63,23 @@ export default function CreditLinePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-cyan-100 rounded-full">
-                <Zap className="h-5 w-5 text-cyan-600" />
-                <span className="font-paragraph text-xs font-semibold text-cyan-600 uppercase tracking-wider">
-                  Flexible Financing
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light rounded-full">
+                <Zap className="h-5 w-5 text-gray-900" />
+                <span className="font-paragraph text-xs font-bold text-gray-900 uppercase tracking-wider">
+                  Refinancing Solutions
                 </span>
               </div>
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-8 leading-tight">
-                Credit Lines for Operational <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">Flexibility</span>
+                Refinance Your Mortgage for <span className="text-vibrant-yellow">Better Terms</span>
               </h1>
               <p className="font-paragraph text-lg md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
-                Maintain financial agility with a revolving credit line that gives you instant access to working capital whenever opportunities or challenges arise.
+                Lower your monthly payments, access your home equity, or switch to better rates with our refinancing solutions designed to save you money.
               </p>
               <Link 
                 to="/application"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-paragraph font-semibold text-base rounded-full hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-gray-900 font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
               >
-                Apply for a Credit Line
+                Apply for Refinancing
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </motion.div>
@@ -90,26 +90,26 @@ export default function CreditLinePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-8 md:p-10 rounded-2xl text-white shadow-2xl">
+              <div className="bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl">
                 <h3 className="font-heading text-3xl mb-8">
-                  Credit Line Overview
+                  Refinancing Overview
                 </h3>
                 <div className="space-y-8">
                   <div>
-                    <p className="font-paragraph text-sm text-white/70 mb-2">Credit Limit</p>
-                    <p className="font-heading text-2xl">€25,000 - €2,000,000</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">Loan Amount</p>
+                    <p className="font-heading text-2xl">€50,000 - €400,000</p>
                   </div>
                   <div>
-                    <p className="font-paragraph text-sm text-white/70 mb-2">Interest Rate</p>
-                    <p className="font-heading text-2xl">From 10.5% per annum</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">Interest Rate</p>
+                    <p className="font-heading text-2xl">From 5.5% per annum</p>
                   </div>
                   <div>
-                    <p className="font-paragraph text-sm text-white/70 mb-2">Access Time</p>
-                    <p className="font-heading text-2xl">Within 24 hours</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">Loan Term</p>
+                    <p className="font-heading text-2xl">Up to 25 years</p>
                   </div>
                   <div>
-                    <p className="font-paragraph text-sm text-white/70 mb-2">Repayment</p>
-                    <p className="font-heading text-2xl">Flexible, revolving</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">Approval Time</p>
+                    <p className="font-heading text-2xl">3-5 business days</p>
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function CreditLinePage() {
               Key Benefits
             </h2>
             <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience the flexibility and convenience of revolving credit
+              Experience the flexibility and convenience of refinancing
             </p>
           </FadeIn>
 
@@ -135,7 +135,7 @@ export default function CreditLinePage() {
               <FadeIn
                 key={index}
                 delay={index * 0.1}
-                className="flex items-start gap-4 bg-white p-8 rounded-xl border border-gray-100 hover:border-cyan-300 hover:shadow-lg transition-all duration-300"
+                className="flex items-start gap-4 bg-white p-8 rounded-xl border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark hover:shadow-lg transition-all duration-300"
               >
                 <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                 <p className="font-paragraph text-lg text-gray-700 leading-relaxed">
@@ -152,17 +152,17 @@ export default function CreditLinePage() {
         <div className="grid grid-cols-12 gap-16">
           <FadeIn className="col-span-12 lg:col-span-6">
             <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-8">
-              What is a Credit Line?
+              What is Refinancing?
             </h2>
             <div className="space-y-6">
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                A credit line is a flexible financing solution that provides your business with access to a predetermined amount of capital that you can draw upon as needed. Unlike a traditional loan where you receive a lump sum upfront, a credit line allows you to borrow only what you need, when you need it.
+                Refinancing is the process of replacing your existing mortgage with a new one, typically to take advantage of better interest rates, lower monthly payments, or to access your home equity. Whether rates have dropped or your financial situation has improved, refinancing can help you save money and achieve your financial goals.
               </p>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                This revolving credit facility is perfect for managing cash flow fluctuations, covering unexpected expenses, seizing time-sensitive opportunities, or bridging gaps between receivables and payables. As you repay the borrowed amount, your available credit replenishes, giving you continuous access to working capital.
+                Our refinancing solutions offer flexibility to help you achieve various objectives: reduce your monthly payments, shorten your loan term, switch from variable to fixed rates, or access cash for home improvements, debt consolidation, or other major expenses.
               </p>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                With AVS Finance's credit line, you gain financial flexibility without the commitment of a full loan. You only pay interest on the funds you actually use, making it a cost-effective solution for businesses that need reliable access to capital.
+                With AVS Finance's refinancing options, you gain the opportunity to optimize your mortgage and improve your financial position. Our experienced team works with you to find the best refinancing solution that matches your specific needs and goals.
               </p>
             </div>
           </FadeIn>
@@ -173,8 +173,8 @@ export default function CreditLinePage() {
             </h2>
             <div className="space-y-4">
               {eligibility.map((criterion, index) => (
-                <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl border border-cyan-100">
-                  <CheckCircle className="h-6 w-6 text-cyan-600 flex-shrink-0 mt-1" />
+                <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 rounded-xl border-2 border-vibrant-yellow">
+                  <CheckCircle className="h-6 w-6 text-gray-900 flex-shrink-0 mt-1" />
                   <p className="font-paragraph text-lg text-gray-700 leading-relaxed">
                     {criterion}
                   </p>
@@ -190,7 +190,7 @@ export default function CreditLinePage() {
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
-              How It Works
+              How Refinancing Works
             </h2>
             <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
               Simple, transparent, and designed for your convenience
@@ -199,32 +199,32 @@ export default function CreditLinePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FadeIn className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 text-white font-heading text-2xl mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-gray-900 font-heading text-2xl mb-6 font-bold">
                 1
               </div>
-              <h3 className="font-heading text-2xl text-gray-900 mb-4">Apply & Get Approved</h3>
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Review Your Options</h3>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                Submit your application and receive approval for your credit limit based on your business profile.
+                We analyze your current mortgage and present refinancing options that could save you money or achieve your goals.
               </p>
             </FadeIn>
 
             <FadeIn className="text-center" delay={0.1}>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 text-white font-heading text-2xl mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-gray-900 font-heading text-2xl mb-6 font-bold">
                 2
               </div>
-              <h3 className="font-heading text-2xl text-gray-900 mb-4">Draw Funds as Needed</h3>
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Apply & Get Approved</h3>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                Access your credit line anytime you need capital, up to your approved limit, within 24 hours.
+                Submit your application and receive approval within 3-5 business days with competitive rates.
               </p>
             </FadeIn>
 
             <FadeIn className="text-center" delay={0.2}>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 text-white font-heading text-2xl mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-gray-900 font-heading text-2xl mb-6 font-bold">
                 3
               </div>
-              <h3 className="font-heading text-2xl text-gray-900 mb-4">Repay & Reuse</h3>
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Close & Save</h3>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                Make flexible repayments, and as you pay down the balance, your credit becomes available again.
+                Complete the refinancing process and start enjoying lower payments or better terms immediately.
               </p>
             </FadeIn>
           </div>
