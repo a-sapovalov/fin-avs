@@ -44,7 +44,6 @@ export default function HomePage() {
         style={{ scaleX }}
       />
       <Header />
-
       {/* --- HERO SECTION --- */}
       <section ref={heroRef} className="relative w-full min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-gradient-to-br from-white via-yellow-50 to-amber-50">
         {/* Animated Background Elements */}
@@ -132,13 +131,13 @@ export default function HomePage() {
                   className="relative"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-2xl blur-2xl opacity-30" />
-                  <div className="relative bg-white rounded-2xl p-8 shadow-2xl border border-gray-100">
-                    <Image 
-                      src="https://static.wixstatic.com/media/43558d_640f34e2ac77424097e80e852f2a7342~mv2.png"
-                      alt="AVS Finance"
+                  <div className="relative">
+                    <Image
+                      src="https://static.wixstatic.com/media/43558d_8fb8a301b7ec48c9ada18ce4afe9f164~mv2.jpg"
                       width={400}
                       className="w-full h-auto object-contain"
-                    />
+                      originWidth={1024}
+                      originHeight={1024} />
                   </div>
                 </motion.div>
               </div>
@@ -146,7 +145,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- SERVICES SECTION --- */}
       <section className="relative w-full bg-gray-50 py-24 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
@@ -251,7 +249,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- WHY CHOOSE AVS --- */}
       <section className="w-full bg-white py-24 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
@@ -308,12 +305,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- LOAN CALCULATOR SECTION --- */}
       <section className="w-full bg-gray-50 py-24 md:py-32">
         <LoanCalculator />
       </section>
-
       {/* --- CTA SECTION --- */}
       <section className="relative w-full py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -351,7 +346,6 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
-
       <Footer />
     </div>
   );
