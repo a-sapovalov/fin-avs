@@ -42,7 +42,7 @@ export default function CreditLinePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-dark-brown">
       <Header />
       
       {/* Hero Section */}

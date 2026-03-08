@@ -37,7 +37,7 @@ export default function HomePage() {
   const yHero = useTransform(scrollY, [0, 1000], [0, 200]);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 overflow-x-clip">
+    <div className="min-h-screen bg-white text-dark-brown overflow-x-clip">
       {/* Scroll Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-vibrant-yellow origin-left z-50"
@@ -81,7 +81,7 @@ export default function HomePage() {
                   Business Financing Made <span className="text-vibrant-yellow">Simple</span>
                 </h1>
 
-                <p className="font-paragraph text-lg md:text-xl text-gray-600 max-w-2xl mb-10 leading-relaxed">
+                <p className="font-paragraph text-lg md:text-xl text-dark-brown-light max-w-2xl mb-10 leading-relaxed">
                   AVS Finance provides competitive business loans and credit lines exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR, with flexible terms tailored to your business needs.
                 </p>
 
@@ -102,18 +102,18 @@ export default function HomePage() {
                 </div>
 
                 {/* Trust Indicators */}
-                <div className="flex flex-col sm:flex-row gap-8 mt-12 pt-8 border-t border-gray-200">
+                <div className="flex flex-col sm:flex-row gap-8 mt-12 pt-8 border-t border-dark-brown-light">
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="font-paragraph text-sm text-gray-600">Fast Approval</span>
+                    <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
+                    <span className="font-paragraph text-sm text-dark-brown-light">Fast Approval</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="font-paragraph text-sm text-gray-600">Competitive Rates</span>
+                    <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
+                    <span className="font-paragraph text-sm text-dark-brown-light">Competitive Rates</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="font-paragraph text-sm text-gray-600">Expert Support</span>
+                    <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
+                    <span className="font-paragraph text-sm text-dark-brown-light">Expert Support</span>
                   </div>
                 </div>
               </motion.div>

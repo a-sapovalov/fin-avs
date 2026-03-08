@@ -110,10 +110,10 @@ export default function LoanCalculator() {
         transition={{ duration: 0.6 }}
       >
         <div className="text-center mb-16">
-          <h2 className="font-heading text-5xl md:text-6xl text-primary mb-6">
+          <h2 className="font-heading text-5xl md:text-6xl text-dark-brown mb-6">
             Loan Calculator
           </h2>
-          <p className="font-paragraph text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="font-paragraph text-xl text-dark-brown-light max-w-3xl mx-auto">
             Calculate your estimated monthly payment and view detailed repayment schedules
           </p>
         </div>
@@ -127,11 +127,11 @@ export default function LoanCalculator() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-8 bg-white border border-primary/10">
+            <Card className="p-8 bg-white border border-dark-brown/10">
               <div className="space-y-8">
                 {/* Credit Amount */}
                 <div>
-                  <label className="font-paragraph text-lg text-primary font-semibold mb-4 block">
+                  <label className="font-paragraph text-lg text-dark-brown font-semibold mb-4 block">
                     Credit Amount: {formatCurrency(creditAmount)}
                   </label>
                   <input
@@ -141,9 +141,9 @@ export default function LoanCalculator() {
                     step="10000"
                     value={creditAmount}
                     onChange={(e) => setCreditAmount(Number(e.target.value))}
-                    className="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary"
+                    className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
                   />
-                  <div className="flex justify-between font-paragraph text-sm text-foreground/60 mt-2">
+                  <div className="flex justify-between font-paragraph text-sm text-dark-brown-light mt-2">
                     <span>€10,000</span>
                     <span>€1,000,000</span>
                   </div>
@@ -159,13 +159,13 @@ export default function LoanCalculator() {
                         setCreditAmount(val);
                       }
                     }}
-                    className="w-full mt-3 px-3 py-2 border border-primary/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary"
+                    className="w-full mt-3 px-3 py-2 border border-dark-brown/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-dark-brown"
                   />
                 </div>
 
                 {/* Annual Rate */}
                 <div>
-                  <label className="font-paragraph text-lg text-primary font-semibold mb-4 block">
+                  <label className="font-paragraph text-lg text-dark-brown font-semibold mb-4 block">
                     Annual Rate: {annualRate.toFixed(2)}%
                   </label>
                   <input
@@ -175,9 +175,9 @@ export default function LoanCalculator() {
                     step="0.1"
                     value={annualRate}
                     onChange={(e) => setAnnualRate(Number(e.target.value))}
-                    className="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary"
+                    className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
                   />
-                  <div className="flex justify-between font-paragraph text-sm text-foreground/60 mt-2">
+                  <div className="flex justify-between font-paragraph text-sm text-dark-brown-light mt-2">
                     <span>9%</span>
                     <span>15%</span>
                   </div>
@@ -193,13 +193,13 @@ export default function LoanCalculator() {
                         setAnnualRate(val);
                       }
                     }}
-                    className="w-full mt-3 px-3 py-2 border border-primary/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary"
+                    className="w-full mt-3 px-3 py-2 border border-dark-brown/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-dark-brown"
                   />
                 </div>
 
                 {/* Duration */}
                 <div>
-                  <label className="font-paragraph text-lg text-primary font-semibold mb-4 block">
+                  <label className="font-paragraph text-lg text-dark-brown font-semibold mb-4 block">
                     Duration: {duration} months ({(duration / 12).toFixed(1)} years)
                   </label>
                   <input
@@ -209,9 +209,9 @@ export default function LoanCalculator() {
                     step="1"
                     value={duration}
                     onChange={(e) => setDuration(Number(e.target.value))}
-                    className="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary"
+                    className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
                   />
-                  <div className="flex justify-between font-paragraph text-sm text-foreground/60 mt-2">
+                  <div className="flex justify-between font-paragraph text-sm text-dark-brown-light mt-2">
                     <span>3 months</span>
                     <span>240 months</span>
                   </div>
@@ -227,13 +227,13 @@ export default function LoanCalculator() {
                         setDuration(val);
                       }
                     }}
-                    className="w-full mt-3 px-3 py-2 border border-primary/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-primary"
+                    className="w-full mt-3 px-3 py-2 border border-dark-brown/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-dark-brown"
                   />
                 </div>
 
                 {/* Schedule Type */}
                 <div>
-                  <label className="font-paragraph text-lg text-primary font-semibold mb-4 block">
+                  <label className="font-paragraph text-lg text-dark-brown font-semibold mb-4 block">
                     Payment Schedule
                   </label>
                   <div className="flex gap-4">
@@ -241,8 +241,8 @@ export default function LoanCalculator() {
                       onClick={() => setScheduleType('annuity')}
                       className={`flex-1 py-3 px-4 rounded-lg font-paragraph font-semibold transition-all duration-300 ${
                         scheduleType === 'annuity'
-                          ? 'bg-primary text-white'
-                          : 'bg-primary/10 text-primary hover:bg-primary/20'
+                          ? 'bg-dark-brown text-white'
+                          : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
                       }`}
                     >
                       Annuity
@@ -251,14 +251,14 @@ export default function LoanCalculator() {
                       onClick={() => setScheduleType('bullet')}
                       className={`flex-1 py-3 px-4 rounded-lg font-paragraph font-semibold transition-all duration-300 ${
                         scheduleType === 'bullet'
-                          ? 'bg-primary text-white'
-                          : 'bg-primary/10 text-primary hover:bg-primary/20'
+                          ? 'bg-dark-brown text-white'
+                          : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
                       }`}
                     >
                       Bullet
                     </button>
                   </div>
-                  <p className="font-paragraph text-sm text-foreground/60 mt-3">
+                  <p className="font-paragraph text-sm text-dark-brown-light mt-3">
                     {scheduleType === 'annuity'
                       ? 'Equal monthly payments throughout the loan term'
                       : 'Interest-only payments monthly, principal due at end'}
@@ -279,7 +279,7 @@ export default function LoanCalculator() {
             <div className="space-y-6">
               {/* Key Metrics */}
               <div className="grid grid-cols-2 gap-4">
-                <Card className="p-6 bg-primary text-white border-0">
+                <Card className="p-6 bg-dark-brown text-white border-0">
                   <p className="font-paragraph text-sm text-white/70 mb-2">
                     Monthly Payment
                   </p>
@@ -288,8 +288,8 @@ export default function LoanCalculator() {
                   </p>
                 </Card>
 
-                <Card className="p-6 bg-accent-gold text-primary border-0">
-                  <p className="font-paragraph text-sm text-primary/70 mb-2">
+                <Card className="p-6 bg-vibrant-yellow text-dark-brown border-0">
+                  <p className="font-paragraph text-sm text-dark-brown/70 mb-2">
                     Total Interest
                   </p>
                   <p className="font-heading text-3xl">
@@ -297,47 +297,47 @@ export default function LoanCalculator() {
                   </p>
                 </Card>
 
-                <Card className="p-6 bg-primary/10 border border-primary/20">
-                  <p className="font-paragraph text-sm text-foreground/70 mb-2">
+                <Card className="p-6 bg-dark-brown/10 border border-dark-brown/20">
+                  <p className="font-paragraph text-sm text-dark-brown-light mb-2">
                     Total Payment
                   </p>
-                  <p className="font-heading text-3xl text-primary">
+                  <p className="font-heading text-3xl text-dark-brown">
                     {formatCurrency(calculations.totalPayment)}
                   </p>
                 </Card>
 
-                <Card className="p-6 bg-primary/5 border border-primary/10">
-                  <p className="font-paragraph text-sm text-foreground/70 mb-2">
+                <Card className="p-6 bg-dark-brown/5 border border-dark-brown/10">
+                  <p className="font-paragraph text-sm text-dark-brown-light mb-2">
                     Credit Amount
                   </p>
-                  <p className="font-heading text-3xl text-primary">
+                  <p className="font-heading text-3xl text-dark-brown">
                     {formatCurrency(creditAmount)}
                   </p>
                 </Card>
               </div>
 
               {/* Schedule Preview */}
-              <Card className="p-6 bg-white border border-primary/10">
-                <h3 className="font-heading text-2xl text-primary mb-4">
+              <Card className="p-6 bg-white border border-dark-brown/10">
+                <h3 className="font-heading text-2xl text-dark-brown mb-4">
                   Payment Schedule Preview
                 </h3>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
-                      <tr className="border-b border-primary/10">
-                        <th className="text-left py-3 px-2 font-paragraph font-semibold text-foreground/70">
+                      <tr className="border-b border-dark-brown/10">
+                        <th className="text-left py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
                           Month
                         </th>
-                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-foreground/70">
+                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
                           Payment
                         </th>
-                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-foreground/70">
+                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
                           Principal
                         </th>
-                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-foreground/70">
+                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
                           Interest
                         </th>
-                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-foreground/70">
+                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
                           Balance
                         </th>
                       </tr>
@@ -346,21 +346,21 @@ export default function LoanCalculator() {
                       {calculations.schedule.slice(0, 12).map((item) => (
                         <tr
                           key={item.month}
-                          className="border-b border-primary/5 hover:bg-primary/5 transition-colors"
+                          className="border-b border-dark-brown/5 hover:bg-dark-brown/5 transition-colors"
                         >
-                          <td className="py-3 px-2 font-paragraph text-foreground">
+                          <td className="py-3 px-2 font-paragraph text-dark-brown">
                             {item.month}
                           </td>
-                          <td className="text-right py-3 px-2 font-paragraph text-foreground font-semibold">
+                          <td className="text-right py-3 px-2 font-paragraph text-dark-brown font-semibold">
                             {formatCurrency(item.payment)}
                           </td>
-                          <td className="text-right py-3 px-2 font-paragraph text-foreground">
+                          <td className="text-right py-3 px-2 font-paragraph text-dark-brown">
                             {formatCurrency(item.principal)}
                           </td>
-                          <td className="text-right py-3 px-2 font-paragraph text-foreground">
+                          <td className="text-right py-3 px-2 font-paragraph text-dark-brown">
                             {formatCurrency(item.interest)}
                           </td>
-                          <td className="text-right py-3 px-2 font-paragraph text-foreground font-semibold">
+                          <td className="text-right py-3 px-2 font-paragraph text-dark-brown font-semibold">
                             {formatCurrency(item.balance)}
                           </td>
                         </tr>
@@ -368,7 +368,7 @@ export default function LoanCalculator() {
                     </tbody>
                   </table>
                 </div>
-                <p className="font-paragraph text-xs text-foreground/50 mt-4">
+                <p className="font-paragraph text-xs text-dark-brown-light mt-4">
                   Showing first 12 months of {duration} month schedule
                 </p>
               </Card>

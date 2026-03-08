@@ -157,7 +157,7 @@ export default function ApplicationPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-dark-brown">
       <Header />
       
       {/* Hero Section */}
