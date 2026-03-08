@@ -105,22 +105,6 @@ export default function HomePage() {
                     Learn More
                   </Link>
                 </div>
-
-                {/* Trust Indicators */}
-                <div className="flex flex-col sm:flex-row gap-8 mt-12 pt-8 border-t border-white/20">
-                  <div className="flex items-center gap-3">
-                    <Shield className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
-                    <span className="font-paragraph text-sm text-white/80">Secure & Transparent</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <TrendingUp className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
-                    <span className="font-paragraph text-sm text-white/80">Proven Track Record</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Zap className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
-                    <span className="font-paragraph text-sm text-white/80">Quick Decisions</span>
-                  </div>
-                </div>
               </motion.div>
             </div>
 
