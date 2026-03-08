@@ -25,19 +25,19 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 
 export default function CreditLinePage() {
   const benefits = [
-    'Competitive interest rates from 5.5% per annum',
-    'Flexible refinancing terms up to 25 years',
-    'Loan amounts from €50,000 to €400,000',
+    'Competitive interest rates from 9.0% per annum + 6 month EURIBOR',
+    'Flexible credit line terms up to 25 years',
+    'Credit amounts from €50,000 to €400,000',
     'Fast approval process within 3-5 business days',
     'No hidden fees or prepayment penalties',
     'Dedicated account manager for personalized support',
   ];
 
   const eligibility = [
-    'Valid identification and proof of income',
-    'Existing mortgage or property equity',
-    'Stable employment or business history',
-    'Clear purpose for refinancing funds',
+    'Valid business registration and proof of business activity',
+    'Existing business credit history',
+    'Stable business history',
+    'Clear purpose for credit line funds',
     'Good credit history and no outstanding defaults',
   ];
 
@@ -66,20 +66,20 @@ export default function CreditLinePage() {
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light rounded-full">
                 <Zap className="h-5 w-5 text-gray-900" />
                 <span className="font-paragraph text-xs font-bold text-gray-900 uppercase tracking-wider">
-                  Refinancing Solutions
+                  Business Credit Lines
                 </span>
               </div>
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">
-                Refinance Your Mortgage for <span className="text-vibrant-yellow">Better Terms</span>
+                Business Credit Lines for <span className="text-vibrant-yellow">Flexibility</span>
               </h1>
               <p className="font-paragraph text-lg md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
-                Lower your monthly payments, access your home equity, or switch to better rates with our refinancing solutions designed to save you money.
+                Access flexible credit lines exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR, draw funds as needed for your business operations.
               </p>
               <Link 
                 to="/application"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
               >
-                Apply for Refinancing
+                Apply for a Credit Line
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </motion.div>
@@ -92,19 +92,19 @@ export default function CreditLinePage() {
             >
               <div className="bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl">
                 <h3 className="font-heading text-3xl mb-8">
-                  Refinancing Overview
+                  Credit Line Overview
                 </h3>
                 <div className="space-y-8">
                   <div>
-                    <p className="font-paragraph text-sm text-gray-700 mb-2">Loan Amount</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">Credit Amount</p>
                     <p className="font-heading text-2xl">€50,000 - €400,000</p>
                   </div>
                   <div>
                     <p className="font-paragraph text-sm text-gray-700 mb-2">Interest Rate</p>
-                    <p className="font-heading text-2xl">From 5.5% per annum</p>
+                    <p className="font-heading text-2xl">From 9.0% + 6M EURIBOR</p>
                   </div>
                   <div>
-                    <p className="font-paragraph text-sm text-gray-700 mb-2">Loan Term</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">Credit Term</p>
                     <p className="font-heading text-2xl">Up to 25 years</p>
                   </div>
                   <div>
@@ -126,7 +126,7 @@ export default function CreditLinePage() {
               Key Benefits
             </h2>
             <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience the flexibility and convenience of refinancing
+              Experience the flexibility and convenience of business credit lines
             </p>
           </FadeIn>
 
@@ -152,17 +152,17 @@ export default function CreditLinePage() {
         <div className="grid grid-cols-12 gap-16">
           <FadeIn className="col-span-12 lg:col-span-6">
             <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-8">
-              What is Refinancing?
+              What is a Business Credit Line?
             </h2>
             <div className="space-y-6">
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                Refinancing is the process of replacing your existing mortgage with a new one, typically to take advantage of better interest rates, lower monthly payments, or to access your home equity. Whether rates have dropped or your financial situation has improved, refinancing can help you save money and achieve your financial goals.
+                A business credit line is a flexible financing solution that provides businesses with access to capital on an as-needed basis. Unlike traditional loans, credit lines allow you to draw funds only when you need them and pay interest only on the amount you use.
               </p>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                Our refinancing solutions offer flexibility to help you achieve various objectives: reduce your monthly payments, shorten your loan term, switch from variable to fixed rates, or access cash for home improvements, debt consolidation, or other major expenses.
+                Our credit lines offer flexibility to help you manage cash flow, handle seasonal variations, or fund unexpected business opportunities. You can draw, repay, and redraw funds throughout the credit line term, making it an ideal solution for growing businesses.
               </p>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                With AVS Finance's refinancing options, you gain the opportunity to optimize your mortgage and improve your financial position. Our experienced team works with you to find the best refinancing solution that matches your specific needs and goals.
+                With AVS Finance's credit lines, you gain the financial flexibility your business needs to thrive. Our experienced team works with you to structure a credit line that matches your specific business needs and growth plans.
               </p>
             </div>
           </FadeIn>
@@ -190,10 +190,10 @@ export default function CreditLinePage() {
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
-              How Refinancing Works
+              How Credit Lines Work
             </h2>
             <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
-              Simple, transparent, and designed for your convenience
+              Simple, transparent, and designed for your business needs
             </p>
           </FadeIn>
 
@@ -202,9 +202,9 @@ export default function CreditLinePage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-gray-900 font-heading text-2xl mb-6 font-bold">
                 1
               </div>
-              <h3 className="font-heading text-2xl text-gray-900 mb-4">Review Your Options</h3>
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Review Your Needs</h3>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                We analyze your current mortgage and present refinancing options that could save you money or achieve your goals.
+                We analyze your business needs and present credit line options tailored to your cash flow requirements.
               </p>
             </FadeIn>
 
@@ -222,9 +222,9 @@ export default function CreditLinePage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-gray-900 font-heading text-2xl mb-6 font-bold">
                 3
               </div>
-              <h3 className="font-heading text-2xl text-gray-900 mb-4">Close & Save</h3>
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Draw & Manage</h3>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                Complete the refinancing process and start enjoying lower payments or better terms immediately.
+                Access your credit line and draw funds as needed for your business operations.
               </p>
             </FadeIn>
           </div>
@@ -241,7 +241,7 @@ export default function CreditLinePage() {
             <div>
               <h3 className="font-heading text-2xl text-gray-900 mb-4">Interest Rates</h3>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                Interest rates start from 10.5% per annum on the outstanding balance. You only pay interest on the amount you actually draw from your credit line, not on the entire approved limit.
+                Interest rates start from 9.0% per annum + 6 month EURIBOR on the outstanding balance. You only pay interest on the amount you actually draw from your credit line, not on the entire approved limit.
               </p>
             </div>
             <div className="border-t border-gray-200 pt-8">
@@ -272,9 +272,9 @@ export default function CreditLinePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-cyan-900 to-blue-900">
+      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-vibrant-yellow rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-[120rem] mx-auto px-6 md:px-12 text-center">
@@ -287,7 +287,7 @@ export default function CreditLinePage() {
             </p>
             <Link 
               to="/application"
-              className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-cyan-400 to-blue-300 text-gray-900 font-paragraph font-semibold text-base rounded-full hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-300"
+              className="inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
             >
               Apply Now
               <ArrowRight className="ml-2 h-5 w-5" />

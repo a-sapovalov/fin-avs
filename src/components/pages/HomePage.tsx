@@ -73,16 +73,16 @@ export default function HomePage() {
                 <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light rounded-full">
                   <span className="w-2 h-2 bg-vibrant-yellow-dark rounded-full" />
                   <span className="font-paragraph text-xs font-bold text-gray-900 uppercase tracking-wider">
-                    Your Dream Home Awaits
+                    Business Financing Solutions
                   </span>
                 </div>
 
                 <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown leading-tight mb-8 tracking-tight">
-                  Find Your Perfect <span className="text-vibrant-yellow">Mortgage</span> Today
+                  Business Financing Made <span className="text-vibrant-yellow">Simple</span>
                 </h1>
 
                 <p className="font-paragraph text-lg md:text-xl text-gray-600 max-w-2xl mb-10 leading-relaxed">
-                  AVS Finance offers competitive mortgage rates and flexible refinancing options to help you achieve homeownership with confidence.
+                  AVS Finance provides competitive business loans and credit lines exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR, with flexible terms tailored to your business needs.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 items-start">
@@ -150,16 +150,16 @@ export default function HomePage() {
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
-              Mortgage Solutions
+              Business Financing Solutions
             </h2>
             <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the mortgage or refinancing option that works best for your situation
+              Choose the business loan or credit line option that works best for your company
             </p>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             
-            {/* Service 1: Mortgages */}
+            {/* Service 1: Business Loans */}
             <FadeIn className="group">
               <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50" />
@@ -169,12 +169,12 @@ export default function HomePage() {
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4">
                       <TrendingUp className="h-7 w-7 text-gray-900" />
                     </div>
-                    <h3 className="font-heading text-3xl text-gray-900 mb-2">Home Mortgages</h3>
-                    <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Long-term financing</p>
+                    <h3 className="font-heading text-3xl text-gray-900 mb-2">Business Loans</h3>
+                    <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Long-term financing for businesses</p>
                   </div>
                   
                   <p className="font-paragraph text-gray-600 mb-8 leading-relaxed flex-grow">
-                    Secure long-term financing for your dream home. Our mortgage programs offer competitive rates and flexible terms tailored to your financial situation.
+                    Secure long-term financing for your business growth. Our loan programs offer competitive rates starting from 9.0% per annum + 6 month EURIBOR with flexible terms tailored to your business needs.
                   </p>
 
                   <div className="space-y-3 mb-8">
@@ -188,7 +188,7 @@ export default function HomePage() {
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-gray-700">Competitive rates from 4.5%</span>
+                      <span className="font-paragraph text-sm text-gray-700">From 9.0% + 6M EURIBOR</span>
                     </div>
                   </div>
 
@@ -203,7 +203,7 @@ export default function HomePage() {
               </div>
             </FadeIn>
 
-            {/* Service 2: Refinance */}
+            {/* Service 2: Credit Lines */}
             <FadeIn className="group" delay={0.1}>
               <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50" />
@@ -213,22 +213,22 @@ export default function HomePage() {
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4">
                       <Zap className="h-7 w-7 text-gray-900" />
                     </div>
-                    <h3 className="font-heading text-3xl text-gray-900 mb-2">Refinancing</h3>
-                    <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Lower your payments</p>
+                    <h3 className="font-heading text-3xl text-gray-900 mb-2">Credit Lines</h3>
+                    <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Flexible working capital</p>
                   </div>
                   
                   <p className="font-paragraph text-gray-600 mb-8 leading-relaxed flex-grow">
-                    Refinance your existing mortgage to get better rates, lower monthly payments, or access your home equity for major expenses.
+                    Access flexible credit lines to manage your business cash flow. Draw funds as needed with competitive rates and pay interest only on what you use.
                   </p>
 
                   <div className="space-y-3 mb-8">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-gray-700">Save on monthly payments</span>
+                      <span className="font-paragraph text-sm text-gray-700">Up to €400,000</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-gray-700">Access home equity</span>
+                      <span className="font-paragraph text-sm text-gray-700">Draw as needed</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -323,10 +323,10 @@ export default function HomePage() {
         <div className="relative z-10 w-full max-w-[120rem] mx-auto px-6 md:px-12 text-center">
           <FadeIn>
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 tracking-tight">
-              Ready to Own Your Home?
+              Ready to Grow Your Business?
             </h2>
             <p className="font-paragraph text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Take the first step towards homeownership with competitive rates and flexible terms designed for you.
+              Take the first step towards business growth with competitive rates and flexible terms designed for your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

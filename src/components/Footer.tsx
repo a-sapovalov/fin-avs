@@ -12,7 +12,10 @@ export default function Footer() {
               AVS <span className="text-vibrant-yellow">Finance</span>
             </h3>
             <p className="font-paragraph text-base text-gray-300 leading-relaxed mb-6">
-              Your trusted partner for mortgage solutions and financial services in Estonia.
+              Your trusted partner for business financing solutions in Estonia.
+            </p>
+            <p className="font-paragraph text-sm text-gray-400 leading-relaxed mb-4">
+              AVS Finance operates under financial institution licence FFA000503 granted by the Financial Intelligence Unit of Estonia.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-gray-400 hover:text-vibrant-yellow transition-colors">
@@ -32,13 +35,13 @@ export default function Footer() {
                 to="/corporate-loan" 
                 className="font-paragraph text-base text-gray-300 hover:text-vibrant-yellow transition-colors duration-300"
               >
-                Mortgages
+                Business Loans
               </Link>
               <Link 
                 to="/credit-line" 
                 className="font-paragraph text-base text-gray-300 hover:text-vibrant-yellow transition-colors duration-300"
               >
-                Refinance
+                Credit Lines
               </Link>
               <Link 
                 to="/about" 

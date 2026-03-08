@@ -25,7 +25,7 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 
 export default function CorporateLoanPage() {
   const benefits = [
-    'Competitive interest rates from 4.5% per annum',
+    'Competitive interest rates from 9.0% per annum + 6 month EURIBOR',
     'Flexible repayment terms up to 30 years',
     'Loan amounts from €50,000 to €500,000',
     'Fast approval process within 3-5 business days',
@@ -34,10 +34,10 @@ export default function CorporateLoanPage() {
   ];
 
   const eligibility = [
-    'Valid identification and proof of income',
+    'Valid business registration and proof of business activity',
     'Minimum credit score requirements',
-    'Stable employment or business history',
-    'Clear purpose for mortgage funds',
+    'Stable business history',
+    'Clear purpose for business loan funds',
     'Good credit history and no outstanding defaults',
   ];
 
@@ -66,20 +66,20 @@ export default function CorporateLoanPage() {
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light rounded-full">
                 <TrendingUp className="h-5 w-5 text-gray-900" />
                 <span className="font-paragraph text-xs font-bold text-gray-900 uppercase tracking-wider">
-                  Home Mortgages
+                  Business Loans
                 </span>
               </div>
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">
-                Mortgage Solutions for Your <span className="text-vibrant-yellow">Dream Home</span>
+                Business Loans for <span className="text-vibrant-yellow">Growth</span>
               </h1>
               <p className="font-paragraph text-lg md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
-                Secure competitive mortgage financing to purchase your dream home with flexible terms and rates tailored to your financial situation.
+                Secure competitive business financing exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR with flexible terms tailored to your business needs.
               </p>
               <Link 
                 to="/application"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
               >
-                Apply for a Mortgage
+                Apply for a Business Loan
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </motion.div>
@@ -92,7 +92,7 @@ export default function CorporateLoanPage() {
             >
               <div className="bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl">
                 <h3 className="font-heading text-3xl mb-8">
-                  Mortgage Overview
+                  Business Loan Overview
                 </h3>
                 <div className="space-y-8">
                   <div>
@@ -101,7 +101,7 @@ export default function CorporateLoanPage() {
                   </div>
                   <div>
                     <p className="font-paragraph text-sm text-gray-700 mb-2">Interest Rate</p>
-                    <p className="font-heading text-2xl">From 4.5% per annum</p>
+                    <p className="font-heading text-2xl">From 9.0% + 6M EURIBOR</p>
                   </div>
                   <div>
                     <p className="font-paragraph text-sm text-gray-700 mb-2">Loan Term</p>
@@ -126,7 +126,7 @@ export default function CorporateLoanPage() {
               Key Benefits
             </h2>
             <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
-              Our mortgage solutions are designed to provide maximum value and flexibility
+              Our business loan solutions are designed to provide maximum value and flexibility
             </p>
           </FadeIn>
 
@@ -152,17 +152,17 @@ export default function CorporateLoanPage() {
         <div className="grid grid-cols-12 gap-16">
           <FadeIn className="col-span-12 lg:col-span-6">
             <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-8">
-              What is a Mortgage?
+              What is a Business Loan?
             </h2>
             <div className="space-y-6">
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                A mortgage is a long-term financing solution designed specifically for homebuyers seeking substantial capital to purchase residential property. Whether you're a first-time buyer or looking to upgrade your home, our mortgages provide competitive rates and flexible terms tailored to your financial situation.
+                A business loan is a long-term financing solution designed specifically for businesses seeking substantial capital for growth, expansion, or operational needs. Whether you're a startup or an established business, our loans provide competitive rates and flexible terms tailored to your business situation.
               </p>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                Unlike short-term financing options, mortgages offer extended repayment periods (up to 30 years) and structured payment schedules that align with your income and life plans. This makes homeownership achievable and affordable for families across Estonia.
+                Our business loans offer extended repayment periods (up to 30 years) and structured payment schedules that align with your business cash flow and growth plans. This makes business financing achievable and affordable for companies across Estonia.
               </p>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                At AVS Finance, we understand that buying a home is one of life's biggest decisions. Our experienced team works closely with you to structure a mortgage that matches your specific needs, ensuring you have the capital and flexibility to achieve your homeownership goals.
+                At AVS Finance, we understand that growing a business requires strategic financing. Our experienced team works closely with you to structure a loan that matches your specific business needs, ensuring you have the capital and flexibility to achieve your business goals.
               </p>
             </div>
           </FadeIn>
@@ -196,19 +196,19 @@ export default function CorporateLoanPage() {
               <div>
                 <h3 className="font-heading text-2xl text-gray-900 mb-4">Interest Rates</h3>
                 <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                  Interest rates start from 4.5% per annum and are determined based on your creditworthiness, loan amount, and repayment term. Fixed and variable rate options are available.
+                  Interest rates start from 9.0% per annum + 6 month EURIBOR and are determined based on your business creditworthiness, loan amount, and repayment term. Fixed and variable rate options are available.
                 </p>
               </div>
               <div className="border-t border-gray-200 pt-8">
                 <h3 className="font-heading text-2xl text-gray-900 mb-4">Repayment Terms</h3>
                 <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                  Flexible repayment schedules ranging from 5 to 30 years. Monthly installments are structured to align with your income and budget. Early repayment is permitted without penalties.
+                  Flexible repayment schedules ranging from 5 to 30 years. Monthly installments are structured to align with your business cash flow and budget. Early repayment is permitted without penalties.
                 </p>
               </div>
               <div className="border-t border-gray-200 pt-8">
-                <h3 className="font-heading text-2xl text-gray-900 mb-4">Down Payment</h3>
+                <h3 className="font-heading text-2xl text-gray-900 mb-4">Collateral Requirements</h3>
                 <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                  Typically 10-20% of the property value is required as a down payment. We offer flexible options for qualified buyers with lower down payment requirements.
+                  Business assets or real estate may be required as collateral depending on the loan amount and your business profile. We work with you to structure collateral arrangements that work for your business.
                 </p>
               </div>
               <div className="border-t border-gray-200 pt-8">
@@ -236,10 +236,10 @@ export default function CorporateLoanPage() {
         <div className="relative z-10 max-w-[120rem] mx-auto px-6 md:px-12 text-center">
           <FadeIn>
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-8">
-              Ready to Own Your Dream Home?
+              Ready to Grow Your Business?
             </h2>
             <p className="font-paragraph text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Start your mortgage application today and take the first step towards homeownership
+              Start your business loan application today and take the first step towards business growth
             </p>
             <Link 
               to="/application"
