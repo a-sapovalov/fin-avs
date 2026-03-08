@@ -45,18 +45,23 @@ export default function HomePage() {
       />
       <Header />
       {/* --- HERO SECTION --- */}
-      <section ref={heroRef} className="relative w-full min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-gradient-to-br from-white via-yellow-50 to-amber-50">
+      <section ref={heroRef} className="relative w-full min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <motion.div 
-            className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-20"
-            animate={{ y: [0, 30, 0] }}
-            transition={{ duration: 8, repeat: Infinity }}
+            className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-15"
+            animate={{ y: [0, 40, 0] }}
+            transition={{ duration: 10, repeat: Infinity }}
           />
           <motion.div 
-            className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-vibrant-yellow to-transparent rounded-full blur-3xl opacity-30"
-            animate={{ y: [0, -30, 0] }}
-            transition={{ duration: 10, repeat: Infinity }}
+            className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-vibrant-yellow to-transparent rounded-full blur-3xl opacity-20"
+            animate={{ y: [0, -40, 0] }}
+            transition={{ duration: 12, repeat: Infinity }}
+          />
+          <motion.div 
+            className="absolute top-1/2 left-0 w-72 h-72 bg-gradient-to-r from-vibrant-yellow-light to-transparent rounded-full blur-3xl opacity-10"
+            animate={{ x: [0, 30, 0] }}
+            transition={{ duration: 8, repeat: Infinity }}
           />
         </div>
 
@@ -64,56 +69,56 @@ export default function HomePage() {
           <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
             
             {/* Hero Content */}
-            <div className="col-span-12 lg:col-span-6 relative">
+            <div className="col-span-12 lg:col-span-7 relative">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
-                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light rounded-full">
-                  <span className="w-2 h-2 bg-vibrant-yellow-dark rounded-full" />
-                  <span className="font-paragraph text-xs font-bold text-gray-900 uppercase tracking-wider">
+                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light/20 border border-vibrant-yellow-light rounded-full">
+                  <span className="w-2 h-2 bg-vibrant-yellow rounded-full" />
+                  <span className="font-paragraph text-xs font-bold text-vibrant-yellow uppercase tracking-wider">
                     Business Financing Solutions
                   </span>
                 </div>
 
-                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown leading-tight mb-8 tracking-tight">
+                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight leading-tight">
                   Business Financing Made <span className="text-vibrant-yellow">Simple</span>
                 </h1>
 
-                <p className="font-paragraph text-lg md:text-xl text-dark-brown-light max-w-2xl mb-10 leading-relaxed">
+                <p className="font-paragraph text-lg md:text-xl text-white/85 mb-10 max-w-2xl leading-relaxed">
                   AVS Finance provides competitive business loans and credit lines exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR, with flexible terms tailored to your business needs.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
                     to="/application"
-                    className="group inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
+                    className="group inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
                   >
                     Get Pre-Approved
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link 
                     to="/about"
-                    className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-gray-300 text-dark-brown font-paragraph font-bold text-base rounded-lg hover:border-vibrant-yellow hover:text-vibrant-yellow transition-all duration-300"
+                    className="inline-flex items-center justify-center px-10 py-4 border-2 border-vibrant-yellow-light text-white font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow/10 hover:border-vibrant-yellow transition-all duration-300"
                   >
                     Learn More
                   </Link>
                 </div>
 
                 {/* Trust Indicators */}
-                <div className="flex flex-col sm:flex-row gap-8 mt-12 pt-8 border-t border-dark-brown-light">
+                <div className="flex flex-col sm:flex-row gap-8 mt-12 pt-8 border-t border-white/20">
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
-                    <span className="font-paragraph text-sm text-dark-brown-light">Fast Approval</span>
+                    <Shield className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
+                    <span className="font-paragraph text-sm text-white/80">Secure & Transparent</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
-                    <span className="font-paragraph text-sm text-dark-brown-light">Competitive Rates</span>
+                    <TrendingUp className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
+                    <span className="font-paragraph text-sm text-white/80">Proven Track Record</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
-                    <span className="font-paragraph text-sm text-dark-brown-light">Expert Support</span>
+                    <Zap className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
+                    <span className="font-paragraph text-sm text-white/80">Quick Decisions</span>
                   </div>
                 </div>
               </motion.div>
@@ -121,23 +126,48 @@ export default function HomePage() {
 
             {/* Hero Visual */}
             <motion.div 
-              className="col-span-12 lg:col-span-6 relative h-full min-h-[400px] flex items-center justify-center"
-              style={{ y: yHero }}
+              className="col-span-12 lg:col-span-5 relative h-full min-h-[300px] flex items-center justify-center"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="relative w-full max-w-md">
+              <div className="relative w-full max-w-sm">
                 <motion.div
-                  animate={{ y: [0, 20, 0] }}
+                  animate={{ y: [0, 25, 0] }}
                   transition={{ duration: 6, repeat: Infinity }}
                   className="relative"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-2xl blur-2xl opacity-30" />
-                  <div className="relative">
-                    <Image
-                      src="https://static.wixstatic.com/media/43558d_5d51498596fe45818a4f43ac96c9449d~mv2.png"
-                      width={400}
-                      className="w-full h-auto object-contain border border-none"
-                      originWidth={1024}
-                      originHeight={1024} />
+                  <div className="absolute inset-0 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-3xl blur-2xl opacity-30" />
+                  <div className="relative bg-gradient-to-br from-vibrant-yellow-light to-vibrant-yellow-dark/20 rounded-3xl p-8 border-2 border-vibrant-yellow-light/50 backdrop-blur-sm">
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                          <LineChart className="h-6 w-6 text-dark-brown" />
+                        </div>
+                        <div>
+                          <p className="font-paragraph text-sm font-bold text-dark-brown">Competitive Rates</p>
+                          <p className="font-paragraph text-xs text-dark-brown-light">From 9.0% + 6M EURIBOR</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                          <Zap className="h-6 w-6 text-dark-brown" />
+                        </div>
+                        <div>
+                          <p className="font-paragraph text-sm font-bold text-dark-brown">Fast Approval</p>
+                          <p className="font-paragraph text-xs text-dark-brown-light">Within 2 working days</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                          <Shield className="h-6 w-6 text-dark-brown" />
+                        </div>
+                        <div>
+                          <p className="font-paragraph text-sm font-bold text-dark-brown">Flexible Terms</p>
+                          <p className="font-paragraph text-xs text-dark-brown-light">Tailored to your needs</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               </div>
