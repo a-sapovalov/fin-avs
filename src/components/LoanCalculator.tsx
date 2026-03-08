@@ -148,13 +148,16 @@ export default function LoanCalculator() {
                   </div>
                   <input
                     type="number"
-                    max="1000000"
                     step="10000"
                     value={creditAmount}
                     onChange={(e) => {
                       const val = Number(e.target.value);
-                      if (val <= 1000000) {
-                        setCreditAmount(val);
+                      setCreditAmount(val);
+                    }}
+                    onBlur={(e) => {
+                      const val = Number(e.target.value);
+                      if (val > 1000000) {
+                        setCreditAmount(1000000);
                       }
                     }}
                     className="w-full mt-3 px-3 py-2 border border-dark-brown/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-dark-brown"
@@ -180,13 +183,16 @@ export default function LoanCalculator() {
                   </div>
                   <input
                     type="number"
-                    max="15"
                     step="0.1"
                     value={annualRate}
                     onChange={(e) => {
                       const val = Number(e.target.value);
-                      if (val <= 15) {
-                        setAnnualRate(val);
+                      setAnnualRate(val);
+                    }}
+                    onBlur={(e) => {
+                      const val = Number(e.target.value);
+                      if (val > 15) {
+                        setAnnualRate(15);
                       }
                     }}
                     className="w-full mt-3 px-3 py-2 border border-dark-brown/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-dark-brown"
@@ -212,13 +218,16 @@ export default function LoanCalculator() {
                   </div>
                   <input
                     type="number"
-                    max="240"
                     step="1"
                     value={duration}
                     onChange={(e) => {
                       const val = Number(e.target.value);
-                      if (val <= 240) {
-                        setDuration(val);
+                      setDuration(val);
+                    }}
+                    onBlur={(e) => {
+                      const val = Number(e.target.value);
+                      if (val > 240) {
+                        setDuration(240);
                       }
                     }}
                     className="w-full mt-3 px-3 py-2 border border-dark-brown/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-dark-brown"
