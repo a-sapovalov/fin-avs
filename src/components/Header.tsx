@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
+// Header with dark brown styling applied
 export default function Header() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
