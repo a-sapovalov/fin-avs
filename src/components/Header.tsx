@@ -29,7 +29,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -53,7 +53,7 @@ export default function Header() {
             to="/application"
             className="hidden lg:inline-flex items-center justify-center px-8 py-2.5 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
           >
-            Get approved for loans
+            Apply
           </Link>
 
           {/* Mobile Menu Button */}
@@ -96,7 +96,7 @@ export default function Header() {
               to="/application"
               className="mt-4 px-8 py-3 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg text-center hover:bg-vibrant-yellow-dark transition-all duration-300"
             >
-              Get approved for loans
+              Apply
             </Link>
           </motion.nav>
         )}
