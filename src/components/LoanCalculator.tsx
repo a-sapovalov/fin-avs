@@ -363,7 +363,7 @@ export default function LoanCalculator() {
                   </table>
                 </div>
                 <p className="font-paragraph text-xs text-dark-brown-light mt-4">
-                  Showing first 12 months of {duration} month schedule
+                  Showing first {duration <= 12 ? duration : 12} months of {duration} month schedule
                 </p>
               </Card>
             </div>
