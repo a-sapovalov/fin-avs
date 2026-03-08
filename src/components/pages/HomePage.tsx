@@ -297,9 +297,7 @@ export default function HomePage() {
                   <Users className="h-6 w-6 text-vibrant-yellow" />
                 </div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-3">Expert Support</h3>
-                <p className="font-paragraph text-dark-brown-light leading-relaxed">
-                  Dedicated relationship manager who understands your needs and recommends the best option.
-                </p>
+                <p className="font-paragraph text-dark-brown-light leading-relaxed">Dedicated manager who understands your needs and recommends the best option.</p>
               </div>
             </FadeIn>
           </div>
