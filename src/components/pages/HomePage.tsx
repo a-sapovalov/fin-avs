@@ -254,7 +254,7 @@ export default function HomePage() {
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           
           <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Why Choose AVS Finance
             </h2>
             <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
@@ -270,8 +270,8 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
                   <Zap className="h-6 w-6 text-vibrant-yellow" />
                 </div>
-                <h3 className="font-heading text-2xl text-gray-900 mb-3">Fast & Flexible</h3>
-                <p className="font-paragraph text-gray-600 leading-relaxed">
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">Fast & Flexible</h3>
+                <p className="font-paragraph text-dark-brown-light leading-relaxed">
                   Get an indicative offer within two working days. We tailor solutions around your needs.
                 </p>
               </div>
@@ -283,8 +283,8 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
                   <LineChart className="h-6 w-6 text-vibrant-yellow" />
                 </div>
-                <h3 className="font-heading text-2xl text-gray-900 mb-3">Competitive Rates</h3>
-                <p className="font-paragraph text-gray-600 leading-relaxed">
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">Competitive Rates</h3>
+                <p className="font-paragraph text-dark-brown-light leading-relaxed">
                   Interest rates from 4.5% per annum with transparent pricing. No hidden fees.
                 </p>
               </div>
@@ -296,8 +296,8 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
                   <Users className="h-6 w-6 text-vibrant-yellow" />
                 </div>
-                <h3 className="font-heading text-2xl text-gray-900 mb-3">Expert Support</h3>
-                <p className="font-paragraph text-gray-600 leading-relaxed">
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">Expert Support</h3>
+                <p className="font-paragraph text-dark-brown-light leading-relaxed">
                   Dedicated relationship manager who understands your needs and recommends the best option.
                 </p>
               </div>
