@@ -148,11 +148,12 @@ export default function LoanCalculator() {
                   </div>
                   <input
                     type="number"
-                    step="10000"
                     value={creditAmount}
                     onChange={(e) => {
                       const val = Number(e.target.value);
-                      setCreditAmount(val);
+                      if (!isNaN(val) && val >= 0) {
+                        setCreditAmount(val);
+                      }
                     }}
                     onBlur={(e) => {
                       const val = Number(e.target.value);
@@ -183,11 +184,12 @@ export default function LoanCalculator() {
                   </div>
                   <input
                     type="number"
-                    step="0.1"
                     value={annualRate}
                     onChange={(e) => {
                       const val = Number(e.target.value);
-                      setAnnualRate(val);
+                      if (!isNaN(val) && val >= 0) {
+                        setAnnualRate(val);
+                      }
                     }}
                     onBlur={(e) => {
                       const val = Number(e.target.value);
@@ -218,11 +220,12 @@ export default function LoanCalculator() {
                   </div>
                   <input
                     type="number"
-                    step="1"
                     value={duration}
                     onChange={(e) => {
                       const val = Number(e.target.value);
-                      setDuration(val);
+                      if (!isNaN(val) && val >= 0) {
+                        setDuration(val);
+                      }
                     }}
                     onBlur={(e) => {
                       const val = Number(e.target.value);
