@@ -308,40 +308,128 @@ export default function HomePage() {
         <LoanCalculator />
       </section>
       {/* --- CTA SECTION --- */}
-      <section className="relative w-full py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://static.wixstatic.com/media/43558d_9fd0ed1bc37f4203910b34748d167c83~mv2.png?originWidth=1280&originHeight=704"
-            alt="Modern Architecture"
-            className="w-full h-full object-cover"
+      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <motion.div 
+            className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-15"
+            animate={{ y: [0, 40, 0] }}
+            transition={{ duration: 10, repeat: Infinity }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-800/95" />
+          <motion.div 
+            className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-vibrant-yellow to-transparent rounded-full blur-3xl opacity-20"
+            animate={{ y: [0, -40, 0] }}
+            transition={{ duration: 12, repeat: Infinity }}
+          />
+          <motion.div 
+            className="absolute top-1/2 left-0 w-72 h-72 bg-gradient-to-r from-vibrant-yellow-light to-transparent rounded-full blur-3xl opacity-10"
+            animate={{ x: [0, 30, 0] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
         </div>
 
-        <div className="relative z-10 w-full max-w-[120rem] mx-auto px-6 md:px-12 text-center">
-          <FadeIn>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white mb-6 tracking-tight">
-              Ready to Grow Your Business?
-            </h2>
-            <p className="font-paragraph text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Take the first step towards business growth with competitive rates and flexible terms designed for your success.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/application"
-                className="inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
-              >
-                Start Your Application
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
-                to="/about"
-                className="inline-flex items-center justify-center px-10 py-4 border-2 border-white/30 text-white font-paragraph font-bold text-base rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Learn More
-              </Link>
+        <div className="relative z-10 w-full max-w-[120rem] mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
+            {/* Content */}
+            <div className="col-span-12 lg:col-span-7">
+              <FadeIn>
+                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light/20 border border-vibrant-yellow-light rounded-full">
+                  <span className="w-2 h-2 bg-vibrant-yellow rounded-full" />
+                  <span className="font-paragraph text-xs font-bold text-vibrant-yellow uppercase tracking-wider">
+                    Ready to Take Action
+                  </span>
+                </div>
+
+                <h2 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight leading-tight">
+                  Ready to Grow Your <span className="text-vibrant-yellow">Business?</span>
+                </h2>
+                <p className="font-paragraph text-lg md:text-xl text-white/85 mb-10 max-w-2xl leading-relaxed">
+                  Take the first step towards business growth with competitive rates and flexible terms designed for your success. Our expert team is ready to help you find the perfect financing solution.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link 
+                    to="/application"
+                    className="group inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
+                  >
+                    Start Your Application
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                  <Link 
+                    to="/about"
+                    className="inline-flex items-center justify-center px-10 py-4 border-2 border-vibrant-yellow-light text-white font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow/10 hover:border-vibrant-yellow transition-all duration-300"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+
+                {/* Trust Indicators */}
+                <div className="flex flex-col sm:flex-row gap-8 mt-12 pt-8 border-t border-white/20">
+                  <div className="flex items-center gap-3">
+                    <Shield className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
+                    <span className="font-paragraph text-sm text-white/80">Secure & Transparent</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <TrendingUp className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
+                    <span className="font-paragraph text-sm text-white/80">Proven Track Record</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Zap className="h-5 w-5 text-vibrant-yellow flex-shrink-0" />
+                    <span className="font-paragraph text-sm text-white/80">Quick Decisions</span>
+                  </div>
+                </div>
+              </FadeIn>
             </div>
-          </FadeIn>
+
+            {/* Visual Element */}
+            <motion.div 
+              className="col-span-12 lg:col-span-5 relative h-full min-h-[300px] flex items-center justify-center"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, margin: "-50px" }}
+            >
+              <div className="relative w-full max-w-sm">
+                <motion.div
+                  animate={{ y: [0, 25, 0] }}
+                  transition={{ duration: 6, repeat: Infinity }}
+                  className="relative"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-3xl blur-2xl opacity-30" />
+                  <div className="relative bg-gradient-to-br from-vibrant-yellow-light to-vibrant-yellow-dark/20 rounded-3xl p-8 border-2 border-vibrant-yellow-light/50 backdrop-blur-sm">
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                          <LineChart className="h-6 w-6 text-dark-brown" />
+                        </div>
+                        <div>
+                          <p className="font-paragraph text-sm font-bold text-dark-brown">Competitive Rates</p>
+                          <p className="font-paragraph text-xs text-dark-brown-light">From 9.0% + 6M EURIBOR</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                          <Zap className="h-6 w-6 text-dark-brown" />
+                        </div>
+                        <div>
+                          <p className="font-paragraph text-sm font-bold text-dark-brown">Fast Approval</p>
+                          <p className="font-paragraph text-xs text-dark-brown-light">Within 2 working days</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                          <Shield className="h-6 w-6 text-dark-brown" />
+                        </div>
+                        <div>
+                          <p className="font-paragraph text-sm font-bold text-dark-brown">Flexible Terms</p>
+                          <p className="font-paragraph text-xs text-dark-brown-light">Tailored to your needs</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
       <Footer />
