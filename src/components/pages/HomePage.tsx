@@ -167,34 +167,34 @@ export default function HomePage() {
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
                   <div className="mb-6">
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4">
-                      <TrendingUp className="h-7 w-7 text-gray-900" />
+                      <TrendingUp className="h-7 w-7 text-dark-brown" />
                     </div>
-                    <h3 className="font-heading text-3xl text-gray-900 mb-2">Business Loans</h3>
+                    <h3 className="font-heading text-3xl text-dark-brown mb-2">Business Loans</h3>
                     <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Long-term financing for businesses</p>
                   </div>
                   
-                  <p className="font-paragraph text-gray-600 mb-8 leading-relaxed flex-grow">
+                  <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
                     Secure long-term financing for your business growth. Our loan programs offer competitive rates starting from 9.0% per annum + 6 month EURIBOR with flexible terms tailored to your business needs.
                   </p>
 
                   <div className="space-y-3 mb-8">
                     <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-gray-700">Up to €500,000</span>
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Up to €500,000</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-gray-700">Flexible repayment terms</span>
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Flexible repayment terms</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-gray-700">From 9.0% + 6M EURIBOR</span>
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">From 9.0% + 6M EURIBOR</span>
                     </div>
                   </div>
 
                   <Link 
                     to="/corporate-loan"
-                    className="inline-flex items-center text-gray-900 font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
+                    className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
                   >
                     Learn More
                     <ArrowRight className="h-5 w-5 transition-transform" />
@@ -211,34 +211,34 @@ export default function HomePage() {
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
                   <div className="mb-6">
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4">
-                      <Zap className="h-7 w-7 text-gray-900" />
+                      <Zap className="h-7 w-7 text-dark-brown" />
                     </div>
-                    <h3 className="font-heading text-3xl text-gray-900 mb-2">Credit Lines</h3>
+                    <h3 className="font-heading text-3xl text-dark-brown mb-2">Credit Lines</h3>
                     <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Flexible working capital</p>
                   </div>
                   
-                  <p className="font-paragraph text-gray-600 mb-8 leading-relaxed flex-grow">
+                  <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
                     Access flexible credit lines to manage your business cash flow. Draw funds as needed with competitive rates and pay interest only on what you use.
                   </p>
 
                   <div className="space-y-3 mb-8">
                     <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-gray-700">Up to €400,000</span>
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Up to €400,000</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-gray-700">Draw as needed</span>
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Draw as needed</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-gray-700">Fast approval process</span>
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Fast approval process</span>
                     </div>
                   </div>
 
                   <Link 
                     to="/credit-line"
-                    className="inline-flex items-center text-gray-900 font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
+                    className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
                   >
                     Learn More
                     <ArrowRight className="h-5 w-5 transition-transform" />
@@ -257,7 +257,7 @@ export default function HomePage() {
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Why Choose AVS Finance
             </h2>
-            <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl mx-auto">
               We combine financial expertise with a deep understanding of the Estonian market
             </p>
           </FadeIn>
