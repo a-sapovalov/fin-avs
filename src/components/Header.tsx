@@ -28,33 +28,35 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`font-paragraph text-sm font-semibold transition-all duration-300 relative group ${
-                  isActive(link.path)
-                    ? 'text-vibrant-yellow'
-                    : 'text-dark-brown hover:text-vibrant-yellow'
-                }`}
-              >
-                {link.label}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-vibrant-yellow transition-all duration-300 ${
-                  isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} />
-              </Link>
-            ))}
-          </nav>
+          {/* Desktop Navigation - Right aligned with buttons */}
+          <div className="hidden lg:flex items-center gap-4">
+            <nav className="flex items-center gap-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`font-paragraph text-sm font-semibold transition-all duration-300 relative group ${
+                    isActive(link.path)
+                      ? 'text-vibrant-yellow'
+                      : 'text-dark-brown hover:text-vibrant-yellow'
+                  }`}
+                >
+                  {link.label}
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-vibrant-yellow transition-all duration-300 ${
+                    isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`} />
+                </Link>
+              ))}
+            </nav>
 
-          {/* CTA Button */}
-          <Link 
-            to="/application"
-            className="hidden lg:inline-flex items-center justify-center px-8 py-2.5 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
-          >
-            Apply
-          </Link>
+            {/* CTA Button */}
+            <Link 
+              to="/application"
+              className="inline-flex items-center justify-center px-8 py-2.5 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
+            >
+              Apply
+            </Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
