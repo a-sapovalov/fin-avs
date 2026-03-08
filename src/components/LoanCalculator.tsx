@@ -136,7 +136,6 @@ export default function LoanCalculator() {
                   </label>
                   <input
                     type="range"
-                    min="10000"
                     max="1000000"
                     step="10000"
                     value={creditAmount}
@@ -144,18 +143,17 @@ export default function LoanCalculator() {
                     className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
                   />
                   <div className="flex justify-between font-paragraph text-sm text-dark-brown-light mt-2">
-                    <span>€10,000</span>
+                    <span>€0</span>
                     <span>€1,000,000</span>
                   </div>
                   <input
                     type="number"
-                    min="10000"
                     max="1000000"
                     step="10000"
                     value={creditAmount}
                     onChange={(e) => {
                       const val = Number(e.target.value);
-                      if (val >= 10000 && val <= 1000000) {
+                      if (val <= 1000000) {
                         setCreditAmount(val);
                       }
                     }}
@@ -170,7 +168,6 @@ export default function LoanCalculator() {
                   </label>
                   <input
                     type="range"
-                    min="9"
                     max="15"
                     step="0.1"
                     value={annualRate}
@@ -178,18 +175,17 @@ export default function LoanCalculator() {
                     className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
                   />
                   <div className="flex justify-between font-paragraph text-sm text-dark-brown-light mt-2">
-                    <span>9%</span>
+                    <span>0%</span>
                     <span>15%</span>
                   </div>
                   <input
                     type="number"
-                    min="9"
                     max="15"
                     step="0.1"
                     value={annualRate}
                     onChange={(e) => {
                       const val = Number(e.target.value);
-                      if (val >= 9 && val <= 15) {
+                      if (val <= 15) {
                         setAnnualRate(val);
                       }
                     }}
@@ -204,7 +200,6 @@ export default function LoanCalculator() {
                   </label>
                   <input
                     type="range"
-                    min="3"
                     max="240"
                     step="1"
                     value={duration}
@@ -212,18 +207,17 @@ export default function LoanCalculator() {
                     className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
                   />
                   <div className="flex justify-between font-paragraph text-sm text-dark-brown-light mt-2">
-                    <span>3 months</span>
+                    <span>0 months</span>
                     <span>240 months</span>
                   </div>
                   <input
                     type="number"
-                    min="3"
                     max="240"
                     step="1"
                     value={duration}
                     onChange={(e) => {
                       const val = Number(e.target.value);
-                      if (val >= 3 && val <= 240) {
+                      if (val <= 240) {
                         setDuration(val);
                       }
                     }}
