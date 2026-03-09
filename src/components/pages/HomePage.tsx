@@ -89,57 +89,109 @@ export default function HomePage() {
       />
       <Header />
       {/* --- HERO SECTION --- */}
-      <section ref={heroRef} className="relative w-full min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-white">
-        {/* Subtle background gradient */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-vibrant-yellow-light rounded-full blur-3xl opacity-10" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-vibrant-yellow-light rounded-full blur-3xl opacity-5" />
+      <section ref={heroRef} className="relative w-full min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          {/* Floating orbs with complex animations */}
+          <motion.div 
+            className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-15"
+            animate={{ 
+              y: [0, 40, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.1, 1]
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div 
+            className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-vibrant-yellow to-transparent rounded-full blur-3xl opacity-20"
+            animate={{ 
+              y: [0, -40, 0],
+              x: [0, -15, 0],
+              scale: [1, 0.95, 1]
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div 
+            className="absolute top-1/2 left-0 w-72 h-72 bg-gradient-to-r from-vibrant-yellow-light to-transparent rounded-full blur-3xl opacity-10"
+            animate={{ 
+              x: [0, 30, 0],
+              y: [0, 15, 0],
+              scale: [1, 1.05, 1]
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          {/* Additional subtle orb */}
+          <motion.div 
+            className="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-bl from-vibrant-yellow-light to-transparent rounded-full blur-3xl opacity-5"
+            animate={{ 
+              y: [0, -30, 0],
+              x: [0, 25, 0]
+            }}
+            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+          />
         </div>
 
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
             
-            {/* Hero Content - Left Side */}
-            <div className="col-span-12 lg:col-span-6 relative">
+            {/* Hero Content */}
+            <div className="col-span-12 lg:col-span-7 relative">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
                 <motion.div 
-                  className="inline-flex items-center gap-2 mb-6"
-                  initial={{ opacity: 0, scale: 0.9 }}
+                  className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light/20 border border-vibrant-yellow-light rounded-full"
+                  initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <span className="font-paragraph text-sm font-bold text-vibrant-yellow uppercase tracking-wider">
-                    Smart Business Financing
+                  <motion.span 
+                    className="w-2 h-2 bg-vibrant-yellow rounded-full" 
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  />
+                  <span className="font-paragraph text-xs font-bold text-vibrant-yellow uppercase tracking-wider">
+                    Business Financing Solutions
                   </span>
                 </motion.div>
 
                 <motion.h1 
-                  className="font-heading text-6xl md:text-7xl lg:text-8xl text-dark-brown mb-8 tracking-tight leading-tight"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  Grow Your Business
-                </motion.h1>
-
-                <motion.p 
-                  className="font-paragraph text-lg md:text-xl text-dark-brown-light mb-12 max-w-xl leading-relaxed"
+                  className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight leading-tight"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                  Access competitive business loans and flexible credit lines tailored to your company's growth. Fast approval, transparent pricing, and dedicated support.
+                  Business Financing Made <motion.span 
+                    className="text-vibrant-yellow inline-block"
+                    animate={{ 
+                      textShadow: [
+                        "0px 0px 0px rgba(230, 203, 163, 0)",
+                        "0px 0px 20px rgba(230, 203, 163, 0.5)",
+                        "0px 0px 0px rgba(230, 203, 163, 0)"
+                      ]
+                    }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  >
+                    Simple
+                  </motion.span>
+                </motion.h1>
+
+                <motion.p 
+                  className="font-paragraph text-lg md:text-xl text-white/85 mb-10 max-w-2xl leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  AVS Finance provides competitive business loans and credit lines exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR, with flexible terms tailored to your business needs.
                 </motion.p>
 
                 <motion.div 
                   className="flex flex-col sm:flex-row gap-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
@@ -147,9 +199,9 @@ export default function HomePage() {
                   >
                     <Link 
                       to="/application"
-                      className="group inline-flex items-center justify-center px-10 py-4 bg-dark-brown text-white font-paragraph font-bold text-base rounded-lg hover:bg-dark-brown-light transition-all duration-300"
+                      className="group inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
                     >
-                      Get Started
+                      Get Pre-Approved
                       <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </motion.div>
@@ -159,102 +211,56 @@ export default function HomePage() {
                   >
                     <Link 
                       to="/about"
-                      className="inline-flex items-center justify-center px-10 py-4 border-2 border-dark-brown text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-dark-brown hover:text-white transition-all duration-300"
+                      className="inline-flex items-center justify-center px-10 py-4 border-2 border-vibrant-yellow-light text-white font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow/10 hover:border-vibrant-yellow transition-all duration-300"
                     >
                       Learn More
                     </Link>
                   </motion.div>
                 </motion.div>
-
-                {/* Trust indicators */}
-                <motion.div 
-                  className="mt-16 flex flex-col sm:flex-row gap-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                >
-                  {[
-                    { label: "Fast Approval", value: "2 Days" },
-                    { label: "Competitive Rates", value: "From 9.0%" },
-                    { label: "Up to", value: "€500K" }
-                  ].map((stat, idx) => (
-                    <div key={idx} className="flex flex-col">
-                      <span className="font-heading text-2xl md:text-3xl text-dark-brown font-bold">{stat.value}</span>
-                      <span className="font-paragraph text-sm text-dark-brown-light">{stat.label}</span>
-                    </div>
-                  ))}
-                </motion.div>
               </motion.div>
             </div>
 
-            {/* Hero Visual - Right Side */}
+            {/* Hero Visual */}
             <motion.div 
-              className="col-span-12 lg:col-span-6 relative h-full min-h-[400px] flex items-center justify-center"
+              className="col-span-12 lg:col-span-5 relative h-full min-h-[300px] flex items-center justify-center"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <motion.div 
-                className="relative w-full h-full flex items-center justify-center"
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="relative w-full max-w-sm"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
-                {/* Main card with features */}
-                <div className="relative w-full max-w-md">
+                <div className="relative">
                   <motion.div 
-                    className="absolute inset-0 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-3xl blur-2xl opacity-20"
-                    animate={{ scale: [1, 1.05, 1] }}
-                    transition={{ duration: 4, repeat: Infinity }}
+                    className="absolute inset-0 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-3xl blur-2xl opacity-30"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 3, repeat: Infinity }}
                   />
-                  
-                  <div className="relative bg-white rounded-3xl p-10 shadow-2xl border border-vibrant-yellow-light">
-                    {/* Decorative accent */}
-                    <div className="absolute top-0 right-0 w-24 h-24 bg-vibrant-yellow-light rounded-bl-3xl opacity-30" />
-                    
-                    <div className="relative space-y-8">
-                      <div>
-                        <h3 className="font-heading text-2xl text-dark-brown mb-2">Why Choose AVS</h3>
-                        <p className="font-paragraph text-sm text-dark-brown-light">Everything you need for business growth</p>
-                      </div>
-
-                      <div className="space-y-4">
-                        {[
-                          { icon: Zap, title: "Instant Decisions", desc: "Get approved in 2 working days" },
-                          { icon: LineChart, title: "Competitive Rates", desc: "Transparent pricing, no hidden fees" },
-                          { icon: Shield, title: "Flexible Terms", desc: "Customized for your business" }
-                        ].map((item, idx) => (
-                          <motion.div 
-                            key={idx}
-                            className="flex items-start gap-4"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.5 + idx * 0.1 }}
-                          >
-                            <div className="w-10 h-10 bg-vibrant-yellow rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                              <item.icon className="h-5 w-5 text-dark-brown" />
-                            </div>
-                            <div>
-                              <p className="font-paragraph text-sm font-bold text-dark-brown">{item.title}</p>
-                              <p className="font-paragraph text-xs text-dark-brown-light">{item.desc}</p>
-                            </div>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                      <motion.div
-                        className="pt-4 border-t border-vibrant-yellow-light"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.8, delay: 0.8 }}
-                      >
-                        <Link 
-                          to="/corporate-loan"
-                          className="inline-flex items-center text-dark-brown font-paragraph font-bold text-sm hover:text-vibrant-yellow transition-colors duration-300 group"
+                  <div className="relative bg-vibrant-yellow-light rounded-3xl p-8 backdrop-blur-sm opacity-[1] border-[#f0ddb880] border border-none">
+                    <div className="space-y-6">
+                      {[
+                        { icon: LineChart, title: "Competitive Rates", subtitle: "From 9.0% + 6M EURIBOR" },
+                        { icon: Zap, title: "Fast Approval", subtitle: "Within 2 working days" },
+                        { icon: Shield, title: "Flexible Terms", subtitle: "Tailored to your needs" }
+                      ].map((item, idx) => (
+                        <motion.div 
+                          key={idx}
+                          className="flex items-center gap-4"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.6, delay: 0.6 + idx * 0.1 }}
                         >
-                          Explore Business Loans
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
-                      </motion.div>
+                          <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                            <item.icon className="h-6 w-6 text-dark-brown" />
+                          </div>
+                          <div>
+                            <p className="font-paragraph text-sm font-bold text-dark-brown">{item.title}</p>
+                            <p className="font-paragraph text-xs text-dark-brown-light">{item.subtitle}</p>
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
                   </div>
                 </div>
