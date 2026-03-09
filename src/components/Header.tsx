@@ -19,8 +19,8 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white border-b-2 border-vibrant-yellow sticky top-0 z-50 shadow-md">
-      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4">
-        <div className="flex items-center justify-between">
+      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4 bg-secondary">
+        <div className="flex items-center justify-between bg-secondary">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <Image 
@@ -30,9 +30,7 @@ export default function Header() {
               height={50}
               className="h-12 w-auto"
             />
-            <span className="font-heading text-2xl font-bold text-dark-brown hidden sm:inline">
-              AVS
-            </span>
+
           </Link>
 
           {/* Desktop Navigation - Right aligned with buttons */}
@@ -59,7 +57,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link 
               to="/application"
-              className="inline-flex items-center justify-center px-8 py-2.5 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
+              className="inline-flex items-center justify-center px-8 py-2.5 font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40 bg-primary text-primary-foreground"
             >
               Apply
             </Link>
