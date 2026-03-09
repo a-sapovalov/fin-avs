@@ -119,13 +119,13 @@ export default function CorporateLoanPage() {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="w-full bg-gray-50 py-24 md:py-32">
+      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Key Benefits
             </h2>
-            <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
               Our business loan solutions are designed to provide maximum value and flexibility
             </p>
           </FadeIn>
@@ -186,16 +186,16 @@ export default function CorporateLoanPage() {
       </section>
 
       {/* Terms and Conditions Section */}
-      <section className="w-full bg-gray-50 py-24 md:py-32">
+      <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn>
-            <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-12">
+            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-12">
               Terms and Conditions
             </h2>
-            <div className="bg-white p-8 md:p-12 rounded-2xl border border-gray-100 space-y-8">
+            <div className="bg-vibrant-yellow-light p-8 md:p-12 rounded-2xl border-2 border-vibrant-yellow space-y-8">
               <div>
-                <h3 className="font-heading text-2xl text-gray-900 mb-4">Interest Rates</h3>
-                <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
+                <h3 className="font-heading text-2xl text-dark-brown mb-4">Interest Rates</h3>
+                <p className="font-paragraph text-lg text-dark-brown leading-relaxed">
                   Interest rates start from 9.0% per annum + 6 month EURIBOR and are determined based on your business creditworthiness, loan amount, and repayment term. Fixed and variable rate options are available.
                 </p>
               </div>

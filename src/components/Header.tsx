@@ -22,9 +22,16 @@ export default function Header() {
       <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <span className="font-heading text-3xl font-bold text-dark-brown">
-              AVS <span className="text-vibrant-yellow">Finance</span>
+          <Link to="/" className="flex items-center gap-3">
+            <Image 
+              src="https://static.wixstatic.com/media/43558d_318c13d0a59e4565bc0b1d7942fefecd~mv2.png"
+              alt="AVS Finance Logo"
+              width={50}
+              height={50}
+              className="h-12 w-auto"
+            />
+            <span className="font-heading text-2xl font-bold text-dark-brown hidden sm:inline">
+              AVS
             </span>
           </Link>
 

@@ -160,13 +160,13 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- SERVICES SECTION --- */}
-      <section className="relative w-full bg-gray-50 py-24 md:py-32">
+      <section className="relative w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Business Financing Solutions
             </h2>
-            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
               Choose the business loan or credit line option that works best for your company
             </p>
           </FadeIn>

@@ -119,13 +119,13 @@ export default function CreditLinePage() {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="w-full bg-gray-50 py-24 md:py-32">
+      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Key Benefits
             </h2>
-            <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
               Experience the flexibility and convenience of business credit lines
             </p>
           </FadeIn>
@@ -186,20 +186,20 @@ export default function CreditLinePage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="w-full bg-gray-50 py-24 md:py-32">
+      <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               How Credit Lines Work
             </h2>
-            <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
               Simple, transparent, and designed for your business needs
             </p>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FadeIn className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-gray-900 font-heading text-2xl mb-6 font-bold">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-dark-brown font-heading text-2xl mb-6 font-bold">
                 1
               </div>
               <h3 className="font-heading text-2xl text-gray-900 mb-4">Review Your Needs</h3>
@@ -267,12 +267,12 @@ export default function CreditLinePage() {
       </section>
 
       {/* Loan Calculator Section */}
-      <section className="w-full bg-gray-50 py-24 md:py-32">
+      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <LoanCalculator />
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
+      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-dark-brown to-dark-brown-light">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-vibrant-yellow rounded-full blur-3xl" />
         </div>

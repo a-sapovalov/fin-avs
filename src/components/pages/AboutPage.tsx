@@ -158,13 +158,13 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="w-full bg-gray-50 py-24 md:py-32">
+      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Our Journey
             </h2>
-            <p className="font-paragraph text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
               A decade of growth, innovation, and partnership
             </p>
           </FadeIn>
@@ -229,41 +229,41 @@ export default function AboutPage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="w-full bg-gray-50 py-24 md:py-32">
+      <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Why Businesses Choose AVS Finance
             </h2>
           </FadeIn>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <FadeIn className="bg-white p-10 md:p-12 rounded-2xl border border-gray-100 hover:border-blue-300 hover:shadow-lg transition-all duration-300 h-full">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl mb-6">
-                <Zap className="h-7 w-7 text-blue-600" />
+            <FadeIn className="bg-vibrant-yellow-light p-10 md:p-12 rounded-2xl border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark hover:shadow-lg transition-all duration-300 h-full">
+              <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-xl mb-6">
+                <Zap className="h-7 w-7 text-dark-brown" />
               </div>
-              <h3 className="font-heading text-2xl text-gray-900 mb-6">
+              <h3 className="font-heading text-2xl text-dark-brown mb-6">
                 Local Expertise, Global Standards
               </h3>
-              <p className="font-paragraph text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="font-paragraph text-lg text-dark-brown leading-relaxed mb-6">
                 We understand the Estonian business landscape intimately while maintaining international best practices in corporate finance. Our team combines local market knowledge with global financial expertise.
               </p>
-              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
+              <p className="font-paragraph text-lg text-dark-brown leading-relaxed">
                 This unique combination allows us to provide solutions that are both relevant to your local context and competitive on a global scale.
               </p>
             </FadeIn>
 
-            <FadeIn className="bg-white p-10 md:p-12 rounded-2xl border border-gray-100 hover:border-cyan-300 hover:shadow-lg transition-all duration-300 h-full" delay={0.1}>
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl mb-6">
-                <Users className="h-7 w-7 text-cyan-600" />
+            <FadeIn className="bg-vibrant-yellow-light p-10 md:p-12 rounded-2xl border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark hover:shadow-lg transition-all duration-300 h-full" delay={0.1}>
+              <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-xl mb-6">
+                <Users className="h-7 w-7 text-dark-brown" />
               </div>
-              <h3 className="font-heading text-2xl text-gray-900 mb-6">
+              <h3 className="font-heading text-2xl text-dark-brown mb-6">
                 Personalized Approach
               </h3>
-              <p className="font-paragraph text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="font-paragraph text-lg text-dark-brown leading-relaxed mb-6">
                 We don't believe in one-size-fits-all solutions. Every business is unique, and so are our financing packages. Our dedicated account managers work closely with you to understand your specific needs and goals.
               </p>
-              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
+              <p className="font-paragraph text-lg text-dark-brown leading-relaxed">
                 From application to approval and beyond, you'll have a trusted advisor by your side every step of the way.
               </p>
             </FadeIn>
@@ -272,7 +272,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-blue-900 to-cyan-900">
+      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-dark-brown to-dark-brown-light">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
         </div>
