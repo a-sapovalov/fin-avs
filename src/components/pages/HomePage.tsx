@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-mo
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LoanCalculator from '@/components/LoanCalculator';
+import AnimatedGraph from '@/components/AnimatedGraph';
 
 const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode, delay?: number, className?: string }) => {
   const ref = useRef(null);
@@ -220,7 +221,7 @@ export default function HomePage() {
               </motion.div>
             </div>
 
-            {/* Hero Visual */}
+            {/* Hero Visual - Animated Graph */}
             <motion.div 
               className="col-span-12 lg:col-span-5 relative h-full min-h-[300px] flex items-center justify-center"
               initial={{ opacity: 0, x: 50 }}
@@ -228,40 +229,18 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <motion.div 
-                className="relative w-full max-w-sm"
+                className="relative w-full max-w-sm h-80"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
-                <div className="relative">
+                <div className="relative h-full">
                   <motion.div 
                     className="absolute inset-0 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-3xl blur-2xl opacity-30"
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 3, repeat: Infinity }}
                   />
-                  <div className="relative bg-vibrant-yellow-light rounded-3xl p-8 backdrop-blur-sm opacity-[1] border-[#f0ddb880] border border-none">
-                    <div className="space-y-6">
-                      {[
-                        { icon: LineChart, title: "Competitive Rates", subtitle: "From 9.0% + 6M EURIBOR" },
-                        { icon: Zap, title: "Fast Approval", subtitle: "Within 2 working days" },
-                        { icon: Shield, title: "Flexible Terms", subtitle: "Tailored to your needs" }
-                      ].map((item, idx) => (
-                        <motion.div 
-                          key={idx}
-                          className="flex items-center gap-4"
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.6, delay: 0.6 + idx * 0.1 }}
-                        >
-                          <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
-                            <item.icon className="h-6 w-6 text-dark-brown" />
-                          </div>
-                          <div>
-                            <p className="font-paragraph text-sm font-bold text-dark-brown">{item.title}</p>
-                            <p className="font-paragraph text-xs text-dark-brown-light">{item.subtitle}</p>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
+                  <div className="relative bg-gradient-to-br from-dark-brown-light to-dark-brown rounded-3xl p-8 backdrop-blur-sm h-full flex items-center justify-center border border-vibrant-yellow-light/20">
+                    <AnimatedGraph />
                   </div>
                 </div>
               </motion.div>
