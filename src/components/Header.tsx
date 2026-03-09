@@ -27,9 +27,9 @@ export default function Header() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="w-full bg-white border-b-2 border-vibrant-yellow sticky top-0 z-50 shadow-md">
-      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4 bg-primary">
-        <div className="flex items-center justify-between bg-primary">
+    <header className="w-full bg-dark-brown border-b-2 border-vibrant-yellow sticky top-0 z-50 shadow-lg">
+      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4 bg-dark-brown">
+        <div className="flex items-center justify-between bg-dark-brown">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <Image 
@@ -103,7 +103,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link 
               to="/application"
-              className="inline-flex items-center justify-center px-8 py-2.5 font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40 bg-primary text-primary-foreground"
+              className="inline-flex items-center justify-center px-8 py-2.5 font-paragraph text-sm font-bold rounded-lg bg-vibrant-yellow text-dark-brown hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
             >
               Apply
             </Link>
@@ -111,7 +111,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-dark-brown"
+            className="lg:hidden text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -139,7 +139,7 @@ export default function Header() {
                 className={`font-paragraph text-base py-2 transition-colors duration-300 ${
                   isActive(link.path)
                     ? 'text-vibrant-yellow font-semibold'
-                    : 'text-dark-brown hover:text-vibrant-yellow'
+                    : 'text-white hover:text-vibrant-yellow'
                 }`}
               >
                 {link.label}
@@ -148,7 +148,7 @@ export default function Header() {
             
             {/* Mobile Language Selector */}
             <div className="border-t border-vibrant-yellow pt-4 mt-4">
-              <div className="font-paragraph text-sm font-semibold text-dark-brown mb-2">Language</div>
+              <div className="font-paragraph text-sm font-semibold text-white mb-2">Language</div>
               <div className="flex gap-2">
                 {languages.map((lang) => (
                   <button

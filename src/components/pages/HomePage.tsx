@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
-import { ArrowRight, TrendingUp, Users, LineChart, CheckCircle, Zap, Shield } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, LineChart, CheckCircle, Zap, Shield, Sparkles, BarChart3, Rocket } from 'lucide-react';
 import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -84,17 +84,17 @@ export default function HomePage() {
     <div className="min-h-screen bg-white text-dark-brown overflow-x-clip">
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-vibrant-yellow origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-vibrant-yellow via-accent-blue to-accent-teal origin-left z-50"
         style={{ scaleX }}
       />
       <Header />
       {/* --- HERO SECTION --- */}
-      <section ref={heroRef} className="relative w-full min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown">
+      <section ref={heroRef} className="relative w-full min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown-light">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           {/* Floating orbs with complex animations */}
           <motion.div 
-            className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-15"
+            className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-accent-blue to-accent-teal rounded-full blur-3xl opacity-20"
             animate={{ 
               y: [0, 40, 0],
               x: [0, 20, 0],
@@ -103,7 +103,7 @@ export default function HomePage() {
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div 
-            className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-vibrant-yellow to-transparent rounded-full blur-3xl opacity-20"
+            className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-vibrant-yellow to-transparent rounded-full blur-3xl opacity-15"
             animate={{ 
               y: [0, -40, 0],
               x: [0, -15, 0],
@@ -112,7 +112,7 @@ export default function HomePage() {
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div 
-            className="absolute top-1/2 left-0 w-72 h-72 bg-gradient-to-r from-vibrant-yellow-light to-transparent rounded-full blur-3xl opacity-10"
+            className="absolute top-1/2 left-0 w-72 h-72 bg-gradient-to-r from-accent-blue to-transparent rounded-full blur-3xl opacity-10"
             animate={{ 
               x: [0, 30, 0],
               y: [0, 15, 0],
@@ -122,7 +122,7 @@ export default function HomePage() {
           />
           {/* Additional subtle orb */}
           <motion.div 
-            className="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-bl from-vibrant-yellow-light to-transparent rounded-full blur-3xl opacity-5"
+            className="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-bl from-accent-teal to-transparent rounded-full blur-3xl opacity-5"
             animate={{ 
               y: [0, -30, 0],
               x: [0, 25, 0]
@@ -167,9 +167,9 @@ export default function HomePage() {
                     className="text-vibrant-yellow inline-block"
                     animate={{ 
                       textShadow: [
-                        "0px 0px 0px rgba(230, 203, 163, 0)",
-                        "0px 0px 20px rgba(230, 203, 163, 0.5)",
-                        "0px 0px 0px rgba(230, 203, 163, 0)"
+                        "0px 0px 0px rgba(255, 215, 0, 0)",
+                        "0px 0px 20px rgba(255, 215, 0, 0.5)",
+                        "0px 0px 0px rgba(255, 215, 0, 0)"
                       ]
                     }}
                     transition={{ duration: 3, repeat: Infinity }}
@@ -270,13 +270,13 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- SERVICES SECTION --- */}
-      <section className="relative w-full bg-vibrant-yellow-light py-24 md:py-32">
+      <section className="relative w-full bg-gradient-to-b from-white via-accent-blue-light to-white py-24 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Business Financing Solutions
             </h2>
-            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl mx-auto">
               Choose the business loan or credit line option that works best for your company
             </p>
           </FadeIn>
@@ -286,12 +286,12 @@ export default function HomePage() {
             {/* Service 1: Business Loans */}
             <FadeIn className="group" delay={0}>
               <motion.div 
-                className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow"
+                className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-accent-blue"
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
               >
                 <motion.div 
-                  className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50"
+                  className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-blue-light to-transparent rounded-bl-full opacity-50"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 />
@@ -299,13 +299,13 @@ export default function HomePage() {
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
                   <div className="mb-6">
                     <motion.div 
-                      className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4"
+                      className="inline-flex items-center justify-center w-14 h-14 bg-accent-blue-light rounded-xl mb-4"
                       whileHover={{ rotate: 10, scale: 1.1 }}
                     >
-                      <TrendingUp className="h-7 w-7 text-dark-brown" />
+                      <TrendingUp className="h-7 w-7 text-accent-blue" />
                     </motion.div>
                     <h3 className="font-heading text-3xl text-dark-brown mb-2">Business Loans</h3>
-                    <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Long-term financing for businesses</p>
+                    <p className="font-paragraph text-sm text-accent-blue font-bold">Long-term financing for businesses</p>
                   </div>
                   
                   <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
@@ -321,7 +321,7 @@ export default function HomePage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: idx * 0.1 }}
                       >
-                        <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 text-accent-blue flex-shrink-0 mt-0.5" />
                         <span className="font-paragraph text-sm text-dark-brown-light">{item}</span>
                       </motion.div>
                     ))}
@@ -341,12 +341,12 @@ export default function HomePage() {
             {/* Service 2: Credit Lines */}
             <FadeIn className="group" delay={0.1}>
               <motion.div 
-                className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow"
+                className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-accent-teal"
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
               >
                 <motion.div 
-                  className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50"
+                  className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-teal to-transparent rounded-bl-full opacity-50"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
                 />
@@ -354,13 +354,13 @@ export default function HomePage() {
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
                   <div className="mb-6">
                     <motion.div 
-                      className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4"
+                      className="inline-flex items-center justify-center w-14 h-14 bg-accent-teal rounded-xl mb-4"
                       whileHover={{ rotate: -10, scale: 1.1 }}
                     >
-                      <Zap className="h-7 w-7 text-dark-brown" />
+                      <Zap className="h-7 w-7 text-white" />
                     </motion.div>
                     <h3 className="font-heading text-3xl text-dark-brown mb-2">Credit Lines</h3>
-                    <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Flexible working capital</p>
+                    <p className="font-paragraph text-sm text-accent-teal font-bold">Flexible working capital</p>
                   </div>
                   
                   <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
@@ -376,7 +376,7 @@ export default function HomePage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: idx * 0.1 }}
                       >
-                        <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 text-accent-teal flex-shrink-0 mt-0.5" />
                         <span className="font-paragraph text-sm text-dark-brown-light">{item}</span>
                       </motion.div>
                     ))}
@@ -411,21 +411,21 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {[
-              { icon: Zap, title: "Fast & Flexible", desc: "Get an indicative offer within two working days. We tailor solutions around your needs." },
-              { icon: LineChart, title: "Competitive Rates", desc: "Interest rates from 4.5% per annum with transparent pricing. No hidden fees." },
-              { icon: Users, title: "Expert Support", desc: "Dedicated manager who understands your needs and recommends the best option." }
+              { icon: Rocket, title: "Fast & Flexible", desc: "Get an indicative offer within two working days. We tailor solutions around your needs.", color: "accent-blue" },
+              { icon: BarChart3, title: "Competitive Rates", desc: "Interest rates from 4.5% per annum with transparent pricing. No hidden fees.", color: "accent-teal" },
+              { icon: Sparkles, title: "Expert Support", desc: "Dedicated manager who understands your needs and recommends the best option.", color: "vibrant-yellow" }
             ].map((feature, idx) => (
               <FadeIn className="group" delay={idx * 0.1} key={idx}>
                 <motion.div 
-                  className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300"
+                  className={`p-8 rounded-xl bg-gradient-to-br from-${feature.color}-light to-white border-2 border-${feature.color} hover:border-dark-brown transition-all duration-300`}
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div 
-                    className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6"
+                    className={`inline-flex items-center justify-center w-12 h-12 bg-${feature.color} rounded-lg mb-6`}
                     whileHover={{ scale: 1.2, rotate: 10 }}
                   >
-                    <feature.icon className="h-6 w-6 text-vibrant-yellow" />
+                    <feature.icon className="h-6 w-6 text-white" />
                   </motion.div>
                   <h3 className="font-heading text-2xl text-dark-brown mb-3">{feature.title}</h3>
                   <p className="font-paragraph text-dark-brown-light leading-relaxed">{feature.desc}</p>
@@ -436,7 +436,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- LOAN CALCULATOR SECTION --- */}
-      <section className="w-full bg-gray-50 py-24 md:py-32">
+      <section className="w-full bg-gradient-to-r from-dark-brown via-dark-brown-light to-dark-brown py-24 md:py-32">
         <LoanCalculator />
       </section>
       <Footer />
