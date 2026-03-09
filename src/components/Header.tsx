@@ -49,10 +49,10 @@ export default function Header() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`font-paragraph text-sm font-semibold transition-all duration-300 relative group opacity-0 group-hover:opacity-100 hover:opacity-100 ${
+                  className={`font-paragraph text-sm font-semibold transition-all duration-300 relative group ${
                     isActive(link.path)
-                      ? 'opacity-100 text-vibrant-yellow'
-                      : 'text-dark-brown hover:text-vibrant-yellow'
+                      ? 'text-vibrant-yellow'
+                      : 'text-vibrant-yellow hover:text-vibrant-yellow-light'
                   }`}
                 >
                   {link.label}
