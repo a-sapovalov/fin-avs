@@ -238,30 +238,13 @@ export default function HomePage() {
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 3, repeat: Infinity }}
                   />
-                  <div className="relative bg-vibrant-yellow-light rounded-3xl p-8 backdrop-blur-sm opacity-[1] border-[#f0ddb880] border border-none">
-                    <div className="space-y-6">
-                      {[
-                        { icon: LineChart, title: "Competitive Rates", subtitle: "From 9.0% + 6M EURIBOR" },
-                        { icon: Zap, title: "Fast Approval", subtitle: "Within 2 working days" },
-                        { icon: Shield, title: "Flexible Terms", subtitle: "Tailored to your needs" }
-                      ].map((item, idx) => (
-                        <motion.div 
-                          key={idx}
-                          className="flex items-center gap-4"
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.6, delay: 0.6 + idx * 0.1 }}
-                        >
-                          <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
-                            <item.icon className="h-6 w-6 text-dark-brown" />
-                          </div>
-                          <div>
-                            <p className="font-paragraph text-sm font-bold text-dark-brown">{item.title}</p>
-                            <p className="font-paragraph text-xs text-dark-brown-light">{item.subtitle}</p>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
+                  <div className="relative bg-white rounded-3xl p-8 backdrop-blur-sm opacity-[1] border border-vibrant-yellow-light overflow-hidden">
+                    <Image 
+                      src="https://static.wixstatic.com/media/43558d_9021324303bd4415a38b7488d02f78d6~mv2.png?originWidth=576&originHeight=576"
+                      alt="Business loans and finance vector illustration"
+                      width={400}
+                      className="w-full h-auto"
+                    />
                   </div>
                 </div>
               </motion.div>
