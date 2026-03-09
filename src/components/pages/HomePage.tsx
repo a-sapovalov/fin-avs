@@ -170,8 +170,12 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             
             {/* Service 1: Business Loans */}
-            <FadeIn className="group">
-              <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow">
+            <FadeIn className="group" delay={0}>
+              <motion.div 
+                className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow"
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50" />
                 
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
@@ -210,12 +214,16 @@ export default function HomePage() {
                     <ArrowRight className="h-5 w-5 transition-transform" />
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </FadeIn>
 
             {/* Service 2: Credit Lines */}
             <FadeIn className="group" delay={0.1}>
-              <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow">
+              <motion.div 
+                className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow"
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50" />
                 
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
@@ -254,7 +262,7 @@ export default function HomePage() {
                     <ArrowRight className="h-5 w-5 transition-transform" />
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </FadeIn>
           </div>
         </div>
@@ -275,8 +283,12 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Feature 1 */}
-            <FadeIn className="group">
-              <div className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300">
+            <FadeIn className="group" delay={0}>
+              <motion.div 
+                className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300"
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
                   <Zap className="h-6 w-6 text-vibrant-yellow" />
                 </div>
@@ -284,12 +296,16 @@ export default function HomePage() {
                 <p className="font-paragraph text-dark-brown-light leading-relaxed">
                   Get an indicative offer within two working days. We tailor solutions around your needs.
                 </p>
-              </div>
+              </motion.div>
             </FadeIn>
 
             {/* Feature 2 */}
             <FadeIn className="group" delay={0.1}>
-              <div className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300">
+              <motion.div 
+                className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300"
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
                   <LineChart className="h-6 w-6 text-vibrant-yellow" />
                 </div>
@@ -297,18 +313,22 @@ export default function HomePage() {
                 <p className="font-paragraph text-dark-brown-light leading-relaxed">
                   Interest rates from 4.5% per annum with transparent pricing. No hidden fees.
                 </p>
-              </div>
+              </motion.div>
             </FadeIn>
 
             {/* Feature 3 */}
             <FadeIn className="group" delay={0.2}>
-              <div className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300">
+              <motion.div 
+                className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300"
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
                   <Users className="h-6 w-6 text-vibrant-yellow" />
                 </div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-3">Expert Support</h3>
                 <p className="font-paragraph text-dark-brown-light leading-relaxed">Dedicated manager who understands your needs and recommends the best option.</p>
-              </div>
+              </motion.div>
             </FadeIn>
           </div>
         </div>
