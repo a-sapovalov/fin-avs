@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
 import { ArrowRight, TrendingUp, Users, LineChart, CheckCircle, Zap, Shield } from 'lucide-react';
@@ -6,7 +6,6 @@ import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-mo
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LoanCalculator from '@/components/LoanCalculator';
-import AnimatedGraph from '@/components/AnimatedGraph';
 
 const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode, delay?: number, className?: string }) => {
   const ref = useRef(null);
@@ -21,50 +20,6 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
       className={className}
     >
       {children}
-    </motion.div>
-  );
-};
-
-const AnimatedCounter = ({ end, duration = 2 }: { end: number, duration?: number }) => {
-  const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!isInView) return;
-    
-    let startTime: number;
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = (timestamp - startTime) / (duration * 1000);
-      
-      if (progress < 1) {
-        setCount(Math.floor(end * progress));
-        requestAnimationFrame(animate);
-      } else {
-        setCount(end);
-      }
-    };
-    
-    requestAnimationFrame(animate);
-  }, [isInView, end, duration]);
-
-  return <span ref={ref}>{count}</span>;
-};
-
-const TextReveal = ({ text, delay = 0, className }: { text: string, delay?: number, className?: string }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-  
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.5, delay }}
-      className={className}
-    >
-      {text}
     </motion.div>
   );
 };
@@ -93,42 +48,20 @@ export default function HomePage() {
       <section ref={heroRef} className="relative w-full min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          {/* Floating orbs with complex animations */}
           <motion.div 
             className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-15"
-            animate={{ 
-              y: [0, 40, 0],
-              x: [0, 20, 0],
-              scale: [1, 1.1, 1]
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ y: [0, 40, 0] }}
+            transition={{ duration: 10, repeat: Infinity }}
           />
           <motion.div 
             className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-vibrant-yellow to-transparent rounded-full blur-3xl opacity-20"
-            animate={{ 
-              y: [0, -40, 0],
-              x: [0, -15, 0],
-              scale: [1, 0.95, 1]
-            }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ y: [0, -40, 0] }}
+            transition={{ duration: 12, repeat: Infinity }}
           />
           <motion.div 
             className="absolute top-1/2 left-0 w-72 h-72 bg-gradient-to-r from-vibrant-yellow-light to-transparent rounded-full blur-3xl opacity-10"
-            animate={{ 
-              x: [0, 30, 0],
-              y: [0, 15, 0],
-              scale: [1, 1.05, 1]
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          {/* Additional subtle orb */}
-          <motion.div 
-            className="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-bl from-vibrant-yellow-light to-transparent rounded-full blur-3xl opacity-5"
-            animate={{ 
-              y: [0, -30, 0],
-              x: [0, 25, 0]
-            }}
-            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ x: [0, 30, 0] }}
+            transition={{ duration: 8, repeat: Infinity }}
           />
         </div>
 
@@ -142,108 +75,82 @@ export default function HomePage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
-                <motion.div 
-                  className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light/20 border border-vibrant-yellow-light rounded-full"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  <motion.span 
-                    className="w-2 h-2 bg-vibrant-yellow rounded-full" 
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
+                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light/20 border border-vibrant-yellow-light rounded-full">
+                  <span className="w-2 h-2 bg-vibrant-yellow rounded-full" />
                   <span className="font-paragraph text-xs font-bold text-vibrant-yellow uppercase tracking-wider">
                     Business Financing Solutions
                   </span>
-                </motion.div>
+                </div>
 
-                <motion.h1 
-                  className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight leading-tight"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
-                >
-                  Business Financing Made <motion.span 
-                    className="text-vibrant-yellow inline-block"
-                    animate={{ 
-                      textShadow: [
-                        "0px 0px 0px rgba(230, 203, 163, 0)",
-                        "0px 0px 20px rgba(230, 203, 163, 0.5)",
-                        "0px 0px 0px rgba(230, 203, 163, 0)"
-                      ]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                    Simple
-                  </motion.span>
-                </motion.h1>
+                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight leading-tight">
+                  Business Financing Made <span className="text-vibrant-yellow">Simple</span>
+                </h1>
 
-                <motion.p 
-                  className="font-paragraph text-lg md:text-xl text-white/85 mb-10 max-w-2xl leading-relaxed"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
+                <p className="font-paragraph text-lg md:text-xl text-white/85 mb-10 max-w-2xl leading-relaxed">
                   AVS Finance provides competitive business loans and credit lines exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR, with flexible terms tailored to your business needs.
-                </motion.p>
+                </p>
 
-                <motion.div 
-                  className="flex flex-col sm:flex-row gap-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link 
+                    to="/application"
+                    className="group inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
                   >
-                    <Link 
-                      to="/application"
-                      className="group inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
-                    >
-                      Get Pre-Approved
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    Get Pre-Approved
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                  <Link 
+                    to="/about"
+                    className="inline-flex items-center justify-center px-10 py-4 border-2 border-vibrant-yellow-light text-white font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow/10 hover:border-vibrant-yellow transition-all duration-300"
                   >
-                    <Link 
-                      to="/about"
-                      className="inline-flex items-center justify-center px-10 py-4 border-2 border-vibrant-yellow-light text-white font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow/10 hover:border-vibrant-yellow transition-all duration-300"
-                    >
-                      Learn More
-                    </Link>
-                  </motion.div>
-                </motion.div>
+                    Learn More
+                  </Link>
+                </div>
               </motion.div>
             </div>
 
-            {/* Hero Visual - Animated Graph */}
+            {/* Hero Visual */}
             <motion.div 
               className="col-span-12 lg:col-span-5 relative h-full min-h-[300px] flex items-center justify-center"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <motion.div 
-                className="relative w-full max-w-sm h-80"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <div className="relative h-full">
-                  <motion.div 
-                    className="absolute inset-0 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-3xl blur-2xl opacity-30"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  />
-                  <div className="relative bg-gradient-to-br from-dark-brown-light to-dark-brown rounded-3xl p-8 backdrop-blur-sm h-full flex items-center justify-center border border-vibrant-yellow-light/20">
-                    <AnimatedGraph />
+              <div className="relative w-full max-w-sm">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-3xl blur-2xl opacity-30" />
+                  <div className="relative bg-vibrant-yellow-light rounded-3xl p-8 backdrop-blur-sm opacity-[1] border-[#f0ddb880] border border-none">
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                          <LineChart className="h-6 w-6 text-dark-brown" />
+                        </div>
+                        <div>
+                          <p className="font-paragraph text-sm font-bold text-dark-brown">Competitive Rates</p>
+                          <p className="font-paragraph text-xs text-dark-brown-light">From 9.0% + 6M EURIBOR</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                          <Zap className="h-6 w-6 text-dark-brown" />
+                        </div>
+                        <div>
+                          <p className="font-paragraph text-sm font-bold text-dark-brown">Fast Approval</p>
+                          <p className="font-paragraph text-xs text-dark-brown-light">Within 2 working days</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
+                          <Shield className="h-6 w-6 text-dark-brown" />
+                        </div>
+                        <div>
+                          <p className="font-paragraph text-sm font-bold text-dark-brown">Flexible Terms</p>
+                          <p className="font-paragraph text-xs text-dark-brown-light">Tailored to your needs</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -263,26 +170,15 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             
             {/* Service 1: Business Loans */}
-            <FadeIn className="group" delay={0}>
-              <motion.div 
-                className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow"
-                whileHover={{ y: -8 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                />
+            <FadeIn className="group">
+              <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50" />
                 
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
                   <div className="mb-6">
-                    <motion.div 
-                      className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4"
-                      whileHover={{ rotate: 10, scale: 1.1 }}
-                    >
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4">
                       <TrendingUp className="h-7 w-7 text-dark-brown" />
-                    </motion.div>
+                    </div>
                     <h3 className="font-heading text-3xl text-dark-brown mb-2">Business Loans</h3>
                     <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Long-term financing for businesses</p>
                   </div>
@@ -292,18 +188,18 @@ export default function HomePage() {
                   </p>
 
                   <div className="space-y-3 mb-8">
-                    {["Up to €500,000", "Flexible repayment terms", "From 9.0% + 6M EURIBOR"].map((item, idx) => (
-                      <motion.div 
-                        key={idx}
-                        className="flex items-start gap-3"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: idx * 0.1 }}
-                      >
-                        <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
-                        <span className="font-paragraph text-sm text-dark-brown-light">{item}</span>
-                      </motion.div>
-                    ))}
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Up to €500,000</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Flexible repayment terms</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">From 9.0% + 6M EURIBOR</span>
+                    </div>
                   </div>
 
                   <Link 
@@ -314,30 +210,19 @@ export default function HomePage() {
                     <ArrowRight className="h-5 w-5 transition-transform" />
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             </FadeIn>
 
             {/* Service 2: Credit Lines */}
             <FadeIn className="group" delay={0.1}>
-              <motion.div 
-                className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow"
-                whileHover={{ y: -8 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                />
+              <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50" />
                 
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
                   <div className="mb-6">
-                    <motion.div 
-                      className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4"
-                      whileHover={{ rotate: -10, scale: 1.1 }}
-                    >
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4">
                       <Zap className="h-7 w-7 text-dark-brown" />
-                    </motion.div>
+                    </div>
                     <h3 className="font-heading text-3xl text-dark-brown mb-2">Credit Lines</h3>
                     <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Flexible working capital</p>
                   </div>
@@ -347,18 +232,18 @@ export default function HomePage() {
                   </p>
 
                   <div className="space-y-3 mb-8">
-                    {["Up to €400,000", "Draw as needed", "Fast approval process"].map((item, idx) => (
-                      <motion.div 
-                        key={idx}
-                        className="flex items-start gap-3"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: idx * 0.1 }}
-                      >
-                        <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
-                        <span className="font-paragraph text-sm text-dark-brown-light">{item}</span>
-                      </motion.div>
-                    ))}
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Up to €400,000</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Draw as needed</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
+                      <span className="font-paragraph text-sm text-dark-brown-light">Fast approval process</span>
+                    </div>
                   </div>
 
                   <Link 
@@ -369,7 +254,7 @@ export default function HomePage() {
                     <ArrowRight className="h-5 w-5 transition-transform" />
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             </FadeIn>
           </div>
         </div>
@@ -389,28 +274,42 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            {[
-              { icon: Zap, title: "Fast & Flexible", desc: "Get an indicative offer within two working days. We tailor solutions around your needs." },
-              { icon: LineChart, title: "Competitive Rates", desc: "Interest rates from 4.5% per annum with transparent pricing. No hidden fees." },
-              { icon: Users, title: "Expert Support", desc: "Dedicated manager who understands your needs and recommends the best option." }
-            ].map((feature, idx) => (
-              <FadeIn className="group" delay={idx * 0.1} key={idx}>
-                <motion.div 
-                  className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300"
-                  whileHover={{ y: -4 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <motion.div 
-                    className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6"
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                  >
-                    <feature.icon className="h-6 w-6 text-vibrant-yellow" />
-                  </motion.div>
-                  <h3 className="font-heading text-2xl text-dark-brown mb-3">{feature.title}</h3>
-                  <p className="font-paragraph text-dark-brown-light leading-relaxed">{feature.desc}</p>
-                </motion.div>
-              </FadeIn>
-            ))}
+            {/* Feature 1 */}
+            <FadeIn className="group">
+              <div className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
+                  <Zap className="h-6 w-6 text-vibrant-yellow" />
+                </div>
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">Fast & Flexible</h3>
+                <p className="font-paragraph text-dark-brown-light leading-relaxed">
+                  Get an indicative offer within two working days. We tailor solutions around your needs.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Feature 2 */}
+            <FadeIn className="group" delay={0.1}>
+              <div className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
+                  <LineChart className="h-6 w-6 text-vibrant-yellow" />
+                </div>
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">Competitive Rates</h3>
+                <p className="font-paragraph text-dark-brown-light leading-relaxed">
+                  Interest rates from 4.5% per annum with transparent pricing. No hidden fees.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Feature 3 */}
+            <FadeIn className="group" delay={0.2}>
+              <div className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
+                  <Users className="h-6 w-6 text-vibrant-yellow" />
+                </div>
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">Expert Support</h3>
+                <p className="font-paragraph text-dark-brown-light leading-relaxed">Dedicated manager who understands your needs and recommends the best option.</p>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

@@ -1,22 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useLanguageStore, type Language } from '@/lib/language-store';
 
 // Header with dark brown styling applied
 export default function Header() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
-  const { language, setLanguage } = useLanguageStore();
-
-  const languages: { code: Language; label: string }[] = [
-    { code: 'en', label: 'English' },
-    { code: 'et', label: 'Eesti' },
-    { code: 'ru', label: 'Русский' },
-  ];
 
   const navLinks = [
     { path: '/corporate-loan', label: 'Business Loans' },
@@ -39,6 +30,7 @@ export default function Header() {
               height={50}
               className="h-12 w-auto"
             />
+
           </Link>
 
           {/* Desktop Navigation - Right aligned with buttons */}
@@ -51,7 +43,7 @@ export default function Header() {
                   className={`font-paragraph text-sm font-semibold transition-all duration-300 relative group ${
                     isActive(link.path)
                       ? 'text-vibrant-yellow'
-                      : 'text-primary-foreground hover:text-vibrant-yellow'
+                      : 'text-dark-brown hover:text-vibrant-yellow'
                   }`}
                 >
                   {link.label}
@@ -61,44 +53,6 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-
-            {/* Language Selector */}
-            <div className="relative">
-              <button
-                onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
-                className="flex items-center gap-2 px-3 py-2 text-primary-foreground hover:text-vibrant-yellow transition-colors duration-300"
-                aria-label="Select language"
-              >
-                <Globe className="h-4 w-4" />
-                <span className="font-paragraph text-sm font-semibold uppercase">{language}</span>
-              </button>
-              
-              {languageMenuOpen && (
-                <motion.div
-                  className="absolute right-0 mt-2 bg-white border border-vibrant-yellow rounded-lg shadow-lg z-50"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => {
-                        setLanguage(lang.code);
-                        setLanguageMenuOpen(false);
-                      }}
-                      className={`block w-full text-left px-4 py-2 font-paragraph text-sm transition-colors duration-200 ${
-                        language === lang.code
-                          ? 'bg-vibrant-yellow text-dark-brown font-semibold'
-                          : 'text-dark-brown hover:bg-vibrant-yellow-light'
-                      }`}
-                    >
-                      {lang.label}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </div>
 
             {/* CTA Button */}
             <Link 
@@ -145,30 +99,6 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            
-            {/* Mobile Language Selector */}
-            <div className="border-t border-vibrant-yellow pt-4 mt-4">
-              <div className="font-paragraph text-sm font-semibold text-dark-brown mb-2">Language</div>
-              <div className="flex gap-2">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => {
-                      setLanguage(lang.code);
-                      setMobileMenuOpen(false);
-                    }}
-                    className={`px-3 py-1 rounded font-paragraph text-xs font-semibold transition-colors duration-200 ${
-                      language === lang.code
-                        ? 'bg-vibrant-yellow text-dark-brown'
-                        : 'bg-vibrant-yellow-light text-dark-brown hover:bg-vibrant-yellow'
-                    }`}
-                  >
-                    {lang.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-            
             <Link 
               to="/application"
               className="mt-4 px-8 py-3 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg text-center hover:bg-vibrant-yellow-dark transition-all duration-300"
