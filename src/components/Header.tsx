@@ -43,7 +43,7 @@ export default function Header() {
                   className={`font-paragraph text-sm font-semibold transition-all duration-300 relative group ${
                     isActive(link.path)
                       ? 'text-vibrant-yellow'
-                      : 'text-dark-brown hover:text-vibrant-yellow'
+                      : 'text-primary-foreground hover:text-vibrant-yellow'
                   }`}
                 >
                   {link.label}
