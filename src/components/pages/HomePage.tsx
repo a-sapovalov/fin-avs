@@ -122,7 +122,7 @@ export default function HomePage() {
                   className="relative"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-3xl blur-2xl opacity-30" />
-                  <div className="relative bg-gradient-to-br from-vibrant-yellow-light to-vibrant-yellow-dark/20 rounded-3xl p-8 border-2 border-vibrant-yellow-light/50 backdrop-blur-sm">
+                  <div className="relative bg-gradient-to-br from-vibrant-yellow-light to-vibrant-yellow-dark/20 rounded-3xl p-8 backdrop-blur-sm opacity-[1] border-[#f0ddb880] border border-none">
                     <div className="space-y-6">
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
