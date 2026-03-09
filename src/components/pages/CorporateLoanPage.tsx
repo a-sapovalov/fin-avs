@@ -46,10 +46,10 @@ export default function CorporateLoanPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative w-full pt-20 pb-24 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown-light">
+      <section className="relative w-full pt-20 pb-24 overflow-hidden bg-gradient-to-br from-white via-yellow-50 to-amber-50">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <motion.div 
-            className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-accent-blue to-accent-teal rounded-full blur-3xl opacity-20"
+            className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-20"
             animate={{ y: [0, 30, 0] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
@@ -69,10 +69,10 @@ export default function CorporateLoanPage() {
                   Business Loans
                 </span>
               </div>
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-8 leading-tight">
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">
                 Business Loans for <span className="text-vibrant-yellow">Growth</span>
               </h1>
-              <p className="font-paragraph text-lg md:text-xl text-white/85 leading-relaxed mb-10 max-w-2xl">
+              <p className="font-paragraph text-lg md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
                 Secure competitive business financing exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR with flexible terms tailored to your business needs.
               </p>
               <Link 
@@ -119,13 +119,13 @@ export default function CorporateLoanPage() {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="w-full bg-gradient-to-b from-white via-accent-blue-light to-white py-24 md:py-32">
+      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Key Benefits
             </h2>
-            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
               Our business loan solutions are designed to provide maximum value and flexibility
             </p>
           </FadeIn>
@@ -135,10 +135,10 @@ export default function CorporateLoanPage() {
               <FadeIn
                 key={index}
                 delay={index * 0.1}
-                className="flex items-start gap-4 bg-white p-8 rounded-xl border-2 border-accent-blue hover:border-dark-brown hover:shadow-lg transition-all duration-300"
+                className="flex items-start gap-4 bg-white p-8 rounded-xl border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark hover:shadow-lg transition-all duration-300"
               >
-                <CheckCircle className="h-6 w-6 text-accent-blue flex-shrink-0 mt-1" />
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+                <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
+                <p className="font-paragraph text-lg text-gray-700 leading-relaxed">
                   {benefit}
                 </p>
               </FadeIn>
@@ -151,31 +151,31 @@ export default function CorporateLoanPage() {
       <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 py-24 md:py-32">
         <div className="grid grid-cols-12 gap-16">
           <FadeIn className="col-span-12 lg:col-span-6">
-            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-8">
+            <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-8">
               What is a Business Loan?
             </h2>
             <div className="space-y-6">
-              <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                 A business loan is a long-term financing solution designed specifically for businesses seeking substantial capital for growth, expansion, or operational needs. Whether you're a startup or an established business, our loans provide competitive rates and flexible terms tailored to your business situation.
               </p>
-              <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                 Our business loans offer extended repayment periods (up to 30 years) and structured payment schedules that align with your business cash flow and growth plans. This makes business financing achievable and affordable for companies across Estonia.
               </p>
-              <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                 At AVS Finance, we understand that growing a business requires strategic financing. Our experienced team works closely with you to structure a loan that matches your specific business needs, ensuring you have the capital and flexibility to achieve your business goals.
               </p>
             </div>
           </FadeIn>
 
           <FadeIn className="col-span-12 lg:col-span-6" delay={0.1}>
-            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-8">
+            <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-8">
               Eligibility Criteria
             </h2>
             <div className="space-y-4">
               {eligibility.map((criterion, index) => (
-                <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-accent-blue-light to-white rounded-xl border-2 border-accent-blue">
-                  <CheckCircle className="h-6 w-6 text-accent-blue flex-shrink-0 mt-1" />
-                  <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+                <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 rounded-xl border-2 border-vibrant-yellow">
+                  <CheckCircle className="h-6 w-6 text-gray-900 flex-shrink-0 mt-1" />
+                  <p className="font-paragraph text-lg text-gray-700 leading-relaxed">
                     {criterion}
                   </p>
                 </div>
@@ -186,34 +186,34 @@ export default function CorporateLoanPage() {
       </section>
 
       {/* Terms and Conditions Section */}
-      <section className="w-full bg-gradient-to-b from-white via-accent-blue-light to-white py-24 md:py-32">
+      <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn>
             <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-12">
               Terms and Conditions
             </h2>
-            <div className="bg-gradient-to-br from-accent-blue-light to-white p-8 md:p-12 rounded-2xl border-2 border-accent-blue space-y-8">
+            <div className="bg-vibrant-yellow-light p-8 md:p-12 rounded-2xl border-2 border-vibrant-yellow space-y-8">
               <div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-4">Interest Rates</h3>
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+                <p className="font-paragraph text-lg text-dark-brown leading-relaxed">
                   Interest rates start from 9.0% per annum + 6 month EURIBOR and are determined based on your business creditworthiness, loan amount, and repayment term. Fixed and variable rate options are available.
                 </p>
               </div>
-              <div className="border-t border-accent-blue pt-8">
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">Repayment Terms</h3>
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <div className="border-t border-gray-200 pt-8">
+                <h3 className="font-heading text-2xl text-gray-900 mb-4">Repayment Terms</h3>
+                <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                   Flexible repayment schedules ranging from 5 to 30 years. Monthly installments are structured to align with your business cash flow and budget. Early repayment is permitted without penalties.
                 </p>
               </div>
-              <div className="border-t border-accent-blue pt-8">
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">Collateral Requirements</h3>
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <div className="border-t border-gray-200 pt-8">
+                <h3 className="font-heading text-2xl text-gray-900 mb-4">Collateral Requirements</h3>
+                <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                   Business assets or real estate may be required as collateral depending on the loan amount and your business profile. We work with you to structure collateral arrangements that work for your business.
                 </p>
               </div>
-              <div className="border-t border-accent-blue pt-8">
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">Fees and Charges</h3>
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <div className="border-t border-gray-200 pt-8">
+                <h3 className="font-heading text-2xl text-gray-900 mb-4">Fees and Charges</h3>
+                <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                   A one-time origination fee of 0.5-1% of the loan amount applies. No hidden fees, monthly maintenance charges, or prepayment penalties. All costs are disclosed upfront.
                 </p>
               </div>
@@ -223,12 +223,12 @@ export default function CorporateLoanPage() {
       </section>
 
       {/* Loan Calculator Section */}
-      <section className="w-full bg-gradient-to-r from-dark-brown via-dark-brown-light to-dark-brown py-24 md:py-32">
+      <section className="w-full bg-white py-24 md:py-32">
         <LoanCalculator />
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown-light">
+      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-vibrant-yellow rounded-full blur-3xl" />
         </div>

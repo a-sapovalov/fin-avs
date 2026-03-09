@@ -46,10 +46,10 @@ export default function CreditLinePage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative w-full pt-20 pb-24 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown-light">
+      <section className="relative w-full pt-20 pb-24 overflow-hidden bg-gradient-to-br from-white via-yellow-50 to-amber-50">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <motion.div 
-            className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-accent-teal to-accent-blue rounded-full blur-3xl opacity-20"
+            className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-20"
             animate={{ y: [0, 30, 0] }}
             transition={{ duration: 8, repeat: Infinity }}
           />
@@ -69,10 +69,10 @@ export default function CreditLinePage() {
                   Business Credit Lines
                 </span>
               </div>
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-8 leading-tight">
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">
                 Business Credit Lines for <span className="text-vibrant-yellow">Flexibility</span>
               </h1>
-              <p className="font-paragraph text-lg md:text-xl text-white/85 leading-relaxed mb-10 max-w-2xl">
+              <p className="font-paragraph text-lg md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
                 Access flexible credit lines exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR, draw funds as needed for your business operations.
               </p>
               <Link 
@@ -119,13 +119,13 @@ export default function CreditLinePage() {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="w-full bg-gradient-to-b from-white via-accent-teal to-white py-24 md:py-32">
+      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               Key Benefits
             </h2>
-            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
               Experience the flexibility and convenience of business credit lines
             </p>
           </FadeIn>
@@ -135,10 +135,10 @@ export default function CreditLinePage() {
               <FadeIn
                 key={index}
                 delay={index * 0.1}
-                className="flex items-start gap-4 bg-white p-8 rounded-xl border-2 border-accent-teal hover:border-dark-brown hover:shadow-lg transition-all duration-300"
+                className="flex items-start gap-4 bg-white p-8 rounded-xl border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark hover:shadow-lg transition-all duration-300"
               >
-                <CheckCircle className="h-6 w-6 text-accent-teal flex-shrink-0 mt-1" />
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+                <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
+                <p className="font-paragraph text-lg text-gray-700 leading-relaxed">
                   {benefit}
                 </p>
               </FadeIn>
@@ -151,31 +151,31 @@ export default function CreditLinePage() {
       <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 py-24 md:py-32">
         <div className="grid grid-cols-12 gap-16">
           <FadeIn className="col-span-12 lg:col-span-6">
-            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-8">
+            <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-8">
               What is a Business Credit Line?
             </h2>
             <div className="space-y-6">
-              <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                 A business credit line is a flexible financing solution that provides businesses with access to capital on an as-needed basis. Unlike traditional loans, credit lines allow you to draw funds only when you need them and pay interest only on the amount you use.
               </p>
-              <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                 Our credit lines offer flexibility to help you manage cash flow, handle seasonal variations, or fund unexpected business opportunities. You can draw, repay, and redraw funds throughout the credit line term, making it an ideal solution for growing businesses.
               </p>
-              <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                 With AVS Finance's credit lines, you gain the financial flexibility your business needs to thrive. Our experienced team works with you to structure a credit line that matches your specific business needs and growth plans.
               </p>
             </div>
           </FadeIn>
 
           <FadeIn className="col-span-12 lg:col-span-6" delay={0.1}>
-            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-8">
+            <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-8">
               Eligibility Criteria
             </h2>
             <div className="space-y-4">
               {eligibility.map((criterion, index) => (
-                <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-accent-teal to-white rounded-xl border-2 border-accent-teal">
-                  <CheckCircle className="h-6 w-6 text-accent-teal flex-shrink-0 mt-1" />
-                  <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+                <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 rounded-xl border-2 border-vibrant-yellow">
+                  <CheckCircle className="h-6 w-6 text-gray-900 flex-shrink-0 mt-1" />
+                  <p className="font-paragraph text-lg text-gray-700 leading-relaxed">
                     {criterion}
                   </p>
                 </div>
@@ -186,13 +186,13 @@ export default function CreditLinePage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="w-full bg-gradient-to-b from-white via-accent-blue-light to-white py-24 md:py-32">
+      <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
               How Credit Lines Work
             </h2>
-            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl mx-auto">
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
               Simple, transparent, and designed for your business needs
             </p>
           </FadeIn>
@@ -202,28 +202,28 @@ export default function CreditLinePage() {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-dark-brown font-heading text-2xl mb-6 font-bold">
                 1
               </div>
-              <h3 className="font-heading text-2xl text-dark-brown mb-4">Review Your Needs</h3>
-              <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Review Your Needs</h3>
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                 We analyze your business needs and present credit line options tailored to your cash flow requirements.
               </p>
             </FadeIn>
 
             <FadeIn className="text-center" delay={0.1}>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-blue text-white font-heading text-2xl mb-6 font-bold">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-gray-900 font-heading text-2xl mb-6 font-bold">
                 2
               </div>
-              <h3 className="font-heading text-2xl text-dark-brown mb-4">Apply & Get Approved</h3>
-              <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Apply & Get Approved</h3>
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                 Submit your application and receive approval within 3-5 business days with competitive rates.
               </p>
             </FadeIn>
 
             <FadeIn className="text-center" delay={0.2}>
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-teal text-white font-heading text-2xl mb-6 font-bold">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-vibrant-yellow text-gray-900 font-heading text-2xl mb-6 font-bold">
                 3
               </div>
-              <h3 className="font-heading text-2xl text-dark-brown mb-4">Draw & Manage</h3>
-              <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Draw & Manage</h3>
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
                 Access your credit line and draw funds as needed for your business operations.
               </p>
             </FadeIn>
@@ -232,49 +232,47 @@ export default function CreditLinePage() {
       </section>
 
       {/* Terms and Conditions Section */}
-      <section className="w-full bg-gradient-to-b from-white via-accent-teal to-white py-24 md:py-32">
-        <div className="max-w-[120rem] mx-auto px-6 md:px-12">
-          <FadeIn>
-            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-12">
-              Terms and Conditions
-            </h2>
-            <div className="bg-white p-8 md:p-12 rounded-2xl border-2 border-accent-teal space-y-8">
-              <div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">Interest Rates</h3>
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
-                  Interest rates start from 9.0% per annum + 6 month EURIBOR on the outstanding balance. You only pay interest on the amount you actually draw from your credit line, not on the entire approved limit.
-                </p>
-              </div>
-              <div className="border-t border-accent-teal pt-8">
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">Repayment Terms</h3>
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
-                  Flexible repayment with minimum monthly payments based on your outstanding balance. You can repay the full amount or make partial payments at any time without penalties.
-                </p>
-              </div>
-              <div className="border-t border-accent-teal pt-8">
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">Credit Line Duration</h3>
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
-                  Credit lines are typically issued for 12-36 months with the option to renew. Your credit limit may be reviewed and adjusted based on your business performance and repayment history.
-                </p>
-              </div>
-              <div className="border-t border-accent-teal pt-8">
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">Fees and Charges</h3>
-                <p className="font-paragraph text-lg text-dark-brown-light leading-relaxed">
-                  A small annual maintenance fee of 0.5-1% of the credit limit applies. No transaction fees for drawing funds. All fees are transparent and disclosed upfront.
-                </p>
-              </div>
+      <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 py-24 md:py-32">
+        <FadeIn>
+          <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-12">
+            Terms and Conditions
+          </h2>
+          <div className="bg-white p-8 md:p-12 rounded-2xl border border-gray-100 space-y-8">
+            <div>
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Interest Rates</h3>
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
+                Interest rates start from 9.0% per annum + 6 month EURIBOR on the outstanding balance. You only pay interest on the amount you actually draw from your credit line, not on the entire approved limit.
+              </p>
             </div>
-          </FadeIn>
-        </div>
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Repayment Terms</h3>
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
+                Flexible repayment with minimum monthly payments based on your outstanding balance. You can repay the full amount or make partial payments at any time without penalties.
+              </p>
+            </div>
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Credit Line Duration</h3>
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
+                Credit lines are typically issued for 12-36 months with the option to renew. Your credit limit may be reviewed and adjusted based on your business performance and repayment history.
+              </p>
+            </div>
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="font-heading text-2xl text-gray-900 mb-4">Fees and Charges</h3>
+              <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
+                A small annual maintenance fee of 0.5-1% of the credit limit applies. No transaction fees for drawing funds. All fees are transparent and disclosed upfront.
+              </p>
+            </div>
+          </div>
+        </FadeIn>
       </section>
 
       {/* Loan Calculator Section */}
-      <section className="w-full bg-gradient-to-r from-dark-brown via-dark-brown-light to-dark-brown py-24 md:py-32">
+      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <LoanCalculator />
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown-light">
+      <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-dark-brown to-dark-brown-light">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-vibrant-yellow rounded-full blur-3xl" />
         </div>
