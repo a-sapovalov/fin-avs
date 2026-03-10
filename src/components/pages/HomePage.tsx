@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
-import { ArrowRight, TrendingUp, Users, LineChart, CheckCircle, Zap, Shield } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, LineChart, CheckCircle, Zap, Shield, ArrowUpRight } from 'lucide-react';
 import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -32,10 +32,6 @@ export default function HomePage() {
     restDelta: 0.001
   });
 
-  const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll();
-  const yHero = useTransform(scrollY, [0, 1000], [0, 200]);
-
   return (
     <div className="min-h-screen bg-white text-dark-brown overflow-x-clip">
       {/* Scroll Progress Bar */}
@@ -44,63 +40,45 @@ export default function HomePage() {
         style={{ scaleX }}
       />
       <Header />
+      
       {/* --- HERO SECTION --- */}
-      <section ref={heroRef} className="relative w-full min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-gradient-to-br from-dark-brown via-dark-brown-light to-dark-brown">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <motion.div 
-            className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-15"
-            animate={{ y: [0, 40, 0] }}
-            transition={{ duration: 10, repeat: Infinity }}
-          />
-          <motion.div 
-            className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-vibrant-yellow to-transparent rounded-full blur-3xl opacity-20"
-            animate={{ y: [0, -40, 0] }}
-            transition={{ duration: 12, repeat: Infinity }}
-          />
-          <motion.div 
-            className="absolute top-1/2 left-0 w-72 h-72 bg-gradient-to-r from-vibrant-yellow-light to-transparent rounded-full blur-3xl opacity-10"
-            animate={{ x: [0, 30, 0] }}
-            transition={{ duration: 8, repeat: Infinity }}
-          />
-        </div>
-
-        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12 relative z-10">
+      <section className="relative w-full py-20 md:py-32 overflow-hidden bg-white">
+        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
             
-            {/* Hero Content */}
-            <div className="col-span-12 lg:col-span-7 relative">
+            {/* Hero Content - Left */}
+            <div className="col-span-12 lg:col-span-6 relative">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
-                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light/20 border border-vibrant-yellow-light rounded-full">
+                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light/30 rounded-full">
                   <span className="w-2 h-2 bg-vibrant-yellow rounded-full" />
-                  <span className="font-paragraph text-xs font-bold text-vibrant-yellow uppercase tracking-wider">
-                    Business Financing Solutions
+                  <span className="font-paragraph text-xs font-bold text-dark-brown uppercase tracking-wider">
+                    Smart Business Financing
                   </span>
                 </div>
 
-                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight leading-tight">
-                  Business Financing Made <span className="text-vibrant-yellow">Simple</span>
+                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-6 tracking-tight leading-tight">
+                  Financing Your <span className="text-vibrant-yellow">Business</span> Growth
                 </h1>
 
-                <p className="font-paragraph text-lg md:text-xl text-white/85 mb-10 max-w-2xl leading-relaxed">
-                  AVS Finance provides competitive business loans and credit lines exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR, with flexible terms tailored to your business needs.
+                <p className="font-paragraph text-lg md:text-xl text-dark-brown-light mb-10 max-w-2xl leading-relaxed">
+                  Get competitive business loans and flexible credit lines tailored to your needs. Fast approval, transparent terms, and expert support every step of the way.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
                     to="/application"
-                    className="group inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
+                    className="group inline-flex items-center justify-center px-10 py-4 bg-dark-brown text-white font-paragraph font-bold text-base rounded-lg hover:bg-dark-brown-light transition-all duration-300"
                   >
-                    Get Pre-Approved
+                    Get Started
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link 
                     to="/about"
-                    className="inline-flex items-center justify-center px-10 py-4 border-2 border-vibrant-yellow-light text-white font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow/10 hover:border-vibrant-yellow transition-all duration-300"
+                    className="inline-flex items-center justify-center px-10 py-4 border-2 border-dark-brown text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-light transition-all duration-300"
                   >
                     Learn More
                   </Link>
@@ -108,83 +86,83 @@ export default function HomePage() {
               </motion.div>
             </div>
 
-            {/* Hero Visual */}
+            {/* Hero Visual - Right */}
             <motion.div 
-              className="col-span-12 lg:col-span-5 relative h-full min-h-[300px] flex items-center justify-center"
+              className="col-span-12 lg:col-span-6 relative h-full min-h-[400px] flex items-center justify-center"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="relative w-full max-w-sm">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark rounded-3xl blur-2xl opacity-30" />
-                  <div className="relative bg-vibrant-yellow-light rounded-3xl p-8 backdrop-blur-sm opacity-[1] border-[#f0ddb880] border border-none">
-                    <div className="space-y-6">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
-                          <LineChart className="h-6 w-6 text-dark-brown" />
-                        </div>
-                        <div>
-                          <p className="font-paragraph text-sm font-bold text-dark-brown">Competitive Rates</p>
-                          <p className="font-paragraph text-xs text-dark-brown-light">From 9.0% + 6M EURIBOR</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
-                          <Zap className="h-6 w-6 text-dark-brown" />
-                        </div>
-                        <div>
-                          <p className="font-paragraph text-sm font-bold text-dark-brown">Fast Approval</p>
-                          <p className="font-paragraph text-xs text-dark-brown-light">Within 2 working days</p>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-vibrant-yellow rounded-xl flex items-center justify-center flex-shrink-0">
-                          <Shield className="h-6 w-6 text-dark-brown" />
-                        </div>
-                        <div>
-                          <p className="font-paragraph text-sm font-bold text-dark-brown">Flexible Terms</p>
-                          <p className="font-paragraph text-xs text-dark-brown-light">Tailored to your needs</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div className="relative w-full max-w-md">
+                {/* Circular background */}
+                <div className="absolute inset-0 bg-vibrant-yellow-light rounded-full blur-2xl opacity-40" />
+                <div className="relative w-80 h-80 rounded-full bg-gradient-to-br from-vibrant-yellow-light to-accent-beige overflow-hidden flex items-center justify-center">
+                  <Image 
+                    src="https://static.wixstatic.com/media/43558d_815395ec83f148eea91d9f707d1ab217~mv2.png?originWidth=320&originHeight=320"
+                    alt="Business professionals discussing financing"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+
       {/* --- SERVICES SECTION --- */}
       <section className="relative w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
-          <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
-              Business Financing Solutions
-            </h2>
-            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
-              Choose the business loan or credit line option that works best for your company
-            </p>
-          </FadeIn>
+          <div className="grid grid-cols-12 gap-8 lg:gap-16 items-start mb-16">
+            {/* Section Header - Left */}
+            <FadeIn className="col-span-12 lg:col-span-5">
+              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6 leading-tight">
+                Our Financing <span className="text-dark-brown">Solutions</span>
+              </h2>
+              <p className="font-paragraph text-lg text-dark-brown-light mb-8 leading-relaxed">
+                Choose the perfect financing option for your business needs. We offer flexible terms and competitive rates.
+              </p>
+            </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Quick Stats - Right */}
+            <div className="col-span-12 lg:col-span-7">
+              <div className="grid grid-cols-2 gap-6">
+                <FadeIn delay={0.1}>
+                  <div className="bg-white rounded-2xl p-6 border-2 border-dark-brown/10">
+                    <p className="font-heading text-4xl text-dark-brown mb-2">€500K</p>
+                    <p className="font-paragraph text-sm text-dark-brown-light">Max Loan Amount</p>
+                  </div>
+                </FadeIn>
+                <FadeIn delay={0.2}>
+                  <div className="bg-white rounded-2xl p-6 border-2 border-dark-brown/10">
+                    <p className="font-heading text-4xl text-dark-brown mb-2">2 Days</p>
+                    <p className="font-paragraph text-sm text-dark-brown-light">Fast Approval</p>
+                  </div>
+                </FadeIn>
+              </div>
+            </div>
+          </div>
+
+          {/* Service Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             {/* Service 1: Business Loans */}
             <FadeIn className="group">
-              <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50" />
+              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-dark-brown/10">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-vibrant-yellow-light rounded-bl-3xl opacity-30" />
                 
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4">
-                      <TrendingUp className="h-7 w-7 text-dark-brown" />
+                  <div className="mb-8">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-vibrant-yellow rounded-2xl mb-6">
+                      <TrendingUp className="h-8 w-8 text-dark-brown" />
                     </div>
                     <h3 className="font-heading text-3xl text-dark-brown mb-2">Business Loans</h3>
-                    <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Long-term financing for businesses</p>
+                    <p className="font-paragraph text-base text-dark-brown-light">Long-term financing for growth</p>
                   </div>
                   
                   <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
-                    Secure long-term financing for your business growth. Our loan programs offer competitive rates starting from 9.0% per annum + 6 month EURIBOR with flexible terms tailored to your business needs.
+                    Secure long-term financing for your business expansion. Competitive rates from 9.0% per annum + 6M EURIBOR with flexible repayment terms.
                   </p>
 
                   <div className="space-y-3 mb-8">
@@ -198,7 +176,7 @@ export default function HomePage() {
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-dark-brown-light">From 9.0% + 6M EURIBOR</span>
+                      <span className="font-paragraph text-sm text-dark-brown-light">Fast approval process</span>
                     </div>
                   </div>
 
@@ -206,8 +184,8 @@ export default function HomePage() {
                     to="/corporate-loan"
                     className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
                   >
-                    Learn More
-                    <ArrowRight className="h-5 w-5 transition-transform" />
+                    Explore Loans
+                    <ArrowUpRight className="h-5 w-5 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -215,20 +193,20 @@ export default function HomePage() {
 
             {/* Service 2: Credit Lines */}
             <FadeIn className="group" delay={0.1}>
-              <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-vibrant-yellow">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-vibrant-yellow-light to-transparent rounded-bl-full opacity-50" />
+              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-dark-brown/10">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-vibrant-yellow-light rounded-bl-3xl opacity-30" />
                 
                 <div className="relative p-8 md:p-10 h-full flex flex-col">
-                  <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow-light rounded-xl mb-4">
-                      <Zap className="h-7 w-7 text-dark-brown" />
+                  <div className="mb-8">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-vibrant-yellow rounded-2xl mb-6">
+                      <Zap className="h-8 w-8 text-dark-brown" />
                     </div>
                     <h3 className="font-heading text-3xl text-dark-brown mb-2">Credit Lines</h3>
-                    <p className="font-paragraph text-sm text-vibrant-yellow-dark font-bold">Flexible working capital</p>
+                    <p className="font-paragraph text-base text-dark-brown-light">Flexible working capital</p>
                   </div>
                   
                   <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
-                    Access flexible credit lines to manage your business cash flow. Draw funds as needed with competitive rates and pay interest only on what you use.
+                    Access flexible credit lines to manage cash flow. Draw funds as needed and pay interest only on what you use. Perfect for seasonal businesses.
                   </p>
 
                   <div className="space-y-3 mb-8">
@@ -242,7 +220,7 @@ export default function HomePage() {
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-vibrant-yellow flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-dark-brown-light">Fast approval process</span>
+                      <span className="font-paragraph text-sm text-dark-brown-light">Competitive rates</span>
                     </div>
                   </div>
 
@@ -250,8 +228,8 @@ export default function HomePage() {
                     to="/credit-line"
                     className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
                   >
-                    Learn More
-                    <ArrowRight className="h-5 w-5 transition-transform" />
+                    Explore Credit Lines
+                    <ArrowUpRight className="h-5 w-5 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -259,16 +237,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* --- WHY CHOOSE AVS --- */}
       <section className="w-full bg-white py-24 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           
-          <FadeIn className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
-              Why Choose AVS Finance
+          <FadeIn className="mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6 leading-tight">
+              Why Businesses Choose <span className="text-vibrant-yellow">AVS Finance</span>
             </h2>
-            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl mx-auto">
-              We combine financial expertise with a deep understanding of the Estonian market
+            <p className="font-paragraph text-lg text-dark-brown-light max-w-3xl">
+              We combine deep financial expertise with a genuine understanding of the Estonian business landscape. Our team is committed to making financing simple and accessible.
             </p>
           </FadeIn>
 
@@ -276,47 +255,51 @@ export default function HomePage() {
             
             {/* Feature 1 */}
             <FadeIn className="group">
-              <div className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
-                  <Zap className="h-6 w-6 text-vibrant-yellow" />
+              <div className="h-full p-8 rounded-2xl bg-white border-2 border-vibrant-yellow hover:border-dark-brown transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
+                  <Zap className="h-7 w-7 text-dark-brown" />
                 </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">Fast & Flexible</h3>
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">Fast & Simple</h3>
                 <p className="font-paragraph text-dark-brown-light leading-relaxed">
-                  Get an indicative offer within two working days. We tailor solutions around your needs.
+                  Get an indicative offer within two working days. Our streamlined process makes financing hassle-free.
                 </p>
               </div>
             </FadeIn>
 
             {/* Feature 2 */}
             <FadeIn className="group" delay={0.1}>
-              <div className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
-                  <LineChart className="h-6 w-6 text-vibrant-yellow" />
+              <div className="h-full p-8 rounded-2xl bg-white border-2 border-vibrant-yellow hover:border-dark-brown transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
+                  <LineChart className="h-7 w-7 text-dark-brown" />
                 </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">Competitive Rates</h3>
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">Transparent Pricing</h3>
                 <p className="font-paragraph text-dark-brown-light leading-relaxed">
-                  Interest rates from 4.5% per annum with transparent pricing. No hidden fees.
+                  Competitive rates with no hidden fees. We believe in clear, honest communication about costs.
                 </p>
               </div>
             </FadeIn>
 
             {/* Feature 3 */}
             <FadeIn className="group" delay={0.2}>
-              <div className="p-8 rounded-xl bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-900 rounded-lg mb-6">
-                  <Users className="h-6 w-6 text-vibrant-yellow" />
+              <div className="h-full p-8 rounded-2xl bg-white border-2 border-vibrant-yellow hover:border-dark-brown transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
+                  <Users className="h-7 w-7 text-dark-brown" />
                 </div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-3">Expert Support</h3>
-                <p className="font-paragraph text-dark-brown-light leading-relaxed">Dedicated manager who understands your needs and recommends the best option.</p>
+                <p className="font-paragraph text-dark-brown-light leading-relaxed">
+                  Dedicated managers who understand your business and provide personalized recommendations.
+                </p>
               </div>
             </FadeIn>
           </div>
         </div>
       </section>
+
       {/* --- LOAN CALCULATOR SECTION --- */}
-      <section className="w-full bg-gray-50 py-24 md:py-32">
+      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <LoanCalculator />
       </section>
+
       <Footer />
     </div>
   );
