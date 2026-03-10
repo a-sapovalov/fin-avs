@@ -35,8 +35,9 @@ export default function Header() {
             <Image 
               src="https://static.wixstatic.com/media/43558d_bb2587d027a749028f9b613e8e9bc44e~mv2.png"
               alt="AVS Finance Logo"
-              width={200}
-              className="h-12 w-auto"
+              width={300}
+              height={300}
+              className="w-[300px] h-[300px]"
             />
           </Link>
 
