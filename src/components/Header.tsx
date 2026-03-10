@@ -33,12 +33,13 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
             <Image
-              src="https://static.wixstatic.com/media/43558d_bdc1274d2e4944f6acd12012ba758b10~mv2.png"
+              src="https://static.wixstatic.com/media/43558d_0fa9cfc93f8e43a6b27486618d383d6c~mv2.png"
               width={200}
               height={200}
               className="h-auto w-auto"
               originWidth={200}
-              originHeight={200} />
+              originHeight={200}
+              alt="AVS Finance Logo" />
 
           </Link>
 
