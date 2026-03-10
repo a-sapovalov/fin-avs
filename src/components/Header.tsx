@@ -33,14 +33,14 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
             <Image
-              src="https://static.wixstatic.com/media/43558d_0fa9cfc93f8e43a6b27486618d383d6c~mv2.png"
-              width={120}
-              height={120}
-              className="h-16 w-auto"
-              originWidth={200}
-              originHeight={200}
-              alt="AVS Finance Logo" />
-
+              src="https://static.wixstatic.com/media/43558d_d755012e8fb141a99d0385afa90be539~mv2.png"
+              width={60}
+              height={60}
+              className="h-14 w-auto"
+              alt="Company Logo"
+              originWidth={2000}
+              originHeight={2000} />
+            <span className="hidden sm:block font-heading text-lg font-semibold text-vibrant-yellow">FinanceHub</span>
           </Link>
 
           {/* Desktop Navigation - Right aligned with buttons */}
