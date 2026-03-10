@@ -31,15 +31,16 @@ export default function Header() {
       <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4 bg-primary">
         <div className="flex items-center justify-between bg-primary">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
             <Image
               src="https://static.wixstatic.com/media/43558d_d755012e8fb141a99d0385afa90be539~mv2.png"
-              width={50}
-              height={50}
-              className="h-12 w-auto"
+              width={60}
+              height={60}
+              className="h-14 w-auto"
+              alt="Company Logo"
               originWidth={2000}
               originHeight={2000} />
-
+            <span className="hidden sm:block font-heading text-lg font-semibold text-vibrant-yellow">FinanceHub</span>
           </Link>
 
           {/* Desktop Navigation - Right aligned with buttons */}
