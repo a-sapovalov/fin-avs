@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Image } from '@/components/ui/image';
 import { ArrowRight, Target, Award, Users, TrendingUp, Zap, Shield } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';

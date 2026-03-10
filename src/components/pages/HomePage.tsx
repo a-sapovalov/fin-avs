@@ -98,8 +98,8 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-vibrant-yellow-light rounded-full blur-2xl opacity-40" />
                 <div className="relative w-80 h-80 rounded-full bg-gradient-to-br from-vibrant-yellow-light to-accent-beige overflow-hidden flex items-center justify-center">
                   <Image 
-                    src="https://static.wixstatic.com/media/43558d_815395ec83f148eea91d9f707d1ab217~mv2.png?originWidth=320&originHeight=320"
-                    alt="Business professionals discussing financing"
+                    src="https://static.wixstatic.com/media/43558d_7227215d79864394a20b12664e01322c~mv2.png?originWidth=320&originHeight=320"
+                    alt="Professional person meditating with financial wellness"
                     width={320}
                     height={320}
                     className="w-full h-full object-cover"
