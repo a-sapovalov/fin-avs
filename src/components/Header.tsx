@@ -34,8 +34,8 @@ export default function Header() {
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
             <Image
               src="https://static.wixstatic.com/media/43558d_641cab54b94a4a408327218288c38d56~mv2.png"
-              width={60}
-              height={60}
+              width={200}
+              height={200}
               className="h-14 w-auto"
               alt="Company Logo"
               originWidth={2000}
