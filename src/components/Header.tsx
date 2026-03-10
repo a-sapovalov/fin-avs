@@ -32,13 +32,13 @@ export default function Header() {
         <div className="flex items-center justify-between bg-primary">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <Image 
-              src="https://static.wixstatic.com/media/43558d_318c13d0a59e4565bc0b1d7942fefecd~mv2.png"
-              alt="AVS Finance Logo"
+            <Image
+              src="https://static.wixstatic.com/media/43558d_d755012e8fb141a99d0385afa90be539~mv2.png"
               width={50}
               height={50}
               className="h-12 w-auto"
-            />
+              originWidth={2000}
+              originHeight={2000} />
 
           </Link>
 
