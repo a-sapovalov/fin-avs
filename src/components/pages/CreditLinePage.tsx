@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Image } from '@/components/ui/image';
 import { ArrowRight, CheckCircle, Shield, Zap } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';

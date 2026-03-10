@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Image } from '@/components/ui/image';
 import { ArrowRight, CheckCircle, TrendingUp, Zap, Shield } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -91,13 +90,8 @@ export default function CorporateLoanPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <h3 className="font-heading text-3xl mb-8 relative z-10">
+              <div className="bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl">
+                <h3 className="font-heading text-3xl mb-8">
                   Business Loan Overview
                 </h3>
                 <div className="space-y-8">
