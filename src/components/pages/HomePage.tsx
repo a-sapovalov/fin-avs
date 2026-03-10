@@ -130,14 +130,14 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-6">
                 <FadeIn delay={0.1}>
                   <div className="bg-white rounded-2xl p-6 border-2 border-dark-brown/10">
-                    <p className="font-heading text-4xl text-dark-brown mb-2">€500K</p>
+                    <p className="font-heading text-4xl text-dark-brown mb-2">€1M</p>
                     <p className="font-paragraph text-sm text-dark-brown-light">Max Loan Amount</p>
                   </div>
                 </FadeIn>
                 <FadeIn delay={0.2}>
                   <div className="bg-white rounded-2xl p-6 border-2 border-dark-brown/10">
-                    <p className="font-heading text-4xl text-dark-brown mb-2">2 Days</p>
-                    <p className="font-paragraph text-sm text-dark-brown-light">Fast Approval</p>
+                    <p className="font-heading text-4xl text-dark-brown mb-2">85%</p>
+                    <p className="font-paragraph text-sm text-dark-brown-light">Max LTV Rate</p>
                   </div>
                 </FadeIn>
               </div>
