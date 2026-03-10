@@ -32,15 +32,7 @@ export default function Header() {
         <div className="flex items-center justify-between bg-primary">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
-            <Image
-              src="https://static.wixstatic.com/media/43558d_641cab54b94a4a408327218288c38d56~mv2.png"
-              width={200}
-              height={200}
-              className="h-14 w-auto"
-              alt="Company Logo"
-              originWidth={2000}
-              originHeight={2000} />
-            <span className="hidden sm:block font-heading text-lg font-semibold text-vibrant-yellow">FinanceHub</span>
+
           </Link>
 
           {/* Desktop Navigation - Right aligned with buttons */}
