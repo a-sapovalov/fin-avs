@@ -33,7 +33,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
             <Image
-              src="https://static.wixstatic.com/media/43558d_501e7802d49f4213a0e0e044e87bae47~mv2.png"
+              src="https://static.wixstatic.com/media/43558d_19ae91ff9a60461287d3873ea1c37e8b~mv2.png"
               width={100}
               height={100}
               className="h-20 w-auto"
