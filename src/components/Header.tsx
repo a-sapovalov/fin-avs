@@ -32,13 +32,14 @@ export default function Header() {
         <div className="flex items-center justify-between bg-primary">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
-            <Image 
-              src="https://static.wixstatic.com/media/43558d_bb2587d027a749028f9b613e8e9bc44e~mv2.png"
-              alt="AVS Finance Logo"
-              width={300}
-              height={300}
-              className="w-[300px] h-[300px]"
-            />
+            <Image
+              src="https://static.wixstatic.com/media/43558d_501e7802d49f4213a0e0e044e87bae47~mv2.png"
+              width={60}
+              height={60}
+              className="h-14 w-auto"
+              originWidth={2000}
+              originHeight={2000} />
+
           </Link>
 
           {/* Desktop Navigation - Right aligned with buttons */}
