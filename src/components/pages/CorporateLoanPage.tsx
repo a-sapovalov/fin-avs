@@ -118,7 +118,9 @@ export default function CorporateLoanPage() {
       </section>
       {/* Key Benefits Section */}
       <section className="w-full bg-white py-24 md:py-32">
-        <LoanCalculator />
+        <div className="max-w-2xl mx-auto px-6 md:px-12">
+          <LoanCalculator />
+        </div>
       </section>
       <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
