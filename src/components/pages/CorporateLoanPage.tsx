@@ -17,7 +17,7 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.8, delay: delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
-      className="bg-secondary">
+    >
       {children}
     </motion.div>
   );
@@ -45,7 +45,7 @@ export default function CorporateLoanPage() {
     <div className="min-h-screen bg-white text-dark-brown">
       <Header />
       {/* Hero Section */}
-      <section className="relative w-full pt-20 pb-24 overflow-hidden from-white via-yellow-50 to-amber-50 bg-secondary">
+      <section className="relative w-full pt-20 pb-24 overflow-hidden bg-gradient-to-br from-white via-yellow-50 to-amber-50">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <motion.div 
             className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-20"
@@ -76,7 +76,7 @@ export default function CorporateLoanPage() {
               </p>
               <Link 
                 to="/application"
-                className="inline-flex items-center justify-center px-8 py-3.5 text-dark-brown font-paragraph font-bold text-base hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40 rounded-lg border-[#140800ff] bg-vibrant-yellow-light border border-none"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
               >
                 apply for a loan
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -89,24 +89,24 @@ export default function CorporateLoanPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl bg-destructive-foreground">
+              <div className="bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl">
                 <h3 className="font-heading text-3xl mb-8">
                   loan overview
                 </h3>
-                <div className="space-y-0">
-                  <div className="py-6 border-b border-gray-300">
+                <div className="space-y-8">
+                  <div>
                     <p className="font-paragraph text-sm text-gray-700 mb-2">loan amount</p>
                     <p className="font-heading text-2xl">€50,000 - €500,000</p>
                   </div>
-                  <div className="py-6 border-b border-gray-300">
+                  <div>
                     <p className="font-paragraph text-sm text-gray-700 mb-2">interest rate</p>
                     <p className="font-heading text-2xl">from 9,0% + 6m euribor</p>
                   </div>
-                  <div className="py-6 border-b border-gray-300">
+                  <div>
                     <p className="font-paragraph text-sm text-gray-700 mb-2">loan term</p>
                     <p className="font-heading text-2xl">up to 30 years</p>
                   </div>
-                  <div className="py-6">
+                  <div>
                     <p className="font-paragraph text-sm text-gray-700 mb-2">approval time</p>
                     <p className="font-heading text-2xl">3-5 business days</p>
                   </div>
@@ -122,7 +122,7 @@ export default function CorporateLoanPage() {
           <LoanCalculator />
         </div>
       </section>
-      <section className="w-full py-24 md:py-32 bg-background">
+      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
