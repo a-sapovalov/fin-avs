@@ -76,7 +76,7 @@ export default function CorporateLoanPage() {
               </p>
               <Link 
                 to="/application"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
+                className="inline-flex items-center justify-center px-8 py-3.5 text-dark-brown font-paragraph font-bold text-base hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40 rounded-lg border-[#140800ff] bg-vibrant-yellow-light border border-none"
               >
                 apply for a loan
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -89,7 +89,7 @@ export default function CorporateLoanPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl bg-background">
+              <div className="from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl bg-destructive-foreground">
                 <h3 className="font-heading text-3xl mb-8">
                   loan overview
                 </h3>
