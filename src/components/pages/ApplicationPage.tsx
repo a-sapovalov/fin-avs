@@ -126,9 +126,9 @@ export default function ApplicationPage() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-white">
         <Header />
-        <section className="w-full max-w-[100rem] mx-auto px-8 py-32">
+        <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 py-32">
           <motion.div
             className="max-w-2xl mx-auto text-center"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -136,18 +136,18 @@ export default function ApplicationPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex justify-center mb-8">
-              <div className="w-24 h-24 rounded-full bg-accent-gold/20 flex items-center justify-center">
-                <CheckCircle className="h-12 w-12 text-accent-gold" />
+              <div className="w-24 h-24 rounded-full bg-vibrant-yellow/20 flex items-center justify-center">
+                <CheckCircle className="h-12 w-12 text-vibrant-yellow" />
               </div>
             </div>
-            <h1 className="font-heading text-5xl text-primary mb-6">
-              Application Submitted Successfully
+            <h1 className="font-heading text-5xl text-dark-brown mb-6">
+              application submitted successfully
             </h1>
-            <p className="font-paragraph text-xl text-foreground leading-relaxed mb-8">
-              Thank you for choosing AVS Finance. We have received your application and our team will review it shortly. You will receive a response within 5-7 business days.
+            <p className="font-paragraph text-xl text-dark-brown-light leading-relaxed mb-8">
+              thank you for choosing avs finance. we have received your application and our team will review it shortly. you will receive a response within 5-7 business days.
             </p>
-            <p className="font-paragraph text-base text-secondary">
-              Redirecting to homepage...
+            <p className="font-paragraph text-base text-dark-brown-light">
+              redirecting to homepage...
             </p>
           </motion.div>
         </section>
@@ -157,44 +157,44 @@ export default function ApplicationPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-dark-brown">
+    <div className="min-h-screen bg-white text-dark-brown">
       <Header />
       
       {/* Hero Section */}
-      <section className="w-full max-w-[100rem] mx-auto px-8 pt-32 pb-16">
+      <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 pt-20 md:pt-32 pb-16">
         <motion.div 
           className="text-center max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="font-heading text-6xl lg:text-7xl text-dark-brown mb-8">
-            Loan Application
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">
+            loan application
           </h1>
-          <p className="font-paragraph text-xl text-foreground leading-relaxed">
-            Complete the form below to apply for corporate financing. Our team will review your application and contact you within 5-7 business days.
+          <p className="font-paragraph text-lg md:text-xl text-dark-brown-light leading-relaxed">
+            complete the form below to apply for corporate financing. our team will review your application and contact you within 5-7 business days.
           </p>
         </motion.div>
       </section>
 
       {/* Form Section */}
-      <section className="w-full max-w-[100rem] mx-auto px-8 pb-24">
+      <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 pb-24">
         <motion.div 
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <form onSubmit={handleSubmit} className="bg-primary/5 p-12 rounded-lg space-y-8">
+          <form onSubmit={handleSubmit} className="bg-vibrant-yellow/10 p-8 md:p-12 rounded-2xl space-y-8">
             {/* 1. Loan Details Section */}
             <div>
-              <h2 className="font-heading text-3xl text-primary mb-6">
-                Loan Details
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">
+                loan details
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="loanType" className="font-paragraph text-base text-foreground">
-                    Loan Type *
+                  <Label htmlFor="loanType" className="font-paragraph text-base text-dark-brown">
+                    loan type *
                   </Label>
                   <Select
                     value={formData.loanType}
@@ -202,21 +202,21 @@ export default function ApplicationPage() {
                     required
                   >
                     <SelectTrigger className="font-paragraph">
-                      <SelectValue placeholder="Select loan type" />
+                      <SelectValue placeholder="select loan type" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="corporate-loan" className="font-paragraph">
-                        Corporate Loan
+                        corporate loan
                       </SelectItem>
                       <SelectItem value="credit-line" className="font-paragraph">
-                        Credit Line
+                        credit line
                       </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="loanAmount" className="font-paragraph text-base text-foreground">
-                    Loan Amount (EUR) *
+                  <Label htmlFor="loanAmount" className="font-paragraph text-base text-dark-brown">
+                    loan amount (eur) *
                   </Label>
                   <Input
                     id="loanAmount"
@@ -229,8 +229,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="loanPurpose" className="font-paragraph text-base text-foreground">
-                    Purpose of the Loan *
+                  <Label htmlFor="loanPurpose" className="font-paragraph text-base text-dark-brown">
+                    purpose of the loan *
                   </Label>
                   <Textarea
                     id="loanPurpose"
@@ -240,12 +240,12 @@ export default function ApplicationPage() {
                     required
                     rows={3}
                     className="font-paragraph"
-                    placeholder="Please describe the purpose of the loan..."
+                    placeholder="please describe the purpose of the loan..."
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="scheduleType" className="font-paragraph text-base text-foreground">
-                    Schedule Type *
+                  <Label htmlFor="scheduleType" className="font-paragraph text-base text-dark-brown">
+                    schedule type *
                   </Label>
                   <Select
                     value={formData.scheduleType}
@@ -253,24 +253,24 @@ export default function ApplicationPage() {
                     required
                   >
                     <SelectTrigger className="font-paragraph">
-                      <SelectValue placeholder="Select schedule type" />
+                      <SelectValue placeholder="select schedule type" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="monthly" className="font-paragraph">
-                        Monthly
+                        monthly
                       </SelectItem>
                       <SelectItem value="quarterly" className="font-paragraph">
-                        Quarterly
+                        quarterly
                       </SelectItem>
                       <SelectItem value="annual" className="font-paragraph">
-                        Annual
+                        annual
                       </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="gracePeriodDuration" className="font-paragraph text-base text-foreground">
-                    Grace Period Duration (months) *
+                  <Label htmlFor="gracePeriodDuration" className="font-paragraph text-base text-dark-brown">
+                    grace period duration (months) *
                   </Label>
                   <Input
                     id="gracePeriodDuration"
@@ -280,7 +280,7 @@ export default function ApplicationPage() {
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
-                    placeholder="Period where only interest is paid"
+                    placeholder="period where only interest is paid"
                   />
                 </div>
               </div>
@@ -288,13 +288,13 @@ export default function ApplicationPage() {
 
             {/* 2. Company Information Section */}
             <div>
-              <h2 className="font-heading text-3xl text-primary mb-6">
-                Company Information
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">
+                company information
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="companyName" className="font-paragraph text-base text-foreground">
-                    Company Name *
+                  <Label htmlFor="companyName" className="font-paragraph text-base text-dark-brown">
+                    company name *
                   </Label>
                   <Input
                     id="companyName"
@@ -306,8 +306,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="registrationNumber" className="font-paragraph text-base text-foreground">
-                    Registration Number *
+                  <Label htmlFor="registrationNumber" className="font-paragraph text-base text-dark-brown">
+                    registration number *
                   </Label>
                   <Input
                     id="registrationNumber"
@@ -319,8 +319,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="registrationAddress" className="font-paragraph text-base text-foreground">
-                    Registration Address *
+                  <Label htmlFor="registrationAddress" className="font-paragraph text-base text-dark-brown">
+                    registration address *
                   </Label>
                   <Input
                     id="registrationAddress"
@@ -332,8 +332,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="communicationLanguage" className="font-paragraph text-base text-foreground">
-                    Communication Language *
+                  <Label htmlFor="communicationLanguage" className="font-paragraph text-base text-dark-brown">
+                    communication language *
                   </Label>
                   <Select
                     value={formData.communicationLanguage}
@@ -341,24 +341,24 @@ export default function ApplicationPage() {
                     required
                   >
                     <SelectTrigger className="font-paragraph">
-                      <SelectValue placeholder="Select language" />
+                      <SelectValue placeholder="select language" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="estonian" className="font-paragraph">
-                        Estonian
+                        estonian
                       </SelectItem>
                       <SelectItem value="english" className="font-paragraph">
-                        English
+                        english
                       </SelectItem>
                       <SelectItem value="russian" className="font-paragraph">
-                        Russian
+                        russian
                       </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="taxResidency" className="font-paragraph text-base text-foreground">
-                    Tax Residency *
+                  <Label htmlFor="taxResidency" className="font-paragraph text-base text-dark-brown">
+                    tax residency *
                   </Label>
                   <Input
                     id="taxResidency"
@@ -367,7 +367,7 @@ export default function ApplicationPage() {
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
-                    placeholder="Country of tax residency"
+                    placeholder="country of tax residency"
                   />
                 </div>
               </div>
@@ -375,13 +375,13 @@ export default function ApplicationPage() {
 
             {/* 3. Contact Information Section */}
             <div>
-              <h2 className="font-heading text-3xl text-primary mb-6">
-                Contact Information
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">
+                contact information
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="representativeFullName" className="font-paragraph text-base text-foreground">
-                    Full Name of Representative *
+                  <Label htmlFor="representativeFullName" className="font-paragraph text-base text-dark-brown">
+                    full name of representative *
                   </Label>
                   <Input
                     id="representativeFullName"
@@ -393,8 +393,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="representativeEmail" className="font-paragraph text-base text-foreground">
-                    Email Address *
+                  <Label htmlFor="representativeEmail" className="font-paragraph text-base text-dark-brown">
+                    email address *
                   </Label>
                   <Input
                     id="representativeEmail"
@@ -407,8 +407,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="representativeIdentificationCode" className="font-paragraph text-base text-foreground">
-                    Personal Identification Code *
+                  <Label htmlFor="representativeIdentificationCode" className="font-paragraph text-base text-dark-brown">
+                    personal identification code *
                   </Label>
                   <Input
                     id="representativeIdentificationCode"
@@ -420,8 +420,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="representativePhone" className="font-paragraph text-base text-foreground">
-                    Phone Number *
+                  <Label htmlFor="representativePhone" className="font-paragraph text-base text-dark-brown">
+                    phone number *
                   </Label>
                   <Input
                     id="representativePhone"
@@ -434,8 +434,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="representationType" className="font-paragraph text-base text-foreground">
-                    Representation Type *
+                  <Label htmlFor="representationType" className="font-paragraph text-base text-dark-brown">
+                    representation type *
                   </Label>
                   <Select
                     value={formData.representationType}
@@ -443,14 +443,14 @@ export default function ApplicationPage() {
                     required
                   >
                     <SelectTrigger className="font-paragraph">
-                      <SelectValue placeholder="Select representation type" />
+                      <SelectValue placeholder="select representation type" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="legal-representative" className="font-paragraph">
-                        Legal Representative
+                        legal representative
                       </SelectItem>
                       <SelectItem value="authorized-representative" className="font-paragraph">
-                        Authorized Representative
+                        authorized representative
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -460,13 +460,13 @@ export default function ApplicationPage() {
 
             {/* 4. Beneficiary Information Section */}
             <div>
-              <h2 className="font-heading text-3xl text-primary mb-6">
-                Beneficiary Information
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">
+                beneficiary information
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="beneficiaryIdentificationCode" className="font-paragraph text-base text-foreground">
-                    Personal Identification Code *
+                  <Label htmlFor="beneficiaryIdentificationCode" className="font-paragraph text-base text-dark-brown">
+                    personal identification code *
                   </Label>
                   <Input
                     id="beneficiaryIdentificationCode"
@@ -478,8 +478,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="beneficiaryFullName" className="font-paragraph text-base text-foreground">
-                    Full Name *
+                  <Label htmlFor="beneficiaryFullName" className="font-paragraph text-base text-dark-brown">
+                    full name *
                   </Label>
                   <Input
                     id="beneficiaryFullName"
@@ -491,8 +491,8 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="beneficiaryCountry" className="font-paragraph text-base text-foreground">
-                    Country of Residence *
+                  <Label htmlFor="beneficiaryCountry" className="font-paragraph text-base text-dark-brown">
+                    country of residence *
                   </Label>
                   <Input
                     id="beneficiaryCountry"
@@ -501,7 +501,7 @@ export default function ApplicationPage() {
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
-                    placeholder="Country of residence"
+                    placeholder="country of residence"
                   />
                 </div>
               </div>
@@ -509,13 +509,13 @@ export default function ApplicationPage() {
 
             {/* 5. PEP Questionnaire Section */}
             <div>
-              <h2 className="font-heading text-3xl text-primary mb-6">
-                Questionnaire
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">
+                questionnaire
               </h2>
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="isPEPRelated" className="font-paragraph text-base text-foreground">
-                    Is any person related to the company a PEP (Politically Exposed Person)? *
+                  <Label htmlFor="isPEPRelated" className="font-paragraph text-base text-dark-brown">
+                    is any person related to the company a pep (politically exposed person)? *
                   </Label>
                   <Select
                     value={formData.isPEPRelated}
@@ -523,14 +523,14 @@ export default function ApplicationPage() {
                     required
                   >
                     <SelectTrigger className="font-paragraph">
-                      <SelectValue placeholder="Select an option" />
+                      <SelectValue placeholder="select an option" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="yes" className="font-paragraph">
-                        Yes
+                        yes
                       </SelectItem>
                       <SelectItem value="no" className="font-paragraph">
-                        No
+                        no
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -540,18 +540,18 @@ export default function ApplicationPage() {
 
             {/* 6. Collateral Section */}
             <div>
-              <h2 className="font-heading text-3xl text-primary mb-6">
-                Collateral
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">
+                collateral
               </h2>
               
               {/* Collaterals List */}
               <div className="space-y-4 mb-6">
                 {collaterals.map((collateral) => (
-                  <div key={collateral.id} className="border border-foreground/20 rounded-lg p-6 space-y-4">
+                  <div key={collateral.id} className="border border-dark-brown/20 rounded-lg p-6 space-y-4">
                     <div className="flex justify-between items-start">
                       <div className="flex-1">
-                        <Label className="font-paragraph text-base text-foreground mb-2 block">
-                          Collateral Type *
+                        <Label className="font-paragraph text-base text-dark-brown mb-2 block">
+                          collateral type *
                         </Label>
                         <Select
                           value={collateral.type}
@@ -568,10 +568,10 @@ export default function ApplicationPage() {
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="real-estate" className="font-paragraph">
-                              Real Estate
+                              real estate
                             </SelectItem>
                             <SelectItem value="other" className="font-paragraph">
-                              Other
+                              other
                             </SelectItem>
                           </SelectContent>
                         </Select>
@@ -587,8 +587,8 @@ export default function ApplicationPage() {
 
                     {collateral.type === 'real-estate' && (
                       <div className="space-y-2">
-                        <Label className="font-paragraph text-base text-foreground">
-                          Address *
+                        <Label className="font-paragraph text-base text-dark-brown">
+                          address *
                         </Label>
                         <Input
                           value={collateral.address || ''}
@@ -596,15 +596,15 @@ export default function ApplicationPage() {
                             updateCollateral(collateral.id, { address: e.target.value })
                           }
                           className="font-paragraph"
-                          placeholder="Enter property address"
+                          placeholder="enter property address"
                         />
                       </div>
                     )}
 
                     {collateral.type === 'other' && (
                       <div className="space-y-2">
-                        <Label className="font-paragraph text-base text-foreground">
-                          Description *
+                        <Label className="font-paragraph text-base text-dark-brown">
+                          description *
                         </Label>
                         <Textarea
                           value={collateral.description || ''}
@@ -612,7 +612,7 @@ export default function ApplicationPage() {
                             updateCollateral(collateral.id, { description: e.target.value })
                           }
                           className="font-paragraph"
-                          placeholder="Describe the collateral"
+                          placeholder="describe the collateral"
                           rows={3}
                         />
                       </div>
@@ -624,15 +624,15 @@ export default function ApplicationPage() {
               <Button
                 type="button"
                 onClick={addCollateral}
-                className="mb-8 px-6 py-2 bg-primary/20 text-primary font-paragraph rounded-lg hover:bg-primary/30 transition-colors"
+                className="mb-8 px-6 py-2 bg-dark-brown/10 text-dark-brown font-paragraph rounded-lg hover:bg-dark-brown/20 transition-colors"
               >
-                + Add Collateral
+                + add collateral
               </Button>
 
               {/* Surety Information */}
-              <div className="space-y-6 border-t border-foreground/20 pt-6">
-                <h3 className="font-heading text-2xl text-primary">
-                  Surety Information
+              <div className="space-y-6 border-t border-dark-brown/20 pt-6">
+                <h3 className="font-heading text-2xl text-dark-brown">
+                  surety information
                 </h3>
 
                 <div className="flex items-center space-x-3">
@@ -645,9 +645,9 @@ export default function ApplicationPage() {
                   />
                   <Label
                     htmlFor="isRepresentativeSurety"
-                    className="font-paragraph text-base text-foreground cursor-pointer"
+                    className="font-paragraph text-base text-dark-brown cursor-pointer"
                   >
-                    The representative of the company is willing to act as a surety personally
+                    the representative of the company is willing to act as a surety personally
                   </Label>
                 </div>
 
@@ -661,17 +661,17 @@ export default function ApplicationPage() {
                   />
                   <Label
                     htmlFor="isOtherPersonSurety"
-                    className="font-paragraph text-base text-foreground cursor-pointer"
+                    className="font-paragraph text-base text-dark-brown cursor-pointer"
                   >
-                    Another person related to the company is willing to act as a surety
+                    another person related to the company is willing to act as a surety
                   </Label>
                 </div>
 
                 {formData.isOtherPersonSurety && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-primary/5 p-6 rounded-lg">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-vibrant-yellow/10 p-6 rounded-lg">
                     <div className="space-y-2">
-                      <Label className="font-paragraph text-base text-foreground">
-                        Name of Surety Person *
+                      <Label className="font-paragraph text-base text-dark-brown">
+                        name of surety person *
                       </Label>
                       <Input
                         value={otherSuretyPerson.name}
@@ -679,12 +679,12 @@ export default function ApplicationPage() {
                           setOtherSuretyPerson({ ...otherSuretyPerson, name: e.target.value })
                         }
                         className="font-paragraph"
-                        placeholder="Full name"
+                        placeholder="full name"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label className="font-paragraph text-base text-foreground">
-                        Identification Code *
+                      <Label className="font-paragraph text-base text-dark-brown">
+                        identification code *
                       </Label>
                       <Input
                         value={otherSuretyPerson.identificationCode}
@@ -695,7 +695,7 @@ export default function ApplicationPage() {
                           })
                         }
                         className="font-paragraph"
-                        placeholder="Identification code"
+                        placeholder="identification code"
                       />
                     </div>
                   </div>
@@ -708,60 +708,16 @@ export default function ApplicationPage() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full md:w-auto px-10 py-6 bg-primary text-primary-foreground font-paragraph text-lg rounded-lg hover:bg-primary/90 transition-all duration-300"
+                className="w-full md:w-auto px-10 py-6 bg-dark-brown text-vibrant-yellow font-paragraph text-lg rounded-lg hover:bg-dark-brown-light transition-all duration-300"
               >
-                {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
+                {isSubmitting ? 'submitting application...' : 'submit application'}
               </Button>
-              <p className="font-paragraph text-sm text-secondary mt-4">
-                * Required fields. By submitting this form, you agree to our terms and conditions.
+              <p className="font-paragraph text-sm text-dark-brown-light mt-4">
+                * required fields. by submitting this form, you agree to our terms and conditions.
               </p>
             </div>
           </form>
         </motion.div>
-      </section>
-
-      {/* Info Section */}
-      <section className="w-full bg-primary py-24">
-        <div className="max-w-[100rem] mx-auto px-8">
-          <div className="grid grid-cols-12 gap-12">
-            <motion.div 
-              className="col-span-12 md:col-span-4 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="font-heading text-4xl text-accent-gold mb-4">5-7</div>
-              <p className="font-paragraph text-lg text-primary-foreground">
-                Business Days Response Time
-              </p>
-            </motion.div>
-            <motion.div 
-              className="col-span-12 md:col-span-4 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div className="font-heading text-4xl text-accent-gold mb-4">100%</div>
-              <p className="font-paragraph text-lg text-primary-foreground">
-                Transparent Process
-              </p>
-            </motion.div>
-            <motion.div 
-              className="col-span-12 md:col-span-4 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="font-heading text-4xl text-accent-gold mb-4">24/7</div>
-              <p className="font-paragraph text-lg text-primary-foreground">
-                Support Available
-              </p>
-            </motion.div>
-          </div>
-        </div>
       </section>
 
       <Footer />
