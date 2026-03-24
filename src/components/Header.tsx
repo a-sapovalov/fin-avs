@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white border-b-2 border-vibrant-yellow sticky top-0 z-50 shadow-md">
-      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4 bg-secondary">
+      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4 bg-primary">
         <div className="flex items-center justify-between bg-secondary">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">

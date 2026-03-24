@@ -100,8 +100,8 @@ export default function HomePage() {
             
             {/* Feature 1 */}
             <FadeIn className="group">
-              <div className="h-full p-8 rounded-2xl border-2 border-dark-brown/10 bg-secondary">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-background">
+              <div className="h-full p-8 rounded-2xl border-2 border-dark-brown/10 bg-background">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-secondary">
                   <Zap className="h-7 w-7 text-dark-brown fill-secondary" />
                 </div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-3">competitive terms</h3>
@@ -126,8 +126,8 @@ export default function HomePage() {
 
             {/* Feature 3 */}
             <FadeIn className="group" delay={0.2}>
-              <div className="h-full p-8 rounded-2xl border-2 border-dark-brown/10 bg-secondary">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-background">
+              <div className="h-full p-8 rounded-2xl border-2 border-dark-brown/10 bg-background">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-secondary">
                   <Users className="h-7 w-7 text-dark-brown fill-secondary" />
                 </div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-3">dedicated client manager</h3>
