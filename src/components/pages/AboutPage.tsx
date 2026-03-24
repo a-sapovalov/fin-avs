@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Image } from '@/components/ui/image';
-import { Phone, MapPin, Building2 } from 'lucide-react';
+import { Phone, MapPin, Building2, Mail } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
             </h2>
           </FadeIn>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16">
             {/* Support by Phone */}
             <FadeIn>
               <div>
@@ -101,6 +101,26 @@ export default function AboutPage() {
                     </p>
                     <p className="font-paragraph text-lg font-bold text-dark-brown">
                       kentmanni tn 6, 10166 tallinn
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Write to Us */}
+            <FadeIn delay={0.2}>
+              <div>
+                <h3 className="font-heading text-xl text-dark-brown mb-4">write to us</h3>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <Mail className="h-6 w-6 text-dark-brown mt-1" />
+                  </div>
+                  <div>
+                    <p className="font-paragraph text-base text-dark-brown-light mb-2">
+                      we'll respond within 24 hours
+                    </p>
+                    <p className="font-paragraph text-lg font-bold text-dark-brown">
+                      info@avs.ee
                     </p>
                   </div>
                 </div>
@@ -199,8 +219,8 @@ export default function AboutPage() {
             </h2>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Registry & Codes + Bank Account */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* AVS Finance OÜ - with Address */}
             <FadeIn className="bg-white p-8 rounded-2xl border-2 border-dark-brown/10">
               <div className="flex gap-3 mb-6">
                 <Building2 className="h-6 w-6 text-dark-brown flex-shrink-0" />
@@ -211,33 +231,24 @@ export default function AboutPage() {
                 <p><span className="font-bold">vat code:</span> ee555555</p>
                 <p><span className="font-bold">licence:</span> ffa000503</p>
                 <div className="pt-4 border-t border-dark-brown/10">
-                  <p className="font-bold mb-2">bank account (swedbank):</p>
-                  <p>ee242200221092048448</p>
+                  <p className="font-bold mb-2">address:</p>
+                  <p>kentmanni tn 6, 10116 tallinn</p>
                 </div>
               </div>
             </FadeIn>
 
-            {/* Address */}
+            {/* Bank Account */}
             <FadeIn delay={0.1} className="bg-white p-8 rounded-2xl border-2 border-dark-brown/10">
               <div className="flex gap-3 mb-4">
-                <MapPin className="h-6 w-6 text-dark-brown flex-shrink-0" />
-                <h3 className="font-heading text-xl text-dark-brown font-bold">address</h3>
+                <Building2 className="h-6 w-6 text-dark-brown flex-shrink-0" />
+                <h3 className="font-heading text-xl text-dark-brown font-bold">bank account</h3>
               </div>
-              <p className="font-paragraph text-dark-brown">
-                kentmanni tn 6, 10116 tallinn
+              <p className="font-paragraph text-dark-brown-light mb-4">
+                swedbank
               </p>
-            </FadeIn>
-
-            {/* Contact Info */}
-            <FadeIn delay={0.2} className="bg-white p-8 rounded-2xl border-2 border-dark-brown/10">
-              <div className="flex gap-3 mb-4">
-                <Phone className="h-6 w-6 text-dark-brown flex-shrink-0" />
-                <h3 className="font-heading text-xl text-dark-brown font-bold">contact</h3>
-              </div>
-              <div className="space-y-3 font-paragraph text-dark-brown">
-                <p><span className="font-bold">email:</span> info@avs.ee</p>
-                <p><span className="font-bold">phone:</span> +372 5306 6545</p>
-              </div>
+              <p className="font-paragraph text-dark-brown font-bold text-lg">
+                ee242200221092048448
+              </p>
             </FadeIn>
           </div>
         </div>
