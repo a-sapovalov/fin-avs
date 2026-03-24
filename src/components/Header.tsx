@@ -69,7 +69,7 @@ export default function Header() {
                 style={{ fontSize: '20px' }}
               >
                 <Globe className="h-5 w-5" />
-                <span className="font-semibold uppercase">{language}</span>
+                <span className="font-semibold uppercase text-xl">{language}</span>
               </button>
 
               {languageMenuOpen && (
