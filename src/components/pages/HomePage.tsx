@@ -101,8 +101,8 @@ export default function HomePage() {
             {/* Feature 1 */}
             <FadeIn className="group">
               <div className="h-full p-8 rounded-2xl border-2 border-dark-brown/10 bg-background">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-secondary">
-                  <Zap className="h-7 w-7 text-dark-brown fill-secondary" />
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
+                  <LineChart className="h-7 w-7 text-dark-brown" />
                 </div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-3">competitive terms</h3>
                 <p className="font-paragraph text-dark-brown-light leading-relaxed">
@@ -114,8 +114,8 @@ export default function HomePage() {
             {/* Feature 2 */}
             <FadeIn className="group" delay={0.1}>
               <div className="h-full p-8 rounded-2xl bg-white border-2 border-dark-brown/10">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
-                  <LineChart className="h-7 w-7 text-dark-brown" />
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-secondary">
+                  <Zap className="h-7 w-7 text-dark-brown fill-secondary" />
                 </div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-3">fast approvals</h3>
                 <p className="font-paragraph text-dark-brown-light leading-relaxed">
