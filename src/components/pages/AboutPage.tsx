@@ -217,7 +217,7 @@ export default function AboutPage() {
       <section className="w-full py-20 md:py-32 bg-vibrant-yellow-light">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-6 leading-tight">
+            <h2 className="font-heading text-4xl text-dark-brown mb-6 leading-tight md:text-4xl">
               company details
             </h2>
             <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">
@@ -286,7 +286,7 @@ export default function AboutPage() {
       <section className="w-full bg-vibrant-yellow py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-6 leading-tight">
+            <h2 className="font-heading text-4xl text-dark-brown mb-6 leading-tight md:text-4xl">
               meet our team
             </h2>
           </FadeIn>
