@@ -35,7 +35,7 @@ export default function Footer() {
                 credit lines
               </Link>
               <Link 
-                to="/about" 
+                to="/leases" 
                 className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
               >
                 leases

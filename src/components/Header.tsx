@@ -15,7 +15,7 @@ export default function Header() {
     { path: '/', label: 'home' },
     { path: '/corporate-loan', label: 'loans' },
     { path: '/credit-line', label: 'credit lines' },
-    { path: '/about', label: 'leases' },
+    { path: '/leases', label: 'leases' },
     { path: '/about', label: 'contacts' },
   ];
 
