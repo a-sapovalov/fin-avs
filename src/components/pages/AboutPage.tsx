@@ -111,7 +111,7 @@ export default function AboutPage() {
       </section>
 
       {/* --- CONTACT FORM & MAP SECTION --- */}
-      <section className="w-full bg-vibrant-yellow-light py-20 md:py-32">
+      <section className="w-full bg-vibrant-yellow py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
             {/* Contact Form - Left */}
@@ -127,7 +127,7 @@ export default function AboutPage() {
                     name="name"
                     value={contactFormData.name}
                     onChange={handleFormChange}
-                    className="w-full px-4 py-3 border-2 border-dark-brown rounded-lg font-paragraph text-dark-brown placeholder-dark-brown-light focus:outline-none focus:border-vibrant-yellow transition-colors"
+                    className="w-full px-4 py-3 border-2 border-dark-brown rounded-lg font-paragraph text-dark-brown placeholder-dark-brown-light focus:outline-none focus:border-dark-brown transition-colors"
                     placeholder="your name"
                     required
                   />
@@ -142,7 +142,7 @@ export default function AboutPage() {
                     name="email"
                     value={contactFormData.email}
                     onChange={handleFormChange}
-                    className="w-full px-4 py-3 border-2 border-dark-brown rounded-lg font-paragraph text-dark-brown placeholder-dark-brown-light focus:outline-none focus:border-vibrant-yellow transition-colors"
+                    className="w-full px-4 py-3 border-2 border-dark-brown rounded-lg font-paragraph text-dark-brown placeholder-dark-brown-light focus:outline-none focus:border-dark-brown transition-colors"
                     placeholder="your email"
                     required
                   />
@@ -156,7 +156,7 @@ export default function AboutPage() {
                     name="message"
                     value={contactFormData.message}
                     onChange={handleFormChange}
-                    className="w-full px-4 py-3 border-2 border-dark-brown rounded-lg font-paragraph text-dark-brown placeholder-dark-brown-light focus:outline-none focus:border-vibrant-yellow transition-colors resize-none h-32"
+                    className="w-full px-4 py-3 border-2 border-dark-brown rounded-lg font-paragraph text-dark-brown placeholder-dark-brown-light focus:outline-none focus:border-dark-brown transition-colors resize-none h-32"
                     placeholder="your message"
                     required
                   />
@@ -201,7 +201,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Registry & Codes + Bank Account */}
-            <FadeIn className="bg-vibrant-yellow-light p-8 rounded-2xl border-2 border-vibrant-yellow">
+            <FadeIn className="bg-white p-8 rounded-2xl border-2 border-dark-brown/10">
               <div className="flex gap-3 mb-6">
                 <Building2 className="h-6 w-6 text-dark-brown flex-shrink-0" />
                 <h3 className="font-heading text-xl text-dark-brown font-bold">avs finance oü</h3>
@@ -210,7 +210,7 @@ export default function AboutPage() {
                 <p><span className="font-bold">registry code:</span> 17269440</p>
                 <p><span className="font-bold">vat code:</span> ee555555</p>
                 <p><span className="font-bold">licence:</span> ffa000503</p>
-                <div className="pt-4 border-t border-vibrant-yellow">
+                <div className="pt-4 border-t border-dark-brown/10">
                   <p className="font-bold mb-2">bank account (swedbank):</p>
                   <p>ee242200221092048448</p>
                 </div>
@@ -218,7 +218,7 @@ export default function AboutPage() {
             </FadeIn>
 
             {/* Address */}
-            <FadeIn delay={0.1} className="bg-vibrant-yellow-light p-8 rounded-2xl border-2 border-vibrant-yellow">
+            <FadeIn delay={0.1} className="bg-white p-8 rounded-2xl border-2 border-dark-brown/10">
               <div className="flex gap-3 mb-4">
                 <MapPin className="h-6 w-6 text-dark-brown flex-shrink-0" />
                 <h3 className="font-heading text-xl text-dark-brown font-bold">address</h3>
@@ -229,7 +229,7 @@ export default function AboutPage() {
             </FadeIn>
 
             {/* Contact Info */}
-            <FadeIn delay={0.2} className="bg-vibrant-yellow-light p-8 rounded-2xl border-2 border-vibrant-yellow">
+            <FadeIn delay={0.2} className="bg-white p-8 rounded-2xl border-2 border-dark-brown/10">
               <div className="flex gap-3 mb-4">
                 <Phone className="h-6 w-6 text-dark-brown flex-shrink-0" />
                 <h3 className="font-heading text-xl text-dark-brown font-bold">contact</h3>
@@ -244,7 +244,7 @@ export default function AboutPage() {
       </section>
 
       {/* --- MEET OUR TEAM SECTION --- */}
-      <section className="w-full bg-vibrant-yellow-light py-20 md:py-32">
+      <section className="w-full bg-vibrant-yellow py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
             <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-6 leading-tight">
@@ -257,7 +257,7 @@ export default function AboutPage() {
               <FadeIn key={index} delay={index * 0.1}>
                 <div className="bg-white rounded-2xl overflow-hidden border-2 border-dark-brown hover:shadow-lg transition-all duration-300">
                   {/* Image */}
-                  <div className="w-full h-64 md:h-80 bg-vibrant-yellow-light overflow-hidden">
+                  <div className="w-full h-64 md:h-80 bg-vibrant-yellow overflow-hidden">
                     <Image
                       src={member.image}
                       alt={member.name}
