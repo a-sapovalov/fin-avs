@@ -60,51 +60,53 @@ export default function AboutPage() {
       {/* --- CUSTOMER SUPPORT SECTION --- */}
       <section className="w-full bg-white py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
-          <FadeIn>
-            <div className="max-w-2xl">
-              <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-10 leading-tight">
-                customer support
-              </h2>
-              
-              <div className="space-y-10">
-                {/* Support by Phone */}
-                <div>
-                  <h3 className="font-heading text-xl text-dark-brown mb-4">support by phone</h3>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <Phone className="h-6 w-6 text-vibrant-yellow mt-1" />
-                    </div>
-                    <div>
-                      <p className="font-paragraph text-base text-dark-brown-light mb-2">
-                        mon–fri 9:00–18:00, sat 10:00–15:00
-                      </p>
-                      <p className="font-paragraph text-lg font-bold text-dark-brown">
-                        +372 5306 6545
-                      </p>
-                    </div>
+          <FadeIn className="mb-16">
+            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-10 leading-tight">
+              customer support
+            </h2>
+          </FadeIn>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+            {/* Support by Phone */}
+            <FadeIn>
+              <div>
+                <h3 className="font-heading text-xl text-dark-brown mb-4">support by phone</h3>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <Phone className="h-6 w-6 text-vibrant-yellow mt-1" />
                   </div>
-                </div>
-
-                {/* Support at the Office */}
-                <div>
-                  <h3 className="font-heading text-xl text-dark-brown mb-4">support at the office</h3>
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-vibrant-yellow mt-1" />
-                    </div>
-                    <div>
-                      <p className="font-paragraph text-base text-dark-brown-light mb-2">
-                        mon–fri 10:00–16:00
-                      </p>
-                      <p className="font-paragraph text-lg font-bold text-dark-brown">
-                        kentmanni tn 6, 10166 tallinn
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-paragraph text-base text-dark-brown-light mb-2">
+                      mon–fri 9:00–18:00, sat 10:00–15:00
+                    </p>
+                    <p className="font-paragraph text-lg font-bold text-dark-brown">
+                      +372 5306 6545
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+
+            {/* Support at the Office */}
+            <FadeIn delay={0.1}>
+              <div>
+                <h3 className="font-heading text-xl text-dark-brown mb-4">support at the office</h3>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <MapPin className="h-6 w-6 text-vibrant-yellow mt-1" />
+                  </div>
+                  <div>
+                    <p className="font-paragraph text-base text-dark-brown-light mb-2">
+                      mon–fri 10:00–16:00
+                    </p>
+                    <p className="font-paragraph text-lg font-bold text-dark-brown">
+                      kentmanni tn 6, 10166 tallinn
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -185,28 +187,6 @@ export default function AboutPage() {
               </div>
             </FadeIn>
           </div>
-        </div>
-      </section>
-
-      {/* --- CALL TO ACTION SECTION --- */}
-      <section className="w-full bg-dark-brown py-20 md:py-32">
-        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <h2 className="font-heading text-4xl md:text-5xl text-vibrant-yellow mb-6 leading-tight">
-                cooperate with avs finance
-              </h2>
-              <p className="font-paragraph text-lg text-vibrant-yellow-light mb-10 leading-relaxed">
-                join estonian businesses that trust us with their financing needs
-              </p>
-              <button
-                onClick={() => window.location.href = '/application'}
-                className="px-8 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300"
-              >
-                start application
-              </button>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
@@ -300,6 +280,28 @@ export default function AboutPage() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* --- CALL TO ACTION SECTION --- */}
+      <section className="w-full bg-dark-brown py-20 md:py-32">
+        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
+          <FadeIn>
+            <div className="max-w-3xl">
+              <h2 className="font-heading text-4xl md:text-5xl text-vibrant-yellow mb-6 leading-tight">
+                cooperate with avs finance
+              </h2>
+              <p className="font-paragraph text-lg text-vibrant-yellow-light mb-10 leading-relaxed">
+                join estonian businesses that trust us with their financing needs
+              </p>
+              <button
+                onClick={() => window.location.href = '/application'}
+                className="px-8 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300"
+              >
+                start application
+              </button>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
