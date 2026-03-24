@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, TrendingUp, Zap, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, TrendingUp, Zap, Shield, FileText, Users, CheckSquare, Headphones } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Header from '@/components/Header';
@@ -188,6 +188,66 @@ export default function CorporateLoanPage() {
           </FadeIn>
         </div>
       </section>
+      {/* Funding Process Section */}
+      <section className="w-full bg-white py-24 md:py-32">
+        <div className="max-w-[120rem] mx-auto px-6 md:px-12">
+          <FadeIn className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-6">
+              funding process
+            </h2>
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
+              our streamlined process gets you from application to funding in just a few simple steps
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-12">
+            {[
+              {
+                icon: FileText,
+                title: 'fulfill the application',
+                description: 'complete our simple application form with your business details and loan requirements. takes just 10-15 minutes.'
+              },
+              {
+                icon: Users,
+                title: 'get reviewed by our experts',
+                description: 'our experienced team reviews your application and assesses your business profile. we may request additional documentation.'
+              },
+              {
+                icon: CheckSquare,
+                title: 'get approval',
+                description: 'receive approval decision within 3-5 business days. once approved, we prepare your loan agreement and terms.'
+              },
+              {
+                icon: Headphones,
+                title: 'receive ongoing support',
+                description: 'get funded and enjoy dedicated account management. we\'re here to support your business throughout the loan term.'
+              }
+            ].map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <FadeIn key={index} delay={index * 0.1}>
+                  <div className="relative flex flex-col items-center text-center">
+                    <div className="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-vibrant-yellow text-dark-brown shadow-lg">
+                      <Icon className="h-8 w-8" />
+                    </div>
+                    <h3 className="font-heading text-xl text-dark-brown mb-4">
+                      {step.title}
+                    </h3>
+                    <p className="font-paragraph text-base text-gray-600 leading-relaxed">
+                      {step.description}
+                    </p>
+                    {index < 3 && (
+                      <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2">
+                        <ArrowRight className="h-6 w-6 text-vibrant-yellow" />
+                      </div>
+                    )}
+                  </div>
+                </FadeIn>
+              );
+            })}
+          </div>
+        </div>
+      </section>
       {/* Terms and Conditions Section */}
       <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -224,7 +284,6 @@ export default function CorporateLoanPage() {
           </FadeIn>
         </div>
       </section>
-      {/* Loan Calculator Section */}
       {/* CTA Section */}
       <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
