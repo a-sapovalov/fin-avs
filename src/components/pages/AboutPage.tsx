@@ -63,7 +63,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white text-dark-brown">
       <Header />
       {/* --- CUSTOMER SUPPORT SECTION --- */}
-      <section className="w-full bg-white py-20 md:py-32">
+      <section className="w-full py-20 md:py-32 bg-vibrant-yellow-light">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
             <h2 className="font-heading md:text-4xl text-dark-brown mb-4 text-4xl">
@@ -78,7 +78,7 @@ export default function AboutPage() {
             {/* Support by Phone */}
             <FadeIn>
               <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-4">support by phone</h3>
+                <h3 className="font-heading text-xl text-dark-brown mb-4 font-bold">support by phone</h3>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <Phone className="h-6 w-6 text-dark-brown mt-1" />
@@ -98,7 +98,7 @@ export default function AboutPage() {
             {/* Support at the Office */}
             <FadeIn delay={0.1}>
               <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-4">support at the office</h3>
+                <h3 className="font-heading text-xl text-dark-brown mb-4 font-bold">support at the office</h3>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <MapPin className="h-6 w-6 text-dark-brown mt-1" />
