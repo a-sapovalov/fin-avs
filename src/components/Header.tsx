@@ -33,8 +33,8 @@ export default function Header() {
         <div className="flex items-center justify-between bg-secondary">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
-            <h1 className="font-heading text-2xl text-vibrant-yellow">
-              avs <span className="text-vibrant-yellow">finance</span>
+            <h1 className="font-heading text-2xl text-dark-brown">
+              avs <span className="text-dark-brown">finance</span>
             </h1>
           </Link>
 
@@ -47,12 +47,12 @@ export default function Header() {
                   to={link.path}
                   className={`font-paragraph text-sm font-semibold transition-all duration-300 relative group ${
                     isActive(link.path)
-                      ? 'text-vibrant-yellow'
-                      : 'text-vibrant-yellow hover:text-vibrant-yellow-light'
+                      ? 'text-dark-brown'
+                      : 'text-dark-brown hover:text-dark-brown-light'
                   }`}
                 >
                   {link.label}
-                  <span className={`absolute bottom-0 left-0 h-0.5 bg-vibrant-yellow transition-all duration-300 ${
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-dark-brown transition-all duration-300 ${
                     isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
                   }`} />
                 </Link>
@@ -63,7 +63,7 @@ export default function Header() {
             <div className="relative">
               <button
                 onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
-                className="flex items-center gap-2 px-3 py-2 text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors duration-300"
+                className="flex items-center gap-2 px-3 py-2 text-dark-brown hover:text-dark-brown-light transition-colors duration-300"
                 aria-label="Change language"
               >
                 <Globe className="h-5 w-5" />
@@ -72,7 +72,7 @@ export default function Header() {
 
               {languageMenuOpen && (
                 <motion.div
-                  className="absolute right-0 mt-2 w-40 bg-primary border-2 border-vibrant-yellow rounded-lg shadow-lg z-50"
+                  className="absolute right-0 mt-2 w-40 bg-vibrant-yellow border-2 border-dark-brown rounded-lg shadow-lg z-50"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
@@ -86,8 +86,8 @@ export default function Header() {
                       }}
                       className={`w-full text-left px-4 py-3 font-paragraph text-sm transition-colors duration-300 ${
                         language === lang.code
-                          ? 'bg-vibrant-yellow text-dark-brown font-semibold'
-                          : 'text-vibrant-yellow hover:bg-dark-brown-light'
+                          ? 'bg-dark-brown text-vibrant-yellow font-semibold'
+                          : 'text-dark-brown hover:bg-vibrant-yellow-light'
                       }`}
                     >
                       {lang.name}
@@ -120,8 +120,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
+            {mobileMenuOpen && (
           <motion.nav 
             className="lg:hidden mt-6 pb-4 flex flex-col gap-4"
             initial={{ opacity: 0, y: -10 }}
@@ -135,8 +134,8 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`font-paragraph text-base py-2 transition-colors duration-300 ${
                   isActive(link.path)
-                    ? 'text-vibrant-yellow font-semibold'
-                    : 'text-dark-brown hover:text-vibrant-yellow'
+                    ? 'text-dark-brown font-semibold'
+                    : 'text-dark-brown hover:text-dark-brown-light'
                 }`}
               >
                 {link.label}
@@ -144,8 +143,8 @@ export default function Header() {
             ))}
 
             {/* Mobile Language Selector */}
-            <div className="mt-4 pt-4 border-t border-vibrant-yellow">
-              <div className="flex items-center gap-2 mb-3 text-vibrant-yellow">
+            <div className="mt-4 pt-4 border-t border-dark-brown">
+              <div className="flex items-center gap-2 mb-3 text-dark-brown">
                 <Globe className="h-5 w-5" />
                 <span className="text-sm font-semibold">Language</span>
               </div>
@@ -159,8 +158,8 @@ export default function Header() {
                     }}
                     className={`text-left px-4 py-2 font-paragraph text-sm rounded transition-colors duration-300 ${
                       language === lang.code
-                        ? 'bg-vibrant-yellow text-dark-brown font-semibold'
-                        : 'text-vibrant-yellow hover:bg-dark-brown-light'
+                        ? 'bg-dark-brown text-vibrant-yellow font-semibold'
+                        : 'text-dark-brown hover:bg-vibrant-yellow-light'
                     }`}
                   >
                     {lang.name}
