@@ -49,12 +49,6 @@ export default function Footer() {
               >
                 leases
               </Link>
-              <Link 
-                to="/application" 
-                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
-              >
-                apply now
-              </Link>
             </nav>
           </div>
 
@@ -63,17 +57,20 @@ export default function Footer() {
             <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">resources</h4>
             <nav className="flex flex-col gap-3">
               <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
-                blog
-              </a>
-              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
                 faq
               </a>
-              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
-                guides
-              </a>
-              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
+              <Link 
+                to="/application" 
+                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
+              >
+                apply now
+              </Link>
+              <Link 
+                to="/about" 
+                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
+              >
                 support
-              </a>
+              </Link>
             </nav>
           </div>
 
