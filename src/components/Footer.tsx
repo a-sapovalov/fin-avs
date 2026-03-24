@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="font-heading text-2xl mb-4">
-              avs <span className="text-vibrant-yellow">finance</span>
+              avs <span className="text-vibrant-yellow">finance</span> oü
             </h3>
             <p className="font-paragraph text-base text-vibrant-yellow-light leading-relaxed mb-6">
               your trusted partner for business financing solutions in estonia.
@@ -17,7 +17,12 @@ export default function Footer() {
             <p className="font-paragraph text-sm text-vibrant-yellow-light leading-relaxed mb-4">
               avs finance operates under financial institution licence ffa000503 granted by the financial intelligence unit of estonia.
             </p>
-
+            <div className="flex items-start gap-3 mt-6">
+              <MapPin className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
+              <span className="font-paragraph text-sm text-vibrant-yellow-light">
+                kentmanni tn 6, 10116 tallinn
+              </span>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -45,38 +50,29 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Resources */}
+          {/* Company Details */}
           <div>
-            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">resources</h4>
-            <nav className="flex flex-col gap-3">
-              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
-                price list
-              </a>
-              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
-                faq
-              </a>
-              <Link 
-                to="/application" 
-                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
-              >
-                apply for financing
-              </Link>
-            </nav>
+            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">company details</h4>
+            <div className="flex flex-col gap-4">
+              <div>
+                <p className="font-paragraph text-sm text-vibrant-yellow-light mb-2">bank account</p>
+                <p className="font-paragraph text-base text-vibrant-yellow-light">
+                  ee76 2200 2210 0126 0001
+                </p>
+              </div>
+              <div>
+                <p className="font-paragraph text-sm text-vibrant-yellow-light mb-2">registration number</p>
+                <p className="font-paragraph text-base text-vibrant-yellow-light">
+                  14622411
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Contact Info */}
+          {/* Customer Support */}
           <div>
-            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">contact</h4>
+            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">customer support</h4>
             <div className="flex flex-col gap-4">
-              <div className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
-                <a 
-                  href="mailto:info@avs.ee" 
-                  className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
-                >
-                  info@avs.ee
-                </a>
-              </div>
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
                 <a 
@@ -86,11 +82,15 @@ export default function Footer() {
                   +372 5306 6545
                 </a>
               </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
-                <span className="font-paragraph text-base text-vibrant-yellow-light">
-                  Kentmanni tn 6, 10116 Tallinn
-                </span>
+              <div>
+                <p className="font-heading text-sm text-vibrant-yellow mb-2">write to us</p>
+                <a 
+                  href="mailto:info@avs.ee" 
+                  className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300 flex items-start gap-3"
+                >
+                  <Mail className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
+                  info@avs.ee
+                </a>
               </div>
             </div>
           </div>
