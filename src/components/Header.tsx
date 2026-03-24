@@ -28,14 +28,19 @@ export default function Header() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="w-full bg-white border-b-2 border-vibrant-yellow sticky top-0 z-50 shadow-md">
-      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4 bg-primary">
-        <div className="flex items-center justify-between bg-primary">
+    <header className="w-full bg-vibrant-yellow border-b-2 border-vibrant-yellow sticky top-0 z-50 shadow-md">
+      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-4 bg-vibrant-yellow">
+        <div className="flex items-center justify-between bg-vibrant-yellow">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
-            <h1 className="font-heading text-2xl text-dark-brown">
-              avs <span className="text-dark-brown">finance</span>
-            </h1>
+            <div className="flex items-center gap-1">
+              <div className="w-8 h-8 bg-dark-brown rounded-lg flex items-center justify-center">
+                <span className="text-vibrant-yellow font-heading font-bold text-lg">A</span>
+              </div>
+              <h1 className="font-heading text-xl font-bold text-dark-brown">
+                AVS
+              </h1>
+            </div>
           </Link>
 
           {/* Desktop Navigation - Right aligned with buttons */}
