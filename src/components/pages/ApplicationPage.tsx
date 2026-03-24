@@ -172,7 +172,7 @@ export default function ApplicationPage() {
             loan application
           </h1>
           <p className="font-paragraph text-lg md:text-xl text-dark-brown-light leading-relaxed">
-            complete the form below to apply for corporate financing. our team will review your application and contact you within 5-7 business days.
+            complete the form below to apply for financing. our team will review your application and contact you within two business days.
           </p>
         </motion.div>
       </section>
