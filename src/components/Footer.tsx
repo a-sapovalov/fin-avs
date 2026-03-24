@@ -9,13 +9,13 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="font-heading text-2xl mb-4">
-              AVS <span className="text-vibrant-yellow">Finance</span>
+              avs <span className="text-vibrant-yellow">finance</span>
             </h3>
             <p className="font-paragraph text-base text-vibrant-yellow-light leading-relaxed mb-6">
-              Your trusted partner for business financing solutions in Estonia.
+              your trusted partner for business financing solutions in estonia.
             </p>
             <p className="font-paragraph text-sm text-vibrant-yellow-light leading-relaxed mb-4">
-              AVS Finance operates under financial institution licence FFA000503 granted by the Financial Intelligence Unit of Estonia.
+              avs finance operates under financial institution licence ffa000503 granted by the financial intelligence unit of estonia.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors">
@@ -29,57 +29,57 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">Services</h4>
+            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">services</h4>
             <nav className="flex flex-col gap-3">
               <Link 
                 to="/corporate-loan" 
                 className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
               >
-                Business Loans
+                loans
               </Link>
               <Link 
                 to="/credit-line" 
                 className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
               >
-                Credit Lines
+                credit lines
               </Link>
               <Link 
                 to="/about" 
                 className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
               >
-                About Us
+                leases
               </Link>
               <Link 
                 to="/application" 
                 className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
               >
-                Apply Now
+                apply now
               </Link>
             </nav>
           </div>
 
           {/* Resources */}
           <div>
-            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">Resources</h4>
+            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">resources</h4>
             <nav className="flex flex-col gap-3">
               <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
-                Blog
+                blog
               </a>
               <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
-                FAQ
+                faq
               </a>
               <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
-                Guides
+                guides
               </a>
               <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
-                Support
+                support
               </a>
             </nav>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">Contact</h4>
+            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">contact</h4>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
@@ -102,7 +102,7 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
                 <span className="font-paragraph text-base text-vibrant-yellow-light">
-                  Tallinn, Estonia
+                  tallinn, estonia
                 </span>
               </div>
             </div>
@@ -113,20 +113,20 @@ export default function Footer() {
         <div className="border-t border-dark-brown-light pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-paragraph text-sm text-vibrant-yellow-light">
-              © {new Date().getFullYear()} AVS Finance. All rights reserved.
+              © {new Date().getFullYear()} avs finance. all rights reserved.
             </p>
             <div className="flex gap-6">
               <a 
                 href="#" 
                 className="font-paragraph text-sm text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
               >
-                Privacy Policy
+                privacy policy
               </a>
               <a 
                 href="#" 
                 className="font-paragraph text-sm text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
               >
-                Terms of Service
+                terms of service
               </a>
             </div>
           </div>

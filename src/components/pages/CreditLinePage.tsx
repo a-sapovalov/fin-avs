@@ -25,20 +25,20 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 
 export default function CreditLinePage() {
   const benefits = [
-    'Competitive interest rates from 9.0% per annum + 6 month EURIBOR',
-    'Flexible credit line terms up to 25 years',
-    'Credit amounts from €50,000 to €400,000',
-    'Fast approval process within 3-5 business days',
-    'No hidden fees or prepayment penalties',
-    'Dedicated account manager for personalized support',
+    'competitive interest rates from 9,0% per annum + 6 month euribor',
+    'flexible credit line terms up to 25 years',
+    'credit amounts from €50,000 to €400,000',
+    'fast approval process within 3-5 business days',
+    'no hidden fees or prepayment penalties',
+    'dedicated account manager for personalized support',
   ];
 
   const eligibility = [
-    'Valid business registration and proof of business activity',
-    'Existing business credit history',
-    'Stable business history',
-    'Clear purpose for credit line funds',
-    'Good credit history and no outstanding defaults',
+    'valid business registration and proof of business activity',
+    'existing business credit history',
+    'stable business history',
+    'clear purpose for credit line funds',
+    'good credit history and no outstanding defaults',
   ];
 
   return (
@@ -66,20 +66,20 @@ export default function CreditLinePage() {
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-vibrant-yellow-light rounded-full">
                 <Zap className="h-5 w-5 text-gray-900" />
                 <span className="font-paragraph text-xs font-bold text-gray-900 uppercase tracking-wider">
-                  Business Credit Lines
+                  credit lines
                 </span>
               </div>
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">
-                Business Credit Lines for <span className="text-vibrant-yellow">Flexibility</span>
+                credit lines for <span className="text-vibrant-yellow">flexibility</span>
               </h1>
               <p className="font-paragraph text-lg md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
-                Access flexible credit lines exclusively for businesses. Starting from 9.0% per annum + 6 month EURIBOR, draw funds as needed for your business operations.
+                access flexible credit lines exclusively for businesses. starting from 9,0% per annum + 6 month euribor, draw funds as needed for your business operations.
               </p>
               <Link 
                 to="/application"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40"
               >
-                Apply for a Credit Line
+                apply for a credit line
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </motion.div>
@@ -92,23 +92,23 @@ export default function CreditLinePage() {
             >
               <div className="bg-gradient-to-br from-vibrant-yellow to-vibrant-yellow-dark p-8 md:p-10 rounded-2xl text-gray-900 shadow-2xl">
                 <h3 className="font-heading text-3xl mb-8">
-                  Credit Line Overview
+                  credit line overview
                 </h3>
                 <div className="space-y-8">
                   <div>
-                    <p className="font-paragraph text-sm text-gray-700 mb-2">Credit Amount</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">credit amount</p>
                     <p className="font-heading text-2xl">€50,000 - €400,000</p>
                   </div>
                   <div>
-                    <p className="font-paragraph text-sm text-gray-700 mb-2">Interest Rate</p>
-                    <p className="font-heading text-2xl">From 9.0% + 6M EURIBOR</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">interest rate</p>
+                    <p className="font-heading text-2xl">from 9,0% + 6m euribor</p>
                   </div>
                   <div>
-                    <p className="font-paragraph text-sm text-gray-700 mb-2">Credit Term</p>
-                    <p className="font-heading text-2xl">Up to 25 years</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">credit term</p>
+                    <p className="font-heading text-2xl">up to 25 years</p>
                   </div>
                   <div>
-                    <p className="font-paragraph text-sm text-gray-700 mb-2">Approval Time</p>
+                    <p className="font-paragraph text-sm text-gray-700 mb-2">approval time</p>
                     <p className="font-heading text-2xl">3-5 business days</p>
                   </div>
                 </div>
@@ -123,10 +123,10 @@ export default function CreditLinePage() {
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
-              Key Benefits
+              key benefits
             </h2>
             <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
-              Experience the flexibility and convenience of business credit lines
+              experience the flexibility and convenience of business credit lines
             </p>
           </FadeIn>
 
@@ -152,24 +152,24 @@ export default function CreditLinePage() {
         <div className="grid grid-cols-12 gap-16">
           <FadeIn className="col-span-12 lg:col-span-6">
             <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-8">
-              What is a Business Credit Line?
+              what is a credit line?
             </h2>
             <div className="space-y-6">
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                A business credit line is a flexible financing solution that provides businesses with access to capital on an as-needed basis. Unlike traditional loans, credit lines allow you to draw funds only when you need them and pay interest only on the amount you use.
+                a credit line is a flexible financing solution that provides businesses with access to capital on an as-needed basis. unlike traditional loans, credit lines allow you to draw funds only when you need them and pay interest only on the amount you use.
               </p>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                Our credit lines offer flexibility to help you manage cash flow, handle seasonal variations, or fund unexpected business opportunities. You can draw, repay, and redraw funds throughout the credit line term, making it an ideal solution for growing businesses.
+                our credit lines offer flexibility to help you manage cash flow, handle seasonal variations, or fund unexpected business opportunities. you can draw, repay, and redraw funds throughout the credit line term, making it an ideal solution for growing businesses.
               </p>
               <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                With AVS Finance's credit lines, you gain the financial flexibility your business needs to thrive. Our experienced team works with you to structure a credit line that matches your specific business needs and growth plans.
+                with avs finance's credit lines, you gain the financial flexibility your business needs to thrive. our experienced team works with you to structure a credit line that matches your specific business needs and growth plans.
               </p>
             </div>
           </FadeIn>
 
           <FadeIn className="col-span-12 lg:col-span-6" delay={0.1}>
             <h2 className="font-heading text-4xl md:text-5xl text-gray-900 mb-8">
-              Eligibility Criteria
+              eligibility criteria
             </h2>
             <div className="space-y-4">
               {eligibility.map((criterion, index) => (

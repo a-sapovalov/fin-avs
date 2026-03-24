@@ -13,15 +13,17 @@ export default function Header() {
   const { language, setLanguage } = useLanguageStore();
 
   const navLinks = [
-    { path: '/corporate-loan', label: 'Business Loans' },
-    { path: '/credit-line', label: 'Credit Line' },
-    { path: '/about', label: 'About' },
+    { path: '/', label: 'home' },
+    { path: '/corporate-loan', label: 'loans' },
+    { path: '/credit-line', label: 'credit lines' },
+    { path: '/about', label: 'leases' },
+    { path: '/about', label: 'contacts' },
   ];
 
   const languages: { code: Language; name: string }[] = [
-    { code: 'en', name: 'English' },
-    { code: 'et', name: 'Estonian' },
-    { code: 'ru', name: 'Русский' },
+    { code: 'en', name: 'eng' },
+    { code: 'et', name: 'est' },
+    { code: 'ru', name: 'rus' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -104,9 +106,9 @@ export default function Header() {
             {/* CTA Button */}
             <Link 
               to="/application"
-              className="inline-flex items-center justify-center px-8 py-2.5 font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40 bg-primary text-primary-foreground"
+              className="inline-flex items-center justify-center px-8 py-2.5 font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40 bg-vibrant-yellow text-dark-brown"
             >
-              Apply
+              apply
             </Link>
           </div>
 
@@ -177,7 +179,7 @@ export default function Header() {
               to="/application"
               className="mt-4 px-8 py-3 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg text-center hover:bg-vibrant-yellow-dark transition-all duration-300"
             >
-              Apply
+              apply
             </Link>
           </motion.nav>
         )}
