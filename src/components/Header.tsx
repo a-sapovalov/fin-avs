@@ -33,14 +33,9 @@ export default function Header() {
         <div className="flex items-center justify-between bg-dark-brown">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
-            <div className="flex items-center gap-1">
-              <div className="w-8 h-8 bg-vibrant-yellow rounded-lg flex items-center justify-center">
-                <span className="text-dark-brown font-heading font-bold text-lg">A</span>
-              </div>
-              <h1 className="font-heading text-xl font-bold text-vibrant-yellow">
-                AVS
-              </h1>
-            </div>
+            <h1 className="font-heading text-xl font-bold text-vibrant-yellow">
+              avs <span className="text-vibrant-yellow">finance</span>
+            </h1>
           </Link>
 
           {/* Desktop Navigation - Right aligned with buttons */}
