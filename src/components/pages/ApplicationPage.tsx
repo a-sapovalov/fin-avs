@@ -254,14 +254,11 @@ export default function ApplicationPage() {
                       <SelectValue placeholder="select schedule type" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="monthly" className="font-paragraph">
-                        monthly
+                      <SelectItem value="annuity" className="font-paragraph">
+                        annuity
                       </SelectItem>
-                      <SelectItem value="quarterly" className="font-paragraph">
-                        quarterly
-                      </SelectItem>
-                      <SelectItem value="annual" className="font-paragraph">
-                        annual
+                      <SelectItem value="bullet" className="font-paragraph">
+                        bullet
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -666,35 +663,37 @@ export default function ApplicationPage() {
                 </div>
 
                 {formData.isOtherPersonSurety && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-lg bg-background">
-                    <div className="space-y-2">
-                      <Label className="font-paragraph text-base text-dark-brown">
-                        name of surety person *
-                      </Label>
-                      <Input
-                        value={otherSuretyPerson.name}
-                        onChange={(e) =>
-                          setOtherSuretyPerson({ ...otherSuretyPerson, name: e.target.value })
-                        }
-                        className="font-paragraph"
-                        placeholder="full name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label className="font-paragraph text-base text-dark-brown">
-                        identification code *
-                      </Label>
-                      <Input
-                        value={otherSuretyPerson.identificationCode}
-                        onChange={(e) =>
-                          setOtherSuretyPerson({
-                            ...otherSuretyPerson,
-                            identificationCode: e.target.value,
-                          })
-                        }
-                        className="font-paragraph"
-                        placeholder="identification code"
-                      />
+                  <div className="border border-dark-brown/20 rounded-lg p-6 bg-background space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label className="font-paragraph text-base text-dark-brown">
+                          name of surety person *
+                        </Label>
+                        <Input
+                          value={otherSuretyPerson.name}
+                          onChange={(e) =>
+                            setOtherSuretyPerson({ ...otherSuretyPerson, name: e.target.value })
+                          }
+                          className="font-paragraph"
+                          placeholder="full name"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label className="font-paragraph text-base text-dark-brown">
+                          identification code *
+                        </Label>
+                        <Input
+                          value={otherSuretyPerson.identificationCode}
+                          onChange={(e) =>
+                            setOtherSuretyPerson({
+                              ...otherSuretyPerson,
+                              identificationCode: e.target.value,
+                            })
+                          }
+                          className="font-paragraph"
+                          placeholder="identification code"
+                        />
+                      </div>
                     </div>
                   </div>
                 )}
