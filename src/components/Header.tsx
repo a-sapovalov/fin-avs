@@ -45,11 +45,12 @@ export default function Header() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`font-paragraph text-sm font-semibold transition-all duration-300 relative group ${
+                  className={`font-heading text-5xl font-semibold transition-all duration-300 relative group ${
                     isActive(link.path)
                       ? 'text-vibrant-yellow'
                       : 'text-vibrant-yellow hover:text-vibrant-yellow-light'
                   }`}
+                  style={{ fontSize: '20px' }}
                 >
                   {link.label}
                   <span className={`absolute bottom-0 left-0 h-0.5 bg-vibrant-yellow transition-all duration-300 ${
@@ -63,11 +64,12 @@ export default function Header() {
             <div className="relative">
               <button
                 onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
-                className="flex items-center gap-2 px-3 py-2 text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors duration-300"
+                className="flex items-center gap-2 px-3 py-2 text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors duration-300 font-heading"
                 aria-label="Change language"
+                style={{ fontSize: '20px' }}
               >
                 <Globe className="h-5 w-5" />
-                <span className="text-sm font-semibold uppercase">{language}</span>
+                <span className="font-semibold uppercase">{language}</span>
               </button>
 
               {languageMenuOpen && (
