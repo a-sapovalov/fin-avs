@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Image } from '@/components/ui/image';
 import { Phone, MapPin, Building2, Mail } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { BaseCrudService } from '@/integrations';
 
 const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode, delay?: number, className?: string }) => {
   const ref = useRef(null);
@@ -28,6 +29,24 @@ export default function AboutPage() {
     email: '',
     message: '',
   });
+  const [teamMembers, setTeamMembers] = useState<any[]>([]);
+  const [isLoadingTeam, setIsLoadingTeam] = useState(true);
+
+  useEffect(() => {
+    const loadTeamMembers = async () => {
+      try {
+        const result = await BaseCrudService.getAll('teammembers');
+        setTeamMembers(result.items || []);
+      } catch (error) {
+        console.error('Error loading team members:', error);
+        setTeamMembers([]);
+      } finally {
+        setIsLoadingTeam(false);
+      }
+    };
+
+    loadTeamMembers();
+  }, []);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -39,19 +58,6 @@ export default function AboutPage() {
     console.log('Form submitted:', contactFormData);
     setContactFormData({ name: '', email: '', message: '' });
   };
-
-  const teamMembers = [
-    {
-      name: 'aleksandr šapovalov',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-      image: 'https://static.wixstatic.com/media/43558d_00e31b592e474fc7bcce3f8af7194b11~mv2.png?originWidth=384&originHeight=320',
-    },
-    {
-      name: 'evelin metslov',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-      image: 'https://static.wixstatic.com/media/43558d_31477ae86f944bcbb842c245e83a88a7~mv2.png?originWidth=384&originHeight=320',
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-white text-dark-brown">
@@ -286,32 +292,46 @@ export default function AboutPage() {
           </FadeIn>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
-            {teamMembers.map((member, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl overflow-hidden border-2 border-dark-brown hover:shadow-lg transition-all duration-300">
-                  {/* Image */}
-                  <div className="w-full h-64 md:h-80 bg-vibrant-yellow overflow-hidden">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={400}
-                      height={320}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+            {!isLoadingTeam && teamMembers.length > 0 ? (
+              teamMembers.map((member, index) => (
+                <FadeIn key={member._id} delay={index * 0.1}>
+                  <div className="bg-white rounded-2xl overflow-hidden border-2 border-dark-brown hover:shadow-lg transition-all duration-300">
+                    {/* Image */}
+                    <div className="w-full h-64 md:h-80 bg-vibrant-yellow overflow-hidden">
+                      {member.profileImage ? (
+                        <Image
+                          src={member.profileImage}
+                          alt={member.name || 'Team member'}
+                          width={400}
+                          height={320}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-vibrant-yellow-dark flex items-center justify-center">
+                          <span className="text-dark-brown font-paragraph">No image</span>
+                        </div>
+                      )}
+                    </div>
 
-                  {/* Content */}
-                  <div className="p-8">
-                    <h3 className="font-heading text-2xl text-dark-brown mb-4 leading-tight">
-                      {member.name}
-                    </h3>
-                    <p className="font-paragraph text-dark-brown-light leading-relaxed">
-                      {member.description}
-                    </p>
+                    {/* Content */}
+                    <div className="p-8">
+                      <h3 className="font-heading text-2xl text-dark-brown mb-4 leading-tight">
+                        {member.name || 'Team Member'}
+                      </h3>
+                      <p className="font-paragraph text-dark-brown-light leading-relaxed">
+                        {member.description || 'No description available'}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              ))
+            ) : (
+              <div className="col-span-full text-center py-12">
+                <p className="font-paragraph text-dark-brown-light text-lg">
+                  {isLoadingTeam ? 'Loading team members...' : 'No team members found'}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>

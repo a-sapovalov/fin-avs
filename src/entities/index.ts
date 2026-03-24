@@ -26,3 +26,24 @@ export interface FinancialServices {
   /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
   serviceImage?: string;
 }
+
+
+/**
+ * Collection ID: teammembers
+ * Interface for TeamMembers
+ */
+export interface TeamMembers {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  name?: string;
+  /** @wixFieldType text */
+  description?: string;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  profileImage?: string;
+  /** @wixFieldType text */
+  role?: string;
+  /** @wixFieldType url */
+  socialMediaLink?: string;
+}
