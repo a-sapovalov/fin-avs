@@ -150,63 +150,87 @@ export default function HomePage() {
           </FadeIn>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             <FadeIn className="group">
-              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between p-8 md:p-10">
-                <div className="mb-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-vibrant-yellow rounded-full mb-6 shadow-md">
-                    <TrendingUp className="h-8 w-8 text-dark-brown" />
-                  </div>
-                  <h3 className="font-heading text-3xl text-dark-brown mb-2">loans</h3>
+              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
+                <div className="relative w-full h-48 overflow-hidden bg-secondary">
+                  <Image
+                    src="https://static.wixstatic.com/media/43558d_280a3d7b202b483395903b782e611f8f~mv2.png?originWidth=384&originHeight=256"
+                    alt="Business loan illustration"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
-                  financing for businesses, whatever the need – whether for refinancing, investment, a property flip or other ventues. the client decides.
-                </p>
-                <Link
-                  to="/corporate-loan"
-                  className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
-                >
-                  explore loans
-                  <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                </Link>
+                <div className="p-8 md:p-10 flex flex-col justify-between flex-grow">
+                  <div className="mb-8">
+                    <h3 className="font-heading text-3xl text-dark-brown mb-2">loans</h3>
+                  </div>
+                  <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
+                    financing for businesses, whatever the need – whether for refinancing, investment, a property flip or other ventues. the client decides.
+                  </p>
+                  <Link
+                    to="/corporate-loan"
+                    className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
+                  >
+                    explore loans
+                    <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </Link>
+                </div>
               </div>
             </FadeIn>
             <FadeIn className="group" delay={0.1}>
-              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between p-8 md:p-10">
-                <div className="mb-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-vibrant-yellow rounded-full mb-6 shadow-md">
-                    <Zap className="h-8 w-8 text-dark-brown" />
-                  </div>
-                  <h3 className="font-heading text-3xl text-dark-brown mb-2">credit lines</h3>
+              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
+                <div className="relative w-full h-48 overflow-hidden bg-secondary">
+                  <Image
+                    src="https://static.wixstatic.com/media/43558d_a8f01def155d4c048dcc3dac9fc45ed1~mv2.png?originWidth=384&originHeight=256"
+                    alt="Credit line illustration"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
-                  pre-approved financing for businesses that can be used at any time, repeatedly, and exactly when needed. interest is charged on the amount in use.
-                </p>
-                <Link
-                  to="/credit-line"
-                  className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
-                >
-                  explore credit lines
-                  <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                </Link>
+                <div className="p-8 md:p-10 flex flex-col justify-between flex-grow">
+                  <div className="mb-8">
+                    <h3 className="font-heading text-3xl text-dark-brown mb-2">credit lines</h3>
+                  </div>
+                  <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
+                    pre-approved financing for businesses that can be used at any time, repeatedly, and exactly when needed. interest is charged on the amount in use.
+                  </p>
+                  <Link
+                    to="/credit-line"
+                    className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
+                  >
+                    explore credit lines
+                    <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </Link>
+                </div>
               </div>
             </FadeIn>
             <FadeIn className="group" delay={0.2}>
-              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between p-8 md:p-10">
-                <div className="mb-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-vibrant-yellow rounded-full mb-6 shadow-md">
-                    <Shield className="h-8 w-8 text-dark-brown" />
-                  </div>
-                  <h3 className="font-heading text-3xl text-dark-brown mb-2">leases</h3>
+              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
+                <div className="relative w-full h-48 overflow-hidden bg-secondary">
+                  <Image
+                    src="https://static.wixstatic.com/media/43558d_8a1aa27417e14497ba7c7c4a7fd0eba2~mv2.png?originWidth=384&originHeight=256"
+                    alt="Equipment lease illustration"
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
-                  leasing for businesses, whatever the need – whether for equipment, vehicles or other business assets. the client decides.
-                </p>
-                <Link
-                  to="/application"
-                  className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
-                >
-                  explore leases
-                  <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                </Link>
+                <div className="p-8 md:p-10 flex flex-col justify-between flex-grow">
+                  <div className="mb-8">
+                    <h3 className="font-heading text-3xl text-dark-brown mb-2">leases</h3>
+                  </div>
+                  <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
+                    leasing for businesses, whatever the need – whether for equipment, vehicles or other business assets. the client decides.
+                  </p>
+                  <Link
+                    to="/application"
+                    className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
+                  >
+                    explore leases
+                    <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </Link>
+                </div>
               </div>
             </FadeIn>
           </div>
