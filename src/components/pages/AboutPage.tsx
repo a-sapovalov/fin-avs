@@ -256,11 +256,11 @@ export default function AboutPage() {
             {/* Bank Account - Sidebar Card */}
             <FadeIn delay={0.1} className="bg-white p-10 md:p-12 rounded-2xl border-2 border-dark-brown shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
               <div>
-                <h3 className="font-heading text-2xl text-dark-brown font-bold mb-8">bank account</h3>
+                <h3 className="font-heading text-2xl text-dark-brown font-bold mb-8">bank accounts</h3>
               </div>
               <div>
-                <p className="font-paragraph text-xs font-bold text-dark-brown-light tracking-wide mb-3 lowercase">swedbank</p>
-                <p className="font-heading text-lg md:text-xl text-dark-brown break-all">
+                <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-3 lowercase text-xl">swedbank</p>
+                <p className="font-heading md:text-xl text-dark-brown break-all text-xl">
                   ee24 2200 2210 9204 8448
                 </p>
               </div>
