@@ -89,7 +89,7 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
                 <span className="font-paragraph text-base text-vibrant-yellow-light">
-                  Kentmanni tn 6, 10116 Tallinn
+                  kentmanni tn 6, 10116 tallinn
                 </span>
               </div>
             </div>
