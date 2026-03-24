@@ -251,37 +251,56 @@ export default function CorporateLoanPage() {
       {/* Terms and Conditions Section */}
       <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
-          <FadeIn>
-            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-12">
+          <FadeIn className="text-center mb-16">
+            <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-6">
               terms and conditions
             </h2>
-            <div className="bg-vibrant-yellow-light p-8 md:p-12 rounded-2xl border-2 border-vibrant-yellow space-y-8">
-              <div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">interest rates</h3>
-                <p className="font-paragraph text-lg text-dark-brown leading-relaxed">
-                  interest rates start from 9,0% per annum + 6 month euribor and are determined based on your business creditworthiness, loan amount, and repayment term. fixed and variable rate options are available.
-                </p>
-              </div>
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="font-heading text-2xl text-gray-900 mb-4">repayment terms</h3>
-                <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                  flexible repayment schedules ranging from 5 to 30 years. monthly installments are structured to align with your business cash flow and budget. early repayment is permitted without penalties.
-                </p>
-              </div>
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="font-heading text-2xl text-gray-900 mb-4">collateral requirements</h3>
-                <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                  business assets or real estate may be required as collateral depending on the loan amount and your business profile. we work with you to structure collateral arrangements that work for your business.
-                </p>
-              </div>
-              <div className="border-t border-gray-200 pt-8">
-                <h3 className="font-heading text-2xl text-gray-900 mb-4">fees and charges</h3>
-                <p className="font-paragraph text-lg text-gray-600 leading-relaxed">
-                  a one-time origination fee of 0.5-1% of the loan amount applies. no hidden fees, monthly maintenance charges, or prepayment penalties. all costs are disclosed upfront.
-                </p>
-              </div>
-            </div>
+            <p className="font-paragraph text-lg text-dark-brown max-w-2xl mx-auto">
+              transparent pricing and flexible terms designed for your business success
+            </p>
           </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-12">
+            {[
+              {
+                icon: TrendingUp,
+                title: 'interest rates',
+                description: 'interest rates start from 9,0% per annum + 6 month euribor and are determined based on your business creditworthiness, loan amount, and repayment term. fixed and variable rate options are available.'
+              },
+              {
+                icon: Zap,
+                title: 'repayment terms',
+                description: 'flexible repayment schedules ranging from 5 to 30 years. monthly installments are structured to align with your business cash flow and budget. early repayment is permitted without penalties.'
+              },
+              {
+                icon: Shield,
+                title: 'collateral requirements',
+                description: 'business assets or real estate may be required as collateral depending on the loan amount and your business profile. we work with you to structure collateral arrangements that work for your business.'
+              },
+              {
+                icon: FileText,
+                title: 'fees and charges',
+                description: 'a one-time origination fee of 0.5-1% of the loan amount applies. no hidden fees, monthly maintenance charges, or prepayment penalties. all costs are disclosed upfront.'
+              }
+            ].map((term, index) => {
+              const Icon = term.icon;
+              return (
+                <FadeIn key={index} delay={index * 0.1}>
+                  <div className="relative flex flex-col items-start p-8 rounded-2xl bg-gradient-to-br from-white to-vibrant-yellow-light border border-vibrant-yellow-dark shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]">
+                    <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-vibrant-yellow-dark text-dark-brown shadow-md">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-heading text-xl text-dark-brown mb-4">
+                      {term.title}
+                    </h3>
+                    <p className="font-paragraph text-base text-gray-600 leading-relaxed">
+                      {term.description}
+                    </p>
+                  </div>
+                </FadeIn>
+              );
+            })}
+          </div>
         </div>
       </section>
       {/* CTA Section */}
