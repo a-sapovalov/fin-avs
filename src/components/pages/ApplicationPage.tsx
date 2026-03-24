@@ -41,6 +41,7 @@ export default function ApplicationPage() {
     loanAmount: '',
     scheduleType: '',
     gracePeriodDuration: '',
+    loanPeriod: '',
     
     // Company Information
     companyName: '',
@@ -276,6 +277,21 @@ export default function ApplicationPage() {
                     required
                     className="font-paragraph"
                     placeholder="period where only interest is paid"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="loanPeriod" className="font-paragraph text-base text-dark-brown">
+                    loan period (months) *
+                  </Label>
+                  <Input
+                    id="loanPeriod"
+                    name="loanPeriod"
+                    type="number"
+                    value={formData.loanPeriod}
+                    onChange={handleInputChange}
+                    required
+                    className="font-paragraph"
+                    placeholder="total duration of the loan"
                   />
                 </div>
               </div>
