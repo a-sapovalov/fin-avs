@@ -138,7 +138,7 @@ export default function CorporateLoanPage() {
               <FadeIn
                 key={index}
                 delay={index * 0.1}
-                className="flex flex-col items-start p-8 rounded-2xl bg-gradient-to-br from-white to-vibrant-yellow-light border border-vibrant-yellow-dark shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]"
+                className="flex flex-col items-start p-8 rounded-2xl bg-gradient-to-br from-white to-vibrant-yellow-light shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]"
               >
                 <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-vibrant-yellow-dark text-dark-brown shadow-md">
                   <CheckCircle className="h-6 w-6" />
