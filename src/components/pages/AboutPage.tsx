@@ -47,7 +47,7 @@ export default function AboutPage() {
       image: 'https://static.wixstatic.com/media/43558d_00e31b592e474fc7bcce3f8af7194b11~mv2.png?originWidth=384&originHeight=320',
     },
     {
-      name: 'evelin metslon',
+      name: 'evelin metslov',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
       image: 'https://static.wixstatic.com/media/43558d_31477ae86f944bcbb842c245e83a88a7~mv2.png?originWidth=384&originHeight=320',
     },
@@ -63,39 +63,45 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
             {/* Customer Support - Left */}
             <FadeIn>
-              <div className="h-full">
-                <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-8 leading-tight">
-                  ask any questions or receive further information about our services
+              <div className="h-full flex flex-col">
+                <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-10 leading-tight">
+                  customer support
                 </h2>
                 
-                <div className="space-y-8">
-                  {/* Phone */}
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <Phone className="h-6 w-6 text-vibrant-yellow mt-1" />
-                    </div>
-                    <div>
-                      <p className="font-paragraph text-base text-dark-brown-light mb-2">
-                        mon–fri 9:00–18:00, sat 10:00–15:00
-                      </p>
-                      <p className="font-paragraph text-lg font-bold text-dark-brown">
-                        +372 5306 6545
-                      </p>
+                <div className="space-y-10 flex-1">
+                  {/* Support by Phone */}
+                  <div>
+                    <h3 className="font-heading text-xl text-dark-brown mb-4">support by phone</h3>
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <Phone className="h-6 w-6 text-vibrant-yellow mt-1" />
+                      </div>
+                      <div>
+                        <p className="font-paragraph text-base text-dark-brown-light mb-2">
+                          mon–fri 9:00–18:00, sat 10:00–15:00
+                        </p>
+                        <p className="font-paragraph text-lg font-bold text-dark-brown">
+                          +372 5306 6545
+                        </p>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Office */}
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-vibrant-yellow mt-1" />
-                    </div>
-                    <div>
-                      <p className="font-paragraph text-base text-dark-brown-light mb-2">
-                        mon–fri 10:00–16:00
-                      </p>
-                      <p className="font-paragraph text-lg font-bold text-dark-brown">
-                        kentmanni tn 6, 10166 tallinn
-                      </p>
+                  {/* Support at the Office */}
+                  <div>
+                    <h3 className="font-heading text-xl text-dark-brown mb-4">support at the office</h3>
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <MapPin className="h-6 w-6 text-vibrant-yellow mt-1" />
+                      </div>
+                      <div>
+                        <p className="font-paragraph text-base text-dark-brown-light mb-2">
+                          mon–fri 10:00–16:00
+                        </p>
+                        <p className="font-paragraph text-lg font-bold text-dark-brown">
+                          kentmanni tn 6, 10166 tallinn
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -104,12 +110,12 @@ export default function AboutPage() {
 
             {/* Press & Media - Right */}
             <FadeIn delay={0.1}>
-              <div className="h-full bg-vibrant-yellow-light p-10 md:p-12 rounded-2xl border-2 border-vibrant-yellow">
-                <h3 className="font-heading text-3xl md:text-4xl text-dark-brown mb-6 leading-tight">
-                  want to know the inside scoop? get it right from the source.
-                </h3>
+              <div className="h-full bg-vibrant-yellow-light p-10 md:p-12 rounded-2xl border-2 border-vibrant-yellow flex flex-col">
+                <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-10 leading-tight">
+                  press and media inquiries
+                </h2>
                 
-                <div className="flex gap-4 items-start">
+                <div className="flex gap-4 items-start flex-1">
                   <Mail className="h-6 w-6 text-dark-brown flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-paragraph text-lg font-bold text-dark-brown">
@@ -248,14 +254,14 @@ export default function AboutPage() {
             </FadeIn>
 
             {/* Bank Account */}
-            <FadeIn delay={0.3} className="bg-vibrant-yellow-light p-8 rounded-2xl border-2 border-vibrant-yellow md:col-span-2 lg:col-span-1">
+            <FadeIn delay={0.3} className="bg-vibrant-yellow-light p-8 rounded-2xl border-2 border-vibrant-yellow">
               <div className="flex gap-3 mb-4">
                 <Banknote className="h-6 w-6 text-dark-brown flex-shrink-0" />
                 <h3 className="font-heading text-xl text-dark-brown font-bold">bank account</h3>
               </div>
-              <p className="font-paragraph text-dark-brown">
-                <span className="font-bold">swedbank:</span><br />ee242200221092048448
-              </p>
+              <div className="space-y-3 font-paragraph text-dark-brown">
+                <p><span className="font-bold">swedbank:</span><br />ee242200221092048448</p>
+              </div>
             </FadeIn>
           </div>
         </div>
