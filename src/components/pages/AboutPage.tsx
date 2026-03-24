@@ -60,7 +60,7 @@ export default function AboutPage() {
       <section className="w-full bg-white py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
-            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-4 leading-tight">
+            <h2 className="font-heading md:text-4xl text-dark-brown mb-4 text-4xl">
               customer support
             </h2>
             <p className="font-paragraph text-base text-dark-brown-light mb-10">
@@ -98,7 +98,7 @@ export default function AboutPage() {
                     <MapPin className="h-6 w-6 text-dark-brown mt-1" />
                   </div>
                   <div>
-                    <p className="font-paragraph text-base text-dark-brown-light mb-2">
+                    <p className="font-paragraph text-dark-brown-light mb-2 text-lg">
                       mon–fri 10:00–16:00
                     </p>
                     <p className="font-paragraph text-lg font-bold text-dark-brown">

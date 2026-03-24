@@ -11,10 +11,8 @@ export default function Footer() {
             <h3 className="font-heading mb-4 text-xl">
               avs <span className="text-vibrant-yellow">finance</span>
             </h3>
-            <p className="font-paragraph text-base text-vibrant-yellow-light leading-relaxed mb-6">
-              your trusted partner for business financing solutions in estonia.
-            </p>
-            <p className="font-paragraph text-sm text-vibrant-yellow-light leading-relaxed mb-4">
+            <p className="font-paragraph text-base text-vibrant-yellow-light leading-relaxed mb-6">your partner for financing solutions.</p>
+            <p className="font-paragraph text-vibrant-yellow-light mb-4 text-base">
               avs finance operates under financial institution licence ffa000503 granted by the financial intelligence unit of estonia.
             </p>
 
