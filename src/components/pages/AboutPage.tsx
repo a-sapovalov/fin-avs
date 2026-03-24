@@ -56,7 +56,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white text-dark-brown">
       <Header />
-      
       {/* --- CUSTOMER SUPPORT SECTION --- */}
       <section className="w-full bg-white py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
@@ -129,7 +128,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* --- CONTACT FORM & MAP SECTION --- */}
       <section className="w-full bg-vibrant-yellow py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
@@ -209,9 +207,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* --- COMPANY DETAILS SECTION --- */}
-      <section className="w-full bg-vibrant-yellow-light py-20 md:py-32">
+      <section className="w-full py-20 md:py-32 bg-vibrant-yellow-light">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
             <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-6 leading-tight">
@@ -271,7 +268,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* --- MEET OUR TEAM SECTION --- */}
       <section className="w-full bg-vibrant-yellow py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
@@ -311,7 +307,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* --- CALL TO ACTION SECTION --- */}
       <section className="w-full bg-dark-brown py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
@@ -333,7 +328,6 @@ export default function AboutPage() {
           </FadeIn>
         </div>
       </section>
-
       <Footer />
     </div>
   );

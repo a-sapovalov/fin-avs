@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">services</h4>
+            <h4 className="font-heading mb-6 text-vibrant-yellow text-xl">services</h4>
             <nav className="flex flex-col gap-3">
               <Link 
                 to="/corporate-loan" 
@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">resources</h4>
+            <h4 className="font-heading mb-6 text-vibrant-yellow text-xl">resources</h4>
             <nav className="flex flex-col gap-3">
               <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
                 price list
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">contact</h4>
+            <h4 className="font-heading mb-6 text-vibrant-yellow text-xl">contact</h4>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
