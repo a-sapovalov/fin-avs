@@ -258,11 +258,19 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-heading text-2xl text-dark-brown font-bold mb-8">bank accounts</h3>
               </div>
-              <div>
-                <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-3 lowercase text-xl">swedbank</p>
-                <p className="font-heading md:text-xl text-dark-brown break-all text-xl">
-                  ee24 2200 2210 9204 8448
-                </p>
+              <div className="space-y-8">
+                <div>
+                  <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-3 lowercase text-xl">swedbank</p>
+                  <p className="font-heading md:text-xl text-dark-brown break-all text-xl">
+                    ee24 2200 2210 9204 8448
+                  </p>
+                </div>
+                <div>
+                  <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-3 lowercase text-xl">coop pank</p>
+                  <p className="font-heading md:text-xl text-dark-brown break-all text-xl">
+                    ee24 2200 2210 9204 0000
+                  </p>
+                </div>
               </div>
             </FadeIn>
           </div>
