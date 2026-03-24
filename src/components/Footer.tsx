@@ -57,19 +57,16 @@ export default function Footer() {
             <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">resources</h4>
             <nav className="flex flex-col gap-3">
               <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
+                price list
+              </a>
+              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
                 faq
               </a>
               <Link 
                 to="/application" 
                 className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
               >
-                apply now
-              </Link>
-              <Link 
-                to="/about" 
-                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
-              >
-                support
+                apply for financing
               </Link>
             </nav>
           </div>
@@ -81,25 +78,25 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
                 <a 
-                  href="mailto:info@avsfinance.ee" 
+                  href="mailto:info@avs.ee" 
                   className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
                 >
-                  info@avsfinance.ee
+                  info@avs.ee
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
                 <a 
-                  href="tel:+3726234567" 
+                  href="tel:+37253066545" 
                   className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
                 >
-                  +372 623 4567
+                  +372 5306 6545
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-vibrant-yellow mt-1 flex-shrink-0" />
                 <span className="font-paragraph text-base text-vibrant-yellow-light">
-                  tallinn, estonia
+                  Kentmanni tn 6, 10116 Tallinn
                 </span>
               </div>
             </div>
