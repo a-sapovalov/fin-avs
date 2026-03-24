@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <h3 className="font-heading text-xl text-dark-brown mb-4">support by phone</h3>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
-                    <Phone className="h-6 w-6 text-vibrant-yellow mt-1" />
+                    <Phone className="h-6 w-6 text-dark-brown mt-1" />
                   </div>
                   <div>
                     <p className="font-paragraph text-base text-dark-brown-light mb-2">
@@ -93,7 +93,7 @@ export default function AboutPage() {
                 <h3 className="font-heading text-xl text-dark-brown mb-4">support at the office</h3>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-vibrant-yellow mt-1" />
+                    <MapPin className="h-6 w-6 text-dark-brown mt-1" />
                   </div>
                   <div>
                     <p className="font-paragraph text-base text-dark-brown-light mb-2">
