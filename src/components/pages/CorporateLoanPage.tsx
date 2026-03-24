@@ -177,7 +177,7 @@ export default function CorporateLoanPage() {
             </h2>
             <div className="space-y-4">
               {eligibility.map((criterion, index) => (
-                <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-vibrant-yellow-light to-yellow-100 rounded-xl border-2 border-vibrant-yellow">
+                <div key={index} className="flex items-start gap-4 p-6 from-vibrant-yellow-light to-yellow-100 rounded-xl border-2 border-vibrant-yellow bg-secondary">
                   <CheckCircle className="h-6 w-6 text-gray-900 flex-shrink-0 mt-1" />
                   <p className="font-paragraph text-lg text-gray-700 leading-relaxed">
                     {criterion}
@@ -286,7 +286,7 @@ export default function CorporateLoanPage() {
               const Icon = term.icon;
               return (
                 <FadeIn key={index} delay={index * 0.1}>
-                  <div className="relative flex flex-col items-start p-8 rounded-2xl bg-gradient-to-br from-white to-vibrant-yellow-light border border-vibrant-yellow-dark shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]">
+                  <div className="relative flex flex-col items-start p-8 rounded-2xl from-white to-vibrant-yellow-light border border-vibrant-yellow-dark shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01] bg-vibrant-yellow-light">
                     <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-vibrant-yellow-dark text-dark-brown shadow-md">
                       <Icon className="h-6 w-6" />
                     </div>
