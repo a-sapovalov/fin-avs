@@ -44,7 +44,6 @@ export default function CorporateLoanPage() {
   return (
     <div className="min-h-screen bg-white text-dark-brown">
       <Header />
-      
       {/* Hero Section */}
       <section className="relative w-full pt-20 pb-24 overflow-hidden bg-gradient-to-br from-white via-yellow-50 to-amber-50">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -117,8 +116,10 @@ export default function CorporateLoanPage() {
           </div>
         </div>
       </section>
-
       {/* Key Benefits Section */}
+      <section className="w-full bg-white py-24 md:py-32">
+        <LoanCalculator />
+      </section>
       <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
@@ -146,7 +147,6 @@ export default function CorporateLoanPage() {
           </div>
         </div>
       </section>
-
       {/* Detailed Description Section */}
       <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 py-24 md:py-32">
         <div className="grid grid-cols-12 gap-16">
@@ -184,7 +184,6 @@ export default function CorporateLoanPage() {
           </FadeIn>
         </div>
       </section>
-
       {/* Terms and Conditions Section */}
       <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -221,12 +220,7 @@ export default function CorporateLoanPage() {
           </FadeIn>
         </div>
       </section>
-
       {/* Loan Calculator Section */}
-      <section className="w-full bg-white py-24 md:py-32">
-        <LoanCalculator />
-      </section>
-
       {/* CTA Section */}
       <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -251,7 +245,6 @@ export default function CorporateLoanPage() {
           </FadeIn>
         </div>
       </section>
-
       <Footer />
     </div>
   );

@@ -87,7 +87,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- WHY CHOOSE AVS --- */}
-      <section className="w-full py-24 md:py-32 bg-background">
+      <section className="w-full py-24 md:py-32 bg-secondary">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           
           <FadeIn className="mb-16">
