@@ -230,11 +230,11 @@ export default function AboutPage() {
                 {/* Left Column */}
                 <div className="space-y-6">
                   <div>
-                    <p className="font-paragraph text-xs font-bold text-dark-brown-light tracking-wide mb-2 lowercase">registry code</p>
+                    <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-2 lowercase text-xl">registry code</p>
                     <p className="font-heading text-xl text-dark-brown">17269440</p>
                   </div>
                   <div>
-                    <p className="font-paragraph text-xs font-bold text-dark-brown-light tracking-wide mb-2 lowercase">vat code</p>
+                    <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-2 lowercase text-xl">vat code</p>
                     <p className="font-heading text-xl text-dark-brown">ee555555</p>
                   </div>
                 </div>
@@ -242,12 +242,12 @@ export default function AboutPage() {
                 {/* Right Column */}
                 <div className="space-y-6">
                   <div>
-                    <p className="font-paragraph text-xs font-bold text-dark-brown-light tracking-wide mb-2 lowercase">licence number</p>
+                    <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-2 lowercase text-xl">licence number</p>
                     <p className="font-heading text-xl text-dark-brown">ffa000503</p>
                   </div>
                   <div>
-                    <p className="font-paragraph text-xs font-bold text-dark-brown-light tracking-wide mb-2 lowercase">registered address</p>
-                    <p className="font-paragraph text-base text-dark-brown">kentmanni tn 6, 10116 tallinn</p>
+                    <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-2 lowercase text-xl">registered address</p>
+                    <p className="font-paragraph text-dark-brown text-xl">kentmanni tn 6, 10116 tallinn</p>
                   </div>
                 </div>
               </div>
