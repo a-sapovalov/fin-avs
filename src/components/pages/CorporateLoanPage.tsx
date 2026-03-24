@@ -122,7 +122,7 @@ export default function CorporateLoanPage() {
           <LoanCalculator />
         </div>
       </section>
-      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
+      <section className="w-full py-24 md:py-32 bg-background">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">

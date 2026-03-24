@@ -26,19 +26,19 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               <Link 
                 to="/corporate-loan" 
-                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
+                className="font-heading text-lg text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors duration-300"
               >
                 loans
               </Link>
               <Link 
                 to="/credit-line" 
-                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
+                className="font-heading text-lg text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors duration-300"
               >
                 credit lines
               </Link>
               <Link 
                 to="/about" 
-                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
+                className="font-heading text-lg text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors duration-300"
               >
                 leases
               </Link>
@@ -49,15 +49,15 @@ export default function Footer() {
           <div>
             <h4 className="font-heading text-lg mb-6 text-vibrant-yellow">resources</h4>
             <nav className="flex flex-col gap-3">
-              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
+              <a href="#" className="font-heading text-lg text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors duration-300">
                 price list
               </a>
-              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
+              <a href="#" className="font-heading text-lg text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors duration-300">
                 faq
               </a>
               <Link 
                 to="/application" 
-                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
+                className="font-heading text-lg text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors duration-300"
               >
                 apply for financing
               </Link>
