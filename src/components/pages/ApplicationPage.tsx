@@ -227,7 +227,7 @@ export default function ApplicationPage() {
                     className="font-paragraph"
                   />
                 </div>
-                <div className="space-y-2 md:col-span-2">
+                <div className="space-y-2">
                   <Label htmlFor="loanPurpose" className="font-paragraph text-base text-dark-brown">
                     purpose of the loan *
                   </Label>
@@ -265,21 +265,6 @@ export default function ApplicationPage() {
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="gracePeriodDuration" className="font-paragraph text-base text-dark-brown">
-                    grace period duration (months) *
-                  </Label>
-                  <Input
-                    id="gracePeriodDuration"
-                    name="gracePeriodDuration"
-                    type="number"
-                    value={formData.gracePeriodDuration}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                    placeholder="period where only interest is paid"
-                  />
-                </div>
-                <div className="space-y-2">
                   <Label htmlFor="loanPeriod" className="font-paragraph text-base text-dark-brown">
                     loan period (months) *
                   </Label>
@@ -292,6 +277,21 @@ export default function ApplicationPage() {
                     required
                     className="font-paragraph"
                     placeholder="total duration of the loan"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="gracePeriodDuration" className="font-paragraph text-base text-dark-brown">
+                    grace period duration (months) *
+                  </Label>
+                  <Input
+                    id="gracePeriodDuration"
+                    name="gracePeriodDuration"
+                    type="number"
+                    value={formData.gracePeriodDuration}
+                    onChange={handleInputChange}
+                    required
+                    className="font-paragraph"
+                    placeholder="period where only interest is paid"
                   />
                 </div>
               </div>
