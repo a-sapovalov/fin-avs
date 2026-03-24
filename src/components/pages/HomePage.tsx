@@ -91,7 +91,7 @@ export default function HomePage() {
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           
           <FadeIn className="mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6 leading-tight">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6 leading-tight text-center">
               why choose avs
             </h2>
           </FadeIn>
@@ -117,7 +117,7 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
                   <LineChart className="h-7 w-7 text-dark-brown" />
                 </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">fast financing decisions</h3>
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">fast approvals</h3>
                 <p className="font-paragraph text-dark-brown-light leading-relaxed">
                   a financing decision within two business days.
                 </p>
@@ -140,12 +140,11 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- WHAT AVS OFFERS --- */}
-      <section className="w-full bg-primary md:py-[50px] py-[50px] px-0">
+      <section className="w-full md:py-[50px] py-[50px] px-0 bg-secondary">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12 pt-24 pb-12 md:pb-24 lg:pb-32">
           <FadeIn className="mb-16 text-center">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight relative inline-block z-10 text-secondary">
-              what avs offers
-              <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3/4 h-3 bg-vibrant-yellow opacity-70 -z-10" />
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight relative inline-block z-10 text-primary">what avs offers
+                            
             </h2>
           </FadeIn>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
