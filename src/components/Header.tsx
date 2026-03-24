@@ -101,7 +101,6 @@ export default function Header() {
             <Link 
               to="/application"
               className="inline-flex items-center justify-center px-8 py-2.5 font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40 bg-vibrant-yellow text-dark-brown font-heading text-xl"
-              style={{ fontFamily: 'questrial', fontSize: '20px' }}
             >
               apply
             </Link>
@@ -172,7 +171,6 @@ export default function Header() {
             <Link 
               to="/application"
               className="mt-4 px-8 py-3 bg-vibrant-yellow text-dark-brown font-paragraph text-sm font-bold rounded-lg text-center hover:bg-vibrant-yellow-dark transition-all duration-300"
-              style={{ fontFamily: 'questrial', fontSize: '20px' }}
             >
               apply
             </Link>
