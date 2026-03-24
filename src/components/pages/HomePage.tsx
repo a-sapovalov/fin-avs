@@ -87,7 +87,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- WHY CHOOSE AVS --- */}
-      <section className="w-full py-24 md:py-32 bg-secondary border-b-2 border-dark-brown/10">
+      <section className="w-full py-24 md:py-32 border-b-2 border-dark-brown/10 bg-background">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           
           <FadeIn className="mb-16">
@@ -140,10 +140,10 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- WHAT AVS OFFERS --- */}
-      <section className="w-full py-24 md:py-32 bg-secondary">
+      <section className="w-full bg-primary md:py-[50px] py-[50px] px-0">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12 pt-24 pb-12 md:pb-24 lg:pb-32">
           <FadeIn className="mb-16 text-center">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown leading-tight relative inline-block z-10">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight relative inline-block z-10 text-secondary">
               what avs offers
               <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3/4 h-3 bg-vibrant-yellow opacity-70 -z-10" />
             </h2>
@@ -153,12 +153,12 @@ export default function HomePage() {
               <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
                 <div className="relative w-full h-48 overflow-hidden bg-secondary">
                   <Image
-                    src="https://static.wixstatic.com/media/43558d_280a3d7b202b483395903b782e611f8f~mv2.png?originWidth=384&originHeight=256"
-                    alt="Business loan illustration"
+                    src="https://static.wixstatic.com/media/nsplsh_2db62b2cf4074f92a0b9ad6ffe3e3e5b~mv2.jpg"
                     width={400}
                     height={300}
                     className="w-full h-full object-cover"
-                  />
+                    originWidth={5596}
+                    originHeight={3731} />
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-between flex-grow">
                   <div className="mb-8">
@@ -181,12 +181,12 @@ export default function HomePage() {
               <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
                 <div className="relative w-full h-48 overflow-hidden bg-secondary">
                   <Image
-                    src="https://static.wixstatic.com/media/43558d_a8f01def155d4c048dcc3dac9fc45ed1~mv2.png?originWidth=384&originHeight=256"
-                    alt="Credit line illustration"
+                    src="https://static.wixstatic.com/media/nsplsh_2d67396172463661587834~mv2.jpg"
                     width={400}
                     height={300}
                     className="w-full h-full object-cover"
-                  />
+                    originWidth={4801}
+                    originHeight={6826} />
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-between flex-grow">
                   <div className="mb-8">
@@ -209,12 +209,12 @@ export default function HomePage() {
               <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
                 <div className="relative w-full h-48 overflow-hidden bg-secondary">
                   <Image
-                    src="https://static.wixstatic.com/media/43558d_8a1aa27417e14497ba7c7c4a7fd0eba2~mv2.png?originWidth=384&originHeight=256"
-                    alt="Equipment lease illustration"
+                    src="https://static.wixstatic.com/media/nsplsh_313974364a325256715145~mv2_d_8403_3952_s_4_2.jpg"
                     width={400}
                     height={300}
                     className="w-full h-full object-cover"
-                  />
+                    originWidth={8403}
+                    originHeight={3952} />
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-between flex-grow">
                   <div className="mb-8">
