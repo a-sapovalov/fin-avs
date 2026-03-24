@@ -17,7 +17,7 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.8, delay: delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
-    >
+      className="bg-secondary">
       {children}
     </motion.div>
   );
@@ -45,7 +45,7 @@ export default function CorporateLoanPage() {
     <div className="min-h-screen bg-white text-dark-brown">
       <Header />
       {/* Hero Section */}
-      <section className="relative w-full pt-20 pb-24 overflow-hidden bg-gradient-to-br from-white via-yellow-50 to-amber-50">
+      <section className="relative w-full pt-20 pb-24 overflow-hidden from-white via-yellow-50 to-amber-50 bg-secondary">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <motion.div 
             className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-vibrant-yellow-light to-yellow-200 rounded-full blur-3xl opacity-20"
@@ -122,7 +122,7 @@ export default function CorporateLoanPage() {
           <LoanCalculator />
         </div>
       </section>
-      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
+      <section className="w-full py-24 md:py-32 bg-background">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
