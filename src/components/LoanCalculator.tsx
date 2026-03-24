@@ -183,7 +183,7 @@ export default function LoanCalculator() {
               <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                 total interest
               </p>
-              <p className="font-heading text-xl md:text-2xl text-vibrant-yellow-dark">
+              <p className="font-heading text-xl md:text-2xl text-dark-brown">
                 {formatCurrency(calculations.totalInterest)}
               </p>
             </div>
