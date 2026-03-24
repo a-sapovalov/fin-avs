@@ -142,60 +142,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* --- WHY CHOOSE AVS --- */}
-      <section className="w-full bg-vibrant-yellow py-24 md:py-32">
-        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
-          
-          <FadeIn className="mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6 leading-tight">
-              why choose avs
-            </h2>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            {/* Feature 1 */}
-            <FadeIn className="group">
-              <div className="h-full p-8 rounded-2xl bg-white border-2 border-dark-brown/10">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
-                  <Zap className="h-7 w-7 text-dark-brown" />
-                </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">competitive terms</h3>
-                <p className="font-paragraph text-dark-brown-light leading-relaxed">
-                  annual interest from 9,5%, ltv up to 80% and period of your choosing.
-                </p>
-              </div>
-            </FadeIn>
-
-            {/* Feature 2 */}
-            <FadeIn className="group" delay={0.1}>
-              <div className="h-full p-8 rounded-2xl bg-white border-2 border-dark-brown/10">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
-                  <LineChart className="h-7 w-7 text-dark-brown" />
-                </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">fast financing decisions</h3>
-                <p className="font-paragraph text-dark-brown-light leading-relaxed">
-                  a financing decision within two business days.
-                </p>
-              </div>
-            </FadeIn>
-
-            {/* Feature 3 */}
-            <FadeIn className="group" delay={0.2}>
-              <div className="h-full p-8 rounded-2xl bg-white border-2 border-dark-brown/10">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
-                  <Users className="h-7 w-7 text-dark-brown" />
-                </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">dedicated client manager</h3>
-                <p className="font-paragraph text-dark-brown-light leading-relaxed">
-                  a dedicated contact who takes the time to understand your business.
-                </p>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
       {/* --- WHAT AVS OFFERS --- */}
       <section className="w-full bg-white py-24 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">

@@ -102,286 +102,112 @@ export default function LoanCalculator() {
   };
 
   return (
-    <div className="w-full max-w-[100rem] mx-auto px-6 md:px-12 py-24">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-5xl md:text-6xl text-dark-brown mb-6">
-            loan calculator
-          </h2>
-          <p className="font-paragraph text-xl text-dark-brown-light max-w-3xl mx-auto">
-            calculate your estimated monthly payment and view detailed repayment schedules
-          </p>
-        </div>
-
-        <div className="grid grid-cols-12 gap-12">
-          {/* Input Section */}
-          <motion.div
-            className="col-span-12 lg:col-span-5"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <Card className="p-8 bg-white border border-dark-brown/10">
-              <div className="space-y-8">
-                {/* Credit Amount */}
-                <div>
-                  <label className="font-paragraph text-lg text-dark-brown font-semibold mb-4 block">
-                    credit amount: {formatCurrency(creditAmount)}
-                  </label>
-                  <input
-                    type="range"
-                    max="1000000"
-                    step="10000"
-                    value={creditAmount}
-                    onChange={(e) => setCreditAmount(Number(e.target.value))}
-                    className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
-                  />
-                  <div className="flex justify-between font-paragraph text-sm text-dark-brown-light mt-2">
-                    <span>€0</span>
-                    <span>€1,000,000</span>
-                  </div>
-                  <input
-                    type="number"
-                    value={creditAmount}
-                    onChange={(e) => {
-                      const val = Number(e.target.value);
-                      if (!isNaN(val) && val >= 0) {
-                        setCreditAmount(val);
-                      }
-                    }}
-                    onBlur={(e) => {
-                      const val = Number(e.target.value);
-                      if (val > 1000000) {
-                        setCreditAmount(1000000);
-                      }
-                    }}
-                    className="w-full mt-3 px-3 py-2 border border-dark-brown/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-dark-brown"
-                  />
-                </div>
-
-                {/* Annual Rate */}
-                <div>
-                  <label className="font-paragraph text-lg text-dark-brown font-semibold mb-4 block">
-                    annual rate: {annualRate.toFixed(2)}%
-                  </label>
-                  <input
-                    type="range"
-                    max="15"
-                    step="0.1"
-                    value={annualRate}
-                    onChange={(e) => setAnnualRate(Number(e.target.value))}
-                    className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
-                  />
-                  <div className="flex justify-between font-paragraph text-sm text-dark-brown-light mt-2">
-                    <span>0%</span>
-                    <span>15%</span>
-                  </div>
-                  <input
-                    type="number"
-                    value={annualRate}
-                    onChange={(e) => {
-                      const val = Number(e.target.value);
-                      if (!isNaN(val) && val >= 0) {
-                        setAnnualRate(val);
-                      }
-                    }}
-                    onBlur={(e) => {
-                      const val = Number(e.target.value);
-                      if (val > 15) {
-                        setAnnualRate(15);
-                      }
-                    }}
-                    className="w-full mt-3 px-3 py-2 border border-dark-brown/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-dark-brown"
-                  />
-                </div>
-
-                {/* Duration */}
-                <div>
-                  <label className="font-paragraph text-lg text-dark-brown font-semibold mb-4 block">
-                    duration: {duration} months ({(duration / 12).toFixed(1)} years)
-                  </label>
-                  <input
-                    type="range"
-                    max="240"
-                    step="1"
-                    value={duration}
-                    onChange={(e) => setDuration(Number(e.target.value))}
-                    className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
-                  />
-                  <div className="flex justify-between font-paragraph text-sm text-dark-brown-light mt-2">
-                    <span>0 months</span>
-                    <span>240 months</span>
-                  </div>
-                  <input
-                    type="number"
-                    value={duration}
-                    onChange={(e) => {
-                      const val = Number(e.target.value);
-                      if (!isNaN(val) && val >= 0) {
-                        setDuration(val);
-                      }
-                    }}
-                    onBlur={(e) => {
-                      const val = Number(e.target.value);
-                      if (val > 240) {
-                        setDuration(240);
-                      }
-                    }}
-                    className="w-full mt-3 px-3 py-2 border border-dark-brown/20 rounded-lg font-paragraph text-sm focus:outline-none focus:border-dark-brown"
-                  />
-                </div>
-
-                {/* Schedule Type */}
-                <div>
-                  <label className="font-paragraph text-lg text-dark-brown font-semibold mb-4 block">
-                    payment schedule
-                  </label>
-                  <div className="flex gap-4">
-                    <button
-                      onClick={() => setScheduleType('annuity')}
-                      className={`flex-1 py-3 px-4 rounded-lg font-paragraph font-semibold transition-all duration-300 ${
-                        scheduleType === 'annuity'
-                          ? 'bg-dark-brown text-white'
-                          : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
-                      }`}
-                    >
-                      annuity
-                    </button>
-                    <button
-                      onClick={() => setScheduleType('bullet')}
-                      className={`flex-1 py-3 px-4 rounded-lg font-paragraph font-semibold transition-all duration-300 ${
-                        scheduleType === 'bullet'
-                          ? 'bg-dark-brown text-white'
-                          : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
-                      }`}
-                    >
-                      bullet
-                    </button>
-                  </div>
-                  <p className="font-paragraph text-sm text-dark-brown-light mt-3">
-                    {scheduleType === 'annuity'
-                      ? 'equal monthly payments throughout the loan term'
-                      : 'interest-only payments monthly, principal due at end'}
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
-
-          {/* Results Section */}
-          <motion.div
-            className="col-span-12 lg:col-span-7"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="space-y-6">
-              {/* Key Metrics */}
-              <div className="grid grid-cols-2 gap-4">
-                <Card className="p-6 bg-dark-brown text-white border-0">
-                  <p className="font-paragraph text-sm text-white/70 mb-2">
-                    monthly payment
-                  </p>
-                  <p className="font-heading text-3xl">
-                    {formatCurrency(calculations.monthlyPayment)}
-                  </p>
-                </Card>
-
-                <Card className="p-6 bg-vibrant-yellow text-dark-brown border-0">
-                  <p className="font-paragraph text-sm text-dark-brown/70 mb-2">
-                    total interest
-                  </p>
-                  <p className="font-heading text-3xl">
-                    {formatCurrency(calculations.totalInterest)}
-                  </p>
-                </Card>
-
-                <Card className="p-6 bg-dark-brown/10 border border-dark-brown/20">
-                  <p className="font-paragraph text-sm text-dark-brown-light mb-2">
-                    total payment
-                  </p>
-                  <p className="font-heading text-3xl text-dark-brown">
-                    {formatCurrency(calculations.totalPayment)}
-                  </p>
-                </Card>
-
-                <Card className="p-6 bg-dark-brown/5 border border-dark-brown/10">
-                  <p className="font-paragraph text-sm text-dark-brown-light mb-2">
-                    credit amount
-                  </p>
-                  <p className="font-heading text-3xl text-dark-brown">
-                    {formatCurrency(creditAmount)}
-                  </p>
-                </Card>
-              </div>
-
-              {/* Schedule Preview */}
-              <Card className="p-6 bg-white border border-dark-brown/10">
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">
-                  payment schedule preview
-                </h3>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b border-dark-brown/10">
-                        <th className="text-left py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
-                          month
-                        </th>
-                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
-                          payment
-                        </th>
-                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
-                          principal
-                        </th>
-                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
-                          interest
-                        </th>
-                        <th className="text-right py-3 px-2 font-paragraph font-semibold text-dark-brown-light">
-                          balance
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {calculations.schedule.slice(0, 12).map((item) => (
-                        <tr
-                          key={item.month}
-                          className="border-b border-dark-brown/5 hover:bg-dark-brown/5 transition-colors"
-                        >
-                          <td className="py-3 px-2 font-paragraph text-dark-brown">
-                            {item.month}
-                          </td>
-                          <td className="text-right py-3 px-2 font-paragraph text-dark-brown font-semibold">
-                            {formatCurrency(item.payment)}
-                          </td>
-                          <td className="text-right py-3 px-2 font-paragraph text-dark-brown">
-                            {formatCurrency(item.principal)}
-                          </td>
-                          <td className="text-right py-3 px-2 font-paragraph text-dark-brown">
-                            {formatCurrency(item.interest)}
-                          </td>
-                          <td className="text-right py-3 px-2 font-paragraph text-dark-brown font-semibold">
-                            {formatCurrency(item.balance)}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-                <p className="font-paragraph text-xs text-dark-brown-light mt-4">
-                  showing first {duration <= 12 ? duration : 12} months of {duration} month schedule
-                </p>
-              </Card>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="w-full"
+    >
+      <Card className="p-6 md:p-8 bg-white border border-dark-brown/10">
+        <div className="space-y-6">
+          {/* Credit Amount */}
+          <div>
+            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+              credit amount: {formatCurrency(creditAmount)}
+            </label>
+            <input
+              type="range"
+              max="1000000"
+              step="10000"
+              value={creditAmount}
+              onChange={(e) => setCreditAmount(Number(e.target.value))}
+              className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
+            />
+            <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
+              <span>€0</span>
+              <span>€1,000,000</span>
             </div>
-          </motion.div>
+          </div>
+
+          {/* Annual Rate */}
+          <div>
+            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+              annual rate: {annualRate.toFixed(2)}%
+            </label>
+            <input
+              type="range"
+              max="15"
+              step="0.1"
+              value={annualRate}
+              onChange={(e) => setAnnualRate(Number(e.target.value))}
+              className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
+            />
+            <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
+              <span>0%</span>
+              <span>15%</span>
+            </div>
+          </div>
+
+          {/* Duration */}
+          <div>
+            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+              duration: {duration} months ({(duration / 12).toFixed(1)} years)
+            </label>
+            <input
+              type="range"
+              max="240"
+              step="1"
+              value={duration}
+              onChange={(e) => setDuration(Number(e.target.value))}
+              className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
+            />
+            <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
+              <span>0 months</span>
+              <span>240 months</span>
+            </div>
+          </div>
+
+          {/* Key Results */}
+          <div className="grid grid-cols-2 gap-3 pt-4 border-t border-dark-brown/10">
+            <div>
+              <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                monthly payment
+              </p>
+              <p className="font-heading text-xl md:text-2xl text-dark-brown">
+                {formatCurrency(calculations.monthlyPayment)}
+              </p>
+            </div>
+
+            <div>
+              <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                total interest
+              </p>
+              <p className="font-heading text-xl md:text-2xl text-vibrant-yellow-dark">
+                {formatCurrency(calculations.totalInterest)}
+              </p>
+            </div>
+
+            <div>
+              <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                total payment
+              </p>
+              <p className="font-heading text-xl md:text-2xl text-dark-brown">
+                {formatCurrency(calculations.totalPayment)}
+              </p>
+            </div>
+
+            <div>
+              <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                credit amount
+              </p>
+              <p className="font-heading text-xl md:text-2xl text-dark-brown">
+                {formatCurrency(creditAmount)}
+              </p>
+            </div>
+          </div>
         </div>
-      </motion.div>
-    </div>
+      </Card>
+    </motion.div>
   );
 }
