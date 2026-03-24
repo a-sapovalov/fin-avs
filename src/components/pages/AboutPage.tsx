@@ -61,9 +61,12 @@ export default function AboutPage() {
       <section className="w-full bg-white py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
-            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-10 leading-tight">
+            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-4 leading-tight">
               customer support
             </h2>
+            <p className="font-paragraph text-base text-dark-brown-light mb-10">
+              ask any questions or receive further information about our services
+            </p>
           </FadeIn>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16">
@@ -222,14 +225,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
             {/* Company Info - Larger Card */}
             <FadeIn className="lg:col-span-2 bg-white p-10 md:p-12 rounded-2xl border-2 border-dark-brown shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex gap-4 mb-8">
-                <div className="p-3 bg-vibrant-yellow rounded-lg flex-shrink-0">
-                  <Building2 className="h-6 w-6 text-dark-brown" />
-                </div>
-                <div>
-                  <h3 className="font-heading text-2xl md:text-3xl text-dark-brown font-bold">avs finance oü</h3>
-                  <p className="font-paragraph text-sm text-dark-brown-light mt-1">estonian financial services company</p>
-                </div>
+              <div className="mb-8">
+                <h3 className="font-heading text-2xl md:text-3xl text-dark-brown font-bold">avs finance oü</h3>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
@@ -262,11 +259,7 @@ export default function AboutPage() {
             {/* Bank Account - Sidebar Card */}
             <FadeIn delay={0.1} className="bg-white p-10 md:p-12 rounded-2xl border-2 border-dark-brown shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
               <div>
-                <div className="p-3 bg-vibrant-yellow rounded-lg w-fit mb-6">
-                  <Building2 className="h-6 w-6 text-dark-brown" />
-                </div>
-                <h3 className="font-heading text-2xl text-dark-brown font-bold mb-2">bank account</h3>
-                <p className="font-paragraph text-sm text-dark-brown-light mb-8">primary banking partner</p>
+                <h3 className="font-heading text-2xl text-dark-brown font-bold mb-8">bank account</h3>
               </div>
               <div>
                 <p className="font-paragraph text-xs font-bold text-dark-brown-light uppercase tracking-wide mb-3">swedbank</p>
