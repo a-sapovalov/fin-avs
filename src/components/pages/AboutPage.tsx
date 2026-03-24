@@ -118,7 +118,7 @@ export default function AboutPage() {
             {/* Write to Us */}
             <FadeIn delay={0.2}>
               <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-4">write to us</h3>
+                <h3 className="font-heading text-xl text-dark-brown mb-4 font-bold">write to us</h3>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <Mail className="h-6 w-6 text-dark-brown mt-1" />

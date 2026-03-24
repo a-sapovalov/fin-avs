@@ -159,9 +159,8 @@ export default function ApplicationPage() {
   return (
     <div className="min-h-screen bg-white text-dark-brown">
       <Header />
-      
       {/* Hero Section */}
-      <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 pt-20 md:pt-32 pb-16">
+      <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 pt-20 md:pt-32 pb-16 bg-secondary">
         <motion.div 
           className="text-center max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -176,9 +175,8 @@ export default function ApplicationPage() {
           </p>
         </motion.div>
       </section>
-
       {/* Form Section */}
-      <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 pb-24">
+      <section className="w-full max-w-[120rem] mx-auto px-6 md:px-12 pb-24 bg-background">
         <motion.div 
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -719,7 +717,6 @@ export default function ApplicationPage() {
           </form>
         </motion.div>
       </section>
-
       <Footer />
     </div>
   );
