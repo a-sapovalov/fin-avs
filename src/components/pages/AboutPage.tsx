@@ -116,9 +116,6 @@ export default function AboutPage() {
                     <Mail className="h-6 w-6 text-dark-brown mt-1" />
                   </div>
                   <div>
-                    <p className="font-paragraph text-base text-dark-brown-light mb-2">
-                      we'll respond within 24 hours
-                    </p>
                     <p className="font-paragraph text-lg font-bold text-dark-brown">
                       info@avs.ee
                     </p>
