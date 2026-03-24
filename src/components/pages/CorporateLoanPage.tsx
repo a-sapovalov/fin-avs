@@ -133,15 +133,17 @@ export default function CorporateLoanPage() {
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-24 px-6 md:px-12">
             {benefits.map((benefit, index) => (
               <FadeIn
                 key={index}
                 delay={index * 0.1}
-                className="flex items-start gap-4 bg-white p-8 rounded-xl border-2 border-vibrant-yellow hover:border-vibrant-yellow-dark hover:shadow-lg transition-all duration-300"
+                className="flex flex-col items-start p-8 rounded-2xl bg-gradient-to-br from-white to-vibrant-yellow-light border border-vibrant-yellow-dark shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]"
               >
-                <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
-                <p className="font-paragraph text-lg text-gray-700 leading-relaxed">
+                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-vibrant-yellow-dark text-dark-brown shadow-md">
+                  <CheckCircle className="h-6 w-6" />
+                </div>
+                <p className="font-paragraph text-lg text-dark-brown leading-relaxed font-semibold">
                   {benefit}
                 </p>
               </FadeIn>
