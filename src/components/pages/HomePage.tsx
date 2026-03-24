@@ -41,7 +41,7 @@ export default function HomePage() {
       />
       <Header />
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full py-20 md:py-32 overflow-hidden bg-secondary">
+      <section className="relative w-full py-20 md:py-32 overflow-hidden bg-secondary border-b-2 border-dark-brown/10">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
             
@@ -87,7 +87,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- WHY CHOOSE AVS --- */}
-      <section className="w-full py-24 md:py-32 bg-secondary">
+      <section className="w-full py-24 md:py-32 bg-secondary border-b-2 border-dark-brown/10">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           
           <FadeIn className="mb-16">
