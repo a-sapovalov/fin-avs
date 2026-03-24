@@ -40,9 +40,8 @@ export default function HomePage() {
         style={{ scaleX }}
       />
       <Header />
-      
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full py-20 md:py-32 overflow-hidden bg-white">
+      <section className="relative w-full py-20 md:py-32 overflow-hidden bg-secondary">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
             
@@ -87,9 +86,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- WHY CHOOSE AVS --- */}
-      <section className="w-full bg-vibrant-yellow py-24 md:py-32">
+      <section className="w-full py-24 md:py-32 bg-background">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           
           <FadeIn className="mb-16">
@@ -102,9 +100,9 @@ export default function HomePage() {
             
             {/* Feature 1 */}
             <FadeIn className="group">
-              <div className="h-full p-8 rounded-2xl bg-white border-2 border-dark-brown/10">
+              <div className="h-full p-8 rounded-2xl border-2 border-dark-brown/10 bg-secondary">
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
-                  <Zap className="h-7 w-7 text-dark-brown" />
+                  <Zap className="h-7 w-7 text-dark-brown fill-background" />
                 </div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-3">competitive terms</h3>
                 <p className="font-paragraph text-dark-brown-light leading-relaxed">
@@ -128,7 +126,7 @@ export default function HomePage() {
 
             {/* Feature 3 */}
             <FadeIn className="group" delay={0.2}>
-              <div className="h-full p-8 rounded-2xl bg-white border-2 border-dark-brown/10">
+              <div className="h-full p-8 rounded-2xl border-2 border-dark-brown/10 bg-secondary">
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
                   <Users className="h-7 w-7 text-dark-brown" />
                 </div>
@@ -141,7 +139,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- WHAT AVS OFFERS --- */}
       <section className="w-full bg-white py-24 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
@@ -240,7 +237,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
