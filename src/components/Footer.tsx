@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div>
-            <h3 className="font-heading text-2xl mb-4">
+            <h3 className="font-heading mb-4 text-xl">
               avs <span className="text-vibrant-yellow">finance</span>
             </h3>
             <p className="font-paragraph text-base text-vibrant-yellow-light leading-relaxed mb-6">

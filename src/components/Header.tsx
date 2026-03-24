@@ -100,7 +100,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link 
               to="/application"
-              className="inline-flex items-center justify-center px-8 py-2.5 font-paragraph text-sm font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40 bg-vibrant-yellow text-dark-brown"
+              className="inline-flex items-center justify-center px-8 py-2.5 font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/40 bg-vibrant-yellow text-dark-brown font-heading text-xl"
             >
               apply
             </Link>
