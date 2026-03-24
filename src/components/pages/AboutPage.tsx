@@ -208,44 +208,72 @@ export default function AboutPage() {
       </section>
 
       {/* --- COMPANY DETAILS SECTION --- */}
-      <section className="w-full bg-white py-20 md:py-32">
+      <section className="w-full bg-vibrant-yellow-light py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
             <h2 className="font-heading text-4xl md:text-5xl text-dark-brown mb-6 leading-tight">
               company details
             </h2>
+            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">
+              official information and credentials for avs finance oü
+            </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* AVS Finance OÜ - with Address */}
-            <FadeIn className="bg-white p-8 rounded-2xl border-2 border-dark-brown/10">
-              <div className="flex gap-3 mb-6">
-                <Building2 className="h-6 w-6 text-dark-brown flex-shrink-0" />
-                <h3 className="font-heading text-xl text-dark-brown font-bold">avs finance oü</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
+            {/* Company Info - Larger Card */}
+            <FadeIn className="lg:col-span-2 bg-white p-10 md:p-12 rounded-2xl border-2 border-dark-brown shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex gap-4 mb-8">
+                <div className="p-3 bg-vibrant-yellow rounded-lg flex-shrink-0">
+                  <Building2 className="h-6 w-6 text-dark-brown" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-2xl md:text-3xl text-dark-brown font-bold">avs finance oü</h3>
+                  <p className="font-paragraph text-sm text-dark-brown-light mt-1">estonian financial services company</p>
+                </div>
               </div>
-              <div className="space-y-3 font-paragraph text-dark-brown">
-                <p><span className="font-bold">registry code:</span> 17269440</p>
-                <p><span className="font-bold">vat code:</span> ee555555</p>
-                <p><span className="font-bold">licence:</span> ffa000503</p>
-                <div className="pt-4 border-t border-dark-brown/10">
-                  <p className="font-bold mb-2">address:</p>
-                  <p>kentmanni tn 6, 10116 tallinn</p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                {/* Left Column */}
+                <div className="space-y-6">
+                  <div>
+                    <p className="font-paragraph text-xs font-bold text-dark-brown-light uppercase tracking-wide mb-2">registry code</p>
+                    <p className="font-heading text-xl text-dark-brown">17269440</p>
+                  </div>
+                  <div>
+                    <p className="font-paragraph text-xs font-bold text-dark-brown-light uppercase tracking-wide mb-2">vat code</p>
+                    <p className="font-heading text-xl text-dark-brown">ee555555</p>
+                  </div>
+                </div>
+
+                {/* Right Column */}
+                <div className="space-y-6">
+                  <div>
+                    <p className="font-paragraph text-xs font-bold text-dark-brown-light uppercase tracking-wide mb-2">licence number</p>
+                    <p className="font-heading text-xl text-dark-brown">ffa000503</p>
+                  </div>
+                  <div>
+                    <p className="font-paragraph text-xs font-bold text-dark-brown-light uppercase tracking-wide mb-2">registered address</p>
+                    <p className="font-paragraph text-base text-dark-brown">kentmanni tn 6, 10116 tallinn</p>
+                  </div>
                 </div>
               </div>
             </FadeIn>
 
-            {/* Bank Account */}
-            <FadeIn delay={0.1} className="bg-white p-8 rounded-2xl border-2 border-dark-brown/10">
-              <div className="flex gap-3 mb-4">
-                <Building2 className="h-6 w-6 text-dark-brown flex-shrink-0" />
-                <h3 className="font-heading text-xl text-dark-brown font-bold">bank account</h3>
+            {/* Bank Account - Sidebar Card */}
+            <FadeIn delay={0.1} className="bg-white p-10 md:p-12 rounded-2xl border-2 border-dark-brown shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className="p-3 bg-vibrant-yellow rounded-lg w-fit mb-6">
+                  <Building2 className="h-6 w-6 text-dark-brown" />
+                </div>
+                <h3 className="font-heading text-2xl text-dark-brown font-bold mb-2">bank account</h3>
+                <p className="font-paragraph text-sm text-dark-brown-light mb-8">primary banking partner</p>
               </div>
-              <p className="font-paragraph text-dark-brown-light mb-4">
-                swedbank
-              </p>
-              <p className="font-paragraph text-dark-brown font-bold text-lg">
-                ee242200221092048448
-              </p>
+              <div>
+                <p className="font-paragraph text-xs font-bold text-dark-brown-light uppercase tracking-wide mb-3">swedbank</p>
+                <p className="font-heading text-lg md:text-xl text-dark-brown break-all">
+                  ee24 2200 2210 9204 8448
+                </p>
+              </div>
             </FadeIn>
           </div>
         </div>
