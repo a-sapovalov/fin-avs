@@ -140,7 +140,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- WHAT AVS OFFERS --- */}
-      <section className="w-full bg-white py-24 md:py-32">
+      <section className="w-full py-24 md:py-32 bg-secondary">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           
           <FadeIn className="mb-16">
