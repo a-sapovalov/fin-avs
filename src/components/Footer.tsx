@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -17,14 +17,7 @@ export default function Footer() {
             <p className="font-paragraph text-sm text-vibrant-yellow-light leading-relaxed mb-4">
               avs finance operates under financial institution licence ffa000503 granted by the financial intelligence unit of estonia.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-vibrant-yellow hover:text-vibrant-yellow-light transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-            </div>
+
           </div>
 
           {/* Quick Links */}

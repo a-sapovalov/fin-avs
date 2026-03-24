@@ -1,5 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Image } from '@/components/ui/image';
 import { Menu, X, Globe } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -34,14 +33,9 @@ export default function Header() {
         <div className="flex items-center justify-between bg-primary">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
-            <Image
-              src="https://static.wixstatic.com/media/43558d_19ae91ff9a60461287d3873ea1c37e8b~mv2.png"
-              width={100}
-              height={100}
-              className="h-20 w-auto"
-              originWidth={2000}
-              originHeight={2000} />
-
+            <h1 className="font-heading text-2xl text-vibrant-yellow">
+              avs <span className="text-vibrant-yellow">finance</span>
+            </h1>
           </Link>
 
           {/* Desktop Navigation - Right aligned with buttons */}
