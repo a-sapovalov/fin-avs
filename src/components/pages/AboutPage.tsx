@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Image } from '@/components/ui/image';
-import { Phone, MapPin, Mail, Building2, Banknote } from 'lucide-react';
+import { Phone, MapPin, Building2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -57,75 +57,54 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white text-dark-brown">
       <Header />
       
-      {/* --- CUSTOMER SUPPORT & PRESS SECTION --- */}
+      {/* --- CUSTOMER SUPPORT SECTION --- */}
       <section className="w-full bg-white py-20 md:py-32">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
-            {/* Customer Support - Left */}
-            <FadeIn>
-              <div className="h-full flex flex-col">
-                <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-10 leading-tight">
-                  customer support
-                </h2>
-                
-                <div className="space-y-10 flex-1">
-                  {/* Support by Phone */}
-                  <div>
-                    <h3 className="font-heading text-xl text-dark-brown mb-4">support by phone</h3>
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <Phone className="h-6 w-6 text-vibrant-yellow mt-1" />
-                      </div>
-                      <div>
-                        <p className="font-paragraph text-base text-dark-brown-light mb-2">
-                          mon–fri 9:00–18:00, sat 10:00–15:00
-                        </p>
-                        <p className="font-paragraph text-lg font-bold text-dark-brown">
-                          +372 5306 6545
-                        </p>
-                      </div>
+          <FadeIn>
+            <div className="max-w-2xl">
+              <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-10 leading-tight">
+                customer support
+              </h2>
+              
+              <div className="space-y-10">
+                {/* Support by Phone */}
+                <div>
+                  <h3 className="font-heading text-xl text-dark-brown mb-4">support by phone</h3>
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0">
+                      <Phone className="h-6 w-6 text-vibrant-yellow mt-1" />
+                    </div>
+                    <div>
+                      <p className="font-paragraph text-base text-dark-brown-light mb-2">
+                        mon–fri 9:00–18:00, sat 10:00–15:00
+                      </p>
+                      <p className="font-paragraph text-lg font-bold text-dark-brown">
+                        +372 5306 6545
+                      </p>
                     </div>
                   </div>
+                </div>
 
-                  {/* Support at the Office */}
-                  <div>
-                    <h3 className="font-heading text-xl text-dark-brown mb-4">support at the office</h3>
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <MapPin className="h-6 w-6 text-vibrant-yellow mt-1" />
-                      </div>
-                      <div>
-                        <p className="font-paragraph text-base text-dark-brown-light mb-2">
-                          mon–fri 10:00–16:00
-                        </p>
-                        <p className="font-paragraph text-lg font-bold text-dark-brown">
-                          kentmanni tn 6, 10166 tallinn
-                        </p>
-                      </div>
+                {/* Support at the Office */}
+                <div>
+                  <h3 className="font-heading text-xl text-dark-brown mb-4">support at the office</h3>
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-vibrant-yellow mt-1" />
+                    </div>
+                    <div>
+                      <p className="font-paragraph text-base text-dark-brown-light mb-2">
+                        mon–fri 10:00–16:00
+                      </p>
+                      <p className="font-paragraph text-lg font-bold text-dark-brown">
+                        kentmanni tn 6, 10166 tallinn
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-            </FadeIn>
-
-            {/* Press & Media - Right */}
-            <FadeIn delay={0.1}>
-              <div className="h-full bg-vibrant-yellow-light p-10 md:p-12 rounded-2xl border-2 border-vibrant-yellow flex flex-col">
-                <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-10 leading-tight">
-                  press and media inquiries
-                </h2>
-                
-                <div className="flex gap-4 items-start flex-1">
-                  <Mail className="h-6 w-6 text-dark-brown flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-paragraph text-lg font-bold text-dark-brown">
-                      press@avs.ee
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -217,9 +196,9 @@ export default function AboutPage() {
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Registry & Codes */}
+            {/* Registry & Codes + Bank Account */}
             <FadeIn className="bg-vibrant-yellow-light p-8 rounded-2xl border-2 border-vibrant-yellow">
-              <div className="flex gap-3 mb-4">
+              <div className="flex gap-3 mb-6">
                 <Building2 className="h-6 w-6 text-dark-brown flex-shrink-0" />
                 <h3 className="font-heading text-xl text-dark-brown font-bold">avs finance oü</h3>
               </div>
@@ -227,6 +206,10 @@ export default function AboutPage() {
                 <p><span className="font-bold">registry code:</span> 17269440</p>
                 <p><span className="font-bold">vat code:</span> ee555555</p>
                 <p><span className="font-bold">licence:</span> ffa000503</p>
+                <div className="pt-4 border-t border-vibrant-yellow">
+                  <p className="font-bold mb-2">bank account (swedbank):</p>
+                  <p>ee242200221092048448</p>
+                </div>
               </div>
             </FadeIn>
 
@@ -250,17 +233,6 @@ export default function AboutPage() {
               <div className="space-y-3 font-paragraph text-dark-brown">
                 <p><span className="font-bold">email:</span> info@avs.ee</p>
                 <p><span className="font-bold">phone:</span> +372 5306 6545</p>
-              </div>
-            </FadeIn>
-
-            {/* Bank Account */}
-            <FadeIn delay={0.3} className="bg-vibrant-yellow-light p-8 rounded-2xl border-2 border-vibrant-yellow">
-              <div className="flex gap-3 mb-4">
-                <Banknote className="h-6 w-6 text-dark-brown flex-shrink-0" />
-                <h3 className="font-heading text-xl text-dark-brown font-bold">bank account</h3>
-              </div>
-              <div className="space-y-3 font-paragraph text-dark-brown">
-                <p><span className="font-bold">swedbank:</span><br />ee242200221092048448</p>
               </div>
             </FadeIn>
           </div>
