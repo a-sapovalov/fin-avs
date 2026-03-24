@@ -93,20 +93,20 @@ export default function CorporateLoanPage() {
                 <h3 className="font-heading text-3xl mb-8">
                   loan overview
                 </h3>
-                <div className="space-y-8">
-                  <div>
+                <div className="space-y-0">
+                  <div className="py-6 border-b border-gray-300">
                     <p className="font-paragraph text-sm text-gray-700 mb-2">loan amount</p>
                     <p className="font-heading text-2xl">€50,000 - €500,000</p>
                   </div>
-                  <div>
+                  <div className="py-6 border-b border-gray-300">
                     <p className="font-paragraph text-sm text-gray-700 mb-2">interest rate</p>
                     <p className="font-heading text-2xl">from 9,0% + 6m euribor</p>
                   </div>
-                  <div>
+                  <div className="py-6 border-b border-gray-300">
                     <p className="font-paragraph text-sm text-gray-700 mb-2">loan term</p>
                     <p className="font-heading text-2xl">up to 30 years</p>
                   </div>
-                  <div>
+                  <div className="py-6">
                     <p className="font-paragraph text-sm text-gray-700 mb-2">approval time</p>
                     <p className="font-heading text-2xl">3-5 business days</p>
                   </div>
