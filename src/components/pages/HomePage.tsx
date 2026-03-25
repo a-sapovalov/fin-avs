@@ -167,7 +167,7 @@ export default function HomePage() {
                     financing for businesses, whatever the need – whether for refinancing, investment, a property flip or other ventues. the client decides.
                   </p>
                   <Link
-                    to="/corporate-loan"
+                    to="/loans"
                     className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
                   >
                     explore loans

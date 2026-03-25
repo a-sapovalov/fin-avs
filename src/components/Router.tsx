@@ -3,7 +3,6 @@ import { createBrowserRouter, RouterProvider, Navigate, Outlet } from 'react-rou
 import { ScrollToTop } from '@/lib/scroll-to-top';
 import ErrorPage from '@/integrations/errorHandlers/ErrorPage';
 import HomePage from '@/components/pages/HomePage';
-import CorporateLoanPage from '@/components/pages/CorporateLoanPage';
 import CreditLinePage from '@/components/pages/CreditLinePage';
 import AboutPage from '@/components/pages/AboutPage';
 import ApplicationPage from '@/components/pages/ApplicationPage';
@@ -31,13 +30,6 @@ const router = createBrowserRouter([
         element: <HomePage />,
         routeMetadata: {
           pageIdentifier: 'home',
-        },
-      },
-      {
-        path: "corporate-loan",
-        element: <CorporateLoanPage />,
-        routeMetadata: {
-          pageIdentifier: 'corporate-loan',
         },
       },
       {
