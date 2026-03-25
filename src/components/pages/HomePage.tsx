@@ -223,7 +223,7 @@ export default function HomePage() {
                     leasing for businesses, whatever the need – whether for equipment, vehicles or other business assets. the client decides.
                   </p>
                   <Link
-                    to="/application"
+                    to="/leases"
                     className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
                   >
                     explore leases
