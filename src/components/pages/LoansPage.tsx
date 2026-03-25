@@ -204,7 +204,7 @@ export default function LoansPage() {
                 to="/application"
                 className="inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
               >
-                apply
+                apply now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
