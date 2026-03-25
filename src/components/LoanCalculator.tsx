@@ -274,11 +274,11 @@ export default function LoanCalculator() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-dark-brown/20">
-                    <th className="text-left py-3 px-4 font-heading text-dark-brown">Month</th>
-                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Loan Balance</th>
-                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Principal Repayment</th>
-                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Interest Payment</th>
-                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Origination Fee</th>
+                    <th className="text-left py-3 px-4 font-heading text-dark-brown">month</th>
+                    <th className="text-right py-3 px-4 font-heading text-dark-brown">loan balance</th>
+                    <th className="text-right py-3 px-4 font-heading text-dark-brown">principal repayment</th>
+                    <th className="text-right py-3 px-4 font-heading text-dark-brown">interest payment</th>
+                    <th className="text-right py-3 px-4 font-heading text-dark-brown">origination fee</th>
                   </tr>
                 </thead>
                 <tbody>
