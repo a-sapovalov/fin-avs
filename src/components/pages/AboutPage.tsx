@@ -66,10 +66,10 @@ export default function AboutPage() {
       <section className="w-full py-20 md:py-32 bg-secondary">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
-            <h2 className="font-heading md:text-4xl text-dark-brown mb-4 text-4xl">
+            <h2 className="font-heading md:text-4xl text-dark-brown mb-4 text-4xl text-center">
               customer support
             </h2>
-            <p className="font-paragraph text-dark-brown-light mb-10 text-lg">
+            <p className="font-paragraph text-dark-brown-light mb-10 text-lg text-center">
               ask any questions or receive further information about our services
             </p>
           </FadeIn>
@@ -217,7 +217,7 @@ export default function AboutPage() {
       <section className="w-full py-20 md:py-32 bg-secondary">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
-            <h2 className="font-heading text-4xl text-dark-brown mb-6 leading-tight md:text-4xl">
+            <h2 className="font-heading text-4xl text-dark-brown mb-6 leading-tight md:text-4xl text-center">
               company details
             </h2>
             <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">
@@ -286,7 +286,7 @@ export default function AboutPage() {
       <section className="w-full py-20 md:py-32 bg-background">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
-            <h2 className="font-heading text-4xl text-dark-brown mb-6 leading-tight md:text-4xl">
+            <h2 className="font-heading text-4xl text-dark-brown mb-6 leading-tight md:text-4xl text-center">
               meet our team
             </h2>
           </FadeIn>

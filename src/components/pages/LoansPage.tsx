@@ -47,7 +47,6 @@ export default function LoansPage() {
   return (
     <div className="min-h-screen bg-white text-dark-brown">
       <Header />
-      
       {/* Hero Section - Primary Background */}
       <section className="w-full bg-dark-brown py-20 md:py-32 overflow-hidden">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -76,28 +75,26 @@ export default function LoansPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image 
-                  src="https://static.wixstatic.com/media/43558d_ecc07857e25d443faf6d28085038e611~mv2.png?originWidth=576&originHeight=384"
-                  alt="business financing solutions"
+                <Image
+                  src="https://static.wixstatic.com/media/nsplsh_a39456e21e0c4a06baa06551e2907085~mv2.jpg"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
-                />
+                  originWidth={3997}
+                  originHeight={2248} />
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-
       {/* Loan Calculator Section */}
       <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <LoanCalculator />
         </div>
       </section>
-
       {/* Terms and Conditions Section */}
-      <section className="w-full bg-vibrant-yellow-light py-24 md:py-32">
+      <section className="w-full py-24 md:py-32 bg-secondary">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-6">
@@ -148,7 +145,6 @@ export default function LoansPage() {
           </FadeIn>
         </div>
       </section>
-
       {/* Application Process Section */}
       <section className="w-full bg-white py-24 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -184,7 +180,6 @@ export default function LoansPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section - Primary Background */}
       <section className="w-full bg-dark-brown py-24 md:py-32 overflow-hidden">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -213,7 +208,6 @@ export default function LoansPage() {
           </FadeIn>
         </div>
       </section>
-
       <Footer />
     </div>
   );
