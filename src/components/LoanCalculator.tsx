@@ -172,9 +172,7 @@ export default function LoanCalculator() {
 
           {/* Schedule Type */}
           <div>
-            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
-              repayment schedule
-            </label>
+            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">repayment schedule type</label>
             <div className="flex gap-4">
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
@@ -185,7 +183,7 @@ export default function LoanCalculator() {
                   onChange={(e) => setScheduleType(e.target.value as 'annuity' | 'bullet')}
                   className="w-4 h-4 accent-dark-brown"
                 />
-                <span className="font-paragraph text-sm text-dark-brown">Annuity (Equal Payments)</span>
+                <span className="font-paragraph text-sm text-dark-brown">annuity (equal payments)</span>
               </label>
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
@@ -196,7 +194,7 @@ export default function LoanCalculator() {
                   onChange={(e) => setScheduleType(e.target.value as 'annuity' | 'bullet')}
                   className="w-4 h-4 accent-dark-brown"
                 />
-                <span className="font-paragraph text-sm text-dark-brown">Bullet (Interest Only)</span>
+                <span className="font-paragraph text-sm text-dark-brown">bullet (interest only)</span>
               </label>
             </div>
           </div>
