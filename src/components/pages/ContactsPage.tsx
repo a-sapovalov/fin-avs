@@ -23,7 +23,7 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
   );
 };
 
-export default function AboutPage() {
+export default function ContactsPage() {
   const [contactFormData, setContactFormData] = useState({
     name: '',
     email: '',
