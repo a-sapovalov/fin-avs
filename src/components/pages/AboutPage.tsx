@@ -336,22 +336,28 @@ export default function AboutPage() {
         </div>
       </section>
       {/* --- CALL TO ACTION SECTION --- */}
-      <section className="w-full bg-dark-brown py-20 md:py-32">
-        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
-          <FadeIn>
-            <div className="max-w-3xl">
-              <h2 className="font-heading text-4xl md:text-5xl text-vibrant-yellow mb-6 leading-tight">
-                cooperate with avs finance
-              </h2>
-              <p className="font-paragraph text-lg text-vibrant-yellow-light mb-10 leading-relaxed">
-                join estonian businesses that trust us with their financing needs
-              </p>
+      <section className="w-full bg-dark-brown py-24 md:py-32 overflow-hidden">
+        <div className="max-w-[120rem] mx-auto px-6 md:px-12">
+          <FadeIn className="text-center">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-vibrant-yellow mb-8">
+              ready to proceed?
+            </h2>
+            <p className="font-paragraph text-lg md:text-xl text-vibrant-yellow-light mb-12 max-w-3xl mx-auto leading-relaxed">
+              get started with our financing solutions today. our team is ready to help you find the perfect solution for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <button
                 onClick={() => window.location.href = '/application'}
-                className="px-8 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300"
+                className="inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
               >
-                start application
+                apply
               </button>
+              <a 
+                href="tel:+37253066545"
+                className="inline-flex items-center justify-center px-10 py-4 border-2 border-vibrant-yellow text-vibrant-yellow font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow hover:text-dark-brown transition-all duration-300"
+              >
+                contact us
+              </a>
             </div>
           </FadeIn>
         </div>
