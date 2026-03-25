@@ -128,7 +128,7 @@ export default function ContactsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
             {/* Contact Form - Left */}
             <FadeIn>
-              <h3 className="font-heading text-2xl text-dark-brown mb-8 md:text-4xl">contact form</h3>
+              <h3 className="font-heading text-2xl text-dark-brown mb-8 md:text-4xl text-center">contact form</h3>
               <form onSubmit={handleFormSubmit} className="space-y-6">
                 <div>
                   <label className="block font-paragraph text-sm font-semibold text-dark-brown mb-2">
@@ -185,7 +185,7 @@ export default function ContactsPage() {
 
             {/* Google Maps - Right */}
             <FadeIn delay={0.1}>
-              <h3 className="font-heading text-2xl text-dark-brown mb-8 md:text-4xl">find us</h3>
+              <h3 className="font-heading text-2xl text-dark-brown mb-8 md:text-4xl text-center">find us</h3>
               <div className="w-full h-full min-h-[400px] rounded-2xl overflow-hidden border-2 border-dark-brown">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2033.7395469999997!2d24.7533!3d59.4370!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692f5e5e5e5e5e5%3A0x0!2sKentmanni%20tn%206%2C%2010166%20Tallinn!5e0!3m2!1sen!2see!4v1234567890"
