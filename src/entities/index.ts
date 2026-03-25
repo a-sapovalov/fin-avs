@@ -46,4 +46,6 @@ export interface TeamMembers {
   role?: string;
   /** @wixFieldType url */
   socialMediaLink?: string;
+  /** @wixFieldType email */
+  email?: string;
 }

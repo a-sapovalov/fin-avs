@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Image } from '@/components/ui/image';
-import { Phone, MapPin, Building2, Mail } from 'lucide-react';
+import { Phone, MapPin, Building2, Mail, Linkedin, Twitter, Facebook, Globe } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { BaseCrudService } from '@/integrations';
@@ -315,12 +315,44 @@ export default function AboutPage() {
 
                     {/* Content */}
                     <div className="p-8">
-                      <h3 className="font-heading text-2xl text-dark-brown mb-4 leading-tight">
+                      <h3 className="font-heading text-2xl text-dark-brown mb-2 leading-tight">
                         {member.name || 'Team Member'}
                       </h3>
-                      <p className="font-paragraph text-dark-brown-light leading-relaxed">
+                      {member.role && (
+                        <p className="font-paragraph text-sm font-semibold text-vibrant-yellow-dark mb-4">
+                          {member.role}
+                        </p>
+                      )}
+                      <p className="font-paragraph text-dark-brown-light leading-relaxed mb-6">
                         {member.description || 'No description available'}
                       </p>
+                      
+                      {/* Contact Info */}
+                      <div className="space-y-3 mb-6 border-t border-vibrant-yellow-dark pt-6">
+                        {member.email && (
+                          <div className="flex items-center gap-3">
+                            <Mail className="h-4 w-4 text-dark-brown flex-shrink-0" />
+                            <a href={`mailto:${member.email}`} className="font-paragraph text-sm text-dark-brown hover:text-vibrant-yellow-dark transition-colors">
+                              {member.email}
+                            </a>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Social Media Link */}
+                      {member.socialMediaLink && (
+                        <div className="flex items-center gap-2">
+                          <a 
+                            href={member.socialMediaLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-vibrant-yellow hover:bg-vibrant-yellow-dark text-dark-brown transition-all duration-300"
+                            title="Social Media"
+                          >
+                            <Globe className="h-5 w-5" />
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </FadeIn>
