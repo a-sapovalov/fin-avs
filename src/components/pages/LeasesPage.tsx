@@ -85,12 +85,12 @@ export default function LeasesPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://static.wixstatic.com/media/nsplsh_a39456e21e0c4a06baa06551e2907085~mv2.jpg"
+                  src="https://static.wixstatic.com/media/nsplsh_f85a8e4671a14821bf89a2d710e9ecf8~mv2.jpg"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
-                  originWidth={3997}
-                  originHeight={2248} />
+                  originWidth={3840}
+                  originHeight={2160} />
               </div>
             </motion.div>
           </div>

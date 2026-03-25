@@ -168,9 +168,7 @@ export default function ApplicationPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">
-            loan application
-          </h1>
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">financing application</h1>
           <p className="font-paragraph text-lg md:text-xl text-dark-brown-light leading-relaxed">
             complete the form below to apply for financing. our team will review your application and contact you within two business days.
           </p>
@@ -187,14 +185,10 @@ export default function ApplicationPage() {
           <form onSubmit={handleSubmit} className="p-8 md:p-12 rounded-2xl space-y-8 bg-background">
             {/* 1. Loan Details Section */}
             <div>
-              <h2 className="font-heading text-3xl text-dark-brown mb-6">
-                loan details
-              </h2>
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">genenral details</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="loanType" className="font-paragraph text-base text-dark-brown">
-                    loan type *
-                  </Label>
+                  <Label htmlFor="loanType" className="font-paragraph text-base text-dark-brown">financing type *</Label>
                   <Select
                     value={formData.loanType}
                     onValueChange={(value) => handleSelectChange('loanType', value)}
@@ -214,9 +208,7 @@ export default function ApplicationPage() {
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="loanAmount" className="font-paragraph text-base text-dark-brown">
-                    loan amount (eur) *
-                  </Label>
+                  <Label htmlFor="loanAmount" className="font-paragraph text-base text-dark-brown">financing amount (eur) *</Label>
                   <Input
                     id="loanAmount"
                     name="loanAmount"

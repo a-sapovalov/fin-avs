@@ -85,12 +85,12 @@ export default function CreditLinePage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://static.wixstatic.com/media/nsplsh_a39456e21e0c4a06baa06551e2907085~mv2.jpg"
+                  src="https://static.wixstatic.com/media/nsplsh_fffa7c80046b4eb9be81888f114ae53a~mv2.jpg"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
-                  originWidth={3997}
-                  originHeight={2248} />
+                  originWidth={6124}
+                  originHeight={4082} />
               </div>
             </motion.div>
           </div>

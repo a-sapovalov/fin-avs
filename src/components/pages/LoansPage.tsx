@@ -69,7 +69,7 @@ export default function LoansPage() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link
                   to="/application"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-vibrant-yellow text-dark-brown font-heading font-bold rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg font-bold"
                 >
                   apply now
                   <ArrowRight className="ml-2 h-5 w-5" />
