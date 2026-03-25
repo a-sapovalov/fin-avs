@@ -45,12 +45,18 @@ export default function Footer() {
           <div>
             <h4 className="font-heading mb-6 text-vibrant-yellow text-xl">resources</h4>
             <nav className="flex flex-col gap-3">
-              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
+              <Link 
+                to="/price-list" 
+                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
+              >
                 price list
-              </a>
-              <a href="#" className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300">
+              </Link>
+              <Link 
+                to="/faq" 
+                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
+              >
                 faq
-              </a>
+              </Link>
               <Link 
                 to="/application" 
                 className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
