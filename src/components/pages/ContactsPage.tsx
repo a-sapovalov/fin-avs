@@ -77,58 +77,46 @@ export default function ContactsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-16">
             {/* Support by Phone */}
             <FadeIn>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-4 font-bold">support by phone</h3>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Phone className="h-6 w-6 text-dark-brown mt-1" />
-                  </div>
-                  <div>
-                    <p className="font-paragraph text-dark-brown-light mb-2 text-lg">
-                      mon–fri 9:00–18:00, sat 10:00–15:00
-                    </p>
-                    <p className="font-paragraph text-lg font-bold text-dark-brown">
-                      +372 5306 6545
-                    </p>
-                  </div>
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-6 p-4 bg-white rounded-full inline-flex items-center justify-center">
+                  <Phone className="h-8 w-8 text-dark-brown" />
                 </div>
+                <h3 className="font-heading text-xl text-dark-brown mb-4 font-bold">support by phone</h3>
+                <p className="font-paragraph text-dark-brown-light mb-3 text-lg">
+                  mon–fri 9:00–18:00, sat 10:00–15:00
+                </p>
+                <p className="font-paragraph text-lg font-bold text-dark-brown">
+                  +372 5306 6545
+                </p>
               </div>
             </FadeIn>
 
             {/* Support at the Office */}
             <FadeIn delay={0.1}>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-4 font-bold">support at the office</h3>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-dark-brown mt-1" />
-                  </div>
-                  <div>
-                    <p className="font-paragraph text-dark-brown-light mb-2 text-lg">
-                      mon–fri 10:00–16:00
-                    </p>
-                    <p className="font-paragraph text-lg font-bold text-dark-brown">
-                      kentmanni tn 6, 10166 tallinn
-                    </p>
-                  </div>
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-6 p-4 bg-white rounded-full inline-flex items-center justify-center">
+                  <MapPin className="h-8 w-8 text-dark-brown" />
                 </div>
+                <h3 className="font-heading text-xl text-dark-brown mb-4 font-bold">support at the office</h3>
+                <p className="font-paragraph text-dark-brown-light mb-3 text-lg">
+                  mon–fri 10:00–16:00
+                </p>
+                <p className="font-paragraph text-lg font-bold text-dark-brown">
+                  kentmanni tn 6, 10166 tallinn
+                </p>
               </div>
             </FadeIn>
 
             {/* Write to Us */}
             <FadeIn delay={0.2}>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-4 font-bold">write to us</h3>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Mail className="h-6 w-6 text-dark-brown mt-1" />
-                  </div>
-                  <div>
-                    <p className="font-paragraph text-lg font-bold text-dark-brown">
-                      info@avs.ee
-                    </p>
-                  </div>
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-6 p-4 bg-white rounded-full inline-flex items-center justify-center">
+                  <Mail className="h-8 w-8 text-dark-brown" />
                 </div>
+                <h3 className="font-heading text-xl text-dark-brown mb-4 font-bold">write to us</h3>
+                <p className="font-paragraph text-lg font-bold text-dark-brown">
+                  info@avs.ee
+                </p>
               </div>
             </FadeIn>
           </div>
