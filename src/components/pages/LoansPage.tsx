@@ -60,10 +60,10 @@ export default function LoansPage() {
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-vibrant-yellow mb-8 leading-tight">
                 loans for your <span className="text-vibrant-yellow">business</span>
               </h1>
-              <p className="font-paragraph text-lg md:text-xl text-vibrant-yellow-light leading-relaxed mb-8 max-w-xl">
+              <p className="font-paragraph text-lg text-vibrant-yellow-light leading-relaxed mb-8 max-w-xl md:text-lg">
                 secure flexible financing solutions tailored to your business needs. competitive rates starting from 9.5% + 6 months euribor with loan amounts from €25,000 to €1,000,000.
               </p>
-              <p className="font-paragraph text-base md:text-lg text-vibrant-yellow-light leading-relaxed mb-10 max-w-xl">
+              <p className="font-paragraph md:text-lg text-vibrant-yellow-light mb-10 max-w-xl text-lg">
                 whether you need capital for expansion, equipment, or working capital, our experienced team is here to help you find the perfect financing solution for your business.
               </p>
             </motion.div>
