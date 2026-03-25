@@ -213,16 +213,6 @@ export default function LoanCalculator() {
             </div>
           </div>
 
-          {/* Credit Amount Display */}
-          <div className="pt-4 border-t border-dark-brown/10">
-            <p className="font-paragraph text-xs text-dark-brown-light mb-2">
-              credit amount
-            </p>
-            <p className="font-heading text-2xl md:text-3xl text-dark-brown">
-              {formatCurrency(creditAmount)}
-            </p>
-          </div>
-
           {/* Key Results */}
           <div className="grid grid-cols-2 gap-3 pt-4 border-t border-dark-brown/10">
             <div>
