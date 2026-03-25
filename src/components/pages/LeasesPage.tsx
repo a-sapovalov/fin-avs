@@ -38,7 +38,6 @@ export default function LeasesPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
       {/* Hero Section */}
       <section className="w-full bg-dark-brown text-vibrant-yellow py-20 md:py-32">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -76,17 +75,16 @@ export default function LeasesPage() {
             {/* Right Image */}
             <motion.div variants={itemVariants} className="relative h-96 md:h-full">
               <Image
-                src="https://static.wixstatic.com/media/43558d_a0650192c526449c9841665d0edc420a~mv2.png?originWidth=448&originHeight=384"
-                alt="Equipment leasing illustration"
+                src="https://static.wixstatic.com/media/nsplsh_44d26ada92584cfdb2a9eca9db71f544~mv2.jpg"
                 width={500}
                 height={400}
                 className="w-full h-full object-cover rounded-lg"
-              />
+                originWidth={5184}
+                originHeight={3456} />
             </motion.div>
           </motion.div>
         </div>
       </section>
-
       {/* Key Benefits Section */}
       <section id="details" className="w-full py-20 md:py-32 bg-white">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -126,7 +124,6 @@ export default function LeasesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* How It Works Section */}
       <section className="w-full py-20 md:py-32 bg-vibrant-yellow-light">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -183,7 +180,6 @@ export default function LeasesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Lease Types Section */}
       <section className="w-full py-20 md:py-32 bg-white">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -244,7 +240,6 @@ export default function LeasesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="w-full bg-dark-brown text-vibrant-yellow py-16 md:py-24">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -282,7 +277,6 @@ export default function LeasesPage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

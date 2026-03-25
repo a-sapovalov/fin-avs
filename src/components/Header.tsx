@@ -33,7 +33,7 @@ export default function Header() {
         <div className="flex items-center justify-between bg-dark-brown">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300">
-            <h1 className="font-heading text-xl font-bold text-vibrant-yellow">
+            <h1 className="font-heading text-xl text-vibrant-yellow font-bold">
               avs <span className="text-vibrant-yellow">finance</span>
             </h1>
           </Link>
