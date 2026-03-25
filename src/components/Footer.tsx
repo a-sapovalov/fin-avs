@@ -12,9 +12,7 @@ export default function Footer() {
               avs <span className="text-vibrant-yellow">finance</span>
             </h3>
             <p className="font-paragraph text-base text-vibrant-yellow-light leading-relaxed mb-6">your partner for financing solutions.</p>
-            <p className="font-paragraph text-vibrant-yellow-light mb-4 text-base">
-              avs finance operates under financial institution licence ffa000503 granted by the financial intelligence unit of estonia.
-            </p>
+            <p className="font-paragraph text-vibrant-yellow-light mb-4 text-base">avs finance oü operates under financial institution licence ffa000503 granted by the financial intelligence unit of estonia.</p>
 
           </div>
 
