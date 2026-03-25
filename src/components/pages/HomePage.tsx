@@ -53,11 +53,7 @@ export default function HomePage() {
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
                 <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 tracking-tight leading-tight">
-                  <span className="whitespace-nowrap">competitive terms.</span>
-                  <br />
-                  <span className="whitespace-nowrap">flexible financing</span>
-                  <br />
-                  <span className="whitespace-nowrap">personal service.</span>
+                  competitive terms. flexible financing. personal service.
                 </h1>
 
                 <p className="font-paragraph text-lg text-dark-brown-light mb-10 max-w-2xl leading-relaxed md:text-lg">
