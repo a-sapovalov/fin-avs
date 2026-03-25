@@ -218,15 +218,9 @@ export default function LoanCalculator() {
             <p className="font-paragraph text-xs text-dark-brown-light mb-2">
               credit amount
             </p>
-            <p className="font-heading text-2xl md:text-3xl text-dark-brown mb-4">
+            <p className="font-heading text-2xl md:text-3xl text-dark-brown">
               {formatCurrency(creditAmount)}
             </p>
-            <Button
-              onClick={() => setIsScheduleOpen(true)}
-              className="w-full bg-dark-brown hover:bg-dark-brown-light text-white font-paragraph font-semibold py-2 rounded-lg transition-colors"
-            >
-              view payment schedule
-            </Button>
           </div>
 
           {/* Key Results */}
@@ -267,6 +261,14 @@ export default function LoanCalculator() {
               </p>
             </div>
           </div>
+
+          {/* View Sample Schedule Button */}
+          <Button
+            onClick={() => setIsScheduleOpen(true)}
+            className="w-full bg-dark-brown hover:bg-dark-brown-light text-white font-paragraph font-semibold py-2 rounded-lg transition-colors"
+          >
+            view sample schedule
+          </Button>
         </div>
       </Card>
 
