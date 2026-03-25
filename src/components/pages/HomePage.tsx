@@ -56,17 +56,17 @@ export default function HomePage() {
                   competitive terms. flexible financing. personal service.
                 </h1>
 
-                <p className="font-paragraph text-lg md:text-xl text-dark-brown-light mb-10 max-w-2xl leading-relaxed">
+                <p className="font-paragraph text-lg text-dark-brown-light mb-10 max-w-2xl leading-relaxed md:text-lg">
                   financing for businesses, whatever the need.
                 </p>
 
-                <p className="font-paragraph text-base md:text-lg text-dark-brown mb-10 max-w-2xl leading-relaxed">
+                <p className="font-paragraph md:text-lg text-dark-brown mb-10 max-w-2xl text-lg">
                   annual interest from 9,5%, flexible financing solutions, a decision within two business days, and a dedicated client manager who understands your business.
                 </p>
 
                 <Link 
                   to="/application"
-                  className="group inline-flex items-center justify-center px-10 py-4 bg-dark-brown text-vibrant-yellow font-paragraph font-bold text-base rounded-lg hover:bg-dark-brown-light transition-all duration-300"
+                  className="group inline-flex items-center justify-center px-10 py-4 bg-dark-brown text-vibrant-yellow font-paragraph font-bold rounded-lg hover:bg-dark-brown-light transition-all duration-300 text-lg"
                 >
                   submit application
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
