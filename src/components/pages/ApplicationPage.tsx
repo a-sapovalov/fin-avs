@@ -220,9 +220,7 @@ export default function ApplicationPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="loanPurpose" className="font-paragraph text-base text-dark-brown">
-                    purpose of the loan *
-                  </Label>
+                  <Label htmlFor="loanPurpose" className="font-paragraph text-base text-dark-brown">purpose of the financing *</Label>
                   <Textarea
                     id="loanPurpose"
                     name="loanPurpose"
