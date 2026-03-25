@@ -24,15 +24,15 @@ export default function AnimatedGraph() {
           animate={isInView ? { opacity: 0.1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <line x1="0" y1="50" x2="480" y2="50" stroke="#E6CBA3" strokeWidth="1" />
-          <line x1="0" y1="100" x2="480" y2="100" stroke="#E6CBA3" strokeWidth="1" />
-          <line x1="0" y1="150" x2="480" y2="150" stroke="#E6CBA3" strokeWidth="1" />
+          <line x1="0" y1="50" x2="480" y2="50" stroke="#140800" strokeWidth="1" />
+          <line x1="0" y1="100" x2="480" y2="100" stroke="#140800" strokeWidth="1" />
+          <line x1="0" y1="150" x2="480" y2="150" stroke="#140800" strokeWidth="1" />
         </motion.g>
 
         {/* Animated line */}
         <motion.path
           d={pathData}
-          stroke="#E6CBA3"
+          stroke="#FCF87C"
           strokeWidth="2"
           fill="none"
           strokeLinecap="round"
@@ -70,7 +70,7 @@ export default function AnimatedGraph() {
             cx={point.x}
             cy={point.y}
             r="3"
-            fill="#E6CBA3"
+            fill="#FCF87C"
             initial={{ scale: 0, opacity: 0 }}
             animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
             transition={{
@@ -87,7 +87,7 @@ export default function AnimatedGraph() {
           cy="20"
           r="6"
           fill="none"
-          stroke="#E6CBA3"
+          stroke="#FCF87C"
           strokeWidth="1"
           initial={{ scale: 0, opacity: 0 }}
           animate={isInView ? { scale: [1, 1.5, 1], opacity: [0.8, 0.3, 0.8] } : { scale: 0, opacity: 0 }}
