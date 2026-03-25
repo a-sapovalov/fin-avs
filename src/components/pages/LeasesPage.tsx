@@ -267,12 +267,12 @@ export default function LeasesPage() {
                 Apply for a Lease
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a
-                href="mailto:info@avs.ee"
+              <Link
+                to="/contacts"
                 className="inline-flex items-center justify-center px-8 py-3 border-2 border-vibrant-yellow text-vibrant-yellow font-heading font-bold rounded-lg hover:bg-dark-brown-light transition-all duration-300"
               >
                 Contact Us
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
