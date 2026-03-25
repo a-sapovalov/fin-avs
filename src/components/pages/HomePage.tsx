@@ -68,7 +68,7 @@ export default function HomePage() {
                   to="/application"
                   className="group inline-flex items-center justify-center px-10 py-4 bg-dark-brown text-vibrant-yellow font-paragraph font-bold rounded-lg hover:bg-dark-brown-light transition-all duration-300 text-lg"
                 >
-                  submit application
+                  apply now
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </motion.div>
