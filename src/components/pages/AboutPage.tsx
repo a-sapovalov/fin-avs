@@ -220,7 +220,7 @@ export default function AboutPage() {
             <h2 className="font-heading text-4xl text-dark-brown mb-6 leading-tight md:text-4xl text-center">
               company details
             </h2>
-            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">
+            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl text-left">
               official information and credentials for avs finance oü
             </p>
           </FadeIn>
