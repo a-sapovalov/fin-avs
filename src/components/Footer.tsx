@@ -23,7 +23,7 @@ export default function Footer() {
             <h4 className="font-heading mb-6 text-vibrant-yellow text-xl">services</h4>
             <nav className="flex flex-col gap-3">
               <Link 
-                to="/corporate-loan" 
+                to="/loans" 
                 className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
               >
                 loans

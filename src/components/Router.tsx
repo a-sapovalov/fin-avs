@@ -8,6 +8,7 @@ import CreditLinePage from '@/components/pages/CreditLinePage';
 import AboutPage from '@/components/pages/AboutPage';
 import ApplicationPage from '@/components/pages/ApplicationPage';
 import LeasesPage from '@/components/pages/LeasesPage';
+import LoansPage from '@/components/pages/LoansPage';
 
 // Layout component that includes ScrollToTop
 function Layout() {
@@ -65,6 +66,13 @@ const router = createBrowserRouter([
         element: <LeasesPage />,
         routeMetadata: {
           pageIdentifier: 'leases',
+        },
+      },
+      {
+        path: "loans",
+        element: <LoansPage />,
+        routeMetadata: {
+          pageIdentifier: 'loans',
         },
       },
       {

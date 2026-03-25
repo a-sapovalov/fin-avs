@@ -13,7 +13,7 @@ export default function Header() {
 
   const navLinks = [
     { path: '/', label: 'home' },
-    { path: '/corporate-loan', label: 'loans' },
+    { path: '/loans', label: 'loans' },
     { path: '/credit-line', label: 'credit lines' },
     { path: '/leases', label: 'leases' },
     { path: '/about', label: 'contacts' },
