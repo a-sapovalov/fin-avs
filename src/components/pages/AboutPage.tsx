@@ -352,12 +352,6 @@ export default function AboutPage() {
               >
                 apply
               </button>
-              <a 
-                href="tel:+37253066545"
-                className="inline-flex items-center justify-center px-10 py-4 border-2 border-vibrant-yellow text-vibrant-yellow font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow hover:text-dark-brown transition-all duration-300"
-              >
-                contact us
-              </a>
             </div>
           </FadeIn>
         </div>
