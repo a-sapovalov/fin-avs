@@ -1,6 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
 
 interface PaymentScheduleItem {
   month: number;
@@ -15,6 +18,7 @@ export default function LoanCalculator() {
   const [annualRate, setAnnualRate] = useState(9);
   const [duration, setDuration] = useState(60);
   const [scheduleType, setScheduleType] = useState<'annuity' | 'bullet'>('annuity');
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
 
   const calculations = useMemo(() => {
     const principal = creditAmount;
@@ -199,6 +203,22 @@ export default function LoanCalculator() {
             </div>
           </div>
 
+          {/* Credit Amount Display */}
+          <div className="pt-4 border-t border-dark-brown/10">
+            <p className="font-paragraph text-xs text-dark-brown-light mb-2">
+              credit amount
+            </p>
+            <p className="font-heading text-2xl md:text-3xl text-dark-brown mb-4">
+              {formatCurrency(creditAmount)}
+            </p>
+            <Button
+              onClick={() => setIsScheduleOpen(true)}
+              className="w-full bg-dark-brown hover:bg-dark-brown-light text-white font-paragraph font-semibold py-2 rounded-lg transition-colors"
+            >
+              view payment schedule
+            </Button>
+          </div>
+
           {/* Key Results */}
           <div className="grid grid-cols-2 gap-3 pt-4 border-t border-dark-brown/10">
             <div>
@@ -239,6 +259,99 @@ export default function LoanCalculator() {
           </div>
         </div>
       </Card>
+
+      {/* Payment Schedule Dialog */}
+      <Dialog open={isScheduleOpen} onOpenChange={setIsScheduleOpen}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto bg-white border border-dark-brown/10">
+          <DialogHeader>
+            <DialogTitle className="font-heading text-2xl text-dark-brown">
+              payment schedule preview
+            </DialogTitle>
+          </DialogHeader>
+
+          <div className="mt-6">
+            {/* Schedule Table */}
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-dark-brown/20">
+                    <th className="text-left py-3 px-4 font-heading text-dark-brown">Month</th>
+                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Loan Balance</th>
+                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Principal Repayment</th>
+                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Interest Payment</th>
+                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Origination Fee Monthly</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {calculations.schedule.map((item, index) => {
+                    const originationFeeMonthly = calculations.originationFee / duration;
+                    return (
+                      <tr
+                        key={index}
+                        className={`border-b border-dark-brown/10 ${
+                          index % 2 === 0 ? 'bg-white' : 'bg-vibrant-yellow-light'
+                        }`}
+                      >
+                        <td className="py-3 px-4 font-paragraph text-dark-brown">
+                          {item.month}
+                        </td>
+                        <td className="text-right py-3 px-4 font-paragraph text-dark-brown">
+                          {formatCurrency(item.balance)}
+                        </td>
+                        <td className="text-right py-3 px-4 font-paragraph text-dark-brown">
+                          {formatCurrency(item.principal)}
+                        </td>
+                        <td className="text-right py-3 px-4 font-paragraph text-dark-brown">
+                          {formatCurrency(item.interest)}
+                        </td>
+                        <td className="text-right py-3 px-4 font-paragraph text-dark-brown">
+                          {formatCurrency(originationFeeMonthly)}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Summary */}
+            <div className="mt-6 pt-6 border-t border-dark-brown/20 grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div>
+                <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                  total principal
+                </p>
+                <p className="font-heading text-lg text-dark-brown">
+                  {formatCurrency(creditAmount)}
+                </p>
+              </div>
+              <div>
+                <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                  total interest
+                </p>
+                <p className="font-heading text-lg text-dark-brown">
+                  {formatCurrency(calculations.totalInterest)}
+                </p>
+              </div>
+              <div>
+                <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                  total origination fee
+                </p>
+                <p className="font-heading text-lg text-dark-brown">
+                  {formatCurrency(calculations.originationFee)}
+                </p>
+              </div>
+              <div>
+                <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                  total amount due
+                </p>
+                <p className="font-heading text-lg text-dark-brown">
+                  {formatCurrency(calculations.totalPayment + calculations.originationFee)}
+                </p>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </motion.div>
   );
 }
