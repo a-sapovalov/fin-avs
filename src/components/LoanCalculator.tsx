@@ -18,6 +18,7 @@ export default function LoanCalculator() {
 
   const calculations = useMemo(() => {
     const principal = creditAmount;
+    const originationFee = creditAmount * 0.01; // 1% origination fee
     const monthlyRate = annualRate / 100 / 12;
     const months = duration;
 
@@ -88,6 +89,7 @@ export default function LoanCalculator() {
       monthlyPayment,
       totalPayment,
       totalInterest,
+      originationFee,
       schedule,
     };
   }, [creditAmount, annualRate, duration, scheduleType]);
@@ -168,6 +170,37 @@ export default function LoanCalculator() {
             </div>
           </div>
 
+          {/* Schedule Type */}
+          <div>
+            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+              repayment schedule
+            </label>
+            <div className="flex gap-4">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="schedule"
+                  value="annuity"
+                  checked={scheduleType === 'annuity'}
+                  onChange={(e) => setScheduleType(e.target.value as 'annuity' | 'bullet')}
+                  className="w-4 h-4 accent-dark-brown"
+                />
+                <span className="font-paragraph text-sm text-dark-brown">Annuity (Equal Payments)</span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="schedule"
+                  value="bullet"
+                  checked={scheduleType === 'bullet'}
+                  onChange={(e) => setScheduleType(e.target.value as 'annuity' | 'bullet')}
+                  className="w-4 h-4 accent-dark-brown"
+                />
+                <span className="font-paragraph text-sm text-dark-brown">Bullet (Interest Only)</span>
+              </label>
+            </div>
+          </div>
+
           {/* Key Results */}
           <div className="grid grid-cols-2 gap-3 pt-4 border-t border-dark-brown/10">
             <div>
@@ -190,19 +223,19 @@ export default function LoanCalculator() {
 
             <div>
               <p className="font-paragraph text-xs text-dark-brown-light mb-1">
-                total payment
+                origination fee (1%)
               </p>
               <p className="font-heading text-xl md:text-2xl text-dark-brown">
-                {formatCurrency(calculations.totalPayment)}
+                {formatCurrency(calculations.originationFee)}
               </p>
             </div>
 
             <div>
               <p className="font-paragraph text-xs text-dark-brown-light mb-1">
-                credit amount
+                total payment
               </p>
               <p className="font-heading text-xl md:text-2xl text-dark-brown">
-                {formatCurrency(creditAmount)}
+                {formatCurrency(calculations.totalPayment + calculations.originationFee)}
               </p>
             </div>
           </div>
