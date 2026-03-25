@@ -63,7 +63,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white text-dark-brown">
       <Header />
       {/* --- CUSTOMER SUPPORT SECTION --- */}
-      <section className="w-full py-20 md:py-32 bg-vibrant-yellow-light">
+      <section className="w-full py-20 md:py-32 bg-secondary">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
             <h2 className="font-heading md:text-4xl text-dark-brown mb-4 text-4xl">
@@ -135,7 +135,7 @@ export default function AboutPage() {
         </div>
       </section>
       {/* --- CONTACT FORM & MAP SECTION --- */}
-      <section className="w-full bg-vibrant-yellow py-20 md:py-32">
+      <section className="w-full py-20 md:py-32 bg-background">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
             {/* Contact Form - Left */}
@@ -214,7 +214,7 @@ export default function AboutPage() {
         </div>
       </section>
       {/* --- COMPANY DETAILS SECTION --- */}
-      <section className="w-full py-20 md:py-32 bg-vibrant-yellow-light">
+      <section className="w-full py-20 md:py-32 bg-secondary">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
             <h2 className="font-heading text-4xl text-dark-brown mb-6 leading-tight md:text-4xl">
@@ -283,7 +283,7 @@ export default function AboutPage() {
         </div>
       </section>
       {/* --- MEET OUR TEAM SECTION --- */}
-      <section className="w-full bg-vibrant-yellow py-20 md:py-32">
+      <section className="w-full py-20 md:py-32 bg-background">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
           <FadeIn className="mb-16">
             <h2 className="font-heading text-4xl text-dark-brown mb-6 leading-tight md:text-4xl">
