@@ -185,7 +185,7 @@ export default function ApplicationPage() {
           <form onSubmit={handleSubmit} className="p-8 md:p-12 rounded-2xl space-y-8 bg-background">
             {/* 1. Loan Details Section */}
             <div>
-              <h2 className="font-heading text-3xl text-dark-brown mb-6">genenral details</h2>
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">general details</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="loanType" className="font-paragraph text-base text-dark-brown">financing type *</Label>
