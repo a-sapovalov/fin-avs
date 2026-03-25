@@ -261,14 +261,11 @@ export default function LoanCalculator() {
           </Button>
         </div>
       </Card>
-
       {/* Payment Schedule Dialog */}
       <Dialog open={isScheduleOpen} onOpenChange={setIsScheduleOpen}>
         <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto bg-white border border-dark-brown/10">
           <DialogHeader>
-            <DialogTitle className="font-heading text-2xl text-dark-brown">
-              payment schedule preview
-            </DialogTitle>
+            <DialogTitle className="font-heading text-2xl text-dark-brown">payment schedule sample</DialogTitle>
           </DialogHeader>
 
           <div className="mt-6">
