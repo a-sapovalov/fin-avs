@@ -10,6 +10,7 @@ interface PaymentScheduleItem {
   payment: number;
   principal: number;
   interest: number;
+  originationFee: number;
   balance: number;
 }
 
@@ -46,11 +47,15 @@ export default function LoanCalculator() {
         const principalPayment = monthlyPayment - interestPayment;
         balance -= principalPayment;
 
+        // Origination fee is paid only in the first month
+        const originationFeeForMonth = i === 1 ? originationFee : 0;
+
         schedule.push({
           month: i,
-          payment: monthlyPayment,
+          payment: monthlyPayment + originationFeeForMonth,
           principal: principalPayment,
           interest: interestPayment,
+          originationFee: originationFeeForMonth,
           balance: Math.max(0, balance),
         });
 
@@ -61,22 +66,27 @@ export default function LoanCalculator() {
       monthlyPayment = principal * monthlyRate;
 
       for (let i = 1; i <= months; i++) {
+        // Origination fee is paid only in the first month
+        const originationFeeForMonth = i === 1 ? originationFee : 0;
+
         if (i === months) {
           // Last payment includes principal
           schedule.push({
             month: i,
-            payment: monthlyPayment + principal,
+            payment: monthlyPayment + principal + originationFeeForMonth,
             principal: principal,
             interest: monthlyPayment,
+            originationFee: originationFeeForMonth,
             balance: 0,
           });
           totalInterest += monthlyPayment;
         } else {
           schedule.push({
             month: i,
-            payment: monthlyPayment,
+            payment: monthlyPayment + originationFeeForMonth,
             principal: 0,
             interest: monthlyPayment,
+            originationFee: originationFeeForMonth,
             balance: principal,
           });
           totalInterest += monthlyPayment;
@@ -279,12 +289,11 @@ export default function LoanCalculator() {
                     <th className="text-right py-3 px-4 font-heading text-dark-brown">Loan Balance</th>
                     <th className="text-right py-3 px-4 font-heading text-dark-brown">Principal Repayment</th>
                     <th className="text-right py-3 px-4 font-heading text-dark-brown">Interest Payment</th>
-                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Origination Fee Monthly</th>
+                    <th className="text-right py-3 px-4 font-heading text-dark-brown">Origination Fee</th>
                   </tr>
                 </thead>
                 <tbody>
                   {calculations.schedule.map((item, index) => {
-                    const originationFeeMonthly = calculations.originationFee / duration;
                     return (
                       <tr
                         key={index}
@@ -305,7 +314,7 @@ export default function LoanCalculator() {
                           {formatCurrency(item.interest)}
                         </td>
                         <td className="text-right py-3 px-4 font-paragraph text-dark-brown">
-                          {formatCurrency(originationFeeMonthly)}
+                          {formatCurrency(item.originationFee)}
                         </td>
                       </tr>
                     );
