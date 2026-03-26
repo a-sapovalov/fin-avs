@@ -58,7 +58,7 @@ export default function LoansPage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">
-                business loans. <span className="text-vibrant-yellow">built around your plans.</span>
+                loans. <span className="text-vibrant-yellow">built around your plans.</span>
               </h1>
               <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light leading-relaxed mb-4 sm:mb-6">
                 secure flexible financing solutions tailored to your business needs. competitive rates starting from 9.5% + 6 months euribor with loan amounts from €25,000 to €1,000,000.
@@ -69,7 +69,7 @@ export default function LoansPage() {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
                 <Link
                   to="/application"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg font-bold text-sm sm:text-base"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg sm:text-lg text-lg font-bold"
                 >
                   apply now
                   <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
