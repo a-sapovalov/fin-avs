@@ -58,7 +58,7 @@ export default function CreditLinePage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">
-                flexible credit lines for your <span className="text-vibrant-yellow">business</span>
+                credit lines. funding on demand.
               </h1>
               <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light leading-relaxed mb-4 sm:mb-6">
                 access working capital on demand with our flexible credit line solutions. competitive rates starting from 10.5% + 6 months euribor with credit limits from €10,000 to €500,000.
