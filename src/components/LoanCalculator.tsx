@@ -20,11 +20,14 @@ export default function LoanCalculator() {
   const [duration, setDuration] = useState(60);
   const [scheduleType, setScheduleType] = useState<'annuity' | 'bullet'>('annuity');
   const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+  const [useEuribor, setUseEuribor] = useState(false);
+  const [euriborRate, setEuriborRate] = useState(3.5);
 
   const calculations = useMemo(() => {
     const principal = creditAmount;
     const originationFee = creditAmount * 0.01; // 1% origination fee
-    const monthlyRate = annualRate / 100 / 12;
+    const effectiveAnnualRate = useEuribor ? annualRate + euriborRate : annualRate;
+    const monthlyRate = effectiveAnnualRate / 100 / 12;
     const months = duration;
 
     let monthlyPayment = 0;
@@ -105,8 +108,9 @@ export default function LoanCalculator() {
       totalInterest,
       originationFee,
       schedule,
+      effectiveAnnualRate: useEuribor ? annualRate + euriborRate : annualRate,
     };
-  }, [creditAmount, annualRate, duration, scheduleType]);
+  }, [creditAmount, annualRate, duration, scheduleType, useEuribor, euriborRate]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -150,6 +154,7 @@ export default function LoanCalculator() {
           <div>
             <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
               annual rate: {annualRate.toFixed(2)}%
+              {useEuribor && <span className="text-dark-brown-light"> + {euriborRate.toFixed(2)}% Euribor = {calculations.effectiveAnnualRate.toFixed(2)}%</span>}
             </label>
             <input
               type="range"
@@ -163,6 +168,38 @@ export default function LoanCalculator() {
               <span>0%</span>
               <span>15%</span>
             </div>
+          </div>
+
+          {/* Euribor Option */}
+          <div className="border-t border-dark-brown/10 pt-4">
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={useEuribor}
+                onChange={(e) => setUseEuribor(e.target.checked)}
+                className="w-4 h-4 accent-dark-brown"
+              />
+              <span className="font-paragraph text-sm text-dark-brown font-semibold">add 6-month Euribor rate</span>
+            </label>
+            {useEuribor && (
+              <div className="mt-4">
+                <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+                  6-month euribor rate: {euriborRate.toFixed(2)}%
+                </label>
+                <input
+                  type="range"
+                  max="10"
+                  step="0.1"
+                  value={euriborRate}
+                  onChange={(e) => setEuriborRate(Number(e.target.value))}
+                  className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
+                />
+                <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
+                  <span>0%</span>
+                  <span>10%</span>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Duration */}
