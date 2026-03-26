@@ -180,6 +180,35 @@ export default function LoanCalculator() {
             </div>
           </div>
 
+          {/* Schedule Type Selection */}
+          <div>
+            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+              schedule type
+            </label>
+            <div className="flex gap-4">
+              <button
+                onClick={() => setScheduleType('annuity')}
+                className={`flex-1 py-3 px-4 rounded-lg font-paragraph font-semibold transition-all ${ 
+                  scheduleType === 'annuity'
+                    ? 'bg-dark-brown text-vibrant-yellow'
+                    : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
+                }`}
+              >
+                annuity schedule
+              </button>
+              <button
+                onClick={() => setScheduleType('bullet')}
+                className={`flex-1 py-3 px-4 rounded-lg font-paragraph font-semibold transition-all ${
+                  scheduleType === 'bullet'
+                    ? 'bg-dark-brown text-vibrant-yellow'
+                    : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
+                }`}
+              >
+                bullet schedule
+              </button>
+            </div>
+          </div>
+
           {/* Key Results */}
           <div className="grid grid-cols-2 gap-3 pt-4 border-t border-dark-brown/10">
             <div>
@@ -235,7 +264,43 @@ export default function LoanCalculator() {
             <DialogTitle className="font-heading text-2xl text-dark-brown">payment schedule sample</DialogTitle>
           </DialogHeader>
 
-          <div className="mt-6">
+          <div className="mt-6 space-y-6">
+            {/* Source Data Display */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-vibrant-yellow-light rounded-lg border border-dark-brown/10">
+              <div>
+                <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                  credit amount
+                </p>
+                <p className="font-heading text-lg text-dark-brown">
+                  {formatCurrency(creditAmount)}
+                </p>
+              </div>
+              <div>
+                <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                  annual rate
+                </p>
+                <p className="font-heading text-lg text-dark-brown">
+                  {annualRate.toFixed(2).replace('.', ',')}%
+                </p>
+              </div>
+              <div>
+                <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                  duration
+                </p>
+                <p className="font-heading text-lg text-dark-brown">
+                  {duration} months
+                </p>
+              </div>
+              <div>
+                <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+                  schedule type
+                </p>
+                <p className="font-heading text-lg text-dark-brown capitalize">
+                  {scheduleType}
+                </p>
+              </div>
+            </div>
+
             {/* Schedule Table */}
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
