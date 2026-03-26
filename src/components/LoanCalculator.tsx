@@ -20,14 +20,11 @@ export default function LoanCalculator() {
   const [duration, setDuration] = useState(60);
   const [scheduleType, setScheduleType] = useState<'annuity' | 'bullet'>('annuity');
   const [isScheduleOpen, setIsScheduleOpen] = useState(false);
-  const [includeEuribor, setIncludeEuribor] = useState(false);
-  const euribor6mRate = 3.65; // 6-month Euribor rate
 
   const calculations = useMemo(() => {
     const principal = creditAmount;
     const originationFee = creditAmount * 0.01; // 1% origination fee
-    const effectiveAnnualRate = includeEuribor ? annualRate + euribor6mRate : annualRate;
-    const monthlyRate = effectiveAnnualRate / 100 / 12;
+    const monthlyRate = annualRate / 100 / 12;
     const months = duration;
 
     let monthlyPayment = 0;
@@ -108,9 +105,8 @@ export default function LoanCalculator() {
       totalInterest,
       originationFee,
       schedule,
-      effectiveRate: includeEuribor ? annualRate + euribor6mRate : annualRate,
     };
-  }, [creditAmount, annualRate, duration, scheduleType, includeEuribor]);
+  }, [creditAmount, annualRate, duration, scheduleType]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -154,7 +150,6 @@ export default function LoanCalculator() {
           <div>
             <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
               annual rate: {annualRate.toFixed(2)}%
-              {includeEuribor && <span className="text-dark-brown-light"> + {euribor6mRate}% Euribor = {(annualRate + euribor6mRate).toFixed(2)}%</span>}
             </label>
             <input
               type="range"
@@ -168,17 +163,6 @@ export default function LoanCalculator() {
               <span>0%</span>
               <span>15%</span>
             </div>
-            <label className="flex items-center gap-2 cursor-pointer mt-4">
-              <input
-                type="checkbox"
-                checked={includeEuribor}
-                onChange={(e) => setIncludeEuribor(e.target.checked)}
-                className="w-4 h-4 accent-dark-brown"
-              />
-              <span className="font-paragraph text-sm text-dark-brown">
-                include 6-month euribor rate ({euribor6mRate}%)
-              </span>
-            </label>
           </div>
 
           {/* Duration */}
