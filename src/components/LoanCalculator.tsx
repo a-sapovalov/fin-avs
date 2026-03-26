@@ -109,7 +109,7 @@ export default function LoanCalculator() {
   }, [creditAmount, annualRate, duration, scheduleType]);
 
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('de-DE', {
       style: 'currency',
       currency: 'EUR',
       minimumFractionDigits: 2,
@@ -141,15 +141,15 @@ export default function LoanCalculator() {
               className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
             />
             <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
-              <span>€0</span>
-              <span>€1,000,000</span>
+              <span>0 €</span>
+              <span>1 000 000 €</span>
             </div>
           </div>
 
           {/* Annual Rate */}
           <div>
             <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
-              annual rate: {annualRate.toFixed(2)}%
+              annual rate: {annualRate.toFixed(2).replace('.', ',')}%
             </label>
             <input
               type="range"
@@ -168,7 +168,7 @@ export default function LoanCalculator() {
           {/* Duration */}
           <div>
             <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
-              duration: {duration} months ({(duration / 12).toFixed(1)} years)
+              duration: {duration} months ({(duration / 12).toFixed(1).replace('.', ',')} years)
             </label>
             <input
               type="range"
