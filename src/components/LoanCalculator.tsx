@@ -16,7 +16,7 @@ interface PaymentScheduleItem {
 
 export default function LoanCalculator() {
   const [creditAmount, setCreditAmount] = useState(100000);
-  const [annualRate, setAnnualRate] = useState(9);
+  const [annualRate, setAnnualRate] = useState(9.5);
   const [duration, setDuration] = useState(60);
   const [scheduleType, setScheduleType] = useState<'annuity' | 'bullet'>('annuity');
   const [isScheduleOpen, setIsScheduleOpen] = useState(false);
@@ -172,7 +172,7 @@ export default function LoanCalculator() {
             </label>
             <input
               type="range"
-              max="240"
+              max="120"
               step="1"
               value={duration}
               onChange={(e) => setDuration(Number(e.target.value))}
@@ -180,7 +180,7 @@ export default function LoanCalculator() {
             />
             <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
               <span>0 months</span>
-              <span>240 months</span>
+              <span>120 months</span>
             </div>
           </div>
 
