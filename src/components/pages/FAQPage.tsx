@@ -21,7 +21,7 @@ const faqItems: FAQItem[] = [
     id: '2',
     category: 'general',
     question: 'how long does the application process take?',
-    answer: 'most applications are processed within 24-48 hours. simple applications may be approved within a few hours. you will receive updates via email throughout the process.'
+    answer: 'we aim to review credit applications and provide an indicative offer within 48 business hours. in simpler cases, an indicative offer may be provided within a few hours.'
   },
   {
     id: '3',
