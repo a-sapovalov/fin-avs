@@ -295,7 +295,7 @@ export default function LoanCalculator() {
                 <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                   schedule type
                 </p>
-                <p className="font-heading text-lg text-dark-brown capitalize">
+                <p className="font-heading text-lg text-dark-brown">
                   {scheduleType}
                 </p>
               </div>
