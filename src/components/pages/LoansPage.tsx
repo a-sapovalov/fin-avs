@@ -28,7 +28,7 @@ export default function LoansPage() {
   const loanTerms = [
     { label: 'loan amount', value: 'from 25 000 € to 1 000 000 €' },
     { label: 'ltv', value: 'up to 80%' },
-    { label: 'loan period', value: 'up to 120 months' },
+    { label: 'loan term', value: 'up to 120 months' },
     { label: 'grace period', value: 'optional, up to 12 months' },
     { label: 'interest rate', value: 'from 9,5% + 6 months euribor' },
     { label: 'payment schedule', value: 'annuity or bullet schedule' },
@@ -136,15 +136,11 @@ export default function LoansPage() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="p-8 bg-white rounded-2xl border-2 border-dark-brown shadow-lg">
                 <h3 className="font-heading text-2xl text-dark-brown mb-4">annuity schedule</h3>
-                <p className="font-paragraph text-base text-dark-brown leading-relaxed">
-                  equal monthly payments throughout the loan term. each payment includes both principal and interest, making budgeting predictable and straightforward for your business.
-                </p>
+                <p className="font-paragraph text-base text-dark-brown leading-relaxed">equal monthly payments throughout the loan term. each payment includes both principal and interest.</p>
               </div>
               <div className="p-8 bg-white rounded-2xl border-2 border-dark-brown shadow-lg">
                 <h3 className="font-heading text-2xl text-dark-brown mb-4">bullet schedule</h3>
-                <p className="font-paragraph text-base text-dark-brown leading-relaxed">
-                  interest-only payments during the loan term with the full principal repaid at maturity. ideal for businesses with seasonal cash flows or planned capital events.
-                </p>
+                <p className="font-paragraph text-base text-dark-brown leading-relaxed">interest-only payments during the loan term with the full principal repaid at maturity.</p>
               </div>
             </div>
           </FadeIn>
