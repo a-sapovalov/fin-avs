@@ -109,12 +109,12 @@ export default function LoanCalculator() {
   }, [creditAmount, annualRate, duration, scheduleType]);
 
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('de-DE', {
-      style: 'currency',
-      currency: 'EUR',
+    // Format with European standard: comma for decimals, space for thousands, € after number
+    const formatted = new Intl.NumberFormat('de-DE', {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     }).format(value);
+    return `${formatted} €`;
   };
 
   return (
@@ -181,35 +181,6 @@ export default function LoanCalculator() {
             <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
               <span>0 months</span>
               <span>120 months</span>
-            </div>
-          </div>
-
-          {/* Schedule Type */}
-          <div>
-            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">repayment schedule type</label>
-            <div className="flex gap-4">
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="schedule"
-                  value="annuity"
-                  checked={scheduleType === 'annuity'}
-                  onChange={(e) => setScheduleType(e.target.value as 'annuity' | 'bullet')}
-                  className="w-4 h-4 accent-dark-brown"
-                />
-                <span className="font-paragraph text-sm text-dark-brown">annuity (equal payments)</span>
-              </label>
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="schedule"
-                  value="bullet"
-                  checked={scheduleType === 'bullet'}
-                  onChange={(e) => setScheduleType(e.target.value as 'annuity' | 'bullet')}
-                  className="w-4 h-4 accent-dark-brown"
-                />
-                <span className="font-paragraph text-sm text-dark-brown">bullet (interest only)</span>
-              </label>
             </div>
           </div>
 
