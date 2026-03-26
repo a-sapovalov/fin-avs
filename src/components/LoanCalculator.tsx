@@ -230,9 +230,7 @@ export default function LoanCalculator() {
             </div>
 
             <div>
-              <p className="font-paragraph text-xs text-dark-brown-light mb-1">
-                origination fee (1%)
-              </p>
+              <p className="font-paragraph text-xs text-dark-brown-light mb-1">origination fee</p>
               <p className="font-heading text-xl md:text-2xl text-dark-brown">
                 {formatCurrency(calculations.originationFee)}
               </p>
