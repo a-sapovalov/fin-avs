@@ -15,7 +15,7 @@ const faqItems: FAQItem[] = [
     id: '1',
     category: 'general',
     question: 'what is avs finance?',
-    answer: 'avs finance is a licensed financial institution providing loans, credit lines, and leasing solutions to individuals and businesses. we operate under financial institution licence ffa000503 granted by the financial intelligence unit of estonia.'
+    answer: 'avs finance is an estonia-based licensed financial institution providing loans, credit lines and leasing solutions to companies, non-profit associations and sole proprietors registered in estonia. we operate under financial institution licence faa000503, granted by the financial intelligence unit of estonia. avs finance is established in estonia and backed by estonian capital.'
   },
   {
     id: '2',
