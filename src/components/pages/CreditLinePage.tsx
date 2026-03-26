@@ -58,7 +58,7 @@ export default function CreditLinePage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">credit lines. funding on demand.</h1>
-              <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light leading-relaxed mb-4 sm:mb-6">A pre-approved credit line that gives your business access to capital when needed.</p>
+              <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light leading-relaxed mb-4 sm:mb-6">a flexible credit line for businesses that want financing ready to use.</p>
               <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light mb-6 sm:mb-8">use it when needed, reuse it as you repay, and pay interest only on the amount in use.</p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
                 <Link
