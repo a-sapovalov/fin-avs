@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-mo
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LoanCalculator from '@/components/LoanCalculator';
+import { formatEuropeanPercent } from '@/lib/format-number';
 
 const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode, delay?: number, className?: string }) => {
   const ref = useRef(null);

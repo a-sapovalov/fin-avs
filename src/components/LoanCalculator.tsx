@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
+import { formatEuropeanNumber, formatEuropeanPercent } from '@/lib/format-number';
 
 interface PaymentScheduleItem {
   month: number;
@@ -109,15 +110,7 @@ export default function LoanCalculator() {
   }, [creditAmount, annualRate, duration, scheduleType]);
 
   const formatCurrency = (value: number) => {
-    // Format with European standard: comma for decimals, space for thousands, € after number
-    const parts = value.toFixed(2).split('.');
-    const integerPart = parts[0];
-    const decimalPart = parts[1];
-    
-    // Add space as thousands separator
-    const withThousandsSeparator = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-    
-    return `${withThousandsSeparator},${decimalPart} €`;
+    return formatEuropeanNumber(value);
   };
 
   return (
