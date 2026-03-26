@@ -114,7 +114,9 @@ export default function LoanCalculator() {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     }).format(value);
-    return `${formatted} €`;
+    // Replace dot (thousands separator) with space
+    const withSpaces = formatted.replace(/\./g, ' ');
+    return `${withSpaces} €`;
   };
 
   return (
