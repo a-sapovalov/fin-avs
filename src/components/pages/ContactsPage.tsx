@@ -307,7 +307,7 @@ export default function ContactsPage() {
                         {member.name || 'Team Member'}
                       </h3>
                       {member.role && (
-                        <p className="font-paragraph text-sm font-semibold text-secondary mb-4">
+                        <p className="font-paragraph text-sm font-semibold text-primary mb-4">
                           {member.role}
                         </p>
                       )}

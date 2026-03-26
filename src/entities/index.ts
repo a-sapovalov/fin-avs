@@ -48,4 +48,6 @@ export interface TeamMembers {
   socialMediaLink?: string;
   /** @wixFieldType email */
   email?: string;
+  /** @wixFieldType number */
+  number?: number;
 }
