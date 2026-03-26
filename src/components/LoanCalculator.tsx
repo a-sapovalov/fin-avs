@@ -251,7 +251,7 @@ export default function LoanCalculator() {
           {/* View Sample Schedule Button */}
           <Button
             onClick={() => setIsScheduleOpen(true)}
-            className="w-full bg-dark-brown hover:bg-dark-brown-light text-white font-paragraph font-semibold py-2 rounded-lg transition-colors"
+            className="w-full bg-dark-brown hover:bg-dark-brown-light text-white font-paragraph font-semibold py-2 rounded-lg transition-colors text-lg"
           >
             view sample schedule
           </Button>
