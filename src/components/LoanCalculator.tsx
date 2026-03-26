@@ -110,13 +110,14 @@ export default function LoanCalculator() {
 
   const formatCurrency = (value: number) => {
     // Format with European standard: comma for decimals, space for thousands, € after number
-    const formatted = new Intl.NumberFormat('de-DE', {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(value);
-    // Replace dot (thousands separator) with space
-    const withSpaces = formatted.replace(/\./g, ' ');
-    return `${withSpaces} €`;
+    const parts = value.toFixed(2).split('.');
+    const integerPart = parts[0];
+    const decimalPart = parts[1];
+    
+    // Add space as thousands separator
+    const withThousandsSeparator = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    
+    return `${withThousandsSeparator},${decimalPart} €`;
   };
 
   return (
