@@ -212,7 +212,7 @@ export default function LoanCalculator() {
           {/* Key Results */}
           <div className="grid grid-cols-2 gap-3 pt-4 border-t border-dark-brown/10">
             <div>
-              <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+              <p className="font-paragraph text-lg text-dark-brown-light mb-1">
                 monthly payment
               </p>
               <p className="font-heading text-xl md:text-2xl text-dark-brown">
@@ -221,7 +221,7 @@ export default function LoanCalculator() {
             </div>
 
             <div>
-              <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+              <p className="font-paragraph text-lg text-dark-brown-light mb-1">
                 total interest
               </p>
               <p className="font-heading text-xl md:text-2xl text-dark-brown">
@@ -230,14 +230,14 @@ export default function LoanCalculator() {
             </div>
 
             <div>
-              <p className="font-paragraph text-xs text-dark-brown-light mb-1">origination fee</p>
+              <p className="font-paragraph text-lg text-dark-brown-light mb-1">origination fee</p>
               <p className="font-heading text-xl md:text-2xl text-dark-brown">
                 {formatCurrency(calculations.originationFee)}
               </p>
             </div>
 
             <div>
-              <p className="font-paragraph text-xs text-dark-brown-light mb-1">
+              <p className="font-paragraph text-lg text-dark-brown-light mb-1">
                 total payment
               </p>
               <p className="font-heading text-xl md:text-2xl text-dark-brown">
