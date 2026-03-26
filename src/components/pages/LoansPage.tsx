@@ -58,7 +58,7 @@ export default function LoansPage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">
-                loans. <span className="text-vibrant-yellow">built around your business.</span>
+                loans. <span className="text-vibrant-yellow">structured for your business.</span>
               </h1>
               <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light leading-relaxed mb-4 sm:mb-6">straightforward loans for businesses. tailored to your goal.</p>
               <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light mb-6 sm:mb-8">whether for refinancing, investment or another business need, our team is here to structure loans that fit your plans.</p>
