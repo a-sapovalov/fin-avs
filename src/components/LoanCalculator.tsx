@@ -215,7 +215,7 @@ export default function LoanCalculator() {
               <p className="font-paragraph text-lg text-dark-brown-light mb-1">
                 monthly payment
               </p>
-              <p className="font-heading text-xl md:text-2xl text-dark-brown">
+              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-semibold">
                 {formatCurrency(calculations.monthlyPayment)}
               </p>
             </div>
@@ -224,14 +224,14 @@ export default function LoanCalculator() {
               <p className="font-paragraph text-lg text-dark-brown-light mb-1">
                 total interest
               </p>
-              <p className="font-heading text-xl md:text-2xl text-dark-brown">
+              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-semibold">
                 {formatCurrency(calculations.totalInterest)}
               </p>
             </div>
 
             <div>
               <p className="font-paragraph text-lg text-dark-brown-light mb-1">origination fee</p>
-              <p className="font-heading text-xl md:text-2xl text-dark-brown">
+              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-semibold">
                 {formatCurrency(calculations.originationFee)}
               </p>
             </div>
@@ -240,7 +240,7 @@ export default function LoanCalculator() {
               <p className="font-paragraph text-lg text-dark-brown-light mb-1">
                 total payment
               </p>
-              <p className="font-heading text-xl md:text-2xl text-dark-brown">
+              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-semibold">
                 {formatCurrency(calculations.totalPayment + calculations.originationFee)}
               </p>
             </div>
@@ -259,7 +259,7 @@ export default function LoanCalculator() {
       <Dialog open={isScheduleOpen} onOpenChange={setIsScheduleOpen}>
         <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto bg-white border border-dark-brown/10">
           <DialogHeader>
-            <DialogTitle className="font-heading text-2xl text-dark-brown">payment schedule sample</DialogTitle>
+            <DialogTitle className="font-paragraph text-2xl text-dark-brown font-semibold">payment schedule sample</DialogTitle>
           </DialogHeader>
 
           <div className="mt-6 space-y-6">
@@ -269,7 +269,7 @@ export default function LoanCalculator() {
                 <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                   credit amount
                 </p>
-                <p className="font-heading text-lg text-dark-brown">
+                <p className="font-paragraph text-lg text-dark-brown font-semibold">
                   {formatCurrency(creditAmount)}
                 </p>
               </div>
@@ -277,7 +277,7 @@ export default function LoanCalculator() {
                 <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                   annual rate
                 </p>
-                <p className="font-heading text-lg text-dark-brown">
+                <p className="font-paragraph text-lg text-dark-brown font-semibold">
                   {annualRate.toFixed(2).replace('.', ',')}%
                 </p>
               </div>
@@ -285,7 +285,7 @@ export default function LoanCalculator() {
                 <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                   duration
                 </p>
-                <p className="font-heading text-lg text-dark-brown">
+                <p className="font-paragraph text-lg text-dark-brown font-semibold">
                   {duration} months
                 </p>
               </div>
@@ -293,7 +293,7 @@ export default function LoanCalculator() {
                 <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                   schedule type
                 </p>
-                <p className="font-heading text-lg text-dark-brown">
+                <p className="font-paragraph text-lg text-dark-brown font-semibold">
                   {scheduleType}
                 </p>
               </div>
@@ -304,11 +304,11 @@ export default function LoanCalculator() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-dark-brown/20">
-                    <th className="text-left py-3 px-4 font-heading text-dark-brown">month</th>
-                    <th className="text-right py-3 px-4 font-heading text-dark-brown">loan balance</th>
-                    <th className="text-right py-3 px-4 font-heading text-dark-brown">principal repayment</th>
-                    <th className="text-right py-3 px-4 font-heading text-dark-brown">interest payment</th>
-                    <th className="text-right py-3 px-4 font-heading text-dark-brown">origination fee</th>
+                    <th className="text-left py-3 px-4 font-paragraph text-dark-brown font-semibold">month</th>
+                    <th className="text-right py-3 px-4 font-paragraph text-dark-brown font-semibold">loan balance</th>
+                    <th className="text-right py-3 px-4 font-paragraph text-dark-brown font-semibold">principal repayment</th>
+                    <th className="text-right py-3 px-4 font-paragraph text-dark-brown font-semibold">interest payment</th>
+                    <th className="text-right py-3 px-4 font-paragraph text-dark-brown font-semibold">origination fee</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -348,7 +348,7 @@ export default function LoanCalculator() {
                 <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                   total principal
                 </p>
-                <p className="font-heading text-lg text-dark-brown">
+                <p className="font-paragraph text-lg text-dark-brown font-semibold">
                   {formatCurrency(creditAmount)}
                 </p>
               </div>
@@ -356,7 +356,7 @@ export default function LoanCalculator() {
                 <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                   total interest
                 </p>
-                <p className="font-heading text-lg text-dark-brown">
+                <p className="font-paragraph text-lg text-dark-brown font-semibold">
                   {formatCurrency(calculations.totalInterest)}
                 </p>
               </div>
@@ -364,7 +364,7 @@ export default function LoanCalculator() {
                 <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                   total origination fee
                 </p>
-                <p className="font-heading text-lg text-dark-brown">
+                <p className="font-paragraph text-lg text-dark-brown font-semibold">
                   {formatCurrency(calculations.originationFee)}
                 </p>
               </div>
@@ -372,7 +372,7 @@ export default function LoanCalculator() {
                 <p className="font-paragraph text-xs text-dark-brown-light mb-1">
                   total amount due
                 </p>
-                <p className="font-heading text-lg text-dark-brown">
+                <p className="font-paragraph text-lg text-dark-brown font-semibold">
                   {formatCurrency(calculations.totalPayment + calculations.originationFee)}
                 </p>
               </div>
