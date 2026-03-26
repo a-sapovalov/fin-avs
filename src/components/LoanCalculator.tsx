@@ -125,7 +125,7 @@ export default function LoanCalculator() {
         <div className="space-y-6">
           {/* Credit Amount */}
           <div>
-            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+            <label className="font-paragraph text-lg md:text-xl text-dark-brown font-semibold mb-3 block">
               credit amount: {formatCurrency(creditAmount)}
             </label>
             <input
@@ -144,7 +144,7 @@ export default function LoanCalculator() {
 
           {/* Annual Rate */}
           <div>
-            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+            <label className="font-paragraph text-lg md:text-xl text-dark-brown font-semibold mb-3 block">
               annual rate: {annualRate.toFixed(2).replace('.', ',')}%
             </label>
             <input
@@ -163,7 +163,7 @@ export default function LoanCalculator() {
 
           {/* Duration */}
           <div>
-            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+            <label className="font-paragraph text-lg md:text-xl text-dark-brown font-semibold mb-3 block">
               duration: {duration} months ({(duration / 12).toFixed(1).replace('.', ',')} years)
             </label>
             <input
@@ -182,7 +182,7 @@ export default function LoanCalculator() {
 
           {/* Schedule Type Selection */}
           <div>
-            <label className="font-paragraph text-sm md:text-base text-dark-brown font-semibold mb-3 block">
+            <label className="font-paragraph text-lg md:text-xl text-dark-brown font-semibold mb-3 block">
               schedule type
             </label>
             <div className="flex gap-4">
