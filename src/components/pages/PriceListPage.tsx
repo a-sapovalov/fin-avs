@@ -39,7 +39,7 @@ const priceSections: PriceSection[] = [
     ],
   },
   {
-    name: 'debt collection costs',
+    name: 'collection costs',
     items: [
       { title: 'reminder letter or debt notice', price: 'first free of charge, from the second onwards €10' },
       { title: 'notice of termination', price: '€20' },
