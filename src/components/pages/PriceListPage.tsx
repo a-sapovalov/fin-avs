@@ -76,8 +76,8 @@ export default function PriceListPage() {
         </div>
 
         {/* Effective Date Notice */}
-        <div className="mb-12 p-6 bg-dark-brown rounded-lg">
-          <p className="font-heading text-lg text-vibrant-yellow">
+        <div className="mb-12 py-4 px-0 border-b border-dark-brown-light">
+          <p className="font-paragraph text-sm text-dark-brown-light">
             effective from 27 march 2026
           </p>
         </div>
@@ -106,9 +106,9 @@ export default function PriceListPage() {
         </div>
 
         {/* VAT Notice */}
-        <div className="p-6 bg-dark-brown-light rounded-lg">
-          <p className="font-paragraph text-sm text-vibrant-yellow-light">
-            <span className="font-heading text-vibrant-yellow">note:</span> value added tax (vat) may be added to service fees in accordance with applicable law.
+        <div className="py-4 px-0 border-t border-dark-brown-light">
+          <p className="font-paragraph text-sm text-dark-brown-light">
+            <span className="font-heading text-dark-brown">note:</span> value added tax (vat) may be added to service fees in accordance with applicable law.
           </p>
         </div>
       </main>
