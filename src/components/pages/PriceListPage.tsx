@@ -76,19 +76,19 @@ export default function PriceListPage() {
         </div>
 
         {/* Pricing Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {priceSections.map((section, idx) => (
-            <div key={idx} className="bg-vibrant-yellow-light rounded-lg p-8 border-l-4 border-dark-brown">
-              <h2 className="font-heading text-2xl text-dark-brown mb-6">
+            <div key={idx} className="bg-vibrant-yellow-light rounded-lg p-6 border-l-4 border-dark-brown flex flex-col h-full">
+              <h2 className="font-heading text-xl text-dark-brown mb-4 flex-shrink-0">
                 {section.name}
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-3 flex-1">
                 {section.items.map((item, itemIdx) => (
-                  <div key={itemIdx} className="pb-4 border-b border-dark-brown-light last:border-b-0">
-                    <h3 className="font-paragraph font-bold text-sm text-dark-brown mb-2">
+                  <div key={itemIdx} className="pb-3 border-b border-dark-brown-light last:border-b-0">
+                    <h3 className="font-paragraph font-bold text-xs text-dark-brown mb-1">
                       {item.title}
                     </h3>
-                    <p className="font-paragraph text-sm text-dark-brown-light">
+                    <p className="font-paragraph text-xs text-dark-brown-light leading-tight">
                       {item.price}
                     </p>
                   </div>
