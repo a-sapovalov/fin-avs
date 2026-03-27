@@ -215,7 +215,7 @@ export default function LoanCalculator() {
               <p className="font-paragraph text-lg text-dark-brown-light mb-1">
                 monthly payment
               </p>
-              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-semibold">
+              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-normal">
                 {formatCurrency(calculations.monthlyPayment)}
               </p>
             </div>
