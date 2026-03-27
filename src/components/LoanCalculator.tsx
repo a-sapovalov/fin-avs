@@ -125,7 +125,7 @@ export default function LoanCalculator() {
         <div className="space-y-6">
           {/* Credit Amount */}
           <div>
-            <label className="font-paragraph text-lg md:text-xl text-dark-brown font-semibold mb-3 block">
+            <label className="font-paragraph text-lg md:text-xl text-dark-brown mb-3 block font-bold">
               credit amount: {formatCurrency(creditAmount)}
             </label>
             <input
@@ -144,7 +144,7 @@ export default function LoanCalculator() {
 
           {/* Annual Rate */}
           <div>
-            <label className="font-paragraph text-lg md:text-xl text-dark-brown font-semibold mb-3 block">
+            <label className="font-paragraph text-lg md:text-xl text-dark-brown mb-3 block font-bold">
               annual rate: {annualRate.toFixed(2).replace('.', ',')}%
             </label>
             <input
@@ -215,7 +215,7 @@ export default function LoanCalculator() {
               <p className="font-paragraph text-lg text-dark-brown-light mb-1">
                 monthly payment
               </p>
-              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-normal">
+              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-bold">
                 {formatCurrency(calculations.monthlyPayment)}
               </p>
             </div>
