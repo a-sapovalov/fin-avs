@@ -76,7 +76,7 @@ export default function PriceListPage() {
         </div>
 
         {/* Pricing Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 gap-6 mb-16">
           {priceSections.map((section, idx) => (
             <div key={idx} className="bg-vibrant-yellow-light rounded-lg p-6 border-l-4 border-dark-brown flex flex-col h-full">
               <h2 className="font-heading text-xl text-dark-brown mb-4 flex-shrink-0">
