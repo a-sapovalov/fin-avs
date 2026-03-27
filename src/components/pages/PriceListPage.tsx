@@ -17,7 +17,7 @@ const priceSections: PriceSection[] = [
     name: 'agreement fees',
     items: [
       { title: 'entry into contract fee', price: '1% of the credit amount, minimum €200' },
-      { title: 'credit linecommitment fee', price: '2% per annum on the undrawn amount' },
+      { title: 'credit line commitment fee', price: '2% per annum on the undrawn amount' },
     ],
   },
   {
@@ -102,7 +102,7 @@ export default function PriceListPage() {
         <div className="py-6 px-0 border-t border-dark-brown-light space-y-4">
           <p className="font-paragraph text-sm text-dark-brown-light">price list effective from 27 march 2026.</p>
           <p className="font-paragraph text-sm text-dark-brown-light">
-            <span className="font-heading text-dark-brown">note:</span> value added tax (vat) may be added to service fees in accordance with applicable law.
+            <span className="font-heading text-dark-brown"></span> value added tax (vat) may be added to service fees in accordance with applicable law.
           </p>
         </div>
       </main>
