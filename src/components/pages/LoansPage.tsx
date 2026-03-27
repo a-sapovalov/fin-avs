@@ -81,12 +81,13 @@ export default function LoansPage() {
             >
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl">
                 <Image
-                  src="https://static.wixstatic.com/media/nsplsh_a39456e21e0c4a06baa06551e2907085~mv2.jpg"
+                  src="https://static.wixstatic.com/media/11062b_f0cfb200520f41058abf17e67605efc4~mv2.jpeg"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
-                  originWidth={3997}
-                  originHeight={2248} />
+                  originWidth={5184}
+                  originHeight={3456}
+                  alt="a bridge is being built over a body of water" />
               </div>
             </motion.div>
           </div>
