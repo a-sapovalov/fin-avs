@@ -75,13 +75,6 @@ export default function PriceListPage() {
           <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">transparent pricing for all our financial services.</p>
         </div>
 
-        {/* Effective Date Notice */}
-        <div className="mb-12 py-4 px-0 border-b border-dark-brown-light">
-          <p className="font-paragraph text-sm text-dark-brown-light">
-            effective from 27 march 2026
-          </p>
-        </div>
-
         {/* Pricing Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {priceSections.map((section, idx) => (
@@ -105,8 +98,11 @@ export default function PriceListPage() {
           ))}
         </div>
 
-        {/* VAT Notice */}
-        <div className="py-4 px-0 border-t border-dark-brown-light">
+        {/* Combined Effective Date & VAT Notice */}
+        <div className="py-6 px-0 border-t border-dark-brown-light space-y-4">
+          <p className="font-paragraph text-sm text-dark-brown-light">
+            effective from 27 march 2026
+          </p>
           <p className="font-paragraph text-sm text-dark-brown-light">
             <span className="font-heading text-dark-brown">note:</span> value added tax (vat) may be added to service fees in accordance with applicable law.
           </p>
