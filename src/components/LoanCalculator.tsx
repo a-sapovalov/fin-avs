@@ -163,7 +163,7 @@ export default function LoanCalculator() {
 
           {/* Duration */}
           <div>
-            <label className="font-paragraph text-lg md:text-xl text-dark-brown font-semibold mb-3 block">
+            <label className="font-paragraph text-lg md:text-xl text-dark-brown mb-3 block font-bold">
               duration: {duration} months ({(duration / 12).toFixed(1).replace('.', ',')} years)
             </label>
             <input
