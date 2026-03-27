@@ -100,9 +100,7 @@ export default function PriceListPage() {
 
         {/* Combined Effective Date & VAT Notice */}
         <div className="py-6 px-0 border-t border-dark-brown-light space-y-4">
-          <p className="font-paragraph text-sm text-dark-brown-light">
-            effective from 27 march 2026
-          </p>
+          <p className="font-paragraph text-sm text-dark-brown-light">price list effective from 27 march 2026.</p>
           <p className="font-paragraph text-sm text-dark-brown-light">
             <span className="font-heading text-dark-brown">note:</span> value added tax (vat) may be added to service fees in accordance with applicable law.
           </p>
