@@ -32,10 +32,10 @@ const priceSections: PriceSection[] = [
     ],
   },
   {
-    name: 'other services',
+    name: 'notarial transactions',
     items: [
-      { title: 'notarial transactions - new mortgage', price: 'free of charge' },
-      { title: 'notarial transactions - other reasons', price: '€100' },
+      { title: 'attendance at a notarial transaction for the creation of a mortgage on entry into a new credit agreement, upon full repayment of the credit amount, or for the creation of an additional mortgage', price: 'free of charge' },
+      { title: 'attendance at a notarial transaction for any other reason', price: '€100' },
     ],
   },
   {
