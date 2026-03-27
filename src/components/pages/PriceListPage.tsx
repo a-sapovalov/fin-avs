@@ -57,7 +57,7 @@ const priceSections: PriceSection[] = [
   {
     name: 'default interest',
     items: [
-      { title: 'delay in repayment', price: '0,1% per day (36,5% per annum)' },
+      { title: 'rate of penalty for late payment', price: '0,1% per day (36,5% per annum)' },
     ],
   },
 ];
