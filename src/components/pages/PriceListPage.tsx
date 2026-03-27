@@ -86,13 +86,13 @@ export default function PriceListPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {priceSections.map((section, idx) => (
             <div key={idx} className="bg-vibrant-yellow-light rounded-lg p-8 border-l-4 border-dark-brown">
-              <h2 className="font-heading text-2xl text-dark-brown mb-6 capitalize">
+              <h2 className="font-heading text-2xl text-dark-brown mb-6">
                 {section.name}
               </h2>
               <div className="space-y-4">
                 {section.items.map((item, itemIdx) => (
                   <div key={itemIdx} className="pb-4 border-b border-dark-brown-light last:border-b-0">
-                    <h3 className="font-heading text-sm uppercase text-dark-brown mb-2">
+                    <h3 className="font-heading text-sm text-dark-brown mb-2">
                       {item.title}
                     </h3>
                     <p className="font-paragraph text-sm text-dark-brown-light">
