@@ -92,7 +92,7 @@ export default function PriceListPage() {
               <div className="space-y-4">
                 {section.items.map((item, itemIdx) => (
                   <div key={itemIdx} className="pb-4 border-b border-dark-brown-light last:border-b-0">
-                    <h3 className="font-heading text-sm text-dark-brown mb-2">
+                    <h3 className="font-paragraph font-bold text-sm text-dark-brown mb-2">
                       {item.title}
                     </h3>
                     <p className="font-paragraph text-sm text-dark-brown-light">
