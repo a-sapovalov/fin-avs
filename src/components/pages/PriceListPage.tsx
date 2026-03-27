@@ -2,6 +2,66 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { formatEuropeanNumber, formatEuropeanPercent } from '@/lib/format-number';
 
+interface PriceItem {
+  title: string;
+  price: string;
+}
+
+interface PriceSection {
+  name: string;
+  items: PriceItem[];
+}
+
+const priceSections: PriceSection[] = [
+  {
+    name: 'agreement fees',
+    items: [
+      { title: 'entry into contract fee', price: '1% of the credit amount, minimum €200' },
+      { title: 'commitment fee', price: 'credit line commitment fee – 1% per annum on the undrawn amount' },
+    ],
+  },
+  {
+    name: 'changes to the agreement',
+    items: [
+      { title: 'increase of the credit amount', price: '1% of the additional credit amount, minimum €100' },
+      { title: 'change of payment date', price: '€20' },
+      { title: 'payment holiday or restructuring due to payment difficulties', price: '0,1% of credit balance, minimum €100' },
+      { title: 'partial or full early repayment', price: 'free of charge if notice is given at least 3 months in advance; otherwise, interest calculated on the credit amount repaid early for the portion of the 3-month notice period not observed' },
+      { title: 'early termination of a credit line or reduction of a credit line limit', price: 'free of charge if notice is given at least 3 months in advance; otherwise, a commitment fee will be charged on the reduced amount or, in the case of early termination, on the undrawn credit line balance, for the portion of the 3-month notice period not observed' },
+      { title: 'other amendments to the agreement', price: 'for example, change of term or replacement of collateral – 1% of the credit balance, minimum €100' },
+    ],
+  },
+  {
+    name: 'other services',
+    items: [
+      { title: 'notarial transactions - new mortgage', price: 'free of charge' },
+      { title: 'notarial transactions - other reasons', price: '€100' },
+    ],
+  },
+  {
+    name: 'debt collection costs',
+    items: [
+      { title: 'reminder letter or debt notice', price: 'first free of charge, from the second onwards €10' },
+      { title: 'notice of termination', price: '€20' },
+      { title: 'termination letter', price: '€40' },
+    ],
+  },
+  {
+    name: 'additional services',
+    items: [
+      { title: 'confirmation letter', price: '€10' },
+      { title: 'confirmation letter for an auditor', price: '€20' },
+      { title: 'special information request', price: '€30 per hour, minimum €30' },
+    ],
+  },
+  {
+    name: 'default interest',
+    items: [
+      { title: 'delay in repayment', price: '0,1% per day (36,5% per annum)' },
+    ],
+  },
+];
+
 export default function PriceListPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -22,136 +82,31 @@ export default function PriceListPage() {
           </p>
         </div>
 
-        {/* Pricing Tables */}
-        <div className="space-y-16">
-          {/* Agreement Fees Section */}
-          <div className="bg-vibrant-yellow-light rounded-lg p-8 md:p-12">
-            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-8">
-              agreement fees
-            </h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">entry into contract fee</h3>
-                <p className="font-paragraph text-dark-brown">1% of the credit amount, minimum {formatEuropeanNumber(200)}</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">commitment fee</h3>
-                <p className="font-paragraph text-dark-brown">credit line commitment fee – 1% per annum on the undrawn amount</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Changes to Agreement Section */}
-          <div className="bg-vibrant-yellow-light rounded-lg p-8 md:p-12">
-            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-8">
-              changes to the agreement
-            </h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">increase of the credit amount</h3>
-                <p className="font-paragraph text-dark-brown">1% of the additional credit amount, minimum {formatEuropeanNumber(100)}</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">change of payment date</h3>
-                <p className="font-paragraph text-dark-brown">{formatEuropeanNumber(20)}</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">payment holiday or restructuring due to payment difficulties</h3>
-                <p className="font-paragraph text-dark-brown">0,1% of credit balance, minimum {formatEuropeanNumber(100)}</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">partial or full early repayment</h3>
-                <p className="font-paragraph text-dark-brown">free of charge if notice is given at least 3 months in advance; otherwise, interest calculated on the credit amount repaid early for the portion of the 3-month notice period not observed</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">early termination of a credit line or reduction of a credit line limit</h3>
-                <p className="font-paragraph text-dark-brown">free of charge if notice is given at least 3 months in advance; otherwise, a commitment fee will be charged on the reduced amount or, in the case of early termination, on the undrawn credit line balance, for the portion of the 3-month notice period not observed</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">other amendments to the agreement</h3>
-                <p className="font-paragraph text-dark-brown">for example, change of term or replacement of collateral – 1% of the credit balance, minimum {formatEuropeanNumber(100)}</p>
+        {/* Pricing Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {priceSections.map((section, idx) => (
+            <div key={idx} className="bg-vibrant-yellow-light rounded-lg p-8 border-l-4 border-dark-brown">
+              <h2 className="font-heading text-2xl text-dark-brown mb-6 capitalize">
+                {section.name}
+              </h2>
+              <div className="space-y-4">
+                {section.items.map((item, itemIdx) => (
+                  <div key={itemIdx} className="pb-4 border-b border-dark-brown-light last:border-b-0">
+                    <h3 className="font-heading text-sm uppercase text-dark-brown mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="font-paragraph text-sm text-dark-brown-light">
+                      {item.price}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-
-          {/* Other Services Section */}
-          <div className="bg-vibrant-yellow-light rounded-lg p-8 md:p-12">
-            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-8">
-              other services
-            </h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">notarial transactions</h3>
-                <ul className="space-y-3 ml-4">
-                  <li className="font-paragraph text-dark-brown">
-                    • attendance at a notarial transaction for the creation of a mortgage on entry into a new credit agreement, upon full repayment of the credit amount, or for the creation of an additional mortgage – free of charge
-                  </li>
-                  <li className="font-paragraph text-dark-brown">
-                    • attendance at a notarial transaction for any other reason – {formatEuropeanNumber(100)}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Debt Collection Costs Section */}
-          <div className="bg-vibrant-yellow-light rounded-lg p-8 md:p-12">
-            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-8">
-              debt collection costs
-            </h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">reminder letter or debt notice</h3>
-                <p className="font-paragraph text-dark-brown">first free of charge, from the second onwards {formatEuropeanNumber(10)}</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">notice of termination</h3>
-                <p className="font-paragraph text-dark-brown">{formatEuropeanNumber(20)}</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">termination letter</h3>
-                <p className="font-paragraph text-dark-brown">{formatEuropeanNumber(40)}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Additional Services Section */}
-          <div className="bg-vibrant-yellow-light rounded-lg p-8 md:p-12">
-            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-8">
-              additional services
-            </h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">confirmation letter</h3>
-                <p className="font-paragraph text-dark-brown">{formatEuropeanNumber(10)}</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">confirmation letter for an auditor</h3>
-                <p className="font-paragraph text-dark-brown">{formatEuropeanNumber(20)}</p>
-              </div>
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">bespoke information request</h3>
-                <p className="font-paragraph text-dark-brown">{formatEuropeanNumber(30)} per hour, minimum {formatEuropeanNumber(30)}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Default Interest Section */}
-          <div className="bg-vibrant-yellow-light rounded-lg p-8 md:p-12">
-            <h2 className="font-heading text-3xl md:text-4xl text-dark-brown mb-8">
-              default interest
-            </h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-heading text-xl text-dark-brown mb-3">delay in repayment</h3>
-                <p className="font-paragraph text-dark-brown">default interest for delay in repayment of the credit amount, or in reimbursing debt collection costs or any other contractual costs – 0,1% per day (36,5% per annum)</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* VAT Notice */}
-        <div className="mt-16 p-6 bg-dark-brown-light rounded-lg">
+        <div className="p-6 bg-dark-brown-light rounded-lg">
           <p className="font-paragraph text-sm text-vibrant-yellow-light">
             <span className="font-heading text-vibrant-yellow">note:</span> value added tax (vat) may be added to service fees in accordance with applicable law.
           </p>
