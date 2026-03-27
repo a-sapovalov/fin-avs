@@ -24,7 +24,7 @@ export default function LoanCalculator() {
 
   const calculations = useMemo(() => {
     const principal = creditAmount;
-    const originationFee = creditAmount * 0.01; // 1% origination fee
+    const originationFee = Math.max(creditAmount * 0.01, 200); // 1% or minimum 200 euros
     const monthlyRate = annualRate / 100 / 12;
     const months = duration;
 
@@ -130,6 +130,7 @@ export default function LoanCalculator() {
             </label>
             <input
               type="range"
+              min="10000"
               max="1000000"
               step="10000"
               value={creditAmount}
@@ -137,7 +138,7 @@ export default function LoanCalculator() {
               className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
             />
             <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
-              <span>0 €</span>
+              <span>10 000 €</span>
               <span>1 000 000 €</span>
             </div>
           </div>
@@ -194,7 +195,7 @@ export default function LoanCalculator() {
                     : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
                 }`}
               >
-                annuity schedule
+                annuity
               </button>
               <button
                 onClick={() => setScheduleType('bullet')}
@@ -204,7 +205,7 @@ export default function LoanCalculator() {
                     : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
                 }`}
               >
-                bullet schedule
+                bullet
               </button>
             </div>
           </div>
