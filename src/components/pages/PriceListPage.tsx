@@ -28,7 +28,7 @@ const priceSections: PriceSection[] = [
       { title: 'payment holiday or restructuring due to payment difficulties', price: '0,1% of credit balance, minimum €100' },
       { title: 'partial or full early repayment', price: 'free of charge if notice is given at least 3 months in advance; otherwise, interest calculated on the credit amount repaid early for the portion of the 3-month notice period not observed' },
       { title: 'early termination of a credit line or reduction of a credit line limit', price: 'free of charge if notice is given at least 3 months in advance; otherwise, a commitment fee will be charged on the reduced amount or, in the case of early termination, on the undrawn credit line balance, for the portion of the 3-month notice period not observed' },
-      { title: 'other amendments to the agreement', price: 'for example, change of term or replacement of collateral – 1% of the credit balance, minimum €100' },
+      { title: 'other amendments to the agreement (for example, change of term or replacement of collateral)', price: '1% of the credit balance, minimum €100' },
     ],
   },
   {
