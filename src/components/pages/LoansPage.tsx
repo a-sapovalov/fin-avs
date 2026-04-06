@@ -58,7 +58,7 @@ export default function LoansPage() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">
-                loans. <span className="text-vibrant-yellow">capital for the next</span>
+                loans. <span className="text-vibrant-yellow">capital for the next step.</span>
               </h1>
               <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light leading-relaxed mb-4 sm:mb-6">straightforward loans for businesses that need financing for a specific purpose.</p>
               <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light mb-6 sm:mb-8">use it for refinancing, investment, a property project or another business need, with terms structured around your plans</p>
