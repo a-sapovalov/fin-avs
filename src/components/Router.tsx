@@ -6,7 +6,6 @@ import HomePage from '@/components/pages/HomePage';
 import CreditLinePage from '@/components/pages/CreditLinePage';
 import ContactsPage from '@/components/pages/ContactsPage';
 import ApplicationPage from '@/components/pages/ApplicationPage';
-import LeasesPage from '@/components/pages/LeasesPage';
 import LoansPage from '@/components/pages/LoansPage';
 import PriceListPage from '@/components/pages/PriceListPage';
 import FAQPage from '@/components/pages/FAQPage';
@@ -53,13 +52,6 @@ const router = createBrowserRouter([
         element: <ApplicationPage />,
         routeMetadata: {
           pageIdentifier: 'application',
-        },
-      },
-      {
-        path: "leases",
-        element: <LeasesPage />,
-        routeMetadata: {
-          pageIdentifier: 'leases',
         },
       },
       {
