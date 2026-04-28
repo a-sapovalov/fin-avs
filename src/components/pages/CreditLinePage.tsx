@@ -27,7 +27,7 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 export default function CreditLinePage() {
   const creditLineTerms = [
     { label: 'credit line limit', value: 'from 10 000 € to 500 000 €' },
-    { label: 'ltv', value: 'up to 75%' },
+    { label: 'ltv', value: 'up to 75% of the collateral value' },
     { label: 'credit period', value: 'up to 120 months' },
     { label: 'grace period', value: 'optional, up to 12 months' },
     { label: 'interest rate', value: 'from 10% + 6 month euribor, calculated from the credit balance' },
