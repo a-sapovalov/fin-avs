@@ -27,7 +27,7 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 export default function LoansPage() {
   const loanTerms = [
     { label: 'loan amount', value: 'from 10 000 € to 1 000 000 €' },
-    { label: 'ltv', value: 'up to 80%' },
+    { label: 'ltv', value: 'up to 80% of the collateral value' },
     { label: 'loan term', value: 'up to 120 months' },
     { label: 'grace period', value: 'optional, up to 12 months' },
     { label: 'interest rate', value: 'from 9,5% + 6 months euribor' },
