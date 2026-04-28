@@ -38,11 +38,10 @@ export default function LoansPage() {
   ];
 
   const processSteps = [
-    'to apply for a loan, fill out the inquiry form',
-    'we will send you an indicative loan offer within 1 working day and the loan officer will clarify any questions you may have',
-    'the loan officer will send you a binding loan offer',
-    'we will sign the loan agreement and find a time to make a notarial transaction',
-    'we will disburse the loan',
+    'submit the application form and provide the information about your business, financing need and proposed security.',
+    'we review the information and, if needed, contact you for clarifications. if the information is sufficient, we aim to provide an indicative offer within 48 business hours.',
+    'if the terms are suitable for both parties, we complete the required checks and prepare the loan and security documents, including any notarial arrangements.',
+    'once the documents are signed and all disbursement conditions are met, the loan is paid out within 48 business hours.',
   ];
 
   return (
