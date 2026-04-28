@@ -16,6 +16,7 @@ export default function Header() {
     { path: '/loans', label: 'loans' },
     { path: '/credit-line', label: 'credit lines' },
     { path: '/contacts', label: 'contacts' },
+    { path: '/faq', label: 'faq' },
   ];
 
   const languages: { code: Language; name: string }[] = [
