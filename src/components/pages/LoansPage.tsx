@@ -39,8 +39,8 @@ export default function LoansPage() {
 
   const processSteps = [
     'submit the application form.',
-    'we review the information and, if needed, contact you for clarifications. if the information is sufficient, we aim to provide an indicative offer within 48 business hours.',
-    'if the terms are suitable for both parties, we complete the required checks and prepare the loan and security documents, including any notarial arrangements.',
+    'we review the information and may contact you for clarifications. if the information is sufficient, we aim to provide an indicative offer within 48 business hours.',
+    'if the terms suit you, we complete the required checks and prepare the loan and security documents.',
     'once the documents are signed and all disbursement conditions are met, the loan is paid out within 48 business hours.',
   ];
 
