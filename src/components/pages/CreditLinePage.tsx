@@ -26,14 +26,16 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 
 export default function CreditLinePage() {
   const creditLineTerms = [
-    { label: 'credit limit', value: '€10,000 - €500,000' },
-    { label: 'ltv', value: 'up to 75%' },
-    { label: 'credit period', value: 'up to 60 months' },
-    { label: 'interest rate', value: 'from 10.5% + 6 months euribor' },
-    { label: 'drawdown', value: 'flexible, as needed' },
+    { label: 'credit limit', value: 'from 10 000 € to 1 000 000 €' },
+    { label: 'ltv', value: 'up to 80%' },
+    { label: 'credit period', value: 'up to 120 months' },
+    { label: 'grace period', value: 'optional, up to 12 months' },
+    { label: 'interest rate', value: 'from 9,5% + 6 months euribor, calculated from the loan balance' },
+    { label: 'drawdown', value: 'as needed by the client' },
+    { label: 'commitment fee', value: 'from 2% per annum, calculated from unused credit line amount' },
     { label: 'repayment', value: 'interest-only or amortizing' },
-    { label: 'security', value: 'mortgage on building, apartment or land in estonia' },
-    { label: 'applicant', value: 'oü, mtü, as or fie registered in estonia' },
+    { label: 'security', value: 'mortgage on building, apartment or land in estonia. mortgage can be combined with surety' },
+    { label: 'applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
   ];
 
   const processSteps = [
