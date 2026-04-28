@@ -141,31 +141,35 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- WHAT AVS OFFERS --- */}
-      <section className="w-full md:py-[50px] py-[50px] px-0 bg-secondary">
-        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12 pt-24 pb-12 md:pb-24 lg:pb-32">
-          <FadeIn className="mb-16 text-center">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight relative inline-block z-10 text-primary">what avs offers
-                            
-            </h2>
+      <section className="w-full py-24 md:py-32 px-0 bg-secondary">
+        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
+          <FadeIn className="mb-20 text-center">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight text-primary">what avs offers</h2>
           </FadeIn>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <FadeIn className="group">
-              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
-                <div className="relative w-full h-48 overflow-hidden bg-secondary">
+          
+          {/* Two-column layout with better proportions */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Loans Card - Left */}
+            <FadeIn className="group flex flex-col">
+              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col">
+                <div className="relative w-full h-64 md:h-72 overflow-hidden bg-secondary flex-shrink-0">
                   <Image
                     src="https://static.wixstatic.com/media/nsplsh_2db62b2cf4074f92a0b9ad6ffe3e3e5b~mv2.jpg"
-                    width={400}
-                    height={300}
+                    width={600}
+                    height={400}
                     className="w-full h-full object-cover"
                     originWidth={5596}
-                    originHeight={3731} />
+                    originHeight={3731}
+                    alt="Loans financing"
+                  />
                 </div>
-                <div className="p-8 md:p-10 flex flex-col justify-between flex-grow">
-                  <div className="mb-8">
-                    <h3 className="font-heading text-3xl text-dark-brown mb-2">loans</h3>
+                <div className="p-10 md:p-12 flex flex-col flex-grow">
+                  <div className="mb-6">
+                    <h3 className="font-heading text-3xl md:text-4xl text-dark-brown mb-2">loans</h3>
+                    <div className="w-12 h-1 bg-vibrant-yellow rounded-full"></div>
                   </div>
-                  <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
-                    financing for businesses, whatever the need – whether for refinancing, investment, a property flip or other ventues. the client decides.
+                  <p className="font-paragraph text-dark-brown-light mb-10 leading-relaxed flex-grow text-lg">
+                    financing for businesses, whatever the need – whether for refinancing, investment, a property flip or other ventures. the client decides.
                   </p>
                   <Link
                     to="/loans"
@@ -177,22 +181,27 @@ export default function HomePage() {
                 </div>
               </div>
             </FadeIn>
-            <FadeIn className="group" delay={0.1}>
-              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
-                <div className="relative w-full h-48 overflow-hidden bg-secondary">
+            
+            {/* Credit Lines Card - Right */}
+            <FadeIn className="group flex flex-col" delay={0.1}>
+              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col">
+                <div className="relative w-full h-64 md:h-72 overflow-hidden bg-secondary flex-shrink-0">
                   <Image
                     src="https://static.wixstatic.com/media/nsplsh_2d67396172463661587834~mv2.jpg"
-                    width={400}
-                    height={300}
+                    width={600}
+                    height={400}
                     className="w-full h-full object-cover"
                     originWidth={4801}
-                    originHeight={6826} />
+                    originHeight={6826}
+                    alt="Credit lines financing"
+                  />
                 </div>
-                <div className="p-8 md:p-10 flex flex-col justify-between flex-grow">
-                  <div className="mb-8">
-                    <h3 className="font-heading text-3xl text-dark-brown mb-2">credit lines</h3>
+                <div className="p-10 md:p-12 flex flex-col flex-grow">
+                  <div className="mb-6">
+                    <h3 className="font-heading text-3xl md:text-4xl text-dark-brown mb-2">credit lines</h3>
+                    <div className="w-12 h-1 bg-vibrant-yellow rounded-full"></div>
                   </div>
-                  <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
+                  <p className="font-paragraph text-dark-brown-light mb-10 leading-relaxed flex-grow text-lg">
                     pre-approved financing for businesses that can be used at any time, repeatedly, and exactly when needed. interest is charged on the amount in use.
                   </p>
                   <Link
