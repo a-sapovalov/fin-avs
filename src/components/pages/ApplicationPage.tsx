@@ -715,9 +715,7 @@ export default function ApplicationPage() {
               >
                 {isSubmitting ? 'submitting application...' : 'submit application'}
               </Button>
-              <p className="font-paragraph text-sm text-dark-brown-light mt-4">
-                * required fields. by submitting this form, you agree to our terms and conditions.
-              </p>
+              <p className="font-paragraph text-sm text-dark-brown-light mt-4">* required fields.</p>
             </div>
           </form>
         </motion.div>
