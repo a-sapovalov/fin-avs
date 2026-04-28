@@ -19,7 +19,7 @@ import {
 
 interface Collateral {
   id: string;
-  type: 'real-estate' | 'other';
+  type: 'mortgage' | 'other';
   address?: string;
   description?: string;
 }
@@ -94,7 +94,7 @@ export default function ApplicationPage() {
   const addCollateral = () => {
     const newCollateral: Collateral = {
       id: Date.now().toString(),
-      type: 'real-estate',
+      type: 'mortgage',
     };
     setCollaterals([...collaterals, newCollateral]);
   };
@@ -558,7 +558,7 @@ export default function ApplicationPage() {
                           value={collateral.type}
                           onValueChange={(value) =>
                             updateCollateral(collateral.id, {
-                              type: value as 'real-estate' | 'other',
+                              type: value as 'mortgage' | 'other',
                               address: undefined,
                               description: undefined,
                             })
@@ -568,8 +568,8 @@ export default function ApplicationPage() {
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="real-estate" className="font-paragraph">
-                              real estate
+                            <SelectItem value="mortgage" className="font-paragraph">
+                              mortgage
                             </SelectItem>
                             <SelectItem value="other" className="font-paragraph">
                               other
@@ -586,7 +586,7 @@ export default function ApplicationPage() {
                       </button>
                     </div>
 
-                    {collateral.type === 'real-estate' && (
+                    {collateral.type === 'mortgage' && (
                       <div className="space-y-2">
                         <Label className="font-paragraph text-base text-dark-brown">
                           address *
