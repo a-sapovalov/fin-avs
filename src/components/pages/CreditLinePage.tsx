@@ -162,16 +162,16 @@ export default function CreditLinePage() {
           <div className="max-w-3xl mx-auto mt-12">
             {processSteps.map((step, index) => (
               <FadeIn key={index} delay={index * 0.1}>
-                <div className="flex gap-8 mb-8 last:mb-0">
-                  <div className="flex flex-col items-center">
+                <div className="flex gap-8 mb-12 last:mb-0">
+                  <div className="flex flex-col items-center flex-shrink-0">
                     <div className="flex items-center justify-center w-12 h-12 rounded-full bg-vibrant-yellow text-dark-brown font-heading font-bold text-lg shadow-lg">
                       {index + 1}
                     </div>
                     {index < processSteps.length - 1 && (
-                      <div className="w-1 h-16 bg-vibrant-yellow mt-2" />
+                      <div className="w-1 flex-grow bg-vibrant-yellow mt-2 min-h-[80px]" />
                     )}
                   </div>
-                  <div className="pb-8 pt-2">
+                  <div className="pt-1 pb-4">
                     <p className="font-paragraph text-lg text-dark-brown leading-relaxed">
                       {step}
                     </p>
