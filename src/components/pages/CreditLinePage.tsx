@@ -33,7 +33,7 @@ export default function CreditLinePage() {
     { label: 'interest rate', value: 'from 10% + 6 month euribor, calculated from the credit balance' },
     { label: 'origination fee', value: '1% of the credit amount' },
     { label: 'drawdown', value: 'as needed by the client' },
-    { label: 'commitment fee', value: 'from 2% per annum, calculated from unused credit line amount' },
+    { label: 'commitment fee', value: '4% per annum, calculated from the undrawn credit line amount' },
     { label: 'security', value: 'mortgage on building, apartment or land in estonia. mortgage can be combined with surety' },
     { label: 'applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
   ];
