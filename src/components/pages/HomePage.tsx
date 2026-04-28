@@ -148,7 +148,7 @@ export default function HomePage() {
                             
             </h2>
           </FadeIn>
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <FadeIn className="group">
               <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
                 <div className="relative w-full h-48 overflow-hidden bg-secondary">
