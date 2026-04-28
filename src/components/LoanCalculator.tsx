@@ -254,6 +254,11 @@ export default function LoanCalculator() {
           >
             view sample schedule
           </Button>
+
+          {/* Discrete Disclaimer */}
+          <p className="font-paragraph text-xs text-dark-brown-light/60 text-center pt-2">
+            *Estimated calculations may vary from actual terms offered
+          </p>
         </div>
       </Card>
       {/* Payment Schedule Dialog */}
