@@ -33,7 +33,6 @@ export default function CreditLinePage() {
     { label: 'interest rate', value: 'from 9,5% + 6 months euribor, calculated from the loan balance' },
     { label: 'drawdown', value: 'as needed by the client' },
     { label: 'commitment fee', value: 'from 2% per annum, calculated from unused credit line amount' },
-    { label: 'repayment', value: 'interest-only or amortizing' },
     { label: 'security', value: 'mortgage on building, apartment or land in estonia. mortgage can be combined with surety' },
     { label: 'applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
   ];
