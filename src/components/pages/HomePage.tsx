@@ -105,8 +105,8 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-vibrant-yellow rounded-xl mb-6">
                   <LineChart className="h-7 w-7 text-dark-brown" />
                 </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">competitive terms</h3>
-                <p className="font-paragraph text-dark-brown-light leading-relaxed">
+                <h3 className="font-heading text-dark-brown mb-3 text-3xl">competitive terms</h3>
+                <p className="font-paragraph text-dark-brown-light text-lg">
                   annual interest from 9,5%, ltv up to 80% and period of your choosing.
                 </p>
               </div>
@@ -118,8 +118,8 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-secondary">
                   <Zap className="h-7 w-7 text-dark-brown fill-secondary" />
                 </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">fast approvals</h3>
-                <p className="font-paragraph text-dark-brown-light leading-relaxed">
+                <h3 className="font-heading text-dark-brown mb-3 text-3xl">fast approvals</h3>
+                <p className="font-paragraph text-dark-brown-light text-lg">
                   a financing decision within two business days.
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default function HomePage() {
                   <Users className="h-7 w-7 text-dark-brown fill-secondary" />
                 </div>
                 <h3 className="font-heading text-2xl text-dark-brown mb-3">dedicated client manager</h3>
-                <p className="font-paragraph text-dark-brown-light leading-relaxed">
+                <p className="font-paragraph text-dark-brown-light text-lg">
                   a dedicated contact who takes the time to understand your business.
                 </p>
               </div>
