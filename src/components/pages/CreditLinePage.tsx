@@ -26,11 +26,11 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 
 export default function CreditLinePage() {
   const creditLineTerms = [
-    { label: 'credit limit', value: 'from 10 000 € to 1 000 000 €' },
-    { label: 'ltv', value: 'up to 80%' },
+    { label: 'credit line limit', value: 'from 10 000 € to 500 000 €' },
+    { label: 'ltv', value: 'up to 75%' },
     { label: 'credit period', value: 'up to 120 months' },
     { label: 'grace period', value: 'optional, up to 12 months' },
-    { label: 'interest rate', value: 'from 9,5% + 6 months euribor, calculated from the loan balance' },
+    { label: 'interest rate', value: 'from 10% + 6 month euribor, calculated from the credit balance' },
     { label: 'drawdown', value: 'as needed by the client' },
     { label: 'commitment fee', value: 'from 2% per annum, calculated from unused credit line amount' },
     { label: 'security', value: 'mortgage on building, apartment or land in estonia. mortgage can be combined with surety' },
