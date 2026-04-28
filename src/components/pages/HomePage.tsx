@@ -205,34 +205,6 @@ export default function HomePage() {
                 </div>
               </div>
             </FadeIn>
-            <FadeIn className="group" delay={0.2}>
-              <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-vibrant-yellow/50 hover:border-vibrant-yellow flex flex-col justify-between">
-                <div className="relative w-full h-48 overflow-hidden bg-secondary">
-                  <Image
-                    src="https://static.wixstatic.com/media/nsplsh_313974364a325256715145~mv2_d_8403_3952_s_4_2.jpg"
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover"
-                    originWidth={8403}
-                    originHeight={3952} />
-                </div>
-                <div className="p-8 md:p-10 flex flex-col justify-between flex-grow">
-                  <div className="mb-8">
-                    <h3 className="font-heading text-3xl text-dark-brown mb-2">leases</h3>
-                  </div>
-                  <p className="font-paragraph text-dark-brown-light mb-8 leading-relaxed flex-grow">
-                    leasing for businesses, whatever the need – whether for equipment, vehicles or other business assets. the client decides.
-                  </p>
-                  <Link
-                    to="/leases"
-                    className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
-                  >
-                    explore leases
-                    <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </Link>
-                </div>
-              </div>
-            </FadeIn>
           </div>
         </div>
       </section>
