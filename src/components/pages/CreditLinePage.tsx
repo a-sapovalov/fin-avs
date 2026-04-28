@@ -42,7 +42,7 @@ export default function CreditLinePage() {
     'submit the application form.',
     'we review the information and may contact you for clarifications. if the information is sufficient, we aim to provide an indicative offer within 48 business hours.',
     'if the terms are suitable, we complete the required checks and prepare the loan and security documents.',
-    'once the documents are signed and all disbursement conditions are met, the credit line is made available for drawdowns within 48 business hours.',
+    'once the documents are signed and all disbursement conditions are met, the credit line is made available for drawdowns.',
   ];
 
   return (
