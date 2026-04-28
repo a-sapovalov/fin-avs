@@ -256,9 +256,7 @@ export default function LoanCalculator() {
           </Button>
 
           {/* Discrete Disclaimer */}
-          <p className="font-paragraph text-xs text-dark-brown-light/60 text-center pt-2">
-            *Estimated calculations may vary from actual terms offered
-          </p>
+          <p className="font-paragraph text-xs text-dark-brown-light/60 text-center pt-2">the calculator provides indicative sample terms only; final terms offered to you may differ</p>
         </div>
       </Card>
       {/* Payment Schedule Dialog */}
