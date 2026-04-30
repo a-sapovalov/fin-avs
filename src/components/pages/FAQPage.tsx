@@ -1,7 +1,8 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface FAQItem {
   id: string;
@@ -125,95 +126,94 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      <main className="flex-1 w-full max-w-[120rem] mx-auto px-6 md:px-12 py-20 bg-secondary">
-        {/* Hero Section */}
-        <div className="mb-16">
-          <h1 className="font-heading text-6xl md:text-7xl text-dark-brown mb-4">
-            frequently asked questions
-          </h1>
-          <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">
-            find answers to common questions about our financing solutions. can't find what you're looking for? contact us directly.
-          </p>
-        </div>
+      <main className="flex-1 w-full px-6 md:px-12 py-20 bg-secondary">
+        <div className="max-w-[120rem] mx-auto">
+          {/* Hero Section */}
+          <div className="mb-16">
+            <h1 className="font-heading text-6xl md:text-7xl text-dark-brown mb-4">
+              frequently asked questions
+            </h1>
+            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">
+              find answers to common questions about our financing solutions. can't find what you're looking for? contact us directly.
+            </p>
+          </div>
 
-        {/* Category Filter */}
-        <div className="mb-12">
-          <div className="flex flex-wrap gap-3">
-            {categories.map(category => (
-              <button
-                key={category.id}
-                onClick={() => {
-                  setSelectedCategory(category.id);
-                  setExpandedId(null);
-                }}
-                className={`font-paragraph px-4 py-2 rounded-lg transition-colors duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-dark-brown text-vibrant-yellow'
-                    : 'bg-vibrant-yellow-light text-dark-brown hover:bg-vibrant-yellow'
-                }`}
+          {/* Category Filter */}
+          <div className="mb-12">
+            <div className="flex flex-wrap gap-3">
+              {categories.map(category => (
+                <button
+                  key={category.id}
+                  onClick={() => {
+                    setSelectedCategory(category.id);
+                    setExpandedId(null);
+                  }}
+                  className={`font-paragraph px-4 py-2 rounded-lg transition-colors duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-dark-brown text-vibrant-yellow'
+                      : 'bg-vibrant-yellow-light text-dark-brown hover:bg-vibrant-yellow'
+                  }`}
+                >
+                  {category.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* FAQ Items */}
+          <div className="space-y-4">
+            {filteredFAQs.map(item => (
+              <div
+                key={item.id}
+                className="bg-vibrant-yellow-light rounded-lg overflow-hidden transition-all duration-300"
               >
-                {category.label}
-              </button>
+                <button
+                  onClick={() => setExpandedId(expandedId === item.id ? null : item.id)}
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-vibrant-yellow transition-colors duration-300"
+                >
+                  <h3 className="font-heading text-lg text-dark-brown text-left">
+                    {item.question}
+                  </h3>
+                  <ChevronDown
+                    className={`h-5 w-5 text-dark-brown flex-shrink-0 transition-transform duration-300 ${
+                      expandedId === item.id ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                
+                {expandedId === item.id && (
+                  <div className="px-6 py-4 bg-white border-t border-dark-brown-light">
+                    <p className="font-paragraph text-base text-dark-brown leading-relaxed">
+                      {item.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
+      </main>
 
-        {/* FAQ Items */}
-        <div className="space-y-4">
-          {filteredFAQs.map(item => (
-            <div
-              key={item.id}
-              className="bg-vibrant-yellow-light rounded-lg overflow-hidden transition-all duration-300"
+      {/* Contact Section - Separate Container */}
+      <section className="w-full bg-dark-brown py-24 md:py-32 overflow-hidden">
+        <div className="max-w-[120rem] mx-auto px-6 md:px-12">
+          <div className="text-center">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-vibrant-yellow mb-8">
+              didn't find your answer?
+            </h2>
+            <p className="font-paragraph text-lg md:text-xl text-vibrant-yellow-light mb-12 max-w-3xl mx-auto leading-relaxed">
+              our customer support team is here to help. reach out to us with any questions.
+            </p>
+            <Link 
+              to="/contacts"
+              className="inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg hover:shadow-vibrant-yellow/50"
             >
-              <button
-                onClick={() => setExpandedId(expandedId === item.id ? null : item.id)}
-                className="w-full px-6 py-4 flex items-center justify-between hover:bg-vibrant-yellow transition-colors duration-300"
-              >
-                <h3 className="font-heading text-lg text-dark-brown text-left">
-                  {item.question}
-                </h3>
-                <ChevronDown
-                  className={`h-5 w-5 text-dark-brown flex-shrink-0 transition-transform duration-300 ${
-                    expandedId === item.id ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
-              
-              {expandedId === item.id && (
-                <div className="px-6 py-4 bg-white border-t border-dark-brown-light">
-                  <p className="font-paragraph text-base text-dark-brown leading-relaxed">
-                    {item.answer}
-                  </p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Contact Section */}
-        <div className="mt-20 bg-dark-brown rounded-lg p-8 md:p-12 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl text-vibrant-yellow mb-4">
-            didn't find your answer?
-          </h2>
-          <p className="font-paragraph text-lg text-vibrant-yellow-light mb-8 max-w-2xl mx-auto">
-            our customer support team is here to help. reach out to us with any questions.
-          </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a
-              href="mailto:info@avs.ee"
-              className="font-paragraph px-6 py-3 bg-vibrant-yellow text-dark-brown rounded-lg hover:bg-vibrant-yellow-dark transition-colors duration-300 font-heading"
-            >
-              email us
-            </a>
-            <a
-              href="tel:+37253066545"
-              className="font-paragraph px-6 py-3 border-2 border-vibrant-yellow text-vibrant-yellow rounded-lg hover:bg-vibrant-yellow hover:text-dark-brown transition-colors duration-300 font-heading"
-            >
-              call us
-            </a>
+              contact us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </div>
         </div>
-      </main>
+      </section>
       <Footer />
     </div>
   );
