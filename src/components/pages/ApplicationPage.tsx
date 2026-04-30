@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircle, Trash2 } from 'lucide-react';
+import { CheckCircle, Trash2, AlertCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Input } from '@/components/ui/input';
@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import {
   Select,
   SelectContent,
@@ -33,6 +34,7 @@ export default function ApplicationPage() {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   
   const [formData, setFormData] = useState({
     // Loan Details
@@ -112,17 +114,78 @@ export default function ApplicationPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Prepare form data for submission
+    const submissionData = {
+      loanDetails: {
+        loanType: formData.loanType,
+        loanPurpose: formData.loanPurpose,
+        loanAmount: parseFloat(formData.loanAmount),
+        scheduleType: formData.scheduleType,
+        gracePeriodDuration: parseInt(formData.gracePeriodDuration),
+        loanPeriod: parseInt(formData.loanPeriod),
+      },
+      companyInformation: {
+        companyName: formData.companyName,
+        registrationNumber: formData.registrationNumber,
+        registrationAddress: formData.registrationAddress,
+        communicationLanguage: formData.communicationLanguage,
+        taxResidency: formData.taxResidency,
+      },
+      contactInformation: {
+        representativeFullName: formData.representativeFullName,
+        representativeEmail: formData.representativeEmail,
+        representativeIdentificationCode: formData.representativeIdentificationCode,
+        representativePhone: formData.representativePhone,
+        representationType: formData.representationType,
+      },
+      beneficiaryInformation: {
+        beneficiaryIdentificationCode: formData.beneficiaryIdentificationCode,
+        beneficiaryFullName: formData.beneficiaryFullName,
+        beneficiaryCountry: formData.beneficiaryCountry,
+      },
+      questionnaire: {
+        isPEPRelated: formData.isPEPRelated,
+      },
+      collaterals: collaterals,
+      suretyInformation: {
+        isRepresentativeSurety: formData.isRepresentativeSurety,
+        isOtherPersonSurety: formData.isOtherPersonSurety,
+        otherSuretyPerson: formData.isOtherPersonSurety ? otherSuretyPerson : null,
+      },
+      submittedAt: new Date().toISOString(),
+    };
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      // Send form data to API endpoint
+      const response = await fetch('/api/applications', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
 
-    // Redirect to home after 3 seconds
-    setTimeout(() => {
-      navigate('/');
-    }, 3000);
+      if (!response.ok) {
+        throw new Error(`API error: ${response.statusText}`);
+      }
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+
+      // Redirect to home after 3 seconds
+      setTimeout(() => {
+        navigate('/');
+      }, 3000);
+    } catch (err) {
+      setIsSubmitting(false);
+      setError(
+        err instanceof Error
+          ? err.message
+          : 'An error occurred while submitting the form. Please try again.'
+      );
+    }
   };
 
   if (isSubmitted) {
@@ -182,6 +245,21 @@ export default function ApplicationPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
+          {error && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mb-6"
+            >
+              <Alert className="border-destructive bg-destructive/10">
+                <AlertCircle className="h-4 w-4 text-destructive" />
+                <AlertDescription className="text-destructive font-paragraph">
+                  {error}
+                </AlertDescription>
+              </Alert>
+            </motion.div>
+          )}
           <form onSubmit={handleSubmit} className="p-8 md:p-12 rounded-2xl space-y-8 bg-background">
             {/* 1. Loan Details Section */}
             <div>
