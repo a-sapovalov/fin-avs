@@ -194,6 +194,43 @@ const faqItems: FAQItem[] = [
     category: 'rates',
     question: '30. what fees may apply besides interest?',
     answer: 'the full list of potentially applicable fees is available in the price list on the avs finance website.'
+  },
+  // Payments category - questions 31-36
+  {
+    id: '31',
+    category: 'payments',
+    question: '31. when do repayments start?',
+    answer: 'repayments start on the date agreed in the agreement. if a grace period has been agreed, principal repayments usually start after the grace period ends.'
+  },
+  {
+    id: '32',
+    category: 'payments',
+    question: '32. what happens if the borrower is unable to repay the loan?',
+    answer: 'if the borrower is unable to make a payment on time, avs finance should be contacted as soon as possible. payment difficulties should not be ignored, as early communication often makes it possible to find a solution that is suitable and less costly for both parties. late payments may result in default interest, contractual penalties and debt recovery costs. payment defaults may also affect the borrower\'s reputation and creditworthiness, which may make it more difficult to obtain financing from other lenders in the future. if the default is not resolved, avs finance may terminate the financing agreement. this may be followed by enforcement proceedings and, where the financing is secured by collateral, the collateral may be sold in enforcement proceedings. our aim is not to punish borrowers for payment difficulties. however, it is important that the borrower informs avs finance immediately if payment problems arise, so that possible solutions can be considered before the situation becomes more serious.'
+  },
+  {
+    id: '33',
+    category: 'payments',
+    question: '33. how should payments be made?',
+    answer: 'payments must be made by bank transfer to the following bank account: recipient: avs finance oü, iban: ee24 2200 2210 9204 0000, bic / swift code: ekrdee22.'
+  },
+  {
+    id: '34',
+    category: 'payments',
+    question: '34. can the payment date be changed?',
+    answer: 'yes. the payment date may be changed by agreement between the parties.'
+  },
+  {
+    id: '35',
+    category: 'payments',
+    question: '35. what is a grace period?',
+    answer: 'a grace period, also known as a payment holiday, is a period during which the borrower is not required to make principal repayments. during the grace period, the borrower continues to pay interest. a grace period can help where the financed project needs time to start generating income or where the borrower\'s cash flow is temporarily lower.'
+  },
+  {
+    id: '36',
+    category: 'payments',
+    question: '36. does avs finance offer a grace period?',
+    answer: 'yes. a grace period is optional and may be agreed for up to 12 months.'
   }
 ];
 
