@@ -102,9 +102,7 @@ export default function Footer() {
         <div className="border-t border-dark-brown-light pt-8">
           <div className="flex flex-col gap-6">
             <div>
-              <p className="font-paragraph text-sm text-vibrant-yellow-light mb-2">
-                avs finance oü operates under financial institution licence ffa000503 granted by the financial intelligence unit of estonia.
-              </p>
+
               <p className="font-paragraph text-sm text-vibrant-yellow-light">
                 © 2026 avs finance. all rights reserved.
               </p>
