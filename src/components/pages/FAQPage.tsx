@@ -345,7 +345,7 @@ export default function FAQPage() {
                   className={`font-paragraph px-4 py-2 rounded-lg transition-colors duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-dark-brown text-vibrant-yellow'
-                      : 'bg-white text-dark-brown border-2 border-dark-brown hover:bg-vibrant-yellow-light hover:text-dark-brown'
+                      : 'bg-white text-dark-brown hover:bg-vibrant-yellow-light hover:text-dark-brown'
                   }`}
                 >
                   {category.label}
