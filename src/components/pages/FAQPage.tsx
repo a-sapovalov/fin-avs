@@ -12,66 +12,6 @@ interface FAQItem {
 }
 
 const faqItems: FAQItem[] = [
-  {
-    id: '1',
-    category: 'all',
-    question: '1. what is avs finance?',
-    answer: 'avs finance is a licensed financial institution providing financing to legal persons registered in estonia. avs finance operates under financial institution licence faa000503, granted by the financial intelligence unit of estonia. avs finance is established in estonia and backed by estonian capital.'
-  },
-  {
-    id: '2',
-    category: 'all',
-    question: '2. what types of financing does avs finance offer?',
-    answer: 'avs finance provides loans and credit lines. financing can be used, for example, for refinancing, investment, working capital, business development or other business-related purposes.'
-  },
-  {
-    id: '3',
-    category: 'all',
-    question: '3. who can apply for financing?',
-    answer: 'financing is available to legal persons registered in estonia.'
-  },
-  {
-    id: '4',
-    category: 'all',
-    question: '4. can a newly established legal person apply for financing?',
-    answer: 'yes. newly established legal persons may apply for financing.'
-  },
-  {
-    id: '5',
-    category: 'all',
-    question: '5. does submitting an application create an obligation to take financing?',
-    answer: 'no. submitting an application does not create an obligation to accept financing. it allows avs finance to review the application and, where possible, provide an indicative offer. financing becomes binding only after the relevant financing documents have been signed.'
-  },
-  {
-    id: '6',
-    category: 'all',
-    question: '6. how long does the application process take?',
-    answer: 'avs finance usually aim to review an application and provide an indicative offer within 48 business hours. the exact timing depends on the circumstances of the financing and the completeness of the documents submitted.'
-  },
-  {
-    id: '7',
-    category: 'all',
-    question: '7. how quickly can financing be paid out?',
-    answer: 'financing is typically paid out within 24 business hours after the financing documents have been signed and all disbursement conditions have been met.'
-  },
-  {
-    id: '8',
-    category: 'all',
-    question: '8. can a legal person with unpaid debts or existing loans still apply for financing?',
-    answer: 'yes. existing loans or unpaid debts do not automatically exclude the applicant from receiving financing. each application is assessed individually.'
-  },
-  {
-    id: '9',
-    category: 'all',
-    question: '9. what documents are typically required for the application?',
-    answer: 'the required documents generally depend on the applicant, the circumstances of the financing and the proposed collateral. typically, avs finance may ask for the applicant\'s bank statements for the last six months, documents confirming the purpose of the financing, and information about the applicant\'s beneficial owners and representatives. avs finance may also request photos, documents and other information relating to the proposed collateral, where needed to assess its suitability and value. a valuation report is generally not required, but may be requested depending on the type, location or specific characteristics of the collateral.'
-  },
-  {
-    id: '10',
-    category: 'all',
-    question: '10. can financing be repaid early without penalties?',
-    answer: 'yes. loans and credit lines can generally be repaid before the due date without penalties by giving at least three months\' prior notice.'
-  },
   // General category - questions 1-10
   {
     id: '1g',
