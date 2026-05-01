@@ -96,17 +96,11 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-dark-brown-light pt-8">
-          <div className="flex flex-col gap-6">
-            <div>
-
-              <p className="font-paragraph text-sm text-vibrant-yellow-light">
-                © 2026 avs finance. all rights reserved.
-              </p>
-            </div>
+          {/* Copyright */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-4 flex items-center justify-between pt-6 border-t border-dark-brown-light mt-6">
+            <p className="font-paragraph text-sm text-vibrant-yellow-light">
+              © 2026 avs finance. all rights reserved.
+            </p>
           </div>
         </div>
       </div>
