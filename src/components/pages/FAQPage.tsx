@@ -114,6 +114,55 @@ const faqItems: FAQItem[] = [
     category: 'loans',
     question: '17. what are the self-financing requirements for loans?',
     answer: 'in most cases, the borrower is expected to contribute its own financing to the project. depending on the purpose of the loan and the collateral, the required own contribution is typically at least 20% of the project cost. the exact self-financing requirement is assessed individually for each application.'
+  },
+  // Credit Lines category - questions 18-25
+  {
+    id: '18',
+    category: 'credit-lines',
+    question: '18. what is a credit line and how does it work?',
+    answer: 'a credit line is a flexible financing limit that the borrower can use when needed, up to the agreed credit limit. the borrower may draw funds within the available limit, repay the used amount and use the repaid amount again during the credit line term.'
+  },
+  {
+    id: '19',
+    category: 'credit-lines',
+    question: '19. when is a credit line a better option than a loan?',
+    answer: 'a credit line may be a better option where the borrower needs flexible access to funds rather than a fixed one-time loan amount. it is commonly used for working capital, seasonal liquidity needs, short-term business expenses, bridge financing or situations where the exact timing or amount of funding need may vary.'
+  },
+  {
+    id: '20',
+    category: 'credit-lines',
+    question: '20. is the full credit line amount paid out immediately?',
+    answer: 'a credit line gives the borrower access to an agreed credit limit. the borrower may draw funds when needed, up to the agreed limit and, if necessary, draw funds in full.'
+  },
+  {
+    id: '21',
+    category: 'credit-lines',
+    question: '21. is interest paid only on the outstanding drawn balance?',
+    answer: 'yes. interest is calculated only on the part of the credit line that has been drawn and remains unpaid. however, a commitment fee applies to the undrawn part of the credit limit. the commitment fee is lower than the interest rate applicable to the amount in use.'
+  },
+  {
+    id: '22',
+    category: 'credit-lines',
+    question: '22. can the credit line be reused after repayment?',
+    answer: 'yes, unless otherwise agreed. amounts repaid under the credit line may be used again during the credit line term.'
+  },
+  {
+    id: '23',
+    category: 'credit-lines',
+    question: '23. what can a credit line be used for?',
+    answer: 'a credit line can be used for legitimate business purposes, including working capital, temporary liquidity needs, purchase of goods or equipment, covering short-term expenses, or financing business projects where the need for funds may arise in stages.'
+  },
+  {
+    id: '24',
+    category: 'credit-lines',
+    question: '24. what credit line amounts does avs finance offer?',
+    answer: 'avs finance offers credit lines from 20 000 € to 500 000 €.'
+  },
+  {
+    id: '25',
+    category: 'credit-lines',
+    question: '25. can the credit limit be increased?',
+    answer: 'yes. the credit limit may be increased up to 500 000 € by agreement between the parties.'
   }
 ];
 
