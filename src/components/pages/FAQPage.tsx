@@ -163,11 +163,11 @@ export default function FAQPage() {
             {filteredFAQs.map(item => (
               <div
                 key={item.id}
-                className="bg-vibrant-yellow-light rounded-lg overflow-hidden transition-all duration-300"
+                className="bg-white rounded-lg overflow-hidden transition-all duration-300 border border-vibrant-yellow-light"
               >
                 <button
                   onClick={() => setExpandedId(expandedId === item.id ? null : item.id)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-vibrant-yellow transition-colors duration-300"
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-vibrant-yellow-light transition-colors duration-300"
                 >
                   <h3 className="font-heading text-lg text-dark-brown text-left">
                     {item.question}
@@ -180,7 +180,7 @@ export default function FAQPage() {
                 </button>
                 
                 {expandedId === item.id && (
-                  <div className="px-6 py-4 bg-white border-t border-dark-brown-light">
+                  <div className="px-6 py-4 bg-vibrant-yellow-light border-t border-vibrant-yellow">
                     <p className="font-paragraph text-base text-dark-brown leading-relaxed">
                       {item.answer}
                     </p>
