@@ -133,7 +133,7 @@ export default function FAQPage() {
             <h1 className="font-heading text-6xl md:text-7xl text-dark-brown mb-4">
               frequently asked questions
             </h1>
-            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">find answers to common questions below. can't find what you're looking for? contact us directly.</p>
+            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">find answers to common questions below.</p>
           </div>
 
           {/* Category Filter */}

@@ -72,7 +72,7 @@ export default function PriceListPage() {
           <h1 className="font-heading text-6xl md:text-7xl text-dark-brown mb-4">
             price list
           </h1>
-          <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">transparent pricing for all our financial services</p>
+          <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">transparent pricing for all our financial services.</p>
         </div>
 
         {/* Pricing Grid */}
