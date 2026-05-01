@@ -57,6 +57,12 @@ export default function Footer() {
               >
                 apply for financing
               </Link>
+              <Link 
+                to="/terms-of-service" 
+                className="font-paragraph text-base text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
+              >
+                terms of service
+              </Link>
             </nav>
           </div>
 
@@ -94,23 +100,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-dark-brown-light pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-paragraph text-sm text-vibrant-yellow-light">
-              © {new Date().getFullYear()} avs finance. all rights reserved.
-            </p>
-            <div className="flex gap-6">
-              <a 
-                href="#" 
-                className="font-paragraph text-sm text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
-              >
-                privacy policy
-              </a>
-              <a 
-                href="#" 
-                className="font-paragraph text-sm text-vibrant-yellow-light hover:text-vibrant-yellow transition-colors duration-300"
-              >
-                terms of service
-              </a>
+          <div className="flex flex-col gap-6">
+            <div>
+              <p className="font-paragraph text-sm text-vibrant-yellow-light mb-2">
+                avs finance oü operates under financial institution licence ffa000503 granted by the financial intelligence unit of estonia.
+              </p>
+              <p className="font-paragraph text-sm text-vibrant-yellow-light">
+                © 2026 avs finance. all rights reserved.
+              </p>
             </div>
           </div>
         </div>
