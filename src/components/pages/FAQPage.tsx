@@ -75,71 +75,95 @@ const faqItems: FAQItem[] = [
   {
     id: '11',
     category: 'loans',
-    question: 'what is the maximum loan amount i can get?',
-    answer: 'the maximum loan amount depends on your income, credit history, and employment status. personal loans typically range from €500 to €25,000, while business loans can be higher. contact us for a personalized assessment.'
+    question: '11. what can a loan be used for?',
+    answer: 'loans can be used for any legitimate business purpose, including investment, working capital, business development, acquisition of assets or refinancing of existing obligations. the specific purpose of the loan is agreed in the loan agreement.'
   },
   {
     id: '12',
     category: 'loans',
-    question: 'can i repay my loan early without penalties?',
-    answer: 'yes! we offer penalty-free early repayment. you can pay off your loan at any time without additional fees. this can help you save on interest charges.'
+    question: '12. can a loan be used for refinancing?',
+    answer: 'yes. a loan can be used to refinance existing obligations.'
   },
   {
     id: '13',
     category: 'loans',
-    question: 'what credit score do i need?',
-    answer: 'while we consider applicants with various credit histories, a higher credit score generally improves your chances of approval and may result in better interest rates. we evaluate each application individually.'
+    question: '13. what loan amounts does avs finance offer?',
+    answer: 'avs finance offers loans from 20 000 € to 1 000 000 €.'
   },
   {
     id: '14',
+    category: 'loans',
+    question: '14. what loan terms does avs finance offer?',
+    answer: 'loan terms can range from 3 months to 120 months.'
+  },
+  {
+    id: '15',
+    category: 'loans',
+    question: '15. can the loan term be extended?',
+    answer: 'yes. the loan term may be extended by agreement between the parties.'
+  },
+  {
+    id: '16',
+    category: 'loans',
+    question: '16. what types of repayment schedule does avs finance offer?',
+    answer: 'avs finance offers annuity and bullet repayment schedules. under an annuity schedule, equal monthly payments are made throughout the loan term. each payment includes both principal and interest. under a bullet schedule, the principal is repaid at the end of the loan term. during the loan term, the borrower pays interest only.'
+  },
+  {
+    id: '17',
+    category: 'loans',
+    question: '17. what are the self-financing requirements for loans?',
+    answer: 'in most cases, the borrower is expected to contribute its own financing to the project. depending on the purpose of the loan and the collateral, the required own contribution is typically at least 20% of the project cost. the exact self-financing requirement is assessed individually for each application.'
+  },
+  {
+    id: '18',
     category: 'credit-lines',
     question: 'how does a credit line differ from a loan?',
     answer: 'a credit line is a flexible borrowing arrangement where you can draw funds as needed, up to your approved limit. you only pay interest on the amount you use, not the entire limit. loans provide a lump sum upfront.'
   },
   {
-    id: '15',
+    id: '19',
     category: 'credit-lines',
     question: 'can i increase my credit limit?',
     answer: 'yes, you can request a credit limit increase after maintaining a good payment history for at least 6 months. contact our customer service team to discuss your options.'
   },
   {
-    id: '16',
+    id: '20',
     category: 'leases',
     question: 'what can i lease?',
     answer: 'we offer leasing for equipment, vehicles, machinery, and other business assets. equipment leases are ideal for businesses that need flexibility without the commitment of ownership.'
   },
   {
-    id: '17',
+    id: '21',
     category: 'leases',
     question: 'what happens at the end of a lease?',
     answer: 'at the end of your lease term, you have several options: return the asset, purchase it at a residual value, or lease a new asset. the specific terms depend on your lease agreement.'
   },
   {
-    id: '18',
+    id: '22',
     category: 'rates',
     question: 'how are interest rates determined?',
     answer: 'interest rates are based on several factors including: your credit score, income stability, loan amount, loan term, current market conditions, and the type of financing. we offer competitive rates tailored to your profile.'
   },
   {
-    id: '19',
+    id: '23',
     category: 'rates',
     question: 'are your rates fixed or variable?',
     answer: 'we primarily offer fixed-rate financing, which means your interest rate remains constant throughout the loan term. this provides predictability and protection against rate increases.'
   },
   {
-    id: '20',
+    id: '24',
     category: 'payment',
     question: 'what payment methods do you accept?',
     answer: 'we accept bank transfers and automatic payments from your bank account. you can set up automatic monthly payments for convenience, or make manual payments at any time.'
   },
   {
-    id: '21',
+    id: '25',
     category: 'payment',
     question: 'what if i miss a payment?',
     answer: 'if you miss a payment, we will contact you to arrange payment. late payments may incur a fee (€10-25) and could affect your credit score. we recommend setting up automatic payments to avoid missed payments.'
   },
   {
-    id: '22',
+    id: '26',
     category: 'security',
     question: 'is my personal information secure?',
     answer: 'yes, we take data security very seriously. all personal information is encrypted and stored securely. we comply with all applicable data protection regulations and never share your information with third parties without consent.'
