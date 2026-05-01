@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="w-full bg-dark-brown text-vibrant-yellow">
-      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-20">
+      <div className="max-w-[120rem] mx-auto px-6 md:px-12 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div>
@@ -97,7 +97,7 @@ export default function Footer() {
             </div>
           </div>
           {/* Copyright */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-4 flex items-center justify-between pt-6 border-t border-dark-brown-light mt-6">
+          <div className="col-span-1 md:col-span-2 lg:col-span-4 flex items-center justify-between pt-4 border-t border-dark-brown-light mt-4">
             <p className="font-paragraph text-sm text-vibrant-yellow-light">
               © 2026 avs finance. all rights reserved.
             </p>
