@@ -15,89 +15,131 @@ const faqItems: FAQItem[] = [
   {
     id: '1',
     category: 'general',
-    question: 'what is avs finance?',
-    answer: 'avs finance is an estonia-based licensed financial institution providing loans, credit lines and leasing solutions to companies, non-profit associations and sole proprietors registered in estonia. we operate under financial institution licence faa000503, granted by the financial intelligence unit of estonia. avs finance is established in estonia and backed by estonian capital.'
+    question: '1. what is avs finance?',
+    answer: 'avs finance is a licensed financial institution providing financing to legal persons registered in estonia. avs finance operates under financial institution licence faa000503, granted by the financial intelligence unit of estonia. avs finance is established in estonia and backed by estonian capital.'
   },
   {
     id: '2',
     category: 'general',
-    question: 'how long does the application process take?',
-    answer: 'we aim to review credit applications and provide an indicative offer within 48 business hours. in simpler cases, an indicative offer may be provided within a few hours.'
+    question: '2. what types of financing does avs finance offer?',
+    answer: 'avs finance provides loans and credit lines. financing can be used, for example, for refinancing, investment, working capital, business development or other business-related purposes.'
   },
   {
     id: '3',
     category: 'general',
-    question: 'what documents do i need to apply?',
-    answer: 'required documents typically include: valid ID, proof of income (last 3 months of payslips or tax returns), bank statements, and proof of residence. additional documents may be requested based on your application.'
+    question: '3. who can apply for financing?',
+    answer: 'financing is available to legal persons registered in estonia.'
   },
   {
     id: '4',
+    category: 'general',
+    question: '4. can a newly established legal person apply for financing?',
+    answer: 'yes. newly established legal persons may apply for financing.'
+  },
+  {
+    id: '5',
+    category: 'general',
+    question: '5. does submitting an application create an obligation to take financing?',
+    answer: 'no. submitting an application does not create an obligation to accept financing. it allows avs finance to review the application and, where possible, provide an indicative offer. financing becomes binding only after the relevant financing documents have been signed.'
+  },
+  {
+    id: '6',
+    category: 'general',
+    question: '6. how long does the application process take?',
+    answer: 'avs finance usually aim to review an application and provide an indicative offer within 48 business hours. the exact timing depends on the circumstances of the financing and the completeness of the documents submitted.'
+  },
+  {
+    id: '7',
+    category: 'general',
+    question: '7. how quickly can financing be paid out?',
+    answer: 'financing is typically paid out within 24 business hours after the financing documents have been signed and all disbursement conditions have been met.'
+  },
+  {
+    id: '8',
+    category: 'general',
+    question: '8. can a legal person with unpaid debts or existing loans still apply for financing?',
+    answer: 'yes. existing loans or unpaid debts do not automatically exclude the applicant from receiving financing. each application is assessed individually.'
+  },
+  {
+    id: '9',
+    category: 'general',
+    question: '9. what documents are typically required for the application?',
+    answer: 'the required documents generally depend on the applicant, the circumstances of the financing and the proposed collateral. typically, avs finance may ask for the applicant\'s bank statements for the last six months, documents confirming the purpose of the financing, and information about the applicant\'s beneficial owners and representatives. avs finance may also request photos, documents and other information relating to the proposed collateral, where needed to assess its suitability and value. a valuation report is generally not required, but may be requested depending on the type, location or specific characteristics of the collateral.'
+  },
+  {
+    id: '10',
+    category: 'general',
+    question: '10. can financing be repaid early without penalties?',
+    answer: 'yes. loans and credit lines can generally be repaid before the due date without penalties by giving at least three months\' prior notice.'
+  },
+  {
+    id: '11',
     category: 'loans',
     question: 'what is the maximum loan amount i can get?',
     answer: 'the maximum loan amount depends on your income, credit history, and employment status. personal loans typically range from €500 to €25,000, while business loans can be higher. contact us for a personalized assessment.'
   },
   {
-    id: '5',
+    id: '12',
     category: 'loans',
     question: 'can i repay my loan early without penalties?',
     answer: 'yes! we offer penalty-free early repayment. you can pay off your loan at any time without additional fees. this can help you save on interest charges.'
   },
   {
-    id: '6',
+    id: '13',
     category: 'loans',
     question: 'what credit score do i need?',
     answer: 'while we consider applicants with various credit histories, a higher credit score generally improves your chances of approval and may result in better interest rates. we evaluate each application individually.'
   },
   {
-    id: '7',
+    id: '14',
     category: 'credit-lines',
     question: 'how does a credit line differ from a loan?',
     answer: 'a credit line is a flexible borrowing arrangement where you can draw funds as needed, up to your approved limit. you only pay interest on the amount you use, not the entire limit. loans provide a lump sum upfront.'
   },
   {
-    id: '8',
+    id: '15',
     category: 'credit-lines',
     question: 'can i increase my credit limit?',
     answer: 'yes, you can request a credit limit increase after maintaining a good payment history for at least 6 months. contact our customer service team to discuss your options.'
   },
   {
-    id: '9',
+    id: '16',
     category: 'leases',
     question: 'what can i lease?',
     answer: 'we offer leasing for equipment, vehicles, machinery, and other business assets. equipment leases are ideal for businesses that need flexibility without the commitment of ownership.'
   },
   {
-    id: '10',
+    id: '17',
     category: 'leases',
     question: 'what happens at the end of a lease?',
     answer: 'at the end of your lease term, you have several options: return the asset, purchase it at a residual value, or lease a new asset. the specific terms depend on your lease agreement.'
   },
   {
-    id: '11',
+    id: '18',
     category: 'rates',
     question: 'how are interest rates determined?',
     answer: 'interest rates are based on several factors including: your credit score, income stability, loan amount, loan term, current market conditions, and the type of financing. we offer competitive rates tailored to your profile.'
   },
   {
-    id: '12',
+    id: '19',
     category: 'rates',
     question: 'are your rates fixed or variable?',
     answer: 'we primarily offer fixed-rate financing, which means your interest rate remains constant throughout the loan term. this provides predictability and protection against rate increases.'
   },
   {
-    id: '13',
+    id: '20',
     category: 'payment',
     question: 'what payment methods do you accept?',
     answer: 'we accept bank transfers and automatic payments from your bank account. you can set up automatic monthly payments for convenience, or make manual payments at any time.'
   },
   {
-    id: '14',
+    id: '21',
     category: 'payment',
     question: 'what if i miss a payment?',
     answer: 'if you miss a payment, we will contact you to arrange payment. late payments may incur a fee (€10-25) and could affect your credit score. we recommend setting up automatic payments to avoid missed payments.'
   },
   {
-    id: '15',
+    id: '22',
     category: 'security',
     question: 'is my personal information secure?',
     answer: 'yes, we take data security very seriously. all personal information is encrypted and stored securely. we comply with all applicable data protection regulations and never share your information with third parties without consent.'
