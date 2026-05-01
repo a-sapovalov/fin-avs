@@ -231,6 +231,73 @@ const faqItems: FAQItem[] = [
     category: 'payments',
     question: '36. does avs finance offer a grace period?',
     answer: 'yes. a grace period is optional and may be agreed for up to 12 months.'
+  },
+  // Collateral category - questions 37-47
+  {
+    id: '37',
+    category: 'collateral',
+    question: '37. is collateral required?',
+    answer: 'yes. collateral is required for financing provided by avs finance.'
+  },
+  {
+    id: '38',
+    category: 'collateral',
+    question: '38. what collateral does avs finance accept?',
+    answer: 'the main form of collateral accepted by avs finance is a mortgage over real estate, such as an apartment, building or land. depending on the project and the borrower\'s risk profile, additional collateral may also be required, such as a commercial pledge, a guarantee from another legal person or a personal surety from a natural person.'
+  },
+  {
+    id: '39',
+    category: 'collateral',
+    question: '39. can collateral be provided by another legal or natural person?',
+    answer: 'yes. although the borrower must be a legal person, the collateral may be provided by another legal or natural person. for example, if real estate belongs to a natural person, a mortgage may be established over that real estate to secure financing granted to the borrower.'
+  },
+  {
+    id: '40',
+    category: 'collateral',
+    question: '40. is a surety required?',
+    answer: 'a surety is not always required.'
+  },
+  {
+    id: '41',
+    category: 'collateral',
+    question: '41. how is collateral value assessed?',
+    answer: 'collateral value is assessed based on its estimated market value. in many cases, avs finance can assess the collateral internally based on available market data and documents provided by the borrower. however, a valuation report may be requested if the collateral is unusual, the value is uncertain or the specific circumstances of the collateral require it.'
+  },
+  {
+    id: '42',
+    category: 'collateral',
+    question: '42. is it possible to get financing if a mortgage is already registered on the property?',
+    answer: 'yes. an existing mortgage does not automatically prevent the property from being accepted as collateral. in such a case, avs finance may accept a mortgage in the next available ranking position, provided that the remaining collateral value is sufficient.'
+  },
+  {
+    id: '43',
+    category: 'collateral',
+    question: '43. what is ltv?',
+    answer: 'ltv means loan-to-value ratio. it shows the relationship between the financing amount and the value of the collateral. for example, if the loan amount is 80 000 € and the collateral value is 100 000 €, the ltv is 80%. the lower the ltv, the stronger the collateral position generally is.'
+  },
+  {
+    id: '44',
+    category: 'collateral',
+    question: '44. what ltv does avs finance accept?',
+    answer: 'as a general rule, avs finance may provide financing up to 80% of the collateral value, but the exact acceptable ltv ratio is assessed individually.'
+  },
+  {
+    id: '45',
+    category: 'collateral',
+    question: '45. who pays the costs related to collateral?',
+    answer: 'costs related to establishing, amending or releasing collateral are usually borne by the borrower. this may include notary fees, state fees, valuation costs, insurance costs and other costs related to the collateral, where applicable.'
+  },
+  {
+    id: '46',
+    category: 'collateral',
+    question: '46. is collateral insurance required?',
+    answer: 'insurance may be required if the financing is secured by a mortgage over real estate or other insurable asset. the exact insurance requirements depend on the collateral and are agreed as part of the financing terms.'
+  },
+  {
+    id: '47',
+    category: 'collateral',
+    question: '47. can collateral be released before the financing is fully repaid?',
+    answer: 'collateral is generally released after all secured obligations have been fully repaid and no further obligations remain. partial release of collateral may be possible by agreement, for example if the outstanding financing amount has been reduced and the remaining collateral is sufficient.'
   }
 ];
 
