@@ -359,24 +359,34 @@ export default function FAQPage() {
             {filteredFAQs.map(item => (
               <div
                 key={item.id}
-                className="bg-white rounded-lg overflow-hidden transition-all duration-300 border border-vibrant-yellow-light"
+                className="rounded-lg overflow-hidden transition-all duration-300"
               >
                 <button
                   onClick={() => setExpandedId(expandedId === item.id ? null : item.id)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-vibrant-yellow-light transition-colors duration-300"
+                  className={`w-full px-6 py-4 flex items-center justify-between transition-colors duration-300 ${
+                    expandedId === item.id
+                      ? 'bg-dark-brown'
+                      : 'bg-white hover:bg-vibrant-yellow-light border border-vibrant-yellow-light'
+                  }`}
                 >
-                  <h3 className="font-heading text-lg text-dark-brown text-left">
+                  <h3 className={`font-heading text-lg text-left ${
+                    expandedId === item.id
+                      ? 'text-vibrant-yellow'
+                      : 'text-dark-brown'
+                  }`}>
                     {item.question}
                   </h3>
                   <ChevronDown
-                    className={`h-5 w-5 text-dark-brown flex-shrink-0 transition-transform duration-300 ${
-                      expandedId === item.id ? 'rotate-180' : ''
+                    className={`h-5 w-5 flex-shrink-0 transition-transform duration-300 ${
+                      expandedId === item.id 
+                        ? 'text-vibrant-yellow rotate-180' 
+                        : 'text-dark-brown'
                     }`}
                   />
                 </button>
                 
                 {expandedId === item.id && (
-                  <div className="px-6 py-4 bg-vibrant-yellow-light border-t border-vibrant-yellow">
+                  <div className="px-6 py-4 bg-white border-t border-vibrant-yellow-light">
                     <p className="font-paragraph text-base text-dark-brown leading-relaxed">
                       {item.answer}
                     </p>
