@@ -161,8 +161,8 @@ const faqItems: FAQItem[] = [
   {
     id: '25',
     category: 'credit-lines',
-    question: '25. can the credit limit be increased?',
-    answer: 'yes. the credit limit may be increased up to 500 000 € by agreement between the parties.'
+    question: '25. can the credit line limit be increased?',
+    answer: 'yes. the credit line limit may be increased up to 500 000 € by agreement between the parties.'
   },
   // Rates & Fees category - questions 26-30
   {
@@ -212,7 +212,7 @@ const faqItems: FAQItem[] = [
     id: '33',
     category: 'payments',
     question: '33. how should payments be made?',
-    answer: 'payments must be made by bank transfer to the following bank account: recipient: avs finance oü, iban: ee24 2200 2210 9204 0000, bic / swift code: ekrdee22.'
+    answer: 'payments must be made by bank transfer. the banking details of avs finance can be found on the contacts page.'
   },
   {
     id: '34',
