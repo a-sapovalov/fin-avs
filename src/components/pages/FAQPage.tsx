@@ -163,6 +163,37 @@ const faqItems: FAQItem[] = [
     category: 'credit-lines',
     question: '25. can the credit limit be increased?',
     answer: 'yes. the credit limit may be increased up to 500 000 € by agreement between the parties.'
+  },
+  // Rates & Fees category - questions 26-30
+  {
+    id: '26',
+    category: 'rates',
+    question: '26. what interest rates apply?',
+    answer: 'avs finance offers annual interest rates starting from 9.5%. the interest rate is assessed individually.'
+  },
+  {
+    id: '27',
+    category: 'rates',
+    question: '27. how is the interest rate determined?',
+    answer: 'the interest rate depends on several factors, including the financing product, loan term, repayment schedule, repayment capacity, collateral, risk profile and market conditions. depending on the product and agreed terms, the interest rate may be fixed or linked to a reference rate, such as 6-month euribor.'
+  },
+  {
+    id: '28',
+    category: 'rates',
+    question: '28. how is the interest calculated?',
+    answer: 'interest is calculated on the outstanding balance of the financing, not on the original financing amount. for example, if 100 000 € was paid out and the outstanding balance has been reduced to 80 000 €, interest is calculated on 80 000 €.'
+  },
+  {
+    id: '29',
+    category: 'rates',
+    question: '29. what is the difference between interest and a commitment fee?',
+    answer: 'interest applies to the part of the credit line that has been drawn and remains unpaid. a commitment fee applies to the undrawn part of the credit line, because avs finance keeps that amount available for the borrower.'
+  },
+  {
+    id: '30',
+    category: 'rates',
+    question: '30. what fees may apply besides interest?',
+    answer: 'the full list of potentially applicable fees is available in the price list on the avs finance website.'
   }
 ];
 
