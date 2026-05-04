@@ -26,15 +26,15 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 
 export default function CreditLinePage() {
   const creditLineTerms = [
+    { label: 'applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
     { label: 'credit line limit', value: 'from 20 000 € to 500 000 €' },
     { label: 'ltv', value: 'up to 75% of the collateral value' },
     { label: 'credit period', value: 'up to 120 months' },
+    { label: 'drawdown', value: 'as needed by the client' },
+    { label: 'security', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
     { label: 'interest rate', value: 'from 10% + 6 month euribor, calculated on the drawn credit balance' },
     { label: 'origination fee', value: 'from 1% of the credit amount' },
-    { label: 'drawdown', value: 'as needed by the client' },
     { label: 'commitment fee', value: 'from 4% per annum, calculated from the undrawn credit balance' },
-    { label: 'security', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
-    { label: 'applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
   ];
 
   const processSteps = [
