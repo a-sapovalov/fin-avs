@@ -71,7 +71,7 @@ export default function CreditLinePage() {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
                 <Link
                   to="/application"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg font-bold text-sm sm:text-lg font-extrabold"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg font-extrabold text-sm sm:text-lg"
                 >
                   apply now
                   <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
