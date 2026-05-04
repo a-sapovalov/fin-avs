@@ -68,15 +68,19 @@ export default function CreditLinePage() {
               <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">credit lines. funding on demand.</h1>
               <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6 text-secondary">a flexible credit line for businesses that want financing ready to use.</p>
               <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg mb-6 sm:mb-8 text-secondary">use it when needed, reuse it as you repay, and pay interest only on the amount in use.</p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
-                <Link
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <Link 
                   to="/application"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg font-extrabold text-sm sm:text-lg"
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-vibrant-yellow text-primary font-paragraph font-bold rounded-xl hover:bg-vibrant-yellow-dark transition-all duration-300 text-lg w-fit shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   apply now
-                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
+                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </div>
+              </motion.div>
             </motion.div>
             
             <motion.div 

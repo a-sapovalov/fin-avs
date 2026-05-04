@@ -70,15 +70,19 @@ export default function LoansPage() {
               </h1>
               <p className="font-paragraph text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 lg:text-lg text-secondary md:text-lg">straightforward loans for businesses that need financing for a specific purpose.</p>
               <p className="font-paragraph text-xs lg:text-lg mb-6 sm:mb-8 md:text-lg text-secondary sm:text-lg">use it for refinancing, investment, a property project or another business need, with terms structured around your plans.</p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
-                <Link
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <Link 
                   to="/application"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg sm:text-lg text-lg font-extrabold"
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-vibrant-yellow text-primary font-paragraph font-bold rounded-xl hover:bg-vibrant-yellow-dark transition-all duration-300 text-lg w-fit shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   apply now
-                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
+                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </div>
+              </motion.div>
             </motion.div>
             
             <motion.div 
