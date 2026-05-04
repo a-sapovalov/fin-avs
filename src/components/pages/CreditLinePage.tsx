@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useScroll, useSpring } from 'framer-motion';
 import { useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -44,56 +44,91 @@ export default function CreditLinePage() {
     'once the documents are signed and all disbursement conditions are met, the credit line is made available for drawdowns.',
   ];
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   return (
-    <div className="min-h-screen bg-white text-dark-brown">
+    <div className="min-h-screen bg-white text-dark-brown overflow-x-clip">
+      {/* Scroll Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-vibrant-yellow origin-left z-50"
+        style={{ scaleX }}
+      />
       <Header />
-      {/* Hero Section - Primary Background */}
-      <section className="w-full bg-dark-brown py-12 sm:py-16 md:py-24 lg:py-32 overflow-hidden">
-        <div className="max-w-[120rem] mx-auto px-4 sm:px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
-            <motion.div 
-              className="order-2 lg:order-1"
-              initial={{ opacity: 0, x: -20 }}
+      {/* Hero Section */}
+      <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-primary border-b-2 border-dark-brown/10">
+
+        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-32 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            {/* Hero Content - Left */}
+            <motion.div
+              className="relative flex flex-col justify-center"
+              initial={{ opacity: 0, x: -60 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
               {/* Accent line */}
               <motion.div
-                className="w-16 h-1 bg-vibrant-yellow rounded-full mb-6 sm:mb-8"
+                className="w-16 h-1 bg-vibrant-yellow rounded-full mb-8"
                 initial={{ width: 0 }}
                 animate={{ width: 64 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               />
 
-              <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">credit lines. funding on demand.</h1>
-              <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light leading-relaxed mb-4 sm:mb-6">a flexible credit line for businesses that want financing ready to use.</p>
-              <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light mb-6 sm:mb-8">use it when needed, reuse it as you repay, and pay interest only on the amount in use.</p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
-                <Link
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-secondary mb-8 tracking-tight text-left leading-tight">
+                credit lines.
+                <br />
+                <span className="relative inline-block">
+                  funding on demand.
+                </span>
+              </h1>
+
+              <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">a flexible credit line for businesses that want financing ready to use.</p>
+
+              <p className="font-paragraph text-secondary mb-12 text-lg md:text-xl font-normal leading-relaxed max-w-lg">use it when needed, reuse it as you repay, and pay interest only on the amount in use.</p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <Link 
                   to="/application"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg font-bold text-sm sm:text-lg"
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-vibrant-yellow text-primary font-paragraph font-bold rounded-xl hover:bg-vibrant-yellow-dark transition-all duration-300 text-lg w-fit shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   apply now
-                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
+                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </div>
+              </motion.div>
             </motion.div>
-            
+
+            {/* Hero Visual - Right */}
             <motion.div 
-              className="order-1 lg:order-2"
-              initial={{ opacity: 0, x: 20 }}
+              className="relative flex items-center justify-center lg:justify-end h-full"
+              initial={{ opacity: 0, x: 60 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl">
-                <Image
-                  src="https://static.wixstatic.com/media/nsplsh_fffa7c80046b4eb9be81888f114ae53a~mv2.jpg"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                  originWidth={6124}
-                  originHeight={4082} />
-              </div>
+              <motion.div
+                className="w-full lg:w-auto"
+              >
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="https://static.wixstatic.com/media/nsplsh_fffa7c80046b4eb9be81888f114ae53a~mv2.jpg"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                    originWidth={6124}
+                    originHeight={4082}
+                    alt="credit lines financing"
+                  />
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
