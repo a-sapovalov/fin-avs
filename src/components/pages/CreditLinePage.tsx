@@ -29,10 +29,10 @@ export default function CreditLinePage() {
     { label: 'applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
     { label: 'credit line limit', value: 'from 20 000 € to 500 000 €' },
     { label: 'ltv', value: 'up to 75% of the collateral value' },
-    { label: 'credit period', value: 'up to 120 months' },
+    { label: 'credit period', value: 'up to 60 months' },
     { label: 'drawdown', value: 'as needed by the client' },
     { label: 'collateral', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
-    { label: 'interest rate', value: 'from 10% + 6 month euribor, calculated on the drawn credit balance' },
+    { label: 'interest rate', value: 'from 9,5% per annum, calculated on the drawn credit balance' },
     { label: 'origination fee', value: 'from 1% to 2% of the credit line amount' },
     { label: 'commitment fee', value: '4% per annum, calculated on the undrawn credit balance' },
   ];
