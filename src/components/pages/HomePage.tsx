@@ -53,7 +53,7 @@ export default function HomePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h1 className="font-heading md:text-5xl text-dark-brown mb-8 tracking-tight lg:text-5xl text-5xl text-center">
+              <h1 className="font-heading md:text-5xl text-dark-brown mb-8 tracking-tight lg:text-5xl text-5xl text-left">
                 competitive terms.
                 <br />
                 tailored financing.
@@ -63,7 +63,7 @@ export default function HomePage() {
 
               <p className="font-paragraph text-lg text-dark-brown-light mb-10 leading-relaxed">secured financing for legal entities registered in estonia.</p>
 
-              <p className="font-paragraph text-lg text-dark-brown mb-10">loans and credit lines with annual interest from 9,5% plus 6-month euribor, financing structures tailored to your needs, a straightforward application process and support from a dedicated client manager.</p>
+              <p className="font-paragraph text-lg text-dark-brown mb-10">loans and credit lines with annual interest from 9,5% plus 6-month euribor, tailored financing structures, a straightforward application process and support from a dedicated client manager.</p>
 
               <Link 
                 to="/application"
