@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import { motion, useInView, useScroll, useSpring } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -44,91 +44,59 @@ export default function LoansPage() {
     'once the documents are signed and all disbursement conditions are met, the loan is paid out.',
   ];
 
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
-
   return (
-    <div className="min-h-screen bg-white text-dark-brown overflow-x-clip">
-      {/* Scroll Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-vibrant-yellow origin-left z-50"
-        style={{ scaleX }}
-      />
+    <div className="min-h-screen bg-white text-dark-brown">
       <Header />
-      {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-primary border-b-2 border-dark-brown/10">
-
-        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-32 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            
-            {/* Hero Content - Left */}
-            <motion.div
-              className="relative flex flex-col justify-center"
-              initial={{ opacity: 0, x: -60 }}
+      {/* Hero Section - Primary Background */}
+      <section className="w-full bg-dark-brown py-12 sm:py-16 md:py-24 lg:py-32 overflow-hidden">
+        <div className="max-w-[120rem] mx-auto px-4 sm:px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            <motion.div 
+              className="order-2 lg:order-1"
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.8 }}
             >
               {/* Accent line */}
               <motion.div
-                className="w-16 h-1 bg-vibrant-yellow rounded-full mb-8"
+                className="w-16 h-1 bg-vibrant-yellow rounded-full mb-6 sm:mb-8"
                 initial={{ width: 0 }}
                 animate={{ width: 64 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               />
 
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-secondary mb-8 tracking-tight text-left leading-tight">
-                loans.
-                <br />
-                <span className="relative inline-block">
-                  capital for the next step.
-                </span>
+              <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">
+                loans. <span className="text-vibrant-yellow">capital for the next step.</span>
               </h1>
-
-              <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">straightforward loans for businesses that need financing for a specific purpose.</p>
-
-              <p className="font-paragraph text-secondary mb-12 text-lg md:text-xl font-normal leading-relaxed max-w-lg">use it for refinancing, investment, a property project or another business need, with terms structured around your plans.</p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                <Link 
+              <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light leading-relaxed mb-4 sm:mb-6">straightforward loans for businesses that need financing for a specific purpose.</p>
+              <p className="font-paragraph text-xs sm:text-sm md:text-base lg:text-lg text-vibrant-yellow-light mb-6 sm:mb-8">use it for refinancing, investment, a property project or another business need, with terms structured around your plans.</p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
+                <Link
                   to="/application"
-                  className="group inline-flex items-center justify-center px-8 py-4 bg-vibrant-yellow text-primary font-paragraph font-bold rounded-xl hover:bg-vibrant-yellow-dark transition-all duration-300 text-lg w-fit shadow-lg hover:shadow-xl hover:scale-105"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg sm:text-lg text-lg font-bold"
                 >
                   apply now
-                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
                 </Link>
-              </motion.div>
+              </div>
             </motion.div>
-
-            {/* Hero Visual - Right */}
+            
             <motion.div 
-              className="relative flex items-center justify-center lg:justify-end h-full"
-              initial={{ opacity: 0, x: 60 }}
+              className="order-1 lg:order-2"
+              initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <motion.div
-                className="w-full lg:w-auto"
-              >
-                <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="https://static.wixstatic.com/media/11062b_f0cfb200520f41058abf17e67605efc4~mv2.jpeg"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover"
-                    originWidth={5184}
-                    originHeight={3456}
-                    alt="a bridge is being built over a body of water"
-                  />
-                </div>
-              </motion.div>
+              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl">
+                <Image
+                  src="https://static.wixstatic.com/media/11062b_f0cfb200520f41058abf17e67605efc4~mv2.jpeg"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                  originWidth={5184}
+                  originHeight={3456}
+                  alt="a bridge is being built over a body of water" />
+              </div>
             </motion.div>
           </div>
         </div>
