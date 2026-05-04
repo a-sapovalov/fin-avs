@@ -29,12 +29,11 @@ export default function CreditLinePage() {
     { label: 'credit line limit', value: 'from 20 000 € to 500 000 €' },
     { label: 'ltv', value: 'up to 75% of the collateral value' },
     { label: 'credit period', value: 'up to 120 months' },
-    { label: 'grace period', value: 'optional, up to 12 months' },
-    { label: 'interest rate', value: 'from 10% + 6 month euribor, calculated from the credit balance' },
-    { label: 'origination fee', value: '1% of the credit amount' },
+    { label: 'interest rate', value: 'from 10% + 6 month euribor, calculated on the drawn credit balance' },
+    { label: 'origination fee', value: 'from 1% of the credit amount' },
     { label: 'drawdown', value: 'as needed by the client' },
-    { label: 'commitment fee', value: '4% per annum, calculated from the undrawn credit amount' },
-    { label: 'security', value: 'mortgage on building, apartment or land in estonia. mortgage can be combined with surety' },
+    { label: 'commitment fee', value: 'from 4% per annum, calculated from the undrawn credit balance' },
+    { label: 'security', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
     { label: 'applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
   ];
 
@@ -131,18 +130,7 @@ export default function CreditLinePage() {
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="p-8 bg-white rounded-2xl border-2 border-dark-brown shadow-lg">
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">interest-only payments</h3>
-                <p className="font-paragraph text-base text-dark-brown leading-relaxed">
-                  pay only interest during the credit period with flexible repayment options. ideal for businesses with variable cash flows or those seeking maximum liquidity.
-                </p>
-              </div>
-              <div className="p-8 bg-white rounded-2xl border-2 border-dark-brown shadow-lg">
-                <h3 className="font-heading text-2xl text-dark-brown mb-4">amortizing payments</h3>
-                <p className="font-paragraph text-base text-dark-brown leading-relaxed">
-                  gradual repayment of principal and interest throughout the credit period. provides structured debt reduction while maintaining access to available credit.
-                </p>
-              </div>
+
             </div>
           </FadeIn>
         </div>

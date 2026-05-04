@@ -229,7 +229,7 @@ export default function ContactsPage() {
                   </div>
                   <div>
                     <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-2 lowercase text-xl">vat code</p>
-                    <p className="font-heading text-xl text-dark-brown">ee111111</p>
+                    <p className="font-heading text-xl text-dark-brown">ee00000000</p>
                   </div>
                 </div>
 
@@ -261,7 +261,7 @@ export default function ContactsPage() {
                 </div>
                 <div>
                   <p className="font-paragraph font-bold text-dark-brown-light tracking-wide mb-3 lowercase text-xl">coop pank</p>
-                  <p className="font-heading md:text-xl text-dark-brown break-all text-xl">ee11 1111 1111 1111 1111</p>
+                  <p className="font-heading md:text-xl text-dark-brown break-all text-xl">ee00 0000 0000 0000 0000</p>
                 </div>
               </div>
             </FadeIn>
