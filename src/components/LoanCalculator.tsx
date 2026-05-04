@@ -121,7 +121,7 @@ export default function LoanCalculator() {
       transition={{ duration: 0.6 }}
       className="w-full"
     >
-      <Card className="p-6 md:p-8 bg-white border border-dark-brown/10 shadow-none">
+      <Card className="p-6 md:p-8 border border-dark-brown/10 shadow-none bg-background">
         <div className="space-y-6">
           {/* Credit Amount */}
           <div>
