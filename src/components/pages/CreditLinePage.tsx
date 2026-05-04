@@ -34,7 +34,7 @@ export default function CreditLinePage() {
     { label: 'security', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
     { label: 'interest rate', value: 'from 10% + 6 month euribor, calculated on the drawn credit balance' },
     { label: 'origination fee', value: 'from 1% to 2% of the credit line amount' },
-    { label: 'commitment fee', value: '4% per annum, calculated from the undrawn credit balance' },
+    { label: 'commitment fee', value: '4% per annum, calculated on the undrawn credit balance' },
   ];
 
   const processSteps = [
