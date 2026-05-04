@@ -13,22 +13,22 @@ interface PDFDocument {
 const documents: PDFDocument[] = [
   {
     id: 'website-terms',
-    title: 'website terms of use',
-    description: 'terms and conditions governing the use of the avs finance website and services.',
+    title: 'Website Terms of Use',
+    description: 'Terms and conditions governing the use of the AVS Finance website and services.',
     fileName: 'AVS-Finance-Website-Terms-of-Use.pdf',
     url: '#'
   },
   {
-    id: 'customer-data-processing',
-    title: 'principles of customer data processing',
-    description: 'comprehensive guidelines for how we collect, process, and protect your personal data.',
-    fileName: 'AVS-Finance-Customer-Data-Processing.pdf',
+    id: 'price-list',
+    title: 'Price List',
+    description: 'Complete pricing information for all AVS Finance products and services.',
+    fileName: 'AVS-Finance-Price-List.pdf',
     url: '#'
   },
   {
     id: 'financing-terms',
-    title: 'general terms and conditions of financing for legal persons',
-    description: 'comprehensive terms and conditions applicable to financing agreements for legal entities.',
+    title: 'General Terms and Conditions of Financing for Legal Persons',
+    description: 'Comprehensive terms and conditions applicable to financing agreements for legal entities.',
     fileName: 'AVS-Finance-Financing-Terms-Legal-Persons.pdf',
     url: '#'
   }
@@ -45,11 +45,8 @@ export default function TermsOfServicePage() {
             <h1 className="font-heading text-6xl md:text-7xl text-dark-brown mb-4">
               terms of service
             </h1>
-            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">
-              download and review our legal documents and data processing principles.
-            </p>
+            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">download and review our legal documents.</p>
           </div>
-
           {/* Documents Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {documents.map(doc => (
@@ -81,9 +78,10 @@ export default function TermsOfServicePage() {
               </div>
             ))}
           </div>
+          {/* Info Section */}
+
         </div>
       </main>
-
       {/* Contact Section */}
       <section className="w-full bg-dark-brown py-24 md:py-32 overflow-hidden">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12">
@@ -103,7 +101,6 @@ export default function TermsOfServicePage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
