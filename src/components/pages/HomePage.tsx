@@ -42,46 +42,91 @@ export default function HomePage() {
       />
       <Header />
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full py-20 md:py-32 overflow-hidden bg-secondary border-b-2 border-dark-brown/10">
+      <section className="relative w-full py-16 md:py-24 overflow-hidden bg-white border-b-2 border-dark-brown/10">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-stretch">
             
-            {/* Hero Content - Left */}
+            {/* Left Content Block */}
             <motion.div
-              className="relative flex flex-col justify-center"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="relative flex flex-col justify-between lg:col-span-1 bg-dark-brown text-vibrant-yellow rounded-3xl p-8 md:p-10"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <h1 className="font-heading md:text-5xl text-dark-brown mb-8 tracking-tight text-left text-5xl lg:text-7xl">
-                competitive terms.
-                <br />
-                tailored financing.
-                <br />
-                personal service.
-              </h1>
-
-              <p className="font-paragraph text-dark-brown-light mb-10 text-2xl font-normal">secured financing for legal entities registered in estonia.</p>
-
-              <p className="font-paragraph text-dark-brown mb-10 text-2xl font-normal">loans and credit lines with annual interest from 9,5% plus 6-month euribor, tailored financing structures, a straightforward application process and support from a dedicated client manager.</p>
-
+              <div>
+                <h1 className="font-heading text-4xl md:text-5xl lg:text-5xl mb-6 tracking-tight leading-tight">
+                  smart financing for your business
+                </h1>
+                <p className="font-paragraph text-vibrant-yellow/90 mb-8 text-lg leading-relaxed">
+                  competitive rates, flexible terms, and dedicated support tailored to your needs.
+                </p>
+              </div>
               <Link 
                 to="/application"
-                className="group inline-flex items-center justify-center px-10 py-4 bg-dark-brown text-vibrant-yellow font-paragraph font-bold rounded-lg hover:bg-dark-brown-light transition-all duration-300 text-lg w-fit"
+                className="group inline-flex items-center justify-center px-8 py-3 bg-vibrant-yellow text-dark-brown font-paragraph font-bold rounded-xl hover:bg-vibrant-yellow-dark transition-all duration-300 text-base w-fit"
               >
                 apply now
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </motion.div>
 
-            {/* Hero Visual - Right */}
+            {/* Center - Calculator */}
             <motion.div 
-              className="relative h-full min-h-[400px] flex items-center justify-center"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative lg:col-span-1 flex items-center justify-center"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <LoanCalculator />
+              <div className="w-full h-full bg-secondary rounded-3xl p-8 md:p-10 flex items-center justify-center">
+                <LoanCalculator />
+              </div>
+            </motion.div>
+
+            {/* Right - Key Features */}
+            <motion.div
+              className="relative flex flex-col justify-between lg:col-span-1 space-y-6"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            >
+              {/* Feature 1 */}
+              <div className="bg-vibrant-yellow-light rounded-2xl p-6 border-2 border-vibrant-yellow/30">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-vibrant-yellow rounded-lg flex items-center justify-center">
+                    <TrendingUp className="h-6 w-6 text-dark-brown" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-dark-brown text-lg mb-1">from 9.5%</h3>
+                    <p className="font-paragraph text-dark-brown-light text-sm">annual interest + 6-month euribor</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="bg-white rounded-2xl p-6 border-2 border-dark-brown/10">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+                    <Zap className="h-6 w-6 text-dark-brown" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-dark-brown text-lg mb-1">2 business days</h3>
+                    <p className="font-paragraph text-dark-brown-light text-sm">indicative offer turnaround</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="bg-white rounded-2xl p-6 border-2 border-dark-brown/10">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+                    <Shield className="h-6 w-6 text-dark-brown" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-dark-brown text-lg mb-1">dedicated manager</h3>
+                    <p className="font-paragraph text-dark-brown-light text-sm">personal support throughout</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
