@@ -53,7 +53,7 @@ export default function HomePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h1 className="font-heading md:text-5xl text-dark-brown mb-8 tracking-tight lg:text-5xl text-5xl text-left">
+              <h1 className="font-heading md:text-5xl text-dark-brown mb-8 tracking-tight text-left text-5xl lg:text-7xl">
                 competitive terms.
                 <br />
                 tailored financing.
