@@ -14,21 +14,21 @@ const documents: PDFDocument[] = [
   {
     id: 'website-terms',
     title: 'website terms of use',
-    description: 'terms and conditions governing the use of the avs finance website and services.',
+    description: 'terms and conditions governing the use of the avs finance website.',
     fileName: 'AVS-Finance-Website-Terms-of-Use.pdf',
     url: '#'
   },
   {
     id: 'data-processing',
     title: 'principles of customer data processing',
-    description: 'guidelines and principles for the processing and protection of customer data.',
+    description: 'principles for the processing and protection of customer data.',
     fileName: 'AVS-Finance-Data-Processing-Principles.pdf',
     url: '#'
   },
   {
     id: 'financing-terms',
-    title: 'general terms and conditions of loans',
-    description: 'comprehensive terms and conditions applicable to financing agreements for legal entities.',
+    title: 'general terms and conditions',
+    description: 'terms and conditions applicable to financing agreements for legal entities.',
     fileName: 'AVS-Finance-Financing-Terms-Legal-Persons.pdf',
     url: '#'
   }
