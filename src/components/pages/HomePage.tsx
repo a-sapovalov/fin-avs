@@ -43,41 +43,40 @@ export default function HomePage() {
       <Header />
       {/* --- HERO SECTION --- */}
       <section className="relative w-full py-20 md:py-32 overflow-hidden bg-secondary border-b-2 border-dark-brown/10">
-        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-12 gap-8 lg:gap-16 items-center">
+        <div className="w-full max-w-[120rem] mx-auto px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             
             {/* Hero Content - Left */}
-            <div className="col-span-12 lg:col-span-6 relative">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            <motion.div
+              className="relative flex flex-col justify-center"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-8 tracking-tight leading-tight">
+                competitive terms.
+                <br />
+                tailored financing.
+                <br />
+                personal service.
+              </h1>
+
+              <p className="font-paragraph text-lg text-dark-brown-light mb-10 leading-relaxed">secured financing for legal entities registered in estonia.</p>
+
+              <p className="font-paragraph text-lg text-dark-brown mb-10">loans and credit lines with annual interest from 9,5% plus 6-month euribor, financing structures tailored to your needs, a straightforward application process and support from a dedicated client manager.</p>
+
+              <Link 
+                to="/application"
+                className="group inline-flex items-center justify-center px-10 py-4 bg-dark-brown text-vibrant-yellow font-paragraph font-bold rounded-lg hover:bg-dark-brown-light transition-all duration-300 text-lg w-fit"
               >
-                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-8 tracking-tight leading-tight">
-                  competitive terms.
-                  <br />
-                  tailored financing.
-                  <br />
-                  personal service.
-                </h1>
-
-                <p className="font-paragraph text-lg text-dark-brown-light mb-10 max-w-2xl leading-relaxed md:text-lg">secured financing for legal entities registered in estonia.</p>
-
-                <p className="font-paragraph md:text-lg text-dark-brown mb-10 max-w-2xl text-lg">loans and credit lines with annual interest from 9,5% plus 6-month euribor, financing structures tailored to your needs, a straightforward application process and support from a dedicated client manager.</p>
-
-                <Link 
-                  to="/application"
-                  className="group inline-flex items-center justify-center px-10 py-4 bg-dark-brown text-vibrant-yellow font-paragraph font-bold rounded-lg hover:bg-dark-brown-light transition-all duration-300 text-lg"
-                >
-                  apply now
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-            </div>
+                apply now
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </motion.div>
 
             {/* Hero Visual - Right */}
             <motion.div 
-              className="col-span-12 lg:col-span-6 relative h-full min-h-[400px] flex items-center justify-center"
+              className="relative h-full min-h-[400px] flex items-center justify-center"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
