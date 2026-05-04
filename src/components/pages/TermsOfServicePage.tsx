@@ -13,22 +13,22 @@ interface PDFDocument {
 const documents: PDFDocument[] = [
   {
     id: 'website-terms',
-    title: 'Website Terms of Use',
-    description: 'Terms and conditions governing the use of the AVS Finance website and services.',
+    title: 'website terms of use',
+    description: 'terms and conditions governing the use of the avs finance website and services.',
     fileName: 'AVS-Finance-Website-Terms-of-Use.pdf',
     url: '#'
   },
   {
-    id: 'price-list',
-    title: 'Price List',
-    description: 'Complete pricing information for all AVS Finance products and services.',
-    fileName: 'AVS-Finance-Price-List.pdf',
+    id: 'data-processing',
+    title: 'principles of customer data processing',
+    description: 'guidelines and principles for the processing and protection of customer data.',
+    fileName: 'AVS-Finance-Data-Processing-Principles.pdf',
     url: '#'
   },
   {
     id: 'financing-terms',
-    title: 'General Terms and Conditions of Financing for Legal Persons',
-    description: 'Comprehensive terms and conditions applicable to financing agreements for legal entities.',
+    title: 'general terms and conditions of loans',
+    description: 'comprehensive terms and conditions applicable to financing agreements for legal entities.',
     fileName: 'AVS-Finance-Financing-Terms-Legal-Persons.pdf',
     url: '#'
   }
@@ -63,7 +63,7 @@ export default function TermsOfServicePage() {
                   <FileText className="h-8 w-8 text-dark-brown flex-shrink-0 ml-3" />
                 </div>
 
-                <p className="font-paragraph text-base text-dark-brown-light mb-6 flex-grow">
+                <p className="font-paragraph text-base text-dark-brown-light mb-6 flex-grow line-clamp-3">
                   {doc.description}
                 </p>
 
