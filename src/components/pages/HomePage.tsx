@@ -53,17 +53,11 @@ export default function HomePage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
-                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 tracking-tight leading-tight">
-                  competitive terms. flexible financing. personal service.
-                </h1>
+                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 tracking-tight leading-tight">competitive terms. tailored financing. personal service.</h1>
 
-                <p className="font-paragraph text-lg text-dark-brown-light mb-10 max-w-2xl leading-relaxed md:text-lg">
-                  financing for businesses, whatever the need.
-                </p>
+                <p className="font-paragraph text-lg text-dark-brown-light mb-10 max-w-2xl leading-relaxed md:text-lg">secured financing for legal entities registered in estonia.</p>
 
-                <p className="font-paragraph md:text-lg text-dark-brown mb-10 max-w-2xl text-lg">
-                  annual interest from 9,5%, flexible financing solutions, a decision within two business days, and a dedicated client manager who understands your business.
-                </p>
+                <p className="font-paragraph md:text-lg text-dark-brown mb-10 max-w-2xl text-lg">loans and credit lines with annual interest from 9,5% plus 6-month euribor, financing structures tailored to your needs, a straightforward application process and support from a dedicated client manager.</p>
 
                 <Link 
                   to="/application"
@@ -118,7 +112,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-heading text-dark-brown mb-3 text-3xl">efficient process</h3>
                 <p className="font-paragraph text-dark-brown-light text-lg">
-                  a financing decision within two business days.
+                  complete the application process and receive an indicative offer within two business days.
                 </p>
               </div>
             </FadeIn>
