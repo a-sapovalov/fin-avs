@@ -30,10 +30,10 @@ export default function LoansPage() {
     { label: 'ltv', value: 'up to 80% of the collateral value' },
     { label: 'loan term', value: 'up to 120 months' },
     { label: 'grace period', value: 'optional, up to 12 months' },
-    { label: 'interest rate', value: 'from 9,5% + 6 months euribor' },
-    { label: 'origination fee', value: '1% of the credit amount' },
+    { label: 'interest rate', value: 'from 9,5% per annum, calculated on the outstanding loan balance' },
+    { label: 'origination fee', value: '1%–2% of the credit amount' },
     { label: 'payment schedule', value: 'annuity or bullet schedule' },
-    { label: 'security', value: 'mortgage on building, apartment or land in estonia. mortgage can be combined with surety' },
+    { label: 'collateral', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
     { label: 'loan applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
   ];
 
