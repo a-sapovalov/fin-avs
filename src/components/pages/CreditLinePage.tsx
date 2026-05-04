@@ -31,7 +31,7 @@ export default function CreditLinePage() {
     { label: 'ltv', value: 'up to 75% of the collateral value' },
     { label: 'credit period', value: 'up to 120 months' },
     { label: 'drawdown', value: 'as needed by the client' },
-    { label: 'security', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
+    { label: 'collateral', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
     { label: 'interest rate', value: 'from 10% + 6 month euribor, calculated on the drawn credit balance' },
     { label: 'origination fee', value: 'from 1% to 2% of the credit line amount' },
     { label: 'commitment fee', value: '4% per annum, calculated on the undrawn credit balance' },
