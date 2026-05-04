@@ -61,9 +61,9 @@ export default function HomePage() {
                 personal service.
               </h1>
 
-              <p className="font-paragraph text-lg text-dark-brown-light mb-10 leading-relaxed">secured financing for legal entities registered in estonia.</p>
+              <p className="font-paragraph text-dark-brown-light mb-10 text-2xl font-normal">secured financing for legal entities registered in estonia.</p>
 
-              <p className="font-paragraph text-lg text-dark-brown mb-10">loans and credit lines with annual interest from 9,5% plus 6-month euribor, tailored financing structures, a straightforward application process and support from a dedicated client manager.</p>
+              <p className="font-paragraph text-dark-brown mb-10 text-2xl font-normal">loans and credit lines with annual interest from 9,5% plus 6-month euribor, tailored financing structures, a straightforward application process and support from a dedicated client manager.</p>
 
               <Link 
                 to="/application"
