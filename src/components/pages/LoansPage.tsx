@@ -57,6 +57,14 @@ export default function LoansPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
+              {/* Accent line */}
+              <motion.div
+                className="w-16 h-1 bg-vibrant-yellow rounded-full mb-6 sm:mb-8"
+                initial={{ width: 0 }}
+                animate={{ width: 64 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              />
+
               <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">
                 loans. <span className="text-vibrant-yellow">capital for the next step.</span>
               </h1>
