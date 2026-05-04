@@ -26,15 +26,15 @@ const FadeIn = ({ children, delay = 0, className }: { children: React.ReactNode,
 
 export default function LoansPage() {
   const loanTerms = [
+    { label: 'applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
     { label: 'loan amount', value: 'from 20 000 € to 1 000 000 €' },
     { label: 'ltv', value: 'up to 80% of the collateral value' },
     { label: 'loan term', value: 'up to 120 months' },
     { label: 'grace period', value: 'optional, up to 12 months' },
+    { label: 'security', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
     { label: 'interest rate', value: 'from 9,5% per annum, calculated on the outstanding loan balance' },
     { label: 'origination fee', value: 'from 1% to 2% of the credit amount' },
     { label: 'payment schedule', value: 'annuity or bullet schedule' },
-    { label: 'collateral', value: 'mortgage on building, apartment or land in estonia; mortgage can be combined with surety' },
-    { label: 'loan applicant', value: 'a company, non-profit association or sole proprietor registered in estonia' },
   ];
 
   const processSteps = [
