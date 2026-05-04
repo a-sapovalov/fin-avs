@@ -68,12 +68,12 @@ export default function LoansPage() {
               <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-vibrant-yellow mb-4 sm:mb-6 leading-tight">
                 loans. <span className="text-secondary">capital for the next step.</span>
               </h1>
-              <p className="font-paragraph text-xs sm:text-sm md:text-base leading-relaxed mb-4 sm:mb-6 lg:text-lg text-secondary">straightforward loans for businesses that need financing for a specific purpose.</p>
-              <p className="font-paragraph text-xs sm:text-sm lg:text-lg mb-6 sm:mb-8 md:text-lg text-secondary">use it for refinancing, investment, a property project or another business need, with terms structured around your plans.</p>
+              <p className="font-paragraph text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 lg:text-lg text-secondary md:text-lg">straightforward loans for businesses that need financing for a specific purpose.</p>
+              <p className="font-paragraph text-xs lg:text-lg mb-6 sm:mb-8 md:text-lg text-secondary sm:text-lg">use it for refinancing, investment, a property project or another business need, with terms structured around your plans.</p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
                 <Link
                   to="/application"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg sm:text-lg text-lg font-extrabold"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 bg-vibrant-yellow text-dark-brown font-heading rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300 hover:shadow-lg sm:text-lg text-lg font-bold"
                 >
                   apply now
                   <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
