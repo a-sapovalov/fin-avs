@@ -13,22 +13,22 @@ interface PDFDocument {
 const documents: PDFDocument[] = [
   {
     id: 'website-terms',
-    title: 'Website Terms of Use',
-    description: 'Terms and conditions governing the use of the AVS Finance website and services.',
+    title: 'website terms of use',
+    description: 'terms and conditions governing the use of the avs finance website and services.',
     fileName: 'AVS-Finance-Website-Terms-of-Use.pdf',
     url: '#'
   },
   {
-    id: 'price-list',
-    title: 'Price List',
-    description: 'Complete pricing information for all AVS Finance products and services.',
-    fileName: 'AVS-Finance-Price-List.pdf',
+    id: 'customer-data-processing',
+    title: 'principles of customer data processing',
+    description: 'comprehensive guidelines for how we collect, process, and protect your personal data.',
+    fileName: 'AVS-Finance-Customer-Data-Processing.pdf',
     url: '#'
   },
   {
     id: 'financing-terms',
-    title: 'General Terms and Conditions of Financing for Legal Persons',
-    description: 'Comprehensive terms and conditions applicable to financing agreements for legal entities.',
+    title: 'general terms and conditions of financing for legal persons',
+    description: 'comprehensive terms and conditions applicable to financing agreements for legal entities.',
     fileName: 'AVS-Finance-Financing-Terms-Legal-Persons.pdf',
     url: '#'
   }
@@ -46,7 +46,7 @@ export default function TermsOfServicePage() {
               terms of service
             </h1>
             <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">
-              download and review our legal documents and pricing information.
+              download and review our legal documents and data processing principles.
             </p>
           </div>
 
@@ -80,24 +80,6 @@ export default function TermsOfServicePage() {
                 </a>
               </div>
             ))}
-          </div>
-
-          {/* Info Section */}
-          <div className="bg-white rounded-lg p-8 md:p-12">
-            <h2 className="font-heading text-3xl text-dark-brown mb-6">
-              important information
-            </h2>
-            <div className="font-paragraph text-base text-dark-brown-light space-y-4 leading-relaxed">
-              <p>
-                All documents below are provided in PDF format for your convenience. You can view them directly in your browser or download them to your device for offline access.
-              </p>
-              <p>
-                These documents contain important legal information regarding AVS Finance services, pricing, and financing terms. We recommend reviewing them carefully before entering into any agreement with us.
-              </p>
-              <p>
-                If you have any questions about these documents or need clarification on any terms, please don't hesitate to contact our customer support team.
-              </p>
-            </div>
           </div>
         </div>
       </main>
