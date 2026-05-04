@@ -42,7 +42,7 @@ export default function HomePage() {
       />
       <Header />
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-secondary via-white to-secondary border-b-2 border-dark-brown/10">
+      <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-primary border-b-2 border-dark-brown/10">
         {/* Decorative background elements */}
         <motion.div
           className="absolute top-20 right-10 w-96 h-96 rounded-full bg-vibrant-yellow/10 blur-3xl"
@@ -73,25 +73,19 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.3 }}
               />
 
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 tracking-tight text-left leading-tight">
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-secondary mb-8 tracking-tight text-left leading-tight">
                 competitive terms.
                 <br />
                 <span className="relative inline-block">
                   tailored financing.
-                  <motion.div
-                    className="absolute bottom-2 left-0 h-4 bg-vibrant-yellow/30 -z-10"
-                    initial={{ width: 0 }}
-                    animate={{ width: '100%' }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                  />
                 </span>
                 <br />
                 personal service.
               </h1>
 
-              <p className="font-paragraph text-dark-brown-light mb-6 text-lg md:text-xl font-normal">secured financing for legal entities registered in estonia.</p>
+              <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">secured financing for legal entities registered in estonia.</p>
 
-              <p className="font-paragraph text-dark-brown mb-12 text-lg md:text-xl font-normal leading-relaxed max-w-lg">loans and credit lines with annual interest from 9,5% plus 6-month euribor, tailored financing structures, a straightforward application process and support from a dedicated client manager.</p>
+              <p className="font-paragraph text-secondary mb-12 text-lg md:text-xl font-normal leading-relaxed max-w-lg">loans and credit lines with annual interest from 9,5% plus 6-month euribor, tailored financing structures, a straightforward application process and support from a dedicated client manager.</p>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -117,8 +111,6 @@ export default function HomePage() {
             >
               <motion.div
                 className="w-full lg:w-auto"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
               >
                 <LoanCalculator />
               </motion.div>
