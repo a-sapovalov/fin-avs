@@ -106,9 +106,7 @@ export default function HomePage() {
                   <LineChart className="h-7 w-7 text-dark-brown" />
                 </div>
                 <h3 className="font-heading text-dark-brown mb-3 text-3xl">competitive terms</h3>
-                <p className="font-paragraph text-dark-brown-light text-lg">
-                  annual interest from 9,5%, ltv up to 80% and period of your choosing.
-                </p>
+                <p className="font-paragraph text-dark-brown-light text-lg">annual interest from 9,5%, ltv of up to 80% and a repayment term tailored to your needs.</p>
               </div>
             </FadeIn>
 
@@ -168,9 +166,7 @@ export default function HomePage() {
                     <h3 className="font-heading text-3xl md:text-4xl text-dark-brown mb-2">loans</h3>
                     <div className="w-12 h-1 bg-vibrant-yellow rounded-full"></div>
                   </div>
-                  <p className="font-paragraph text-dark-brown-light mb-10 leading-relaxed flex-grow text-lg">
-                    financing for businesses, whatever the need – whether for refinancing, investment, a property flip or other ventures. the client decides.
-                  </p>
+                  <p className="font-paragraph text-dark-brown-light mb-10 leading-relaxed flex-grow text-lg">loans for legal entities that need capital for refinancing, investment, property-backed projects, working capital or other business purposes.</p>
                   <Link
                     to="/loans"
                     className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
@@ -201,9 +197,7 @@ export default function HomePage() {
                     <h3 className="font-heading text-3xl md:text-4xl text-dark-brown mb-2">credit lines</h3>
                     <div className="w-12 h-1 bg-vibrant-yellow rounded-full"></div>
                   </div>
-                  <p className="font-paragraph text-dark-brown-light mb-10 leading-relaxed flex-grow text-lg">
-                    pre-approved financing for businesses that can be used at any time, repeatedly, and exactly when needed. interest is charged on the amount in use.
-                  </p>
+                  <p className="font-paragraph text-dark-brown-light mb-10 leading-relaxed flex-grow text-lg">flexible pre-approved credit for legal entities that want funds available when needed. use the limit repeatedly, draw only what you need, and pay interest only on the outstanding drawn amount.</p>
                   <Link
                     to="/credit-line"
                     className="inline-flex items-center text-dark-brown font-paragraph font-bold text-base hover:text-vibrant-yellow transition-colors duration-300 group-hover:gap-2 gap-1"
