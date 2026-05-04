@@ -106,7 +106,7 @@ export default function HomePage() {
                   <LineChart className="h-7 w-7 text-dark-brown" />
                 </div>
                 <h3 className="font-heading text-dark-brown mb-3 text-3xl">competitive terms</h3>
-                <p className="font-paragraph text-dark-brown-light text-lg">annual interest from 9,5%, ltv of up to 80% and a repayment term tailored to your needs.</p>
+                <p className="font-paragraph text-dark-brown-light text-lg">annual interest from 9,5% plus 6-month euribor, financing of up to 80% of the collateral value and flexible repayment terms.</p>
               </div>
             </FadeIn>
 
@@ -116,7 +116,7 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-secondary">
                   <Zap className="h-7 w-7 text-dark-brown fill-secondary" />
                 </div>
-                <h3 className="font-heading text-dark-brown mb-3 text-3xl">fast approvals</h3>
+                <h3 className="font-heading text-dark-brown mb-3 text-3xl">efficient process</h3>
                 <p className="font-paragraph text-dark-brown-light text-lg">
                   a financing decision within two business days.
                 </p>
@@ -129,10 +129,8 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-secondary">
                   <Users className="h-7 w-7 text-dark-brown fill-secondary" />
                 </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">dedicated client manager</h3>
-                <p className="font-paragraph text-dark-brown-light text-lg">
-                  a dedicated contact who takes the time to understand your business.
-                </p>
+                <h3 className="font-heading text-2xl text-dark-brown mb-3">personal support</h3>
+                <p className="font-paragraph text-dark-brown-light text-lg">a dedicated client manager to guide the process and understand your business needs.</p>
               </div>
             </FadeIn>
           </div>
