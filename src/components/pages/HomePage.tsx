@@ -42,9 +42,9 @@ export default function HomePage() {
       />
       <Header />
       {/* --- HERO SECTION --- */}
-      <section className="relative w-full py-16 md:py-24 overflow-hidden bg-white border-b-2 border-dark-brown/10">
+      <section className="relative w-full py-16 md:py-24 overflow-hidden bg-black border-b-2 border-dark-brown/10">
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
             
             {/* Left Content Block */}
             <motion.div
@@ -79,53 +79,6 @@ export default function HomePage() {
             >
               <div className="w-full h-full bg-secondary rounded-3xl p-8 md:p-10 flex items-center justify-center">
                 <LoanCalculator />
-              </div>
-            </motion.div>
-
-            {/* Right - Key Features */}
-            <motion.div
-              className="relative flex flex-col justify-between lg:col-span-1 space-y-6"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {/* Feature 1 */}
-              <div className="bg-vibrant-yellow-light rounded-2xl p-6 border-2 border-vibrant-yellow/30">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-vibrant-yellow rounded-lg flex items-center justify-center">
-                    <TrendingUp className="h-6 w-6 text-dark-brown" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-dark-brown text-lg mb-1">from 9.5%</h3>
-                    <p className="font-paragraph text-dark-brown-light text-sm">annual interest + 6-month euribor</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feature 2 */}
-              <div className="bg-white rounded-2xl p-6 border-2 border-dark-brown/10">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-                    <Zap className="h-6 w-6 text-dark-brown" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-dark-brown text-lg mb-1">2 business days</h3>
-                    <p className="font-paragraph text-dark-brown-light text-sm">indicative offer turnaround</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feature 3 */}
-              <div className="bg-white rounded-2xl p-6 border-2 border-dark-brown/10">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-                    <Shield className="h-6 w-6 text-dark-brown" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-dark-brown text-lg mb-1">dedicated manager</h3>
-                    <p className="font-paragraph text-dark-brown-light text-sm">personal support throughout</p>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
