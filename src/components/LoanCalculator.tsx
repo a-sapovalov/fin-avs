@@ -119,13 +119,13 @@ export default function LoanCalculator() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="w-full"
+      className="w-full max-w-full"
     >
-      <Card className="p-6 md:p-8 bg-white border border-dark-brown/10 shadow-none">
-        <div className="space-y-6">
+      <Card className="p-4 sm:p-6 md:p-8 bg-white border border-dark-brown/10 shadow-none w-full">
+        <div className="space-y-4 sm:space-y-6">
           {/* Credit Amount */}
           <div>
-            <label className="font-paragraph text-lg md:text-xl text-dark-brown mb-3 block font-bold">
+            <label className="font-paragraph text-sm sm:text-base md:text-lg lg:text-xl text-dark-brown mb-2 sm:mb-3 block font-bold">
               credit amount: {formatCurrency(creditAmount)}
             </label>
             <input
@@ -137,7 +137,7 @@ export default function LoanCalculator() {
               onChange={(e) => setCreditAmount(Number(e.target.value))}
               className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
             />
-            <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
+            <div className="flex justify-between font-paragraph text-xs sm:text-sm text-dark-brown-light mt-1 sm:mt-2">
               <span>10 000 €</span>
               <span>1 000 000 €</span>
             </div>
@@ -145,7 +145,7 @@ export default function LoanCalculator() {
 
           {/* Annual Rate */}
           <div>
-            <label className="font-paragraph text-lg md:text-xl text-dark-brown mb-3 block font-bold">
+            <label className="font-paragraph text-sm sm:text-base md:text-lg lg:text-xl text-dark-brown mb-2 sm:mb-3 block font-bold">
               annual rate: {annualRate.toFixed(2).replace('.', ',')}%
             </label>
             <input
@@ -156,7 +156,7 @@ export default function LoanCalculator() {
               onChange={(e) => setAnnualRate(Number(e.target.value))}
               className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
             />
-            <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
+            <div className="flex justify-between font-paragraph text-xs sm:text-sm text-dark-brown-light mt-1 sm:mt-2">
               <span>0%</span>
               <span>15%</span>
             </div>
@@ -164,7 +164,7 @@ export default function LoanCalculator() {
 
           {/* Duration */}
           <div>
-            <label className="font-paragraph text-lg md:text-xl text-dark-brown mb-3 block font-bold">
+            <label className="font-paragraph text-sm sm:text-base md:text-lg lg:text-xl text-dark-brown mb-2 sm:mb-3 block font-bold">
               duration: {duration} months ({(duration / 12).toFixed(1).replace('.', ',')} years)
             </label>
             <input
@@ -175,7 +175,7 @@ export default function LoanCalculator() {
               onChange={(e) => setDuration(Number(e.target.value))}
               className="w-full h-2 bg-dark-brown/20 rounded-lg appearance-none cursor-pointer accent-dark-brown"
             />
-            <div className="flex justify-between font-paragraph text-xs text-dark-brown-light mt-2">
+            <div className="flex justify-between font-paragraph text-xs sm:text-sm text-dark-brown-light mt-1 sm:mt-2">
               <span>0 months</span>
               <span>120 months</span>
             </div>
@@ -183,13 +183,13 @@ export default function LoanCalculator() {
 
           {/* Schedule Type Selection */}
           <div>
-            <label className="font-paragraph text-lg md:text-xl text-dark-brown font-semibold mb-3 block">
+            <label className="font-paragraph text-sm sm:text-base md:text-lg lg:text-xl text-dark-brown font-semibold mb-2 sm:mb-3 block">
               schedule type
             </label>
-            <div className="flex gap-4">
+            <div className="flex gap-2 sm:gap-4">
               <button
                 onClick={() => setScheduleType('annuity')}
-                className={`flex-1 py-3 px-4 rounded-lg font-paragraph font-semibold transition-all ${ 
+                className={`flex-1 py-2 sm:py-3 px-3 sm:px-4 rounded-lg font-paragraph text-sm sm:text-base font-semibold transition-all ${ 
                   scheduleType === 'annuity'
                     ? 'bg-dark-brown text-vibrant-yellow'
                     : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
@@ -199,7 +199,7 @@ export default function LoanCalculator() {
               </button>
               <button
                 onClick={() => setScheduleType('bullet')}
-                className={`flex-1 py-3 px-4 rounded-lg font-paragraph font-semibold transition-all ${
+                className={`flex-1 py-2 sm:py-3 px-3 sm:px-4 rounded-lg font-paragraph text-sm sm:text-base font-semibold transition-all ${
                   scheduleType === 'bullet'
                     ? 'bg-dark-brown text-vibrant-yellow'
                     : 'bg-dark-brown/10 text-dark-brown hover:bg-dark-brown/20'
@@ -211,37 +211,37 @@ export default function LoanCalculator() {
           </div>
 
           {/* Key Results */}
-          <div className="grid grid-cols-2 gap-3 pt-4 border-t border-dark-brown/10">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-dark-brown/10">
             <div>
-              <p className="font-paragraph text-lg text-dark-brown-light mb-1">
+              <p className="font-paragraph text-xs sm:text-sm md:text-base text-dark-brown-light mb-1">
                 monthly payment
               </p>
-              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-bold">
+              <p className="font-paragraph text-base sm:text-lg md:text-xl lg:text-2xl text-dark-brown font-bold">
                 {formatCurrency(calculations.monthlyPayment)}
               </p>
             </div>
 
             <div>
-              <p className="font-paragraph text-lg text-dark-brown-light mb-1">
+              <p className="font-paragraph text-xs sm:text-sm md:text-base text-dark-brown-light mb-1">
                 total interest
               </p>
-              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-semibold">
+              <p className="font-paragraph text-base sm:text-lg md:text-xl lg:text-2xl text-dark-brown font-semibold">
                 {formatCurrency(calculations.totalInterest)}
               </p>
             </div>
 
             <div>
-              <p className="font-paragraph text-lg text-dark-brown-light mb-1">origination fee</p>
-              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-semibold">
+              <p className="font-paragraph text-xs sm:text-sm md:text-base text-dark-brown-light mb-1">origination fee</p>
+              <p className="font-paragraph text-base sm:text-lg md:text-xl lg:text-2xl text-dark-brown font-semibold">
                 {formatCurrency(calculations.originationFee)}
               </p>
             </div>
 
             <div>
-              <p className="font-paragraph text-lg text-dark-brown-light mb-1">
+              <p className="font-paragraph text-xs sm:text-sm md:text-base text-dark-brown-light mb-1">
                 total payment
               </p>
-              <p className="font-paragraph text-xl md:text-2xl text-dark-brown font-semibold">
+              <p className="font-paragraph text-base sm:text-lg md:text-xl lg:text-2xl text-dark-brown font-semibold">
                 {formatCurrency(calculations.totalPayment + calculations.originationFee)}
               </p>
             </div>
@@ -250,13 +250,13 @@ export default function LoanCalculator() {
           {/* View Sample Schedule Button */}
           <Button
             onClick={() => setIsScheduleOpen(true)}
-            className="w-full bg-dark-brown hover:bg-dark-brown-light text-white font-paragraph font-semibold py-2 rounded-lg transition-colors text-lg"
+            className="w-full bg-dark-brown hover:bg-dark-brown-light text-white font-paragraph font-semibold py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base md:text-lg"
           >
             view sample schedule
           </Button>
 
           {/* Discrete Disclaimer */}
-          <p className="font-paragraph text-xs text-dark-brown-light/60 text-center pt-2">the calculator provides indicative sample terms only; final terms offered to you may differ</p>
+          <p className="font-paragraph text-xs text-dark-brown-light/60 text-center pt-1 sm:pt-2">the calculator provides indicative sample terms only; final terms offered to you may differ</p>
         </div>
       </Card>
       {/* Payment Schedule Dialog */}

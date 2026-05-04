@@ -43,13 +43,24 @@ export default function HomePage() {
       <Header />
       {/* --- HERO SECTION --- */}
       <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-primary border-b-2 border-dark-brown/10">
+        {/* Decorative background elements */}
+        <motion.div
+          className="absolute top-20 right-10 w-96 h-96 rounded-full bg-vibrant-yellow/10 blur-3xl"
+          animate={{ y: [0, 30, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-vibrant-yellow/5 blur-3xl"
+          animate={{ y: [0, -30, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+        />
 
         <div className="w-full max-w-[120rem] mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-24 lg:py-32 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             
             {/* Hero Content - Left */}
             <motion.div
-              className="relative flex flex-col justify-center"
+              className="relative flex flex-col justify-center opacity-[0.24]"
               initial={{ opacity: 0, x: -60 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -83,7 +94,7 @@ export default function HomePage() {
               >
                 <Link 
                   to="/application"
-                  className="group inline-flex items-center justify-center px-8 py-4 bg-vibrant-yellow text-primary font-paragraph font-bold rounded-xl hover:bg-vibrant-yellow-dark transition-all duration-300 text-lg w-fit shadow-lg hover:shadow-xl hover:scale-105"
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-dark-brown text-vibrant-yellow font-paragraph font-bold rounded-xl hover:bg-dark-brown-light transition-all duration-300 text-lg w-fit shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   apply now
                   <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1" />
