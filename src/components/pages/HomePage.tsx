@@ -53,7 +53,13 @@ export default function HomePage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
-                <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 tracking-tight leading-tight">competitive terms. tailored financing. personal service.</h1>
+                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-dark-brown mb-8 tracking-tight leading-tight">
+                  competitive terms.
+                  <br />
+                  tailored financing.
+                  <br />
+                  personal service.
+                </h1>
 
                 <p className="font-paragraph text-lg text-dark-brown-light mb-10 max-w-2xl leading-relaxed md:text-lg">secured financing for legal entities registered in estonia.</p>
 
