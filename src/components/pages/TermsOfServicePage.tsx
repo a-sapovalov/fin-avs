@@ -56,7 +56,7 @@ export default function TermsOfServicePage() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="font-heading text-xl text-dark-brown mb-2">
+                    <h3 className="font-heading text-xl text-dark-brown mb-2 h-14 flex items-center">
                       {doc.title}
                     </h3>
                   </div>
