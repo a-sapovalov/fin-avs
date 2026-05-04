@@ -123,7 +123,7 @@ export default function HomePage() {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-6 bg-secondary">
                   <Users className="h-7 w-7 text-dark-brown fill-secondary" />
                 </div>
-                <h3 className="font-heading text-2xl text-dark-brown mb-3">personal support</h3>
+                <h3 className="font-heading text-dark-brown mb-3 text-3xl">personal support</h3>
                 <p className="font-paragraph text-dark-brown-light text-lg">a dedicated client manager to guide the process and understand your business needs.</p>
               </div>
             </FadeIn>
