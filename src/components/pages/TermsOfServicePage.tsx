@@ -1,92 +1,127 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Download, FileText } from 'lucide-react';
+
+interface PDFDocument {
+  id: string;
+  title: string;
+  description: string;
+  fileName: string;
+  url: string;
+}
+
+const documents: PDFDocument[] = [
+  {
+    id: 'website-terms',
+    title: 'Website Terms of Use',
+    description: 'Terms and conditions governing the use of the AVS Finance website and services.',
+    fileName: 'AVS-Finance-Website-Terms-of-Use.pdf',
+    url: '#'
+  },
+  {
+    id: 'price-list',
+    title: 'Price List',
+    description: 'Complete pricing information for all AVS Finance products and services.',
+    fileName: 'AVS-Finance-Price-List.pdf',
+    url: '#'
+  },
+  {
+    id: 'financing-terms',
+    title: 'General Terms and Conditions of Financing for Legal Persons',
+    description: 'Comprehensive terms and conditions applicable to financing agreements for legal entities.',
+    fileName: 'AVS-Finance-Financing-Terms-Legal-Persons.pdf',
+    url: '#'
+  }
+];
 
 export default function TermsOfServicePage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
-      <main className="flex-grow w-full">
-        <div className="max-w-[100rem] mx-auto px-6 md:px-12 py-20">
-          <h1 className="font-heading text-6xl text-dark-brown mb-12">Terms of Service</h1>
-          
-          <div className="font-paragraph text-base text-dark-brown leading-relaxed space-y-8">
-            <section>
-              <h2 className="font-heading text-2xl text-dark-brown mb-4">1. Introduction</h2>
-              <p>
-                These Terms of Service ("Terms") govern your use of the AVS Finance website and services. By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.
-              </p>
-            </section>
+      <main className="flex-1 w-full px-6 md:px-12 py-20 bg-secondary">
+        <div className="max-w-[120rem] mx-auto">
+          {/* Hero Section */}
+          <div className="mb-16 flex flex-col items-center justify-center text-center">
+            <h1 className="font-heading text-6xl md:text-7xl text-dark-brown mb-4">
+              terms of service
+            </h1>
+            <p className="font-paragraph text-lg text-dark-brown-light max-w-2xl">
+              download and review our legal documents and pricing information.
+            </p>
+          </div>
 
-            <section>
-              <h2 className="font-heading text-2xl text-dark-brown mb-4">2. Use License</h2>
-              <p>
-                Permission is granted to temporarily download one copy of the materials (information or software) on AVS Finance's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
-              </p>
-              <ul className="list-disc list-inside space-y-2 mt-4">
-                <li>Modifying or copying the materials</li>
-                <li>Using the materials for any commercial purpose or for any public display</li>
-                <li>Attempting to decompile or reverse engineer any software contained on the website</li>
-                <li>Removing any copyright or other proprietary notations from the materials</li>
-                <li>Transferring the materials to another person or "mirroring" the materials on any other server</li>
-              </ul>
-            </section>
+          {/* Documents Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {documents.map(doc => (
+              <div
+                key={doc.id}
+                className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h3 className="font-heading text-xl text-dark-brown mb-2">
+                      {doc.title}
+                    </h3>
+                  </div>
+                  <FileText className="h-8 w-8 text-dark-brown flex-shrink-0 ml-3" />
+                </div>
 
-            <section>
-              <h2 className="font-heading text-2xl text-dark-brown mb-4">3. Disclaimer</h2>
-              <p>
-                The materials on AVS Finance's website are provided on an 'as is' basis. AVS Finance makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
-              </p>
-            </section>
+                <p className="font-paragraph text-base text-dark-brown-light mb-6 flex-grow">
+                  {doc.description}
+                </p>
 
-            <section>
-              <h2 className="font-heading text-2xl text-dark-brown mb-4">4. Limitations</h2>
-              <p>
-                In no event shall AVS Finance or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on AVS Finance's website, even if AVS Finance or an authorized representative has been notified orally or in writing of the possibility of such damage.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-2xl text-dark-brown mb-4">5. Accuracy of Materials</h2>
-              <p>
-                The materials appearing on AVS Finance's website could include technical, typographical, or photographic errors. AVS Finance does not warrant that any of the materials on its website are accurate, complete, or current. AVS Finance may make changes to the materials contained on its website at any time without notice.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-2xl text-dark-brown mb-4">6. Links</h2>
-              <p>
-                AVS Finance has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by AVS Finance of the site. Use of any such linked website is at the user's own risk.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-2xl text-dark-brown mb-4">7. Modifications</h2>
-              <p>
-                AVS Finance may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-2xl text-dark-brown mb-4">8. Governing Law</h2>
-              <p>
-                These terms and conditions are governed by and construed in accordance with the laws of Estonia, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="font-heading text-2xl text-dark-brown mb-4">9. Contact Information</h2>
-              <p>
-                If you have any questions about these Terms of Service, please contact us at:
-              </p>
-              <div className="mt-4 space-y-2">
-                <p><strong>Email:</strong> info@avs.ee</p>
-                <p><strong>Phone:</strong> +372 5306 6545</p>
-                <p><strong>Address:</strong> Kentmanni tn 6, 10116 Tallinn, Estonia</p>
+                <a
+                  href={doc.url}
+                  download={doc.fileName}
+                  className="inline-flex items-center justify-center px-6 py-3 bg-dark-brown text-vibrant-yellow font-paragraph font-bold text-base rounded-lg hover:bg-dark-brown-light transition-all duration-300 w-full"
+                >
+                  <Download className="h-5 w-5 mr-2" />
+                  download pdf
+                </a>
               </div>
-            </section>
+            ))}
+          </div>
+
+          {/* Info Section */}
+          <div className="bg-white rounded-lg p-8 md:p-12">
+            <h2 className="font-heading text-3xl text-dark-brown mb-6">
+              important information
+            </h2>
+            <div className="font-paragraph text-base text-dark-brown-light space-y-4 leading-relaxed">
+              <p>
+                All documents below are provided in PDF format for your convenience. You can view them directly in your browser or download them to your device for offline access.
+              </p>
+              <p>
+                These documents contain important legal information regarding AVS Finance services, pricing, and financing terms. We recommend reviewing them carefully before entering into any agreement with us.
+              </p>
+              <p>
+                If you have any questions about these documents or need clarification on any terms, please don't hesitate to contact our customer support team.
+              </p>
+            </div>
           </div>
         </div>
       </main>
+
+      {/* Contact Section */}
+      <section className="w-full bg-dark-brown py-24 md:py-32 overflow-hidden">
+        <div className="max-w-[120rem] mx-auto px-6 md:px-12">
+          <div className="text-center">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-vibrant-yellow mb-8">
+              questions about our terms?
+            </h2>
+            <p className="font-paragraph text-lg md:text-xl text-vibrant-yellow-light mb-12 max-w-3xl mx-auto leading-relaxed">
+              our customer support team is here to help. reach out to us with any questions or concerns.
+            </p>
+            <a
+              href="/contacts"
+              className="inline-flex items-center justify-center px-10 py-4 bg-vibrant-yellow text-dark-brown font-paragraph font-bold text-base rounded-lg hover:bg-vibrant-yellow-dark transition-all duration-300"
+            >
+              contact us
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
