@@ -16,7 +16,7 @@ const priceSections: PriceSection[] = [
   {
     name: 'agreement fees',
     items: [
-      { title: 'entry into contract fee', price: '1% of the credit amount, minimum €200' },
+      { title: 'entry into contract fee', price: '1%–2% of the credit amount, minimum €200' },
       { title: 'credit line commitment fee', price: '4% per annum on the undrawn amount' },
     ],
   },
