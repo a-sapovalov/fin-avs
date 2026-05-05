@@ -232,9 +232,7 @@ export default function ApplicationPage() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-dark-brown mb-8 leading-tight">financing application</h1>
-          <p className="font-paragraph text-lg md:text-xl text-dark-brown-light leading-relaxed">
-            complete the form below to apply for financing. our team will review your application and contact you within two business days.
-          </p>
+          <p className="font-paragraph text-lg md:text-xl text-dark-brown-light leading-relaxed">complete the form below to apply for financing</p>
         </motion.div>
       </section>
       {/* Form Section */}

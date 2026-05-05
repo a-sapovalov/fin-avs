@@ -199,7 +199,7 @@ export default function LoansPage() {
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-vibrant-yellow mb-8">
               ready to proceed?
             </h2>
-            <p className="font-paragraph text-lg md:text-xl text-vibrant-yellow-light mb-12 max-w-3xl mx-auto leading-relaxed">get started with our financing solutions today. our team is ready to help you find the suitable solution for your business.</p>
+            <p className="font-paragraph text-lg md:text-xl text-vibrant-yellow-light mb-12 max-w-3xl mx-auto leading-relaxed">apply for financing today. our team is ready to help you find the right financing solution for your needs.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link 
                 to="/application"
