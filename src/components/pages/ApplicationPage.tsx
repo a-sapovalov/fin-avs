@@ -264,7 +264,7 @@ export default function ApplicationPage() {
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
-                    placeholder="enter the total amount of financing you are requesting in euros"
+                    placeholder="total desired amount of financing"
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
