@@ -109,6 +109,13 @@ export default function ApplicationPage() {
     setIsSubmitting(true);
     setError(null);
 
+    // Validate at least one collateral is provided
+    if (collaterals.length === 0) {
+      setError('At least one collateral must be provided.');
+      setIsSubmitting(false);
+      return;
+    }
+
     // Prepare form data for submission
     const submissionData = {
       financingDetails: {
@@ -429,10 +436,10 @@ export default function ApplicationPage() {
               </div>
             </div>
 
-            {/* 3. Collateral and Surety Information Section */}
+            {/* 3. Collateral Information Section */}
             <div>
               <h2 className="font-heading text-3xl text-dark-brown mb-6">
-                collateral and surety information
+                collateral information
               </h2>
               
               {/* Collaterals List */}
@@ -548,11 +555,17 @@ export default function ApplicationPage() {
                 onClick={addCollateral}
                 className="mb-8 px-6 py-2 bg-dark-brown/10 text-dark-brown font-paragraph rounded-lg hover:bg-dark-brown/20 transition-colors"
               >
-                + add
+                + add collateral
               </Button>
+            </div>
 
-              {/* Surety Information */}
-              <div className="space-y-6 border-t border-dark-brown/20 pt-6">
+            {/* 4. Surety Information Section */}
+            <div>
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">
+                surety information (optional)
+              </h2>
+              
+              <div className="space-y-6">
 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
