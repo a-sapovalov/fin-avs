@@ -111,9 +111,26 @@ export default function ApplicationPage() {
 
     // Validate at least one collateral is provided
     if (collaterals.length === 0) {
-      setError('At least one collateral must be provided.');
+      setError('at least one collateral must be provided.');
       setIsSubmitting(false);
       return;
+    }
+
+    // Validate collateral fields
+    for (const collateral of collaterals) {
+      if (collateral.type === 'mortgage') {
+        if (!collateral.propertyType || !collateral.address) {
+          setError('property type and address are required for mortgage collaterals.');
+          setIsSubmitting(false);
+          return;
+        }
+      } else if (collateral.type === 'other') {
+        if (!collateral.description) {
+          setError('description is required for other collaterals.');
+          setIsSubmitting(false);
+          return;
+        }
+      }
     }
 
     // Prepare form data for submission
