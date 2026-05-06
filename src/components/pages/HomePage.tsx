@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
-import { ArrowRight, TrendingUp, Users, LineChart, CheckCircle, Zap, Shield, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, LineChart, Zap, Shield, ArrowUpRight } from 'lucide-react';
 import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -59,24 +59,76 @@ export default function HomePage() {
               </h1>
 
               <div className="mb-12">
-                <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">loans and credit lines with competitive terms and a straightforward application process.</p>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">annual interest from 9.5% plus 6-month euribor</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">financing of up to 80% of collateral value</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">loan terms of up to 120 months</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">suitable for refinancing, investment, working capital and other business purposes</span>
-                  </li>
+                <p className="font-paragraph text-secondary mb-8 text-lg md:text-xl font-normal">loans and credit lines with competitive terms and a straightforward application process.</p>
+                <ul className="space-y-5">
+                  <motion.li 
+                    className="flex items-start gap-4 group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                  >
+                    <div className="flex-shrink-0 mt-1">
+                      <motion.div 
+                        className="w-8 h-8 rounded-full bg-vibrant-yellow text-dark-brown flex items-center justify-center font-bold text-sm font-heading"
+                        whileHover={{ scale: 1.15, rotate: 360 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        ✓
+                      </motion.div>
+                    </div>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal group-hover:text-vibrant-yellow transition-colors duration-300">annual interest from 9.5% plus 6-month euribor</span>
+                  </motion.li>
+                  <motion.li 
+                    className="flex items-start gap-4 group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                  >
+                    <div className="flex-shrink-0 mt-1">
+                      <motion.div 
+                        className="w-8 h-8 rounded-full bg-vibrant-yellow text-dark-brown flex items-center justify-center font-bold text-sm font-heading"
+                        whileHover={{ scale: 1.15, rotate: 360 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        ✓
+                      </motion.div>
+                    </div>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal group-hover:text-vibrant-yellow transition-colors duration-300">financing of up to 80% of collateral value</span>
+                  </motion.li>
+                  <motion.li 
+                    className="flex items-start gap-4 group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                  >
+                    <div className="flex-shrink-0 mt-1">
+                      <motion.div 
+                        className="w-8 h-8 rounded-full bg-vibrant-yellow text-dark-brown flex items-center justify-center font-bold text-sm font-heading"
+                        whileHover={{ scale: 1.15, rotate: 360 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        ✓
+                      </motion.div>
+                    </div>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal group-hover:text-vibrant-yellow transition-colors duration-300">loan terms of up to 120 months</span>
+                  </motion.li>
+                  <motion.li 
+                    className="flex items-start gap-4 group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                  >
+                    <div className="flex-shrink-0 mt-1">
+                      <motion.div 
+                        className="w-8 h-8 rounded-full bg-vibrant-yellow text-dark-brown flex items-center justify-center font-bold text-sm font-heading"
+                        whileHover={{ scale: 1.15, rotate: 360 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        ✓
+                      </motion.div>
+                    </div>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal group-hover:text-vibrant-yellow transition-colors duration-300">suitable for refinancing, investment, working capital and other business purposes</span>
+                  </motion.li>
                 </ul>
               </div>
 
