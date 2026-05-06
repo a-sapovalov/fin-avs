@@ -71,7 +71,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">flexible repayment terms</span>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">loans and credit lines for various business purposes</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
@@ -79,11 +79,11 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">dedicated client manager support</span>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">flexible repayment terms</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">loans and credit lines for various business purposes</span>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">dedicated client manager support</span>
                   </li>
                 </ul>
               </div>
