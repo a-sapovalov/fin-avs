@@ -55,11 +55,11 @@ export default function HomePage() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-secondary mb-12 tracking-tight text-left leading-tight">
-                secured financing for legal entities registered in estonia.
+                secured loans and credit lines for legal entities.
               </h1>
 
               <div className="mb-12">
-                <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">loans and credit lines with competitive terms and a straightforward application process.</p>
+                <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">we assess each application individually based on the transaction and collateral. get the financing you need with flexible terms tailored to your business.</p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
@@ -75,7 +75,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">suitable for refinancing, investment, working capital and other business purposes</span>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">suitable for refinancing, flipping, investment, working capital and other business purposes</span>
                   </li>
                 </ul>
               </div>
