@@ -59,7 +59,7 @@ export default function HomePage() {
               </h1>
 
               <div className="mb-12">
-                <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">our financing solutions include:</p>
+                <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">loans and credit lines with competitive terms and a straightforward application process.</p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
@@ -71,19 +71,11 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">loans and credit lines for various business purposes</span>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">loan terms of up to 120 months</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">straightforward application process</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">flexible repayment terms</span>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">dedicated client manager support</span>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">suitable for refinancing, investment, working capital and other business purposes</span>
                   </li>
                 </ul>
               </div>
