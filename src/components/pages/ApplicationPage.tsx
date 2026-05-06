@@ -341,7 +341,7 @@ export default function ApplicationPage() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="registrationNumber" className="font-paragraph text-base text-dark-brown">
-                    registration number *
+                    registry code *
                   </Label>
                   <Input
                     id="registrationNumber"
