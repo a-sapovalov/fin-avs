@@ -37,35 +37,20 @@ export default function ApplicationPage() {
   const [error, setError] = useState<string | null>(null);
   
   const [formData, setFormData] = useState({
-    // Loan Details
-    loanType: '',
-    loanPurpose: '',
-    loanAmount: '',
+    // Financing Details
+    financingType: '',
+    financingAmount: '',
+    financingPurpose: '',
     scheduleType: '',
-    gracePeriodDuration: '',
     loanPeriod: '',
     
-    // Company Information
-    companyName: '',
+    // Applicant Information
+    legalEntityName: '',
     registrationNumber: '',
-    registrationAddress: '',
     communicationLanguage: '',
-    taxResidency: '',
-    
-    // Contact Information
-    representativeFullName: '',
-    representativeEmail: '',
-    representativeIdentificationCode: '',
-    representativePhone: '',
-    representationType: '',
-    
-    // Beneficiary Information
-    beneficiaryIdentificationCode: '',
-    beneficiaryFullName: '',
-    beneficiaryCountry: '',
-    
-    // PEP Questionnaire
-    isPEPRelated: '',
+    contactPersonName: '',
+    phoneNumber: '',
+    emailAddress: '',
     
     // Surety Information
     isRepresentativeSurety: false,
@@ -118,35 +103,20 @@ export default function ApplicationPage() {
 
     // Prepare form data for submission
     const submissionData = {
-      loanDetails: {
-        loanType: formData.loanType,
-        loanPurpose: formData.loanPurpose,
-        loanAmount: parseFloat(formData.loanAmount),
+      financingDetails: {
+        financingType: formData.financingType,
+        financingAmount: parseFloat(formData.financingAmount),
+        financingPurpose: formData.financingPurpose,
         scheduleType: formData.scheduleType,
-        gracePeriodDuration: parseInt(formData.gracePeriodDuration),
         loanPeriod: parseInt(formData.loanPeriod),
       },
-      companyInformation: {
-        companyName: formData.companyName,
+      applicantInformation: {
+        legalEntityName: formData.legalEntityName,
         registrationNumber: formData.registrationNumber,
-        registrationAddress: formData.registrationAddress,
         communicationLanguage: formData.communicationLanguage,
-        taxResidency: formData.taxResidency,
-      },
-      contactInformation: {
-        representativeFullName: formData.representativeFullName,
-        representativeEmail: formData.representativeEmail,
-        representativeIdentificationCode: formData.representativeIdentificationCode,
-        representativePhone: formData.representativePhone,
-        representationType: formData.representationType,
-      },
-      beneficiaryInformation: {
-        beneficiaryIdentificationCode: formData.beneficiaryIdentificationCode,
-        beneficiaryFullName: formData.beneficiaryFullName,
-        beneficiaryCountry: formData.beneficiaryCountry,
-      },
-      questionnaire: {
-        isPEPRelated: formData.isPEPRelated,
+        contactPersonName: formData.contactPersonName,
+        phoneNumber: formData.phoneNumber,
+        emailAddress: formData.emailAddress,
       },
       collaterals: collaterals,
       suretyInformation: {
@@ -259,19 +229,19 @@ export default function ApplicationPage() {
             </motion.div>
           )}
           <form onSubmit={handleSubmit} className="p-8 md:p-12 rounded-2xl space-y-8 bg-background">
-            {/* 1. Loan Details Section */}
+            {/* 1. Financing Details Section */}
             <div>
-              <h2 className="font-heading text-3xl text-dark-brown mb-6">general details</h2>
+              <h2 className="font-heading text-3xl text-dark-brown mb-6">financing details</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="loanType" className="font-paragraph text-base text-dark-brown">financing type *</Label>
+                  <Label htmlFor="financingType" className="font-paragraph text-base text-dark-brown">financing type *</Label>
                   <Select
-                    value={formData.loanType}
-                    onValueChange={(value) => handleSelectChange('loanType', value)}
+                    value={formData.financingType}
+                    onValueChange={(value) => handleSelectChange('financingType', value)}
                     required
                   >
                     <SelectTrigger className="font-paragraph">
-                      <SelectValue placeholder="select loan type" />
+                      <SelectValue placeholder="select financing type" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="corporate-loan" className="font-paragraph">
@@ -284,28 +254,28 @@ export default function ApplicationPage() {
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="loanAmount" className="font-paragraph text-base text-dark-brown">financing amount (eur) *</Label>
+                  <Label htmlFor="financingAmount" className="font-paragraph text-base text-dark-brown">financing amount (eur) *</Label>
                   <Input
-                    id="loanAmount"
-                    name="loanAmount"
+                    id="financingAmount"
+                    name="financingAmount"
                     type="number"
-                    value={formData.loanAmount}
+                    value={formData.financingAmount}
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
                   />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="loanPurpose" className="font-paragraph text-base text-dark-brown">purpose of the financing *</Label>
+                <div className="space-y-2 md:col-span-2">
+                  <Label htmlFor="financingPurpose" className="font-paragraph text-base text-dark-brown">purpose of the financing *</Label>
                   <Textarea
-                    id="loanPurpose"
-                    name="loanPurpose"
-                    value={formData.loanPurpose}
+                    id="financingPurpose"
+                    name="financingPurpose"
+                    value={formData.financingPurpose}
                     onChange={handleInputChange}
                     required
                     rows={3}
                     className="font-paragraph"
-                    placeholder="please describe the purpose of the loan..."
+                    placeholder="please describe the purpose of the financing..."
                   />
                 </div>
                 <div className="space-y-2">
@@ -345,38 +315,23 @@ export default function ApplicationPage() {
                     placeholder="total duration of the loan"
                   />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="gracePeriodDuration" className="font-paragraph text-base text-dark-brown">
-                    grace period duration (months) *
-                  </Label>
-                  <Input
-                    id="gracePeriodDuration"
-                    name="gracePeriodDuration"
-                    type="number"
-                    value={formData.gracePeriodDuration}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                    placeholder="period where only interest is paid"
-                  />
-                </div>
               </div>
             </div>
 
-            {/* 2. Company Information Section */}
+            {/* 2. Applicant Information Section */}
             <div>
               <h2 className="font-heading text-3xl text-dark-brown mb-6">
-                company information
+                applicant information
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="companyName" className="font-paragraph text-base text-dark-brown">
-                    company name *
+                  <Label htmlFor="legalEntityName" className="font-paragraph text-base text-dark-brown">
+                    name of the legal entity *
                   </Label>
                   <Input
-                    id="companyName"
-                    name="companyName"
-                    value={formData.companyName}
+                    id="legalEntityName"
+                    name="legalEntityName"
+                    value={formData.legalEntityName}
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
@@ -395,22 +350,9 @@ export default function ApplicationPage() {
                     className="font-paragraph"
                   />
                 </div>
-                <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="registrationAddress" className="font-paragraph text-base text-dark-brown">
-                    registration address *
-                  </Label>
-                  <Input
-                    id="registrationAddress"
-                    name="registrationAddress"
-                    value={formData.registrationAddress}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
-                </div>
                 <div className="space-y-2">
                   <Label htmlFor="communicationLanguage" className="font-paragraph text-base text-dark-brown">
-                    communication language *
+                    preferred communication language *
                   </Label>
                   <Select
                     value={formData.communicationLanguage}
@@ -434,188 +376,50 @@ export default function ApplicationPage() {
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="taxResidency" className="font-paragraph text-base text-dark-brown">
-                    tax residency *
+                  <Label htmlFor="contactPersonName" className="font-paragraph text-base text-dark-brown">
+                    contact person *
                   </Label>
                   <Input
-                    id="taxResidency"
-                    name="taxResidency"
-                    value={formData.taxResidency}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                    placeholder="country of tax residency"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* 3. Contact Information Section */}
-            <div>
-              <h2 className="font-heading text-3xl text-dark-brown mb-6">
-                contact information
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="representativeFullName" className="font-paragraph text-base text-dark-brown">
-                    full name of representative *
-                  </Label>
-                  <Input
-                    id="representativeFullName"
-                    name="representativeFullName"
-                    value={formData.representativeFullName}
+                    id="contactPersonName"
+                    name="contactPersonName"
+                    value={formData.contactPersonName}
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="representativeEmail" className="font-paragraph text-base text-dark-brown">
-                    email address *
-                  </Label>
-                  <Input
-                    id="representativeEmail"
-                    name="representativeEmail"
-                    type="email"
-                    value={formData.representativeEmail}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="representativeIdentificationCode" className="font-paragraph text-base text-dark-brown">
-                    personal identification code *
-                  </Label>
-                  <Input
-                    id="representativeIdentificationCode"
-                    name="representativeIdentificationCode"
-                    value={formData.representativeIdentificationCode}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="representativePhone" className="font-paragraph text-base text-dark-brown">
+                  <Label htmlFor="phoneNumber" className="font-paragraph text-base text-dark-brown">
                     phone number *
                   </Label>
                   <Input
-                    id="representativePhone"
-                    name="representativePhone"
+                    id="phoneNumber"
+                    name="phoneNumber"
                     type="tel"
-                    value={formData.representativePhone}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                  />
-                </div>
-                <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="representationType" className="font-paragraph text-base text-dark-brown">
-                    representation type *
-                  </Label>
-                  <Select
-                    value={formData.representationType}
-                    onValueChange={(value) => handleSelectChange('representationType', value)}
-                    required
-                  >
-                    <SelectTrigger className="font-paragraph">
-                      <SelectValue placeholder="select representation type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="legal-representative" className="font-paragraph">
-                        legal representative
-                      </SelectItem>
-                      <SelectItem value="authorized-representative" className="font-paragraph">
-                        authorized representative
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </div>
-
-            {/* 4. Beneficiary Information Section */}
-            <div>
-              <h2 className="font-heading text-3xl text-dark-brown mb-6">
-                beneficiary information
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="beneficiaryIdentificationCode" className="font-paragraph text-base text-dark-brown">
-                    personal identification code *
-                  </Label>
-                  <Input
-                    id="beneficiaryIdentificationCode"
-                    name="beneficiaryIdentificationCode"
-                    value={formData.beneficiaryIdentificationCode}
+                    value={formData.phoneNumber}
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="beneficiaryFullName" className="font-paragraph text-base text-dark-brown">
-                    full name *
+                  <Label htmlFor="emailAddress" className="font-paragraph text-base text-dark-brown">
+                    email address *
                   </Label>
                   <Input
-                    id="beneficiaryFullName"
-                    name="beneficiaryFullName"
-                    value={formData.beneficiaryFullName}
+                    id="emailAddress"
+                    name="emailAddress"
+                    type="email"
+                    value={formData.emailAddress}
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
                   />
                 </div>
-                <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="beneficiaryCountry" className="font-paragraph text-base text-dark-brown">
-                    country of residence *
-                  </Label>
-                  <Input
-                    id="beneficiaryCountry"
-                    name="beneficiaryCountry"
-                    value={formData.beneficiaryCountry}
-                    onChange={handleInputChange}
-                    required
-                    className="font-paragraph"
-                    placeholder="country of residence"
-                  />
-                </div>
               </div>
             </div>
 
-            {/* 5. PEP Questionnaire Section */}
-            <div>
-              <h2 className="font-heading text-3xl text-dark-brown mb-6">
-                questionnaire
-              </h2>
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="isPEPRelated" className="font-paragraph text-base text-dark-brown">
-                    is any person related to the company a pep (politically exposed person)? *
-                  </Label>
-                  <Select
-                    value={formData.isPEPRelated}
-                    onValueChange={(value) => handleSelectChange('isPEPRelated', value)}
-                    required
-                  >
-                    <SelectTrigger className="font-paragraph">
-                      <SelectValue placeholder="select an option" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="yes" className="font-paragraph">
-                        yes
-                      </SelectItem>
-                      <SelectItem value="no" className="font-paragraph">
-                        no
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </div>
-
-            {/* 6. Collateral Section */}
+            {/* 3. Collateral Section */}
             <div>
               <h2 className="font-heading text-3xl text-dark-brown mb-6">
                 collateral
@@ -724,7 +528,7 @@ export default function ApplicationPage() {
                     htmlFor="isRepresentativeSurety"
                     className="font-paragraph text-base text-dark-brown cursor-pointer"
                   >
-                    the representative of the company is willing to act as a surety personally
+                    the contact person is willing to act as a surety personally
                   </Label>
                 </div>
 
@@ -740,7 +544,7 @@ export default function ApplicationPage() {
                     htmlFor="isOtherPersonSurety"
                     className="font-paragraph text-base text-dark-brown cursor-pointer"
                   >
-                    another person related to the company is willing to act as a surety
+                    another person is willing to act as a surety
                   </Label>
                 </div>
 
