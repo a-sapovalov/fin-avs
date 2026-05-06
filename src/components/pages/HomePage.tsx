@@ -81,6 +81,10 @@ export default function HomePage() {
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
                     <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">dedicated client manager support</span>
                   </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">loans and credit lines for various business purposes</span>
+                  </li>
                 </ul>
               </div>
 
