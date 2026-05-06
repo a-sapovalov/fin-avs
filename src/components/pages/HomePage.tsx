@@ -54,27 +54,35 @@ export default function HomePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              {/* Accent line */}
-              <motion.div
-                className="w-16 h-1 bg-vibrant-yellow rounded-full mb-8"
-                initial={{ width: 0 }}
-                animate={{ width: 64 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              />
-
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-secondary mb-8 tracking-tight text-left leading-tight">
-                competitive terms.
-                <br />
-                <span className="relative inline-block">
-                  tailored financing.
-                </span>
-                <br />
-                personal service.
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-secondary mb-12 tracking-tight text-left leading-tight">
+                secured financing for legal entities registered in estonia.
               </h1>
 
-              <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">secured financing for legal entities registered in estonia.</p>
-
-              <p className="font-paragraph text-secondary mb-12 text-lg md:text-xl font-normal leading-relaxed max-w-lg">loans and credit lines with annual interest from 9,5% plus 6-month euribor, tailored financing structures, a straightforward application process and support from a dedicated client manager.</p>
+              <div className="mb-12">
+                <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">our financing solutions include:</p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">annual interest from 9.5% plus 6-month euribor</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">financing of up to 80% of collateral value</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">flexible repayment terms</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">straightforward application process</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">dedicated client manager support</span>
+                  </li>
+                </ul>
+              </div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
