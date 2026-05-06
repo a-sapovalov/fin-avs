@@ -256,15 +256,18 @@ export default function ApplicationPage() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="financingAmount" className="font-paragraph text-base text-dark-brown">financing amount (eur) *</Label>
+                  <p className="font-paragraph text-sm text-dark-brown-light">enter the total desired amount of financing</p>
                   <Input
                     id="financingAmount"
                     name="financingAmount"
                     type="number"
+                    inputMode="decimal"
+                    step="0.01"
                     value={formData.financingAmount}
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
-                    placeholder="enter the total amount of financing you are requesting in euros"
+                    placeholder="0.00"
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
@@ -330,6 +333,7 @@ export default function ApplicationPage() {
                   <Label htmlFor="legalEntityName" className="font-paragraph text-base text-dark-brown">
                     name of the legal entity *
                   </Label>
+                  <p className="font-paragraph text-sm text-dark-brown-light">enter the official registered name of your company</p>
                   <Input
                     id="legalEntityName"
                     name="legalEntityName"
@@ -341,8 +345,9 @@ export default function ApplicationPage() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="registrationNumber" className="font-paragraph text-base text-dark-brown">
-                    registration number *
+                    registry code *
                   </Label>
+                  <p className="font-paragraph text-sm text-dark-brown-light">enter your company's unique registry code</p>
                   <Input
                     id="registrationNumber"
                     name="registrationNumber"
@@ -356,6 +361,7 @@ export default function ApplicationPage() {
                   <Label htmlFor="communicationLanguage" className="font-paragraph text-base text-dark-brown">
                     preferred communication language *
                   </Label>
+                  <p className="font-paragraph text-sm text-dark-brown-light">select the language for all communications</p>
                   <Select
                     value={formData.communicationLanguage}
                     onValueChange={(value) => handleSelectChange('communicationLanguage', value)}
@@ -381,6 +387,7 @@ export default function ApplicationPage() {
                   <Label htmlFor="contactPersonName" className="font-paragraph text-base text-dark-brown">
                     contact person *
                   </Label>
+                  <p className="font-paragraph text-sm text-dark-brown-light">enter the full name of the primary contact</p>
                   <Input
                     id="contactPersonName"
                     name="contactPersonName"
@@ -394,6 +401,7 @@ export default function ApplicationPage() {
                   <Label htmlFor="phoneNumber" className="font-paragraph text-base text-dark-brown">
                     phone number *
                   </Label>
+                  <p className="font-paragraph text-sm text-dark-brown-light">enter a valid phone number for contact</p>
                   <Input
                     id="phoneNumber"
                     name="phoneNumber"
@@ -408,6 +416,7 @@ export default function ApplicationPage() {
                   <Label htmlFor="emailAddress" className="font-paragraph text-base text-dark-brown">
                     email address *
                   </Label>
+                  <p className="font-paragraph text-sm text-dark-brown-light">enter a valid email address for correspondence</p>
                   <Input
                     id="emailAddress"
                     name="emailAddress"
