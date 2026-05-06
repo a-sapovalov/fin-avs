@@ -572,7 +572,7 @@ export default function ApplicationPage() {
                   </div>
 
                   {formData.isRepresentativeSurety && (
-                    <div className="border border-dark-brown/20 rounded-lg p-6 bg-background space-y-4 ml-8">
+                    <div className="border border-dark-brown/20 rounded-lg p-6 bg-background space-y-4">
                       <div className="space-y-2">
                         <Label className="font-paragraph text-base text-dark-brown">
                           identification code *
