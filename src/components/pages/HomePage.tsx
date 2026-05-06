@@ -59,7 +59,7 @@ export default function HomePage() {
               </h1>
 
               <div className="mb-12">
-                <p className="font-paragraph text-secondary mb-6 text-lg md:text-xl font-normal">we assess each application individually based on the transaction and collateral. get the financing you need with flexible terms tailored to your business.</p>
+
                 <ul className="space-y-4">
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
@@ -71,7 +71,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
-                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">loan terms of up to 120 months</span>
+                    <span className="font-paragraph text-secondary text-lg md:text-xl font-normal">terms of up to 120 months</span>
                   </li>
                   <li className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-vibrant-yellow flex-shrink-0 mt-1" />
