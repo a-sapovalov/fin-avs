@@ -31,6 +31,10 @@ interface SuretyPerson {
   identificationCode: string;
 }
 
+interface RepresentativeSurety {
+  identificationCode: string;
+}
+
 export default function ApplicationPage() {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -61,6 +65,9 @@ export default function ApplicationPage() {
   const [collaterals, setCollaterals] = useState<Collateral[]>([]);
   const [otherSuretyPerson, setOtherSuretyPerson] = useState<SuretyPerson>({
     name: '',
+    identificationCode: '',
+  });
+  const [representativeSurety, setRepresentativeSurety] = useState<RepresentativeSurety>({
     identificationCode: '',
   });
 
@@ -122,6 +129,7 @@ export default function ApplicationPage() {
       collaterals: collaterals,
       suretyInformation: {
         isRepresentativeSurety: formData.isRepresentativeSurety,
+        representativeSurety: formData.isRepresentativeSurety ? representativeSurety : null,
         isOtherPersonSurety: formData.isOtherPersonSurety,
         otherSuretyPerson: formData.isOtherPersonSurety ? otherSuretyPerson : null,
       },
@@ -546,20 +554,43 @@ export default function ApplicationPage() {
               {/* Surety Information */}
               <div className="space-y-6 border-t border-dark-brown/20 pt-6">
 
-                <div className="flex items-center space-x-3">
-                  <Checkbox
-                    id="isRepresentativeSurety"
-                    checked={formData.isRepresentativeSurety}
-                    onCheckedChange={(checked) =>
-                      handleCheckboxChange('isRepresentativeSurety', checked as boolean)
-                    }
-                  />
-                  <Label
-                    htmlFor="isRepresentativeSurety"
-                    className="font-paragraph text-base text-dark-brown cursor-pointer"
-                  >
-                    the contact person is willing to act as a surety personally
-                  </Label>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <Checkbox
+                      id="isRepresentativeSurety"
+                      checked={formData.isRepresentativeSurety}
+                      onCheckedChange={(checked) =>
+                        handleCheckboxChange('isRepresentativeSurety', checked as boolean)
+                      }
+                    />
+                    <Label
+                      htmlFor="isRepresentativeSurety"
+                      className="font-paragraph text-base text-dark-brown cursor-pointer"
+                    >
+                      the contact person is willing to act as a surety personally
+                    </Label>
+                  </div>
+
+                  {formData.isRepresentativeSurety && (
+                    <div className="border border-dark-brown/20 rounded-lg p-6 bg-background space-y-4 ml-8">
+                      <div className="space-y-2">
+                        <Label className="font-paragraph text-base text-dark-brown">
+                          identification code *
+                        </Label>
+                        <Input
+                          value={representativeSurety.identificationCode}
+                          onChange={(e) =>
+                            setRepresentativeSurety({
+                              ...representativeSurety,
+                              identificationCode: e.target.value,
+                            })
+                          }
+                          className="font-paragraph"
+                          placeholder="identification code"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex items-center space-x-3">
