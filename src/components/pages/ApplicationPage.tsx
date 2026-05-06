@@ -421,10 +421,10 @@ export default function ApplicationPage() {
               </div>
             </div>
 
-            {/* 3. Collateral Section */}
+            {/* 3. Collateral and Surety Information Section */}
             <div>
               <h2 className="font-heading text-3xl text-dark-brown mb-6">
-                collateral
+                collateral and surety information
               </h2>
               
               {/* Collaterals List */}
@@ -540,14 +540,11 @@ export default function ApplicationPage() {
                 onClick={addCollateral}
                 className="mb-8 px-6 py-2 bg-dark-brown/10 text-dark-brown font-paragraph rounded-lg hover:bg-dark-brown/20 transition-colors"
               >
-                + add collateral
+                + add
               </Button>
 
               {/* Surety Information */}
               <div className="space-y-6 border-t border-dark-brown/20 pt-6">
-                <h3 className="font-heading text-2xl text-dark-brown">
-                  surety information
-                </h3>
 
                 <div className="flex items-center space-x-3">
                   <Checkbox
