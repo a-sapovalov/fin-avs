@@ -256,7 +256,6 @@ export default function ApplicationPage() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="financingAmount" className="font-paragraph text-base text-dark-brown">financing amount (eur) *</Label>
-                  <p className="font-paragraph text-sm text-dark-brown-light">enter the total amount of financing you are requesting in euros</p>
                   <Input
                     id="financingAmount"
                     name="financingAmount"
@@ -265,6 +264,7 @@ export default function ApplicationPage() {
                     onChange={handleInputChange}
                     required
                     className="font-paragraph"
+                    placeholder="enter the total amount of financing you are requesting in euros"
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
@@ -472,19 +472,6 @@ export default function ApplicationPage() {
                       <div className="space-y-4">
                         <div className="space-y-2">
                           <Label className="font-paragraph text-base text-dark-brown">
-                            address *
-                          </Label>
-                          <Input
-                            value={collateral.address || ''}
-                            onChange={(e) =>
-                              updateCollateral(collateral.id, { address: e.target.value })
-                            }
-                            className="font-paragraph"
-                            placeholder="enter property address"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label className="font-paragraph text-base text-dark-brown">
                             property type *
                           </Label>
                           <Select
@@ -511,6 +498,19 @@ export default function ApplicationPage() {
                               </SelectItem>
                             </SelectContent>
                           </Select>
+                        </div>
+                        <div className="space-y-2">
+                          <Label className="font-paragraph text-base text-dark-brown">
+                            address *
+                          </Label>
+                          <Input
+                            value={collateral.address || ''}
+                            onChange={(e) =>
+                              updateCollateral(collateral.id, { address: e.target.value })
+                            }
+                            className="font-paragraph"
+                            placeholder="enter property address"
+                          />
                         </div>
                       </div>
                     )}
