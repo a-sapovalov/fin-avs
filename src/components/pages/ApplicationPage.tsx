@@ -211,7 +211,7 @@ export default function ApplicationPage() {
               application submitted successfully
             </h1>
             <p className="font-paragraph text-xl text-dark-brown-light leading-relaxed mb-8">
-              thank you for choosing avs finance. we have received your application and our team will review it shortly. you will receive a response within 5-7 business days.
+              thank you for choosing avs finance. we have received your application and our team will review it and contact you shortly.
             </p>
             <p className="font-paragraph text-base text-dark-brown-light">
               redirecting to homepage...
